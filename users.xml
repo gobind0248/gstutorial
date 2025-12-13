@@ -4,15 +4,15 @@
   <user>
     <username>admin</username>
     <password>123</password>
-    <name>G.S. Tutorial Admin</name>
+    <name>Gobind Sharma(Admin)</name>
     <role>admin</role>
   </user>
   
   <!-- Student Accounts -->
   <user>
-    <username>student8</username>
-    <password>pass123</password>
-    <name>Class 8 Student</name>
+    <username>stud2025</username>
+    <password>2025</password>
+    <name>Student-2025</name>
     <role>student</role>
   </user>
   
@@ -37,3 +37,4 @@
     <role>teacher</role>
   </user>
 </users>
+
