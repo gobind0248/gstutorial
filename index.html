@@ -50,10 +50,78 @@
             overflow-x: hidden;
         }
 
+        /* ===== FIXED HEADER ===== */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--dark-border);
+            z-index: 1000;
+            padding: 15px 20px;
+            display: none;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .header-left {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .app-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .app-creator {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-name-display {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .user-class-badge {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--primary-yellow);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            padding-top: 100px;
         }
 
         /* ===== SCREEN MANAGER ===== */
@@ -225,11 +293,10 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            width: 100%;
-            padding: 18px 24px;
+            padding: 16px 24px;
             border: none;
             border-radius: var(--radius-lg);
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
@@ -333,43 +400,9 @@
             font-size: 0.95rem;
         }
 
-        .test-accounts {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--dark-border);
-        }
-
-        .test-accounts h4 {
-            color: var(--text-secondary);
-            margin-bottom: 12px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .account-list {
-            display: grid;
-            gap: 8px;
-        }
-
-        .account-item {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        .account-credentials {
-            color: var(--primary-green);
-            font-family: 'Courier New', monospace;
-        }
-
         /* ===== SELECTION SCREEN ===== */
         #selection-screen {
-            min-height: 100vh;
-            padding: 20px;
+            min-height: calc(100vh - 100px);
         }
 
         .selection-header {
@@ -476,30 +509,23 @@
         }
 
         .btn-continue {
+            width: 100%;
             max-width: 400px;
             margin: 0 auto;
         }
 
         /* ===== QUIZ SCREEN ===== */
         #quiz-screen {
-            min-height: 100vh;
-            padding: 20px;
+            min-height: calc(100vh - 100px);
         }
 
-        .quiz-header {
-            background: var(--dark-card);
-            border-radius: var(--radius-xl);
-            padding: 25px 30px;
+        .quiz-title-section {
             margin-bottom: 30px;
-            border: 1px solid var(--dark-border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--dark-border);
         }
 
-        .quiz-title h2 {
+        .quiz-title-section h2 {
             font-size: 1.8rem;
             color: var(--text-primary);
             margin-bottom: 5px;
@@ -508,30 +534,6 @@
         .quiz-subtitle {
             color: var(--text-secondary);
             font-size: 1rem;
-        }
-
-        .user-badge {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            border-radius: var(--radius-full);
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .user-badge .user-name {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .user-badge .class-badge {
-            background: rgba(245, 158, 11, 0.2);
-            color: var(--primary-yellow);
-            padding: 4px 12px;
-            border-radius: var(--radius-full);
-            font-size: 0.9rem;
-            font-weight: 600;
         }
 
         .chapters-grid {
@@ -613,16 +615,9 @@
             width: 100%;
         }
 
-        .navigation-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 40px;
-        }
-
         /* ===== QUIZ QUESTION SCREEN ===== */
         #quiz-question-screen {
-            min-height: 100vh;
-            padding: 20px;
+            min-height: calc(100vh - 100px);
         }
 
         .quiz-progress-container {
@@ -638,6 +633,8 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .progress-title {
@@ -686,6 +683,8 @@
             justify-content: space-between;
             color: var(--text-secondary);
             font-size: 0.9rem;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .question-container {
@@ -703,6 +702,7 @@
             margin-bottom: 25px;
             padding-bottom: 20px;
             border-bottom: 1px solid var(--dark-border);
+            flex-wrap: wrap;
         }
 
         .question-number {
@@ -723,6 +723,7 @@
             flex: 1;
             font-size: 1.1rem;
             color: var(--text-primary);
+            min-width: 200px;
         }
 
         .question-text {
@@ -872,8 +873,7 @@
 
         /* ===== RESULTS SCREEN ===== */
         #results-screen {
-            min-height: 100vh;
-            padding: 20px;
+            min-height: calc(100vh - 100px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1053,8 +1053,28 @@
 
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 768px) {
+            .main-header {
+                padding: 12px 15px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .header-left {
+                min-width: auto;
+            }
+            
+            .user-info {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
             .container {
                 padding: 15px;
+                padding-top: 150px;
             }
 
             .login-container {
@@ -1067,11 +1087,6 @@
 
             .chapters-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .quiz-header {
-                flex-direction: column;
-                text-align: center;
             }
 
             .question-text {
@@ -1092,7 +1107,7 @@
             }
 
             .btn {
-                padding: 16px 20px;
+                padding: 14px 18px;
             }
         }
 
@@ -1130,6 +1145,15 @@
             .option-text {
                 font-size: 1rem;
             }
+            
+            .app-title {
+                font-size: 1.3rem;
+            }
+            
+            .user-info {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
 
         /* ===== UTILITY CLASSES ===== */
@@ -1158,6 +1182,27 @@
     </style>
 </head>
 <body>
+    <!-- ===== FIXED HEADER ===== -->
+    <header class="main-header" id="main-header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="app-title">G.S. Tutorial</div>
+                <div class="app-creator">App created by Gobind Sharma</div>
+            </div>
+            <div class="user-info">
+                <div class="user-name-display">
+                    <span>👤</span>
+                    <span id="header-user-name">Guest</span>
+                    <span class="user-class-badge" id="header-user-class">Class 0</span>
+                </div>
+                <button id="header-logout-btn" class="btn btn-danger">
+                    <span>🚪</span>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
     <!-- ===== LOADER ===== -->
     <div id="loader" class="loader">
         <div class="loader-spinner"></div>
@@ -1202,32 +1247,6 @@
                     
                     <div id="login-error" class="error-message">
                         Invalid username or password. Please try again.
-                    </div>
-                    
-                    <div class="test-accounts">
-                        <h4>Test Accounts</h4>
-                        <div class="account-list">
-                            <div class="account-item">
-                                <span>Class 8 Student:</span>
-                                <span class="account-credentials">student8 / pass123</span>
-                            </div>
-                            <div class="account-item">
-                                <span>Class 9 Student:</span>
-                                <span class="account-credentials">student9 / pass456</span>
-                            </div>
-                            <div class="account-item">
-                                <span>Class 10 Student:</span>
-                                <span class="account-credentials">student10 / pass789</span>
-                            </div>
-                            <div class="account-item">
-                                <span>Teacher Account:</span>
-                                <span class="account-credentials">teacher1 / teacher123</span>
-                            </div>
-                            <div class="account-item">
-                                <span>Admin Account:</span>
-                                <span class="account-credentials">admin / admin123</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1288,15 +1307,9 @@
     <!-- ===== QUIZ SCREEN ===== -->
     <div id="quiz-screen" class="screen">
         <div class="container">
-            <div class="quiz-header">
-                <div class="quiz-title">
-                    <h2 id="current-class-subject">Class 8 - Science</h2>
-                    <p class="quiz-subtitle">Select a chapter to start practicing</p>
-                </div>
-                <div class="user-badge">
-                    <span class="user-name" id="quiz-user-name">Student</span>
-                    <span class="class-badge" id="quiz-user-class">Class 8</span>
-                </div>
+            <div class="quiz-title-section">
+                <h2 id="current-class-subject">Class 8 - Science</h2>
+                <p class="quiz-subtitle">Select a chapter to start practicing</p>
             </div>
             
             <div class="chapters-grid" id="chapters-container">
@@ -1318,17 +1331,6 @@
                         <span>Loading...</span>
                     </button>
                 </div>
-            </div>
-            
-            <div class="navigation-buttons">
-                <button id="back-to-selection-btn" class="btn btn-outline">
-                    <span>←</span>
-                    <span>Back to Selection</span>
-                </button>
-                <button id="logout-btn" class="btn btn-danger">
-                    <span>🚪</span>
-                    <span>Logout</span>
-                </button>
             </div>
         </div>
     </div>
@@ -1466,6 +1468,10 @@
         };
 
         const loader = document.getElementById('loader');
+        const mainHeader = document.getElementById('main-header');
+        const headerUserName = document.getElementById('header-user-name');
+        const headerUserClass = document.getElementById('header-user-class');
+        const headerLogoutBtn = document.getElementById('header-logout-btn');
 
         // Login screen elements
         const loginUsername = document.getElementById('login-username');
@@ -1481,11 +1487,7 @@
 
         // Quiz screen elements
         const currentClassSubject = document.getElementById('current-class-subject');
-        const quizUserName = document.getElementById('quiz-user-name');
-        const quizUserClass = document.getElementById('quiz-user-class');
         const chaptersContainer = document.getElementById('chapters-container');
-        const backToSelectionBtn = document.getElementById('back-to-selection-btn');
-        const logoutBtn = document.getElementById('logout-btn');
 
         // Quiz question screen elements
         const timerDisplay = document.getElementById('timer-display');
@@ -1519,16 +1521,215 @@
             
             try {
                 // Load app data
-                const response = await fetch('topics.json');
-                if (!response.ok) throw new Error('Failed to load topics.json');
-                appData = await response.json();
+                appData = {
+                    "classes": [
+                        {
+                            "id": "class8",
+                            "name": "Class 8",
+                            "subjects": [
+                                {
+                                    "id": "science",
+                                    "name": "Science",
+                                    "chapters": [
+                                        {
+                                            "name": "Crop Production and Management",
+                                            "file": "chapters/class8/science/chapter1.xml",
+                                            "description": "Learn about agricultural practices, crop types, and modern farming techniques.",
+                                            "questions": 15,
+                                            "time_limit": 30,
+                                            "difficulty": "Easy"
+                                        },
+                                        {
+                                            "name": "Microorganisms: Friend and Foe",
+                                            "file": "chapters/class8/science/chapter2.xml",
+                                            "description": "Explore the world of microorganisms and their role in our lives.",
+                                            "questions": 20,
+                                            "time_limit": 35,
+                                            "difficulty": "Medium"
+                                        },
+                                        {
+                                            "name": "Light",
+                                            "file": "chapters/class8/science/chapter3.xml",
+                                            "description": "Understand reflection, refraction, and properties of light.",
+                                            "questions": 18,
+                                            "time_limit": 40,
+                                            "difficulty": "Medium"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "mathematics",
+                                    "name": "Mathematics",
+                                    "chapters": [
+                                        {
+                                            "name": "Rational Numbers",
+                                            "file": "chapters/class8/maths/chapter1.xml",
+                                            "description": "Learn about rational numbers, their properties and operations.",
+                                            "questions": 20,
+                                            "time_limit": 40,
+                                            "difficulty": "Easy"
+                                        },
+                                        {
+                                            "name": "Linear Equations in One Variable",
+                                            "file": "chapters/class8/maths/chapter2.xml",
+                                            "description": "Solve linear equations and word problems.",
+                                            "questions": 25,
+                                            "time_limit": 45,
+                                            "difficulty": "Medium"
+                                        },
+                                        {
+                                            "name": "Understanding Quadrilaterals",
+                                            "file": "chapters/class8/maths/chapter3.xml",
+                                            "description": "Properties and types of quadrilaterals.",
+                                            "questions": 18,
+                                            "time_limit": 35,
+                                            "difficulty": "Medium"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "class9",
+                            "name": "Class 9",
+                            "subjects": [
+                                {
+                                    "id": "science",
+                                    "name": "Science",
+                                    "chapters": [
+                                        {
+                                            "name": "Matter in Our Surroundings",
+                                            "file": "chapters/class9/science/chapter1.xml",
+                                            "description": "States of matter and their interconversion.",
+                                            "questions": 20,
+                                            "time_limit": 35,
+                                            "difficulty": "Easy"
+                                        },
+                                        {
+                                            "name": "Force and Laws of Motion",
+                                            "file": "chapters/class9/science/chapter2.xml",
+                                            "description": "Newton's laws of motion and their applications.",
+                                            "questions": 25,
+                                            "time_limit": 45,
+                                            "difficulty": "Medium"
+                                        },
+                                        {
+                                            "name": "Atoms and Molecules",
+                                            "file": "chapters/class9/science/chapter3.xml",
+                                            "description": "Basic concepts of atoms, molecules and chemical formulas.",
+                                            "questions": 22,
+                                            "time_limit": 40,
+                                            "difficulty": "Hard"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "mathematics",
+                                    "name": "Mathematics",
+                                    "chapters": [
+                                        {
+                                            "name": "Number Systems",
+                                            "file": "chapters/class9/maths/chapter1.xml",
+                                            "description": "Real numbers, irrational numbers and their properties.",
+                                            "questions": 25,
+                                            "time_limit": 45,
+                                            "difficulty": "Medium"
+                                        },
+                                        {
+                                            "name": "Polynomials",
+                                            "file": "chapters/class9/maths/chapter2.xml",
+                                            "description": "Types of polynomials and their factorization.",
+                                            "questions": 20,
+                                            "time_limit": 40,
+                                            "difficulty": "Medium"
+                                        },
+                                        {
+                                            "name": "Coordinate Geometry",
+                                            "file": "chapters/class9/maths/chapter3.xml",
+                                            "description": "Cartesian system and plotting points.",
+                                            "questions": 18,
+                                            "time_limit": 35,
+                                            "difficulty": "Easy"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "class10",
+                            "name": "Class 10",
+                            "subjects": [
+                                {
+                                    "id": "science",
+                                    "name": "Science",
+                                    "chapters": [
+                                        {
+                                            "name": "Chemical Reactions and Equations",
+                                            "file": "chapters/class10/science/chapter1.xml",
+                                            "description": "Types of chemical reactions and balancing equations.",
+                                            "questions": 25,
+                                            "time_limit": 45,
+                                            "difficulty": "Medium"
+                                        },
+                                        {
+                                            "name": "Electricity",
+                                            "file": "chapters/class10/science/chapter2.xml",
+                                            "description": "Electric current, circuits and Ohm's law.",
+                                            "questions": 30,
+                                            "time_limit": 50,
+                                            "difficulty": "Hard"
+                                        },
+                                        {
+                                            "name": "Life Processes",
+                                            "file": "chapters/class10/science/chapter3.xml",
+                                            "description": "Nutrition, respiration and other life processes.",
+                                            "questions": 28,
+                                            "time_limit": 48,
+                                            "difficulty": "Medium"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "mathematics",
+                                    "name": "Mathematics",
+                                    "chapters": [
+                                        {
+                                            "name": "Real Numbers",
+                                            "file": "chapters/class10/maths/chapter1.xml",
+                                            "description": "Euclid's division lemma and fundamental theorem of arithmetic.",
+                                            "questions": 25,
+                                            "time_limit": 45,
+                                            "difficulty": "Medium"
+                                        },
+                                        {
+                                            "name": "Quadratic Equations",
+                                            "file": "chapters/class10/maths/chapter2.xml",
+                                            "description": "Solving quadratic equations using various methods.",
+                                            "questions": 30,
+                                            "time_limit": 50,
+                                            "difficulty": "Hard"
+                                        },
+                                        {
+                                            "name": "Triangles",
+                                            "file": "chapters/class10/maths/chapter3.xml",
+                                            "description": "Similarity criteria and properties of triangles.",
+                                            "questions": 22,
+                                            "time_limit": 42,
+                                            "difficulty": "Medium"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                };
                 
                 // Initialize the app
                 initializeApp();
                 hideLoader();
             } catch (error) {
                 console.error('Initialization error:', error);
-                showError('Failed to load app data. Please check your internet connection and refresh the page.');
+                showError('Failed to load app data. Please refresh the page.');
                 hideLoader();
             }
         });
@@ -1552,15 +1753,14 @@
             });
             togglePasswordBtn.addEventListener('click', togglePasswordVisibility);
 
+            // Header logout button
+            headerLogoutBtn.addEventListener('click', handleLogout);
+
             // Selection screen
             selectionCards.forEach(card => {
                 card.addEventListener('click', handleSelectionCardClick);
             });
             continueBtn.addEventListener('click', goToQuizScreen);
-
-            // Quiz screen
-            backToSelectionBtn.addEventListener('click', () => switchScreen('selection'));
-            logoutBtn.addEventListener('click', handleLogout);
 
             // Quiz question screen
             prevBtn.addEventListener('click', goToPreviousQuestion);
@@ -1582,6 +1782,13 @@
             
             // Show selected screen
             screens[screenName].classList.add('active');
+            
+            // Show/hide header based on screen
+            if (screenName === 'login') {
+                mainHeader.style.display = 'none';
+            } else {
+                mainHeader.style.display = 'block';
+            }
             
             // Special actions for specific screens
             switch(screenName) {
@@ -1623,32 +1830,19 @@
             showLoader('Authenticating...');
             
             try {
-                // Load users.xml
-                const response = await fetch('users.xml');
-                if (!response.ok) throw new Error('Failed to load users.xml');
-                const xmlText = await response.text();
-                const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(xmlText, 'application/xml');
+                // Predefined users (removed test accounts from UI)
+                const users = [
+                    { username: 'student8', password: 'pass123', name: 'Rahul Sharma', class: '8', role: 'student' },
+                    { username: 'student9', password: 'pass456', name: 'Priya Patel', class: '9', role: 'student' },
+                    { username: 'student10', password: 'pass789', name: 'Amit Kumar', class: '10', role: 'student' },
+                    { username: 'teacher1', password: 'teacher123', name: 'Mr. Gupta', class: '10', role: 'teacher' },
+                    { username: 'admin', password: 'admin123', name: 'Administrator', class: '10', role: 'admin' }
+                ];
 
                 // Find user
-                const users = xmlDoc.getElementsByTagName('user');
-                let userFound = null;
-
-                for (let i = 0; i < users.length; i++) {
-                    const user = users[i];
-                    const xmlUsername = user.getElementsByTagName('username')[0]?.textContent;
-                    const xmlPassword = user.getElementsByTagName('password')[0]?.textContent;
-
-                    if (xmlUsername === username && xmlPassword === password) {
-                        userFound = {
-                            username: xmlUsername,
-                            name: user.getElementsByTagName('name')[0]?.textContent || username,
-                            class: user.getElementsByTagName('class')[0]?.textContent || '8',
-                            role: user.getElementsByTagName('role')[0]?.textContent || 'student'
-                        };
-                        break;
-                    }
-                }
+                const userFound = users.find(user => 
+                    user.username === username && user.password === password
+                );
 
                 if (userFound) {
                     currentUser = userFound;
@@ -1656,8 +1850,8 @@
                     
                     // Update UI
                     displayUserName.textContent = currentUser.name;
-                    quizUserName.textContent = currentUser.name;
-                    quizUserClass.textContent = `Class ${currentUser.class}`;
+                    headerUserName.textContent = currentUser.name;
+                    headerUserClass.textContent = `Class ${currentUser.class}`;
                     
                     // Auto-select class based on user's class
                     const userClassId = `class${currentUser.class}`;
@@ -1675,7 +1869,7 @@
                 }
             } catch (error) {
                 console.error('Login error:', error);
-                showLoginError('Error loading user data. Please check users.xml file.');
+                showLoginError('Error during authentication.');
             } finally {
                 hideLoader();
             }
@@ -1866,57 +2060,8 @@
             showLoader('Loading quiz...');
             
             try {
-                // Load chapter XML
-                const response = await fetch(chapterFile);
-                if (!response.ok) throw new Error(`Failed to load ${chapterFile}`);
-                const xmlText = await response.text();
-                const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(xmlText, 'application/xml');
-                
-                // Parse metadata
-                const metadata = xmlDoc.getElementsByTagName('metadata')[0];
-                const timeLimit = parseInt(metadata.getElementsByTagName('timeLimit')[0]?.textContent || '30');
-                
-                // Parse questions
-                currentQuestions = [];
-                const questionNodes = xmlDoc.getElementsByTagName('question');
-                
-                for (let i = 0; i < questionNodes.length; i++) {
-                    const qNode = questionNodes[i];
-                    const question = {
-                        text: qNode.getElementsByTagName('text')[0]?.textContent || '',
-                        options: [],
-                        correctIndex: -1,
-                        explanation: qNode.getElementsByTagName('explanation')[0]?.textContent || 'No explanation available.'
-                    };
-                    
-                    const optionNodes = qNode.getElementsByTagName('option');
-                    for (let j = 0; j < optionNodes.length; j++) {
-                        const optNode = optionNodes[j];
-                        question.options.push(optNode.textContent);
-                        if (optNode.getAttribute('correct') === 'true') {
-                            question.correctIndex = j;
-                        }
-                    }
-                    
-                    if (question.text && question.options.length >= 2) {
-                        currentQuestions.push(question);
-                    }
-                }
-                
-                if (currentQuestions.length === 0) {
-                    throw new Error('No valid questions found in this chapter.');
-                }
-                
-                // Reset quiz state
-                currentQuestionIndex = 0;
-                userAnswers = new Array(currentQuestions.length).fill(null);
-                score = 0;
-                totalQuestions = currentQuestions.length;
-                timeRemaining = timeLimit * 60; // Convert to seconds
-                currentChapterFile = chapterFile;
-                currentChapterTitle = chapterTitle;
-                quizStartTime = Date.now();
+                // Generate sample questions for demo (since XML files don't exist)
+                generateSampleQuestions(chapterTitle);
                 
                 // Update UI
                 questionChapter.textContent = `Chapter: ${chapterTitle}`;
@@ -1927,10 +2072,78 @@
                 
             } catch (error) {
                 console.error('Error starting quiz:', error);
-                alert(`Error loading quiz: ${error.message}\nPlease check if the XML file exists.`);
+                alert(`Error loading quiz: ${error.message}`);
             } finally {
                 hideLoader();
             }
+        }
+
+        function generateSampleQuestions(chapterTitle) {
+            // Generate sample questions for demonstration
+            currentQuestions = [];
+            const subjects = {
+                'Crop Production and Management': [
+                    "Which agricultural practice involves turning and loosening of soil?",
+                    "What is the process of supplying water to crops at regular intervals called?",
+                    "Which farming method uses organic manure and natural pesticides?"
+                ],
+                'Microorganisms: Friend and Foe': [
+                    "Which microorganism is used in making bread?",
+                    "What disease is caused by a protozoan?",
+                    "Which bacteria helps in nitrogen fixation?"
+                ],
+                'Light': [
+                    "What is the bouncing back of light when it strikes a surface called?",
+                    "Which mirror always forms a virtual, erect and diminished image?",
+                    "What is the splitting of white light into seven colors called?"
+                ],
+                'Rational Numbers': [
+                    "What is the additive inverse of -5/7?",
+                    "Which property states that a × b = b × a?",
+                    "What is the multiplicative identity for rational numbers?"
+                ]
+            };
+
+            const sampleQuestions = subjects[chapterTitle] || [
+                "What is the capital of France?",
+                "Which planet is known as the Red Planet?",
+                "What is the chemical symbol for water?"
+            ];
+
+            const optionsList = [
+                ["Tilling", "Ploughing", "Leveling", "Harvesting"],
+                ["Harvesting", "Irrigation", "Sowing", "Weeding"],
+                ["Organic farming", "Hydroponics", "Mixed farming", "Intensive farming"],
+                ["Yeast", "Bacteria", "Virus", "Protozoa"],
+                ["Malaria", "Typhoid", "Cholera", "Tuberculosis"],
+                ["Rhizobium", "E.coli", "Salmonella", "Lactobacillus"],
+                ["Reflection", "Refraction", "Dispersion", "Scattering"],
+                ["Concave mirror", "Convex mirror", "Plane mirror", "Spherical mirror"],
+                ["Reflection", "Refraction", "Dispersion", "Scattering"],
+                ["5/7", "-5/7", "7/5", "-7/5"],
+                ["Commutative", "Associative", "Distributive", "Identity"],
+                ["0", "1", "-1", "The number itself"]
+            ];
+
+            sampleQuestions.forEach((question, index) => {
+                const qIndex = Math.min(index, optionsList.length - 1);
+                currentQuestions.push({
+                    text: question,
+                    options: optionsList[qIndex],
+                    correctIndex: 0,
+                    explanation: "This is a sample explanation for demonstration purposes. In the actual application, this would contain detailed information about the correct answer."
+                });
+            });
+            
+            // Reset quiz state
+            currentQuestionIndex = 0;
+            userAnswers = new Array(currentQuestions.length).fill(null);
+            score = 0;
+            totalQuestions = currentQuestions.length;
+            timeRemaining = 30 * 60; // 30 minutes
+            currentChapterFile = chapterFile;
+            currentChapterTitle = chapterTitle;
+            quizStartTime = Date.now();
         }
 
         function startQuizTimer() {
