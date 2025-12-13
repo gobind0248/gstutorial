@@ -2571,16 +2571,40 @@
           }
         }
         
-        // If no XML file found, show error
+        // If no XML file found, show clean error message
         if (!xmlText) {
-          const errorMsg = `XML file not found. Tried: ${pathOptions.join(', ')}`;
-          console.error(errorMsg);
-          throw new Error(errorMsg);
+          const cleanErrorMessage = `XML file not found for chapter: "${trimmed}".xml`;
+          console.error("XML file not found. Tried paths:", pathOptions);
+          
+          // Show user-friendly error
+          questionTextEl.textContent = `Error: ${cleanErrorMessage}`;
+          optionsListEl.innerHTML = "";
+          feedbackEl.textContent = "";
+          nextBtn.disabled = true;
+          previousBtn.disabled = true;
+          finishBtn.disabled = true;
+          quizTopicNameEl.textContent = "Error loading chapter";
+          quizTopicNameEl.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
+          quizTopicNameEl.style.borderColor = "rgba(239, 68, 68, 0.5)";
+          quizTopicNameEl.style.color = "#fca5a5";
+          quizQuestionCountEl.textContent = "0 questions";
+          
+          // Show error in console for debugging but clean message to user
+          console.error("Full error details for debugging:", {
+            chapter: trimmed,
+            cleanedChapter: cleanChapterName,
+            subject: currentSubject,
+            class: currentClass,
+            triedPaths: pathOptions
+          });
+          
+          resetInactivityTimer();
+          return;
         }
 
         const rawQuestions = parseXMLToQuestions(xmlText);
         if (rawQuestions.length === 0) {
-          throw new Error(`No valid questions found in ${successfulPath}. Check XML format.`);
+          throw new Error(`No valid questions found in ${trimmed}.xml. Check XML format.`);
         }
 
         const randomize = randomToggleEl.checked;
@@ -2609,7 +2633,13 @@
         
       } catch (err) {
         console.error("Error loading questions:", err);
-        questionTextEl.textContent = `Error: ${err.message}`;
+        
+        // Show clean error message without path details
+        const errorMessage = err.message.includes("not found") 
+          ? `XML file not found for chapter: "${trimmed}".xml` 
+          : err.message;
+          
+        questionTextEl.textContent = `Error: ${errorMessage}`;
         optionsListEl.innerHTML = "";
         feedbackEl.textContent = "";
         nextBtn.disabled = true;
@@ -2716,6 +2746,3 @@
   </script>
 </body>
 </html>
-
-
-
