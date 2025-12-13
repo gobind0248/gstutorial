@@ -3,7 +3,7 @@
   <!-- Teacher/Admin Account -->
   <user>
     <username>admin</username>
-    <password>admin123</password>
+    <password>123</password>
     <name>G.S. Tutorial Admin</name>
     <role>admin</role>
   </user>
@@ -59,4 +59,5 @@
     <class>10</class>
     <role>student</role>
   </user>
+
 </users>
