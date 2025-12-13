@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <timeLimit>30</timeLimit>
+    <author>G. S. Tutorial</author>
+    <description>Class 10 Mathematics - Chapter 1: Real Numbers</description>
+  </metadata>
+  
+  <question>
+    <text>HCF of 26 and 91 is:</text>
+    <option>1</option>
+    <option correct="true">13</option>
+    <option>26</option>
+    <option>91</option>
+    <explanation>26=2×13, 91=7×13. Common factor is 13, so HCF=13.</explanation>
+  </question>
+  
+  <question>
+    <text>Which is not an irrational number?</text>
+    <option>π</option>
+    <option>√2</option>
+    <option>√3</option>
+    <option correct="true">√4</option>
+    <explanation>√4=2, which is rational. Others are irrational.</explanation>
+  </question>
+  
+  <question>
+    <text>Euclid's division lemma states: a = bq + r where:</text>
+    <option>0 ≤ r < b</option>
+    <option correct="true">0 ≤ r < b</option>
+    <option>0 < r ≤ b</option>
+    <option>0 < r < b</option>
+    <explanation>In a = bq + r, r must satisfy 0 ≤ r < b.</explanation>
+  </question>
+  
+  <question>
+    <text>LCM of 12 and 18 is:</text>
+    <option>36</option>
+    <option correct="true">36</option>
+    <option>72</option>
+    <option>216</option>
+    <explanation>12=2²×3, 18=2×3². LCM=2²×3²=4×9=36</explanation>
+  </question>
+  
+  <question>
+    <text>Decimal expansion of 13/3125 will be:</text>
+    <option>Terminating</option>
+    <option correct="true">Terminating</option>
+    <option>Non-terminating repeating</option>
+    <option>Non-terminating non-repeating</option>
+    <explanation>3125=5^5 (only prime factor 5), so decimal will be terminating.</explanation>
+  </question>
+  
+  <question>
+    <text>HCF of 96 and 404 is:</text>
+    <option>2</option>
+    <option>4</option>
+    <option correct="true">4</option>
+    <option>8</option>
+    <explanation>96=2^5×3, 404=2²×101. HCF=2²=4</explanation>
+  </question>
+  
+  <question>
+    <text>Which of these is irrational?</text>
+    <option>0.14</option>
+    <option>0.1416</option>
+    <option correct="true">0.141141114...</option>
+    <option>0.4014001400014...</option>
+    <explanation>It's non-terminating non-repeating decimal, hence irrational.</explanation>
+  </question>
+  
+  <question>
+    <text>If HCF(306, 657)=9, then LCM(306, 657)=?</text>
+    <option>22338</option>
+    <option correct="true">22338</option>
+    <option>11234</option>
+    <option>44676</option>
+    <explanation>LCM×HCF=Product of numbers. LCM=(306×657)/9=22338</explanation>
+  </question>
+  
+  <question>
+    <text>√2 is:</text>
+    <option>A rational number</option>
+    <option correct="true">An irrational number</option>
+    <option>An integer</option>
+    <option>A natural number</option>
+    <explanation>√2 cannot be expressed as p/q where p,q are integers, so it's irrational.</explanation>
+  </question>
+  
+  <question>
+    <text>Express 140 as product of primes:</text>
+    <option>2×5×7</option>
+    <option correct="true">2²×5×7</option>
+    <option>2×70</option>
+    <option>4×5×7</option>
+    <explanation>140=14×10=2×7×2×5=2²×5×7</explanation>
+  </question>
+  
+  <question>
+    <text>Which will have terminating decimal?</text>
+    <option>15/1600</option>
+    <option correct="true">15/1600</option>
+    <option>17/1600</option>
+    <option>19/1600</option>
+    <explanation>1600=2^6×5² (only factors 2 and 5), so all will terminate, but question asks for one.</explanation>
+  </question>
+  
+  <question>
+    <text>Find HCF of 135 and 225</text>
+    <option>5</option>
+    <option>15</option>
+    <option correct="true">45</option>
+    <option>75</option>
+    <explanation>135=3³×5, 225=3²×5². HCF=3²×5=9×5=45</explanation>
+  </question>
+  
+  <question>
+    <text>Fundamental Theorem of Arithmetic states:</text>
+    <option>Every composite number can be factorized as product of primes</option>
+    <option>This factorization is unique</option>
+    <option correct="true">Both of these</option>
+    <option>None of these</option>
+    <explanation>Every composite number can be expressed as product of primes uniquely, apart from order.</explanation>
+  </question>
+  
+  <question>
+    <text>Which has non-terminating repeating decimal?</text>
+    <option>23/8</option>
+    <option>35/50</option>
+    <option>17/25</option>
+    <option correct="true">29/343</option>
+    <explanation>343=7³ (has prime factor 7 other than 2 and 5), so decimal will be non-terminating repeating.</explanation>
+  </question>
+  
+  <question>
+    <text>√10 × √15 = ?</text>
+    <option>5√6</option>
+    <option correct="true">5√6</option>
+    <option>25</option>
+    <option>150</option>
+    <explanation>√10 × √15 = √(10×15) = √150 = √(25×6) = 5√6</explanation>
+  </question>
+  
+  <question>
+    <text>If n is odd, then n² - 1 is divisible by:</text>
+    <option>3</option>
+    <option>5</option>
+    <option correct="true">8</option>
+    <option>16</option>
+    <explanation>For odd n=2k+1, n²-1=4k(k+1). Since k(k+1) is even, divisible by 8.</explanation>
+  </question>
+  
+  <question>
+    <text>HCF of smallest prime and smallest composite is:</text>
+    <option>0</option>
+    <option>1</option>
+    <option correct="true">2</option>
+    <option>4</option>
+    <explanation>Smallest prime=2, smallest composite=4. HCF(2,4)=2</explanation>
+  </question>
+  
+  <question>
+    <text>√(6+√(6+√(6+...))) = ?</text>
+    <option>2</option>
+    <option>3</option>
+    <option correct="true">3</option>
+    <option>6</option>
+    <explanation>Let x=√(6+x). Then x²=6+x → x²-x-6=0 → (x-3)(x+2)=0 → x=3 (positive)</explanation>
+  </question>
+  
+  <question>
+    <text>If p is prime, √p is:</text>
+    <option>Rational</option>
+    <option correct="true">Irrational</option>
+    <option>Integer</option>
+    <option>Natural</option>
+    <explanation>Square root of a prime number is always irrational.</explanation>
+  </question>
+  
+  <question>
+    <text>After how many places will 17/8 terminate?</text>
+    <option>1</option>
+    <option>2</option>
+    <option correct="true">3</option>
+    <option>4</option>
+    <explanation>17/8=2.125 terminates after 3 decimal places.</explanation>
+  </question>
+</quiz>
