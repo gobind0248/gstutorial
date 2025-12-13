@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <timeLimit>30</timeLimit>
+    <author>G. S. Tutorial</author>
+    <description>Class 9 Mathematics - Chapter 1: Number Systems</description>
+  </metadata>
+  
+  <question>
+    <text>Every rational number is:</text>
+    <option>A natural number</option>
+    <option>An integer</option>
+    <option correct="true">A real number</option>
+    <option>None of these</option>
+    <explanation>All rational numbers are real numbers, but not all real numbers are rational.</explanation>
+  </question>
+  
+  <question>
+    <text>Which of these is an irrational number?</text>
+    <option>√4</option>
+    <option>√(9/16)</option>
+    <option correct="true">√2</option>
+    <option>√0.04</option>
+    <explanation>√2 cannot be expressed as p/q where p and q are integers, so it's irrational.</explanation>
+  </question>
+  
+  <question>
+    <text>Decimal representation of a rational number cannot be:</text>
+    <option>Terminating</option>
+    <option>Non-terminating</option>
+    <option>Non-terminating repeating</option>
+    <option correct="true">Non-terminating non-repeating</option>
+    <explanation>Rational numbers have either terminating or non-terminating repeating decimals.</explanation>
+  </question>
+  
+  <question>
+    <text>The product of any two irrational numbers is:</text>
+    <option>Always irrational</option>
+    <option correct="true">Sometimes rational, sometimes irrational</option>
+    <option>Always rational</option>
+    <option>Always integer</option>
+    <explanation>Example: √2 × √2 = 2 (rational) but √2 × √3 = √6 (irrational)</explanation>
+  </question>
+  
+  <question>
+    <text>Which of these lies between 0 and 1?</text>
+    <option>π</option>
+    <option>√2</option>
+    <option correct="true">0.1010010001...</option>
+    <option>1.010010001...</option>
+    <explanation>0.1010010001... is greater than 0 and less than 1.</explanation>
+  </question>
+  
+  <question>
+    <text>If x = 2 + √3, then x + 1/x = ?</text>
+    <option>2</option>
+    <option correct="true">4</option>
+    <option>6</option>
+    <option>8</option>
+    <explanation>1/x = 1/(2+√3) = (2-√3)/(4-3) = 2-√3. So x + 1/x = (2+√3)+(2-√3)=4</explanation>
+  </question>
+  
+  <question>
+    <text>Rationalize: 1/(√5 + √2)</text>
+    <option>(√5 - √2)/3</option>
+    <option correct="true">(√5 - √2)/3</option>
+    <option>(√5 + √2)/3</option>
+    <option>(√2 - √5)/3</option>
+    <explanation>Multiply numerator and denominator by (√5 - √2): (√5-√2)/(5-2) = (√5-√2)/3</explanation>
+  </question>
+  
+  <question>
+    <text>√6 × √24 = ?</text>
+    <option>12</option>
+    <option correct="true">12</option>
+    <option>6√4</option>
+    <option>24</option>
+    <explanation>√6 × √24 = √(6×24) = √144 = 12</explanation>
+  </question>
+  
+  <question>
+    <text>Which is greater: 3√3 or 4√2?</text>
+    <option>3√3</option>
+    <option correct="true">4√2</option>
+    <option>Both equal</option>
+    <option>Cannot compare</option>
+    <explanation>3√3 ≈ 5.196, 4√2 ≈ 5.657. So 4√2 > 3√3</explanation>
+  </question>
+  
+  <question>
+    <text>Find two rational numbers between 1/3 and 1/2</text>
+    <option>0.4, 0.45</option>
+    <option correct="true">5/12, 7/16</option>
+    <option>0.3, 0.4</option>
+    <option>2/5, 3/7</option>
+    <explanation>1/3=0.333, 1/2=0.5. 5/12≈0.417 and 7/16=0.4375 lie between them.</explanation>
+  </question>
+  
+  <question>
+    <text>Simplify: (3+√3)(3-√3)</text>
+    <option>6</option>
+    <option>9</option>
+    <option correct="true">6</option>
+    <option>3</option>
+    <explanation>Using (a+b)(a-b)=a²-b²: 3² - (√3)² = 9 - 3 = 6</explanation>
+  </question>
+  
+  <question>
+    <text>The decimal expansion of 17/8 is:</text>
+    <option correct="true">2.125</option>
+    <option>2.15</option>
+    <option>2.2</option>
+    <option>2.25</option>
+    <explanation>17 ÷ 8 = 2.125 (terminating decimal)</explanation>
+  </question>
+  
+  <question>
+    <text>If x = 3-2√2, then 1/x = ?</text>
+    <option>3+2√2</option>
+    <option correct="true">3+2√2</option>
+    <option>3-2√2</option>
+    <option>-3+2√2</option>
+    <explanation>1/(3-2√2) = (3+2√2)/(9-8) = 3+2√2</explanation>
+  </question>
+  
+  <question>
+    <text>√45 × √20 = ?</text>
+    <option>30</option>
+    <option correct="true">30</option>
+    <option>45</option>
+    <option>60</option>
+    <explanation>√45 × √20 = √(45×20) = √900 = 30</explanation>
+  </question>
+  
+  <question>
+    <text>Express 0.4777... in p/q form</text>
+    <option>43/90</option>
+    <option correct="true">43/90</option>
+    <option>47/99</option>
+    <option>477/999</option>
+    <explanation>Let x=0.4777... Then 10x=4.777... and 100x=47.777... Subtract: 90x=43 → x=43/90</explanation>
+  </question>
+  
+  <question>
+    <text>Which is irrational?</text>
+    <option>0.14</option>
+    <option>0.1416</option>
+    <option correct="true">0.141141114...</option>
+    <option>0.1414</option>
+    <explanation>0.141141114... is non-terminating non-repeating, hence irrational.</explanation>
+  </question>
+  
+  <question>
+    <text>Simplify: (√5+√2)²</text>
+    <option>7</option>
+    <option correct="true">7+2√10</option>
+    <option>5+2√10</option>
+    <option>7+√10</option>
+    <explanation>(√5+√2)² = (√5)²+(√2)²+2(√5)(√2) = 5+2+2√10 = 7+2√10</explanation>
+  </question>
+  
+  <question>
+    <text>Find the value of: (256)^(0.16) × (256)^(0.09)</text>
+    <option>4</option>
+    <option>16</option>
+    <option correct="true">4</option>
+    <option>64</option>
+    <explanation>(256)^(0.16) × (256)^(0.09) = 256^(0.25) = 256^(1/4) = 4</explanation>
+  </question>
+  
+  <question>
+    <text>If √2 = 1.414, then √8 = ?</text>
+    <option>2.828</option>
+    <option correct="true">2.828</option>
+    <option>4.242</option>
+    <option>1.414</option>
+    <explanation>√8 = √(4×2) = 2√2 = 2×1.414 = 2.828</explanation>
+  </question>
+  
+  <question>
+    <text>Classify: 1.010010001...</text>
+    <option>Rational</option>
+    <option correct="true">Irrational</option>
+    <option>Integer</option>
+    <option>Natural</option>
+    <explanation>It's non-terminating non-repeating decimal, hence irrational.</explanation>
+  </question>
+</quiz>
