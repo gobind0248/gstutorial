@@ -1,6 +1,9 @@
 {
   "app_name": "G.S. Tutorial - Classes 8-10",
-  "version": "1.0",
+  "version": "2.0",
+  "author": "Gobind Sharma",
+  "description": "Interactive quiz app for Science and Mathematics",
+  "last_updated": "2024-01-15",
   "classes": [
     {
       "id": "class8",
@@ -8,6 +11,7 @@
       "folder": "Class 8",
       "icon": "🎒",
       "color": "#3b82f6",
+      "description": "For students studying in Class 8",
       "subjects": [
         {
           "id": "science",
@@ -15,22 +19,52 @@
           "icon": "🔬",
           "color": "#22c55e",
           "folder": "Science",
+          "description": "Physics, Chemistry, and Biology",
           "chapters": [
             {
               "id": "ch1",
-              "name": "Crop Production and Management",
+              "name": "Chapter 1: Crop Production and Management",
               "file": "Class 8/Science/Chapter 1 - Crop Production.xml",
               "questions": 20,
               "time_limit": 30,
-              "difficulty": "Medium"
+              "difficulty": "Medium",
+              "description": "Agricultural practices, crop production, and management"
             },
             {
               "id": "ch2",
-              "name": "Microorganisms: Friend and Foe",
+              "name": "Chapter 2: Microorganisms: Friend and Foe",
               "file": "Class 8/Science/Chapter 2 - Microorganisms.xml",
               "questions": 25,
               "time_limit": 35,
-              "difficulty": "Medium"
+              "difficulty": "Medium",
+              "description": "Types of microorganisms, their uses and harmful effects"
+            },
+            {
+              "id": "ch3",
+              "name": "Chapter 3: Synthetic Fibres and Plastics",
+              "file": "Class 8/Science/Chapter 3 - Synthetic Fibres.xml",
+              "questions": 18,
+              "time_limit": 25,
+              "difficulty": "Easy",
+              "description": "Types of fibres, plastics and their environmental impact"
+            },
+            {
+              "id": "ch4",
+              "name": "Chapter 4: Materials: Metals and Non-Metals",
+              "file": "Class 8/Science/Chapter 4 - Metals Non-Metals.xml",
+              "questions": 22,
+              "time_limit": 30,
+              "difficulty": "Medium",
+              "description": "Properties and uses of metals and non-metals"
+            },
+            {
+              "id": "ch5",
+              "name": "Chapter 5: Coal and Petroleum",
+              "file": "Class 8/Science/Chapter 5 - Coal Petroleum.xml",
+              "questions": 20,
+              "time_limit": 30,
+              "difficulty": "Medium",
+              "description": "Fossil fuels, their formation and conservation"
             }
           ]
         },
@@ -40,22 +74,52 @@
           "icon": "📐",
           "color": "#f59e0b",
           "folder": "Mathematics",
+          "description": "Algebra, Geometry, and Arithmetic",
           "chapters": [
             {
               "id": "ch1",
-              "name": "Rational Numbers",
+              "name": "Chapter 1: Rational Numbers",
               "file": "Class 8/Mathematics/Chapter 1 - Rational Numbers.xml",
               "questions": 18,
               "time_limit": 25,
-              "difficulty": "Medium"
+              "difficulty": "Medium",
+              "description": "Properties and operations on rational numbers"
             },
             {
               "id": "ch2",
-              "name": "Linear Equations in One Variable",
+              "name": "Chapter 2: Linear Equations in One Variable",
               "file": "Class 8/Mathematics/Chapter 2 - Linear Equations.xml",
               "questions": 22,
               "time_limit": 30,
-              "difficulty": "Medium"
+              "difficulty": "Medium",
+              "description": "Solving linear equations and word problems"
+            },
+            {
+              "id": "ch3",
+              "name": "Chapter 3: Understanding Quadrilaterals",
+              "file": "Class 8/Mathematics/Chapter 3 - Quadrilaterals.xml",
+              "questions": 20,
+              "time_limit": 30,
+              "difficulty": "Medium",
+              "description": "Properties of quadrilaterals and polygons"
+            },
+            {
+              "id": "ch4",
+              "name": "Chapter 4: Practical Geometry",
+              "file": "Class 8/Mathematics/Chapter 4 - Practical Geometry.xml",
+              "questions": 15,
+              "time_limit": 25,
+              "difficulty": "Easy",
+              "description": "Construction of quadrilaterals and shapes"
+            },
+            {
+              "id": "ch5",
+              "name": "Chapter 5: Data Handling",
+              "file": "Class 8/Mathematics/Chapter 5 - Data Handling.xml",
+              "questions": 20,
+              "time_limit": 30,
+              "difficulty": "Medium",
+              "description": "Graphical representation of data, probability"
             }
           ]
         }
@@ -67,6 +131,7 @@
       "folder": "Class 9",
       "icon": "📚",
       "color": "#8b5cf6",
+      "description": "For students studying in Class 9",
       "subjects": [
         {
           "id": "science",
@@ -77,19 +142,48 @@
           "chapters": [
             {
               "id": "ch1",
-              "name": "Matter in Our Surroundings",
+              "name": "Chapter 1: Matter in Our Surroundings",
               "file": "Class 9/Science/Chapter 1 - Matter.xml",
               "questions": 20,
               "time_limit": 30,
-              "difficulty": "Medium"
+              "difficulty": "Medium",
+              "description": "States of matter, evaporation, and condensation"
             },
             {
               "id": "ch2",
-              "name": "Is Matter Around Us Pure?",
+              "name": "Chapter 2: Is Matter Around Us Pure?",
               "file": "Class 9/Science/Chapter 2 - Pure Matter.xml",
               "questions": 22,
               "time_limit": 35,
-              "difficulty": "Medium"
+              "difficulty": "Medium",
+              "description": "Mixtures, solutions, and separation techniques"
+            },
+            {
+              "id": "ch3",
+              "name": "Chapter 3: Atoms and Molecules",
+              "file": "Class 9/Science/Chapter 3 - Atoms Molecules.xml",
+              "questions": 25,
+              "time_limit": 35,
+              "difficulty": "Hard",
+              "description": "Atomic structure, molecules, and chemical formulas"
+            },
+            {
+              "id": "ch4",
+              "name": "Chapter 4: Structure of the Atom",
+              "file": "Class 9/Science/Chapter 4 - Atom Structure.xml",
+              "questions": 20,
+              "time_limit": 30,
+              "difficulty": "Hard",
+              "description": "Atomic models, electrons, protons, and neutrons"
+            },
+            {
+              "id": "ch5",
+              "name": "Chapter 5: The Fundamental Unit of Life",
+              "file": "Class 9/Science/Chapter 5 - Cell.xml",
+              "questions": 18,
+              "time_limit": 25,
+              "difficulty": "Medium",
+              "description": "Cell structure, organelles, and functions"
             }
           ]
         },
@@ -102,19 +196,48 @@
           "chapters": [
             {
               "id": "ch1",
-              "name": "Number Systems",
+              "name": "Chapter 1: Number Systems",
               "file": "Class 9/Mathematics/Chapter 1 - Number Systems.xml",
               "questions": 20,
               "time_limit": 30,
-              "difficulty": "Medium"
+              "difficulty": "Medium",
+              "description": "Real numbers, irrational numbers, and their properties"
             },
             {
               "id": "ch2",
-              "name": "Polynomials",
+              "name": "Chapter 2: Polynomials",
               "file": "Class 9/Mathematics/Chapter 2 - Polynomials.xml",
               "questions": 24,
               "time_limit": 35,
-              "difficulty": "Hard"
+              "difficulty": "Hard",
+              "description": "Polynomial operations, factorization, and remainder theorem"
+            },
+            {
+              "id": "ch3",
+              "name": "Chapter 3: Coordinate Geometry",
+              "file": "Class 9/Mathematics/Chapter 3 - Coordinate Geometry.xml",
+              "questions": 18,
+              "time_limit": 25,
+              "difficulty": "Medium",
+              "description": "Cartesian plane, plotting points, and distance formula"
+            },
+            {
+              "id": "ch4",
+              "name": "Chapter 4: Linear Equations in Two Variables",
+              "file": "Class 9/Mathematics/Chapter 4 - Linear Equations Two.xml",
+              "questions": 22,
+              "time_limit": 30,
+              "difficulty": "Medium",
+              "description": "Graphical method and algebraic methods"
+            },
+            {
+              "id": "ch5",
+              "name": "Chapter 5: Introduction to Euclid's Geometry",
+              "file": "Class 9/Mathematics/Chapter 5 - Euclid Geometry.xml",
+              "questions": 15,
+              "time_limit": 20,
+              "difficulty": "Easy",
+              "description": "Euclid's axioms and postulates"
             }
           ]
         }
@@ -126,6 +249,7 @@
       "folder": "Class 10",
       "icon": "🎓",
       "color": "#ef4444",
+      "description": "For students studying in Class 10",
       "subjects": [
         {
           "id": "science",
@@ -136,19 +260,48 @@
           "chapters": [
             {
               "id": "ch1",
-              "name": "Chemical Reactions and Equations",
+              "name": "Chapter 1: Chemical Reactions and Equations",
               "file": "Class 10/Science/Chapter 1 - Chemical Reactions.xml",
               "questions": 25,
               "time_limit": 35,
-              "difficulty": "Hard"
+              "difficulty": "Hard",
+              "description": "Types of chemical reactions and balancing equations"
             },
             {
               "id": "ch2",
-              "name": "Acids, Bases and Salts",
+              "name": "Chapter 2: Acids, Bases and Salts",
               "file": "Class 10/Science/Chapter 2 - Acids Bases Salts.xml",
               "questions": 22,
               "time_limit": 30,
-              "difficulty": "Hard"
+              "difficulty": "Hard",
+              "description": "Properties of acids and bases, pH scale"
+            },
+            {
+              "id": "ch3",
+              "name": "Chapter 3: Metals and Non-metals",
+              "file": "Class 10/Science/Chapter 3 - Metals Non-Metals.xml",
+              "questions": 20,
+              "time_limit": 30,
+              "difficulty": "Medium",
+              "description": "Properties, reactivity series, and extraction"
+            },
+            {
+              "id": "ch4",
+              "name": "Chapter 4: Carbon and Its Compounds",
+              "file": "Class 10/Science/Chapter 4 - Carbon Compounds.xml",
+              "questions": 25,
+              "time_limit": 35,
+              "difficulty": "Hard",
+              "description": "Covalent bonding, hydrocarbons, and functional groups"
+            },
+            {
+              "id": "ch5",
+              "name": "Chapter 5: Periodic Classification of Elements",
+              "file": "Class 10/Science/Chapter 5 - Periodic Table.xml",
+              "questions": 18,
+              "time_limit": 25,
+              "difficulty": "Medium",
+              "description": "Modern periodic table and periodic trends"
             }
           ]
         },
@@ -161,19 +314,48 @@
           "chapters": [
             {
               "id": "ch1",
-              "name": "Real Numbers",
+              "name": "Chapter 1: Real Numbers",
               "file": "Class 10/Mathematics/Chapter 1 - Real Numbers.xml",
               "questions": 20,
               "time_limit": 30,
-              "difficulty": "Medium"
+              "difficulty": "Medium",
+              "description": "Euclid's division algorithm and fundamental theorem"
             },
             {
               "id": "ch2",
-              "name": "Polynomials",
+              "name": "Chapter 2: Polynomials",
               "file": "Class 10/Mathematics/Chapter 2 - Polynomials.xml",
               "questions": 22,
               "time_limit": 35,
-              "difficulty": "Hard"
+              "difficulty": "Hard",
+              "description": "Zeroes of polynomials and division algorithm"
+            },
+            {
+              "id": "ch3",
+              "name": "Chapter 3: Pair of Linear Equations in Two Variables",
+              "file": "Class 10/Mathematics/Chapter 3 - Linear Equations Pair.xml",
+              "questions": 24,
+              "time_limit": 35,
+              "difficulty": "Hard",
+              "description": "Graphical and algebraic methods of solving"
+            },
+            {
+              "id": "ch4",
+              "name": "Chapter 4: Quadratic Equations",
+              "file": "Class 10/Mathematics/Chapter 4 - Quadratic Equations.xml",
+              "questions": 22,
+              "time_limit": 35,
+              "difficulty": "Hard",
+              "description": "Solving quadratic equations by various methods"
+            },
+            {
+              "id": "ch5",
+              "name": "Chapter 5: Arithmetic Progressions",
+              "file": "Class 10/Mathematics/Chapter 5 - Arithmetic Progressions.xml",
+              "questions": 20,
+              "time_limit": 30,
+              "difficulty": "Medium",
+              "description": "nth term and sum of n terms of AP"
             }
           ]
         }
