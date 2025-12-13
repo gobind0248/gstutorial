@@ -5,8 +5,11 @@
     <class>8</class>
     <subject>Science</subject>
     <chapter>1</chapter>
+    <author>G.S. Tutorial</author>
     <timeLimit>30</timeLimit>
     <difficulty>Medium</difficulty>
+    <version>1.0</version>
+    <lastUpdated>2024-01-15</lastUpdated>
   </metadata>
   
   <question>
@@ -15,7 +18,7 @@
     <option correct="false">Maize</option>
     <option correct="true">Wheat</option>
     <option correct="false">Soybean</option>
-    <explanation>Wheat is a rabi crop, sown in winter and harvested in spring.</explanation>
+    <explanation>Wheat is a rabi crop, sown in winter and harvested in spring. Kharif crops are sown with the onset of monsoon and harvested in autumn.</explanation>
   </question>
   
   <question>
@@ -24,7 +27,7 @@
     <option correct="false">Harvesting</option>
     <option correct="false">Irrigation</option>
     <option correct="false">Sowing</option>
-    <explanation>Ploughing is the process of loosening and turning the soil.</explanation>
+    <explanation>Ploughing is the process of loosening and turning the soil to make it suitable for sowing seeds.</explanation>
   </question>
   
   <question>
@@ -33,7 +36,7 @@
     <option correct="true">Plough</option>
     <option correct="false">Seed drill</option>
     <option correct="false">Hoe</option>
-    <explanation>A plough is used for tilling the soil, preparing it for sowing.</explanation>
+    <explanation>A plough is used for tilling the soil, preparing it for sowing. It breaks soil clumps and brings nutrient-rich soil to the top.</explanation>
   </question>
   
   <question>
@@ -42,7 +45,7 @@
     <option correct="false">Oxygen</option>
     <option correct="false">Carbon dioxide</option>
     <option correct="false">Hydrogen</option>
-    <explanation>Rhizobium bacteria fix atmospheric nitrogen into a usable form for plants.</explanation>
+    <explanation>Rhizobium bacteria live in root nodules of leguminous plants and convert atmospheric nitrogen into a usable form for plants.</explanation>
   </question>
   
   <question>
@@ -51,6 +54,96 @@
     <option correct="true">Weeding</option>
     <option correct="false">Harvesting</option>
     <option correct="false">Threshing</option>
-    <explanation>The process of removing weeds from the field is called weeding.</explanation>
+    <explanation>The process of removing weeds from the field is called weeding. Weeds compete with crops for nutrients, water, and light.</explanation>
+  </question>
+  
+  <question>
+    <text>Which of the following is a rabi crop?</text>
+    <option correct="true">Wheat</option>
+    <option correct="false">Rice</option>
+    <option correct="false">Cotton</option>
+    <option correct="false">Maize</option>
+    <explanation>Wheat is a rabi crop sown in winter (October-December) and harvested in spring (March-April).</explanation>
+  </question>
+  
+  <question>
+    <text>The process of separating grains from chaff is called:</text>
+    <option correct="false">Winnowing</option>
+    <option correct="false">Harvesting</option>
+    <option correct="true">Threshing</option>
+    <option correct="false">Irrigation</option>
+    <explanation>Threshing is the process of separating grains from chaff. It can be done manually or using machines.</explanation>
+  </question>
+  
+  <question>
+    <text>Which of the following is not a method of irrigation?</text>
+    <option correct="false">Drip system</option>
+    <option correct="false">Sprinkler system</option>
+    <option correct="false">Chain pump</option>
+    <option correct="true">Composting</option>
+    <explanation>Composting is a method of preparing manure, not a method of irrigation.</explanation>
+  </question>
+  
+  <question>
+    <text>Manure is formed by the decomposition of:</text>
+    <option correct="true">Animal and plant waste</option>
+    <option correct="false">Chemical fertilizers</option>
+    <option correct="false">Plastic waste</option>
+    <option correct="false">Metal waste</option>
+    <explanation>Manure is formed by the decomposition of animal and plant waste. It improves soil fertility and texture.</explanation>
+  </question>
+  
+  <question>
+    <text>Which of these is a weedicide?</text>
+    <option correct="false">Urea</option>
+    <option correct="true">2,4-D</option>
+    <option correct="false">NPK</option>
+    <option correct="false">Superphosphate</option>
+    <explanation>2,4-D is a common weedicide used to control weeds in crop fields.</explanation>
+  </question>
+  
+  <question>
+    <text>Crops grown for their commercial value are called:</text>
+    <option correct="false">Food crops</option>
+    <option correct="true">Cash crops</option>
+    <option correct="false">Plantation crops</option>
+    <option correct="false">Horticultural crops</option>
+    <explanation>Cash crops are grown for their commercial value rather than for personal use. Examples: cotton, sugarcane, tobacco.</explanation>
+  </question>
+  
+  <question>
+    <text>Which tool is used for removing weeds?</text>
+    <option correct="false">Plough</option>
+    <option correct="true">Hoe</option>
+    <option correct="false">Seed drill</option>
+    <option correct="false">Combine</option>
+    <explanation>A hoe is used for removing weeds and loosening soil.</explanation>
+  </question>
+  
+  <question>
+    <text>The practice of growing different crops in succession is called:</text>
+    <option correct="true">Crop rotation</option>
+    <option correct="false">Mixed cropping</option>
+    <option correct="false">Intercropping</option>
+    <option correct="false">Plant breeding</option>
+    <explanation>Crop rotation involves growing different crops in succession on the same land to maintain soil fertility.</explanation>
+  </question>
+  
+  <question>
+    <text>Which bacteria converts atmospheric nitrogen into nitrates?</text>
+    <option correct="false">Lactobacillus</option>
+    <option correct="true">Rhizobium</option>
+    <option correct="false">E. coli</option>
+    <option correct="false">Salmonella</option>
+    <explanation>Rhizobium bacteria convert atmospheric nitrogen into nitrates that plants can absorb and use.</explanation>
+  </question>
+  
+  <question>
+    <text>Drip irrigation helps in:</text>
+    <option correct="false">Increasing soil erosion</option>
+    <option correct="true">Conserving water</option>
+    <option correct="false">Increasing weed growth</option>
+    <option correct="false">Decreasing crop yield</option>
+    <explanation>Drip irrigation conserves water by delivering it directly to plant roots, minimizing evaporation and runoff.</explanation>
   </question>
 </quiz>
