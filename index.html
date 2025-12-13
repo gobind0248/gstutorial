@@ -1736,39 +1736,27 @@
           response = await fetch(path);
         }
         
-        // Third try: create sample chapters
         if (!response.ok) {
-          console.log("Creating sample chapters...");
-          chaptersList = createSampleChapters();
-        } else {
-          chaptersList = await response.json();
-          
-          if (!Array.isArray(chaptersList) || chaptersList.length === 0) {
-            console.warn("chapters.json is empty, using sample chapters");
-            chaptersList = createSampleChapters();
-          }
+          throw new Error(`Cannot find chapters.json at ${path}. Please create this file.`);
+        }
+        
+        chaptersList = await response.json();
+        
+        if (!Array.isArray(chaptersList) || chaptersList.length === 0) {
+          throw new Error("chapters.json is empty. Please add chapter names to the array.");
         }
         
         // Populate dropdown
         populateChapterDropdown();
         
-        console.log(`Loaded ${chaptersList.length} chapters`);
+        console.log(`Loaded ${chaptersList.length} chapters from ${path}`);
         
       } catch (err) {
         console.error("Error loading chapters:", err);
-        chaptersList = createSampleChapters();
-        populateChapterDropdown();
+        showChapterError(err.message);
       }
       
       resetInactivityTimer();
-    }
-
-    function createSampleChapters() {
-      return [
-        "Sample Chapter 1: Introduction",
-        "Sample Chapter 2: Basic Concepts", 
-        "Sample Chapter 3: Advanced Topics"
-      ];
     }
 
     function populateChapterDropdown() {
@@ -1785,15 +1773,22 @@
       startBtnEl.disabled = false;
       quizTopicNameEl.textContent = "No chapter selected";
       quizQuestionCountEl.textContent = `${chaptersList.length} chapters available`;
+      questionTextEl.textContent = "Select a chapter to start the quiz.";
+    }
+
+    function showChapterError(errorMessage) {
+      topicSelectEl.innerHTML = `
+        <option value="">-- Error Loading Chapters --</option>
+        <option value="">${errorMessage}</option>
+      `;
       
-      // Show info message for sample chapters
-      if (chaptersList[0].includes("Sample")) {
-        questionTextEl.textContent = "Select a sample chapter to test the quiz. Create folders and chapters.json files to add your own content.";
-        quizTopicNameEl.textContent = "Sample Chapters";
-        quizTopicNameEl.style.backgroundColor = "rgba(245, 158, 11, 0.1)";
-        quizTopicNameEl.style.borderColor = "rgba(245, 158, 11, 0.5)";
-        quizTopicNameEl.style.color = "#fbbf24";
-      }
+      quizTopicNameEl.textContent = "Error";
+      quizTopicNameEl.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
+      quizTopicNameEl.style.borderColor = "rgba(239, 68, 68, 0.5)";
+      quizTopicNameEl.style.color = "#fca5a5";
+      quizQuestionCountEl.textContent = "0 chapters";
+      questionTextEl.textContent = "Please create chapters.json in the subject folder with chapter names in an array.";
+      startBtnEl.disabled = true;
     }
 
     // ========== QUIZ FUNCTIONS ==========
@@ -2444,7 +2439,7 @@
       resetInactivityTimer();
     }
 
-    // ========== LOAD QUESTIONS ==========
+    // ========== LOAD QUESTIONS FROM XML FILES ==========
     async function loadQuestionsFromXML(chapterName) {
       const trimmed = chapterName.trim();
       if (!trimmed) {
@@ -2455,12 +2450,15 @@
 
       currentTopicName = trimmed;
       
+      // Clean the filename - remove any invalid characters
+      const cleanChapterName = trimmed.replace(/[<>:"/\\|?*]/g, '');
+      
       // Try multiple path combinations
       const pathOptions = [
-        `Class ${currentClass}/${currentSubject.toLowerCase()}/${trimmed}.xml`,
-        `${currentClass}/${currentSubject.toLowerCase()}/${trimmed}.xml`,
-        `Class ${currentClass}/${currentSubject.toLowerCase()}/${trimmed}`,
-        `${currentClass}/${currentSubject.toLowerCase()}/${trimmed}`
+        `Class ${currentClass}/${currentSubject.toLowerCase()}/${cleanChapterName}.xml`,
+        `${currentClass}/${currentSubject.toLowerCase()}/${cleanChapterName}.xml`,
+        `Class ${currentClass}/${currentSubject.toLowerCase()}/${encodeURIComponent(trimmed)}.xml`,
+        `${currentClass}/${currentSubject.toLowerCase()}/${encodeURIComponent(trimmed)}.xml`
       ];
       
       quizTopicNameEl.textContent = trimmed;
@@ -2492,6 +2490,7 @@
 
         let xmlText = null;
         let lastError = null;
+        let successfulPath = null;
         
         // Try all path options
         for (const path of pathOptions) {
@@ -2499,6 +2498,7 @@
             const res = await fetch(path);
             if (res.ok) {
               xmlText = await res.text();
+              successfulPath = path;
               console.log(`Successfully loaded from: ${path}`);
               break;
             }
@@ -2508,59 +2508,54 @@
           }
         }
         
-        // If no XML file found, create a sample one
+        // If no XML file found, show error
         if (!xmlText) {
-          console.log("Creating sample questions...");
-          xmlText = createSampleXML(trimmed);
+          throw new Error(`XML file not found. Tried: ${pathOptions.join(', ')}`);
         }
 
-        processXML(xmlText);
+        const rawQuestions = parseXMLToQuestions(xmlText);
+        if (rawQuestions.length === 0) {
+          throw new Error(`No valid questions found in ${successfulPath}. Check XML format.`);
+        }
+
+        const randomize = randomToggleEl.checked;
+        questions = prepareQuestionBank(rawQuestions, randomize);
+        userAnswers = new Array(questions.length);
+
+        questionsLoaded = true;
+        currentIndex = 0;
+        score = 0;
+        attempted = 0;
+        scoreMiniEl.textContent = "Score: 0";
+        nextBtn.style.display = "inline-block";
+        previousBtn.style.display = "inline-block";
+        finishBtn.style.display = "inline-block";
+
+        quizTopicNameEl.textContent = trimmed;
+        quizQuestionCountEl.textContent = `${questions.length} questions`;
+        
+        if (timerDuration > 0) {
+          showTimerNotification();
+          startTimer();
+        }
+        
+        renderQuestion();
+        resetInactivityTimer();
         
       } catch (err) {
-        console.error(err);
-        questionTextEl.textContent = `Error loading chapter. Using sample questions instead.`;
-        
-        // Create and use sample questions
-        const sampleXML = createSampleXML(trimmed);
-        processXML(sampleXML);
+        console.error("Error loading questions:", err);
+        questionTextEl.textContent = `Error: ${err.message}`;
+        optionsListEl.innerHTML = "";
+        feedbackEl.textContent = "";
+        nextBtn.disabled = true;
+        previousBtn.disabled = true;
+        finishBtn.disabled = true;
+        quizTopicNameEl.textContent = "Error loading chapter";
+        quizTopicNameEl.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
+        quizTopicNameEl.style.borderColor = "rgba(239, 68, 68, 0.5)";
+        quizTopicNameEl.style.color = "#fca5a5";
+        resetInactivityTimer();
       }
-    }
-
-    
-
-    function processXML(xmlText) {
-      const rawQuestions = parseXMLToQuestions(xmlText);
-      if (rawQuestions.length === 0) {
-        questionTextEl.textContent = "No questions parsed from XML. Using sample questions.";
-        // Create sample questions
-        const sampleXML = createSampleXML(currentTopicName);
-        processXML(sampleXML);
-        return;
-      }
-
-      const randomize = randomToggleEl.checked;
-      questions = prepareQuestionBank(rawQuestions, randomize);
-      userAnswers = new Array(questions.length);
-
-      questionsLoaded = true;
-      currentIndex = 0;
-      score = 0;
-      attempted = 0;
-      scoreMiniEl.textContent = "Score: 0";
-      nextBtn.style.display = "inline-block";
-      previousBtn.style.display = "inline-block";
-      finishBtn.style.display = "inline-block";
-
-      quizTopicNameEl.textContent = currentTopicName;
-      quizQuestionCountEl.textContent = `${questions.length} questions`;
-      
-      if (timerDuration > 0) {
-        showTimerNotification();
-        startTimer();
-      }
-      
-      renderQuestion();
-      resetInactivityTimer();
     }
 
     // ========== EVENT LISTENERS ==========
@@ -2644,6 +2639,7 @@
       usernameEl.focus();
       console.log("G. S. Tutorial App initialized. Created by Gobind Sharma.");
       console.log("Default login: teacher / gstutorial");
+      console.log("IMPORTANT: Create folders with chapters.json and XML files to load your content.");
     }
 
     document.addEventListener("DOMContentLoaded", initializeApp);
@@ -2655,4 +2651,3 @@
   </script>
 </body>
 </html>
-
