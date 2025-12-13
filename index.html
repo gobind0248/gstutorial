@@ -50,12 +50,6 @@
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
         /* ===== FIXED HEADER ===== */
         #app-header {
             display: none;
@@ -67,7 +61,7 @@
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--dark-border);
             z-index: 1000;
-            padding: 12px 20px;
+            padding: 10px 20px;
         }
 
         #app-header.active {
@@ -80,8 +74,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
             gap: 15px;
+        }
+
+        .header-left {
+            flex: 1;
         }
 
         .header-left h1 {
@@ -101,7 +98,7 @@
         .header-right {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
         }
 
         .user-info {
@@ -113,6 +110,7 @@
             border-radius: var(--radius-full);
             border: 1px solid var(--dark-border);
             font-size: 0.9rem;
+            min-height: 36px;
         }
 
         .user-name {
@@ -121,52 +119,38 @@
         }
 
         .header-logout-btn {
-            padding: 6px 15px;
-            font-size: 0.8rem;
+            padding: 6px 12px;
+            font-size: 0.9rem;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         /* ===== SCREEN MANAGER ===== */
         .screen {
             display: none;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            min-height: 100vh;
+            width: 100%;
         }
 
         .screen.active {
             display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slideInRight {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
         }
 
         /* ===== LOGIN SCREEN ===== */
         #login-screen {
-            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
         }
 
         .login-container {
@@ -178,6 +162,8 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: var(--shadow-xl), 0 0 40px rgba(59, 130, 246, 0.1);
             overflow: hidden;
+            max-height: 90vh;
+            margin: 0 auto;
         }
 
         .login-header {
@@ -400,16 +386,31 @@
             font-size: 0.9rem;
         }
 
-        /* ===== CLASS SELECTION SCREEN ===== */
-        #class-selection-screen {
+        /* ===== CONTENT WRAPPER ===== */
+        .content-wrapper {
+            width: 100%;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
             padding: 80px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ===== CLASS SELECTION SCREEN ===== */
+        #class-selection-screen .main-content {
+            padding-top: 70px;
         }
 
         .selection-header {
             text-align: center;
             margin-bottom: 30px;
-            padding: 15px;
+            padding: 15px 0;
         }
 
         .selection-header h2 {
@@ -430,7 +431,9 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            margin-bottom: 30px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1000px;
         }
 
         .selection-card {
@@ -496,20 +499,22 @@
         }
 
         /* ===== SUBJECT SELECTION SCREEN ===== */
-        #subject-selection-screen {
-            min-height: 100vh;
-            padding: 80px 20px 20px;
+        #subject-selection-screen .main-content {
+            padding-top: 70px;
+            align-items: center;
+            justify-content: center;
         }
 
         /* ===== CHAPTER SELECTION SCREEN ===== */
-        #chapter-selection-screen {
-            min-height: 100vh;
-            padding: 80px 20px 20px;
+        #chapter-selection-screen .main-content {
+            padding-top: 70px;
+            align-items: center;
+            justify-content: center;
         }
 
         .selection-container {
+            width: 100%;
             max-width: 500px;
-            margin: 0 auto;
             background: var(--dark-card);
             border-radius: var(--radius-lg);
             padding: 25px;
@@ -610,11 +615,13 @@
         }
 
         /* ===== QUIZ QUESTION SCREEN ===== */
-        #quiz-question-screen {
-            min-height: 100vh;
-            padding: 70px 15px 15px;
+        #quiz-question-screen .main-content {
+            padding: 60px 15px 15px;
             display: flex;
             flex-direction: column;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
         }
 
         .quiz-progress-container {
@@ -738,6 +745,7 @@
             overflow-y: auto;
             max-height: 50vh;
             padding-right: 5px;
+            min-height: 200px;
         }
 
         .option {
@@ -855,8 +863,7 @@
         }
 
         .quiz-controls {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
             gap: 10px;
             margin-top: 15px;
             flex-shrink: 0;
@@ -867,11 +874,24 @@
             font-size: 0.9rem;
         }
 
+        .btn-previous {
+            flex: 1;
+            justify-content: flex-start;
+        }
+
+        .btn-next {
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+        .btn-finish {
+            width: 100%;
+            margin-top: 10px;
+        }
+
         /* ===== RESULTS SCREEN ===== */
-        #results-screen {
-            min-height: 100vh;
-            padding: 80px 20px 20px;
-            display: flex;
+        #results-screen .main-content {
+            padding: 70px 20px 20px;
             align-items: center;
             justify-content: center;
         }
@@ -884,7 +904,6 @@
             padding: 30px;
             border: 1px solid var(--dark-border);
             box-shadow: var(--shadow-xl);
-            animation: fadeIn 0.5s ease;
         }
 
         .results-header {
@@ -1045,13 +1064,13 @@
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 768px) {
             #app-header {
-                padding: 10px 15px;
+                padding: 8px 15px;
             }
 
             .header-content {
                 flex-direction: column;
                 text-align: center;
-                gap: 10px;
+                gap: 8px;
             }
 
             .header-left h1 {
@@ -1066,7 +1085,7 @@
                 width: 100%;
                 justify-content: center;
                 flex-wrap: wrap;
-                gap: 10px;
+                gap: 8px;
             }
 
             .user-info {
@@ -1074,20 +1093,25 @@
                 padding: 5px 10px;
             }
 
-            .container {
-                padding: 15px;
+            .header-logout-btn {
+                padding: 5px 10px;
+                font-size: 0.8rem;
             }
 
-            #class-selection-screen,
-            #subject-selection-screen,
-            #chapter-selection-screen,
-            #quiz-question-screen,
-            #results-screen {
-                padding-top: 70px;
+            .main-content {
+                padding: 60px 15px 15px;
+            }
+
+            #class-selection-screen .main-content,
+            #subject-selection-screen .main-content,
+            #chapter-selection-screen .main-content,
+            #results-screen .main-content {
+                padding-top: 60px;
             }
 
             .login-container {
                 margin: 0 10px;
+                max-height: 85vh;
             }
 
             .login-header {
@@ -1174,17 +1198,20 @@
                 font-size: 1.8rem;
             }
 
-            .btn {
-                padding: 12px 16px;
-                font-size: 0.9rem;
+            .quiz-controls {
+                flex-direction: column;
+            }
+
+            .btn-previous, .btn-next {
+                width: 100%;
+            }
+
+            .btn-finish {
+                order: 3;
             }
         }
 
         @media (max-width: 480px) {
-            .quiz-controls {
-                grid-template-columns: 1fr;
-            }
-            
             .chapter-info-grid {
                 grid-template-columns: 1fr;
                 gap: 8px;
@@ -1209,29 +1236,33 @@
             }
         }
 
-        /* ===== UTILITY CLASSES ===== */
-        .text-center { text-align: center; }
-        .text-right { text-align: right; }
-        .text-left { text-align: left; }
-        .mt-10 { margin-top: 10px; }
-        .mt-20 { margin-top: 20px; }
-        .mt-30 { margin-top: 30px; }
-        .mb-10 { margin-bottom: 10px; }
-        .mb-20 { margin-bottom: 20px; }
-        .mb-30 { margin-bottom: 30px; }
-        .p-20 { padding: 20px; }
-        .p-30 { padding: 30px; }
-        .hidden { display: none !important; }
-        .visible { display: block !important; }
-        .flex { display: flex; }
-        .flex-col { flex-direction: column; }
-        .items-center { align-items: center; }
-        .justify-center { justify-content: center; }
-        .justify-between { justify-content: space-between; }
-        .gap-10 { gap: 10px; }
-        .gap-20 { gap: 20px; }
-        .w-full { width: 100%; }
-        .h-full { height: 100%; }
+        /* Desktop specific */
+        @media (min-width: 769px) {
+            .options-container {
+                min-height: 300px;
+            }
+            
+            .selection-grid {
+                max-width: 900px;
+            }
+            
+            .quiz-controls {
+                justify-content: space-between;
+            }
+            
+            .btn-previous {
+                max-width: 120px;
+            }
+            
+            .btn-next {
+                max-width: 120px;
+            }
+            
+            .btn-finish {
+                max-width: 200px;
+                align-self: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1262,43 +1293,41 @@
 
     <!-- ===== LOGIN SCREEN ===== -->
     <div id="login-screen" class="screen active">
-        <div class="container">
-            <div class="login-container">
-                <div class="login-header">
-                    <div class="logo">
-                        <h1>G.S. Tutorial</h1>
-                        <p>Classes 8, 9 & 10 • Science & Mathematics</p>
+        <div class="login-container">
+            <div class="login-header">
+                <div class="logo">
+                    <h1>G.S. Tutorial</h1>
+                    <p>Classes 8, 9 & 10 • Science & Mathematics</p>
+                </div>
+            </div>
+            
+            <div class="login-form">
+                <div class="form-group">
+                    <label class="form-label">
+                        <span>👤</span>
+                        <span>Username</span>
+                    </label>
+                    <input type="text" id="login-username" class="form-input" placeholder="Enter your username" autocomplete="username">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">
+                        <span>🔒</span>
+                        <span>Password</span>
+                    </label>
+                    <div class="password-container">
+                        <input type="password" id="login-password" class="form-input" placeholder="Enter your password" autocomplete="current-password">
+                        <button type="button" class="toggle-password" id="toggle-password">👁️</button>
                     </div>
                 </div>
                 
-                <div class="login-form">
-                    <div class="form-group">
-                        <label class="form-label">
-                            <span>👤</span>
-                            <span>Username</span>
-                        </label>
-                        <input type="text" id="login-username" class="form-input" placeholder="Enter your username" autocomplete="username">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label">
-                            <span>🔒</span>
-                            <span>Password</span>
-                        </label>
-                        <div class="password-container">
-                            <input type="password" id="login-password" class="form-input" placeholder="Enter your password" autocomplete="current-password">
-                            <button type="button" class="toggle-password" id="toggle-password">👁️</button>
-                        </div>
-                    </div>
-                    
-                    <button id="login-btn" class="btn btn-primary">
-                        <span>🔐</span>
-                        <span>Login to Continue</span>
-                    </button>
-                    
-                    <div id="login-error" class="error-message">
-                        Invalid username or password. Please try again.
-                    </div>
+                <button id="login-btn" class="btn btn-primary">
+                    <span>🔐</span>
+                    <span>Login to Continue</span>
+                </button>
+                
+                <div id="login-error" class="error-message">
+                    Invalid username or password. Please try again.
                 </div>
             </div>
         </div>
@@ -1306,29 +1335,31 @@
 
     <!-- ===== CLASS SELECTION SCREEN ===== -->
     <div id="class-selection-screen" class="screen">
-        <div class="container">
-            <div class="selection-header">
-                <h2>Welcome, <span class="user-name-highlight" id="display-user-name">Student</span>!</h2>
-                <p class="welcome-message">Please select your class to continue</p>
-            </div>
-            
-            <div class="selection-grid">
-                <div class="selection-card" data-type="class" data-value="class8">
-                    <div class="selection-icon">🎒</div>
-                    <h3>Class 8</h3>
-                    <p>For students studying in Class 8. Access Science and Mathematics chapters tailored for Class 8 curriculum.</p>
+        <div class="content-wrapper">
+            <div class="main-content">
+                <div class="selection-header">
+                    <h2>Welcome, <span class="user-name-highlight" id="display-user-name">Student</span>!</h2>
+                    <p class="welcome-message">Please select your class to continue</p>
                 </div>
                 
-                <div class="selection-card" data-type="class" data-value="class9">
-                    <div class="selection-icon">📚</div>
-                    <h3>Class 9</h3>
-                    <p>For students studying in Class 9. Comprehensive coverage of Class 9 Science and Mathematics syllabus.</p>
-                </div>
-                
-                <div class="selection-card" data-type="class" data-value="class10">
-                    <div class="selection-icon">🎓</div>
-                    <h3>Class 10</h3>
-                    <p>For students studying in Class 10. Prepare for board exams with detailed chapter-wise practice.</p>
+                <div class="selection-grid">
+                    <div class="selection-card" data-type="class" data-value="class8">
+                        <div class="selection-icon">🎒</div>
+                        <h3>Class 8</h3>
+                        <p>For students studying in Class 8. Access Science and Mathematics chapters tailored for Class 8 curriculum.</p>
+                    </div>
+                    
+                    <div class="selection-card" data-type="class" data-value="class9">
+                        <div class="selection-icon">📚</div>
+                        <h3>Class 9</h3>
+                        <p>For students studying in Class 9. Comprehensive coverage of Class 9 Science and Mathematics syllabus.</p>
+                    </div>
+                    
+                    <div class="selection-card" data-type="class" data-value="class10">
+                        <div class="selection-icon">🎓</div>
+                        <h3>Class 10</h3>
+                        <p>For students studying in Class 10. Prepare for board exams with detailed chapter-wise practice.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1336,32 +1367,34 @@
 
     <!-- ===== SUBJECT SELECTION SCREEN ===== -->
     <div id="subject-selection-screen" class="screen">
-        <div class="container">
-            <div class="selection-container">
-                <div class="selection-title">
-                    <h2>Select Subject</h2>
-                    <p>Choose a subject for <span id="selected-class-display">Class 8</span></p>
-                </div>
-                
-                <div class="selection-grid">
-                    <div class="selection-card" data-type="subject" data-value="science">
-                        <div class="selection-icon">🔬</div>
-                        <h3>Science</h3>
-                        <p>Physics, Chemistry, and Biology chapters with detailed explanations and MCQs for comprehensive learning.</p>
+        <div class="content-wrapper">
+            <div class="main-content">
+                <div class="selection-container">
+                    <div class="selection-title">
+                        <h2>Select Subject</h2>
+                        <p>Choose a subject for <span id="selected-class-display">Class 8</span></p>
                     </div>
                     
-                    <div class="selection-card" data-type="subject" data-value="mathematics">
-                        <div class="selection-icon">📐</div>
-                        <h3>Mathematics</h3>
-                        <p>Algebra, Geometry, Arithmetic, and Statistics chapters with step-by-step solutions and practice questions.</p>
+                    <div class="selection-grid">
+                        <div class="selection-card" data-type="subject" data-value="science">
+                            <div class="selection-icon">🔬</div>
+                            <h3>Science</h3>
+                            <p>Physics, Chemistry, and Biology chapters with detailed explanations and MCQs for comprehensive learning.</p>
+                        </div>
+                        
+                        <div class="selection-card" data-type="subject" data-value="mathematics">
+                            <div class="selection-icon">📐</div>
+                            <h3>Mathematics</h3>
+                            <p>Algebra, Geometry, Arithmetic, and Statistics chapters with step-by-step solutions and practice questions.</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="back-button">
-                    <button id="back-to-class-btn" class="btn btn-outline">
-                        <span>←</span>
-                        <span>Back to Class Selection</span>
-                    </button>
+                    
+                    <div class="back-button">
+                        <button id="back-to-class-btn" class="btn btn-outline">
+                            <span>←</span>
+                            <span>Back to Class Selection</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1369,51 +1402,53 @@
 
     <!-- ===== CHAPTER SELECTION SCREEN ===== -->
     <div id="chapter-selection-screen" class="screen">
-        <div class="container">
-            <div class="selection-container">
-                <div class="selection-title">
-                    <h2>Select Chapter</h2>
-                    <p>Choose a chapter from <span id="selected-subject-display">Science</span> for <span id="current-class-display">Class 8</span></p>
-                </div>
-                
-                <div class="form-group">
-                    <label class="form-label">
-                        <span>📚</span>
-                        <span>Select Chapter</span>
-                    </label>
-                    <select id="chapter-select" class="form-select">
-                        <option value="">-- Please select a chapter --</option>
-                    </select>
-                </div>
-                
-                <div class="chapter-info" id="chapter-info" style="display: none;">
-                    <div class="chapter-info-grid">
-                        <div class="info-box">
-                            <div class="info-label">Questions</div>
-                            <div class="info-value questions-count" id="questions-count">0</div>
-                        </div>
-                        <div class="info-box">
-                            <div class="info-label">Time Limit</div>
-                            <div class="info-value time-limit" id="time-limit">0 min</div>
-                        </div>
-                        <div class="info-box">
-                            <div class="info-label">Difficulty</div>
-                            <div class="info-value difficulty" id="difficulty">Easy</div>
-                        </div>
+        <div class="content-wrapper">
+            <div class="main-content">
+                <div class="selection-container">
+                    <div class="selection-title">
+                        <h2>Select Chapter</h2>
+                        <p>Choose a chapter from <span id="selected-subject-display">Science</span> for <span id="current-class-display">Class 8</span></p>
                     </div>
-                    <div class="chapter-description" id="chapter-description"></div>
-                </div>
-                
-                <button id="start-quiz-btn" class="btn btn-primary btn-full" disabled>
-                    <span>▶</span>
-                    <span>Start Quiz</span>
-                </button>
-                
-                <div class="back-button">
-                    <button id="back-to-subject-btn" class="btn btn-outline">
-                        <span>←</span>
-                        <span>Back to Subject Selection</span>
+                    
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>📚</span>
+                            <span>Select Chapter</span>
+                        </label>
+                        <select id="chapter-select" class="form-select">
+                            <option value="">-- Please select a chapter --</option>
+                        </select>
+                    </div>
+                    
+                    <div class="chapter-info" id="chapter-info" style="display: none;">
+                        <div class="chapter-info-grid">
+                            <div class="info-box">
+                                <div class="info-label">Questions</div>
+                                <div class="info-value questions-count" id="questions-count">0</div>
+                            </div>
+                            <div class="info-box">
+                                <div class="info-label">Time Limit</div>
+                                <div class="info-value time-limit" id="time-limit">0 min</div>
+                            </div>
+                            <div class="info-box">
+                                <div class="info-label">Difficulty</div>
+                                <div class="info-value difficulty" id="difficulty">Easy</div>
+                            </div>
+                        </div>
+                        <div class="chapter-description" id="chapter-description"></div>
+                    </div>
+                    
+                    <button id="start-quiz-btn" class="btn btn-primary btn-full" disabled>
+                        <span>▶</span>
+                        <span>Start Quiz</span>
                     </button>
+                    
+                    <div class="back-button">
+                        <button id="back-to-subject-btn" class="btn btn-outline">
+                            <span>←</span>
+                            <span>Back to Subject Selection</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1421,105 +1456,105 @@
 
     <!-- ===== QUIZ QUESTION SCREEN ===== -->
     <div id="quiz-question-screen" class="screen">
-        <div class="container">
-            <div class="quiz-progress-container">
-                <div class="progress-header">
-                    <div class="progress-title" id="quiz-title">Chapter Quiz</div>
-                    <div class="timer-container">
-                        <span>⏰</span>
-                        <span id="timer-display">00:00</span>
+        <div class="content-wrapper">
+            <div class="main-content">
+                <div class="quiz-progress-container">
+                    <div class="progress-header">
+                        <div class="progress-title" id="quiz-title">Chapter Quiz</div>
+                        <div class="timer-container">
+                            <span>⏰</span>
+                            <span id="timer-display">00:00</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-info">
+                        <span id="current-question-info">Question 0/0</span>
+                        <span id="score-info">Score: 0</span>
                     </div>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progress-fill"></div>
+                
+                <div class="question-container">
+                    <div class="question-header">
+                        <div class="question-number" id="question-number">1</div>
+                        <div class="question-chapter" id="question-chapter">Chapter: Loading...</div>
+                    </div>
+                    <div class="question-text" id="question-text">
+                        Loading question...
+                    </div>
                 </div>
-                <div class="progress-info">
-                    <span id="current-question-info">Question 0/0</span>
-                    <span id="score-info">Score: 0</span>
+                
+                <div class="options-container" id="options-container">
+                    <!-- Options will be dynamically loaded here -->
                 </div>
-            </div>
-            
-            <div class="question-container">
-                <div class="question-header">
-                    <div class="question-number" id="question-number">1</div>
-                    <div class="question-chapter" id="question-chapter">Chapter: Loading...</div>
+                
+                <div class="explanation-box" id="explanation-box">
+                    <div class="explanation-title">
+                        <span>📝</span>
+                        <span>Explanation</span>
+                    </div>
+                    <div class="explanation-text" id="explanation-text">
+                        Loading explanation...
+                    </div>
                 </div>
-                <div class="question-text" id="question-text">
-                    Loading question...
+                
+                <div class="quiz-controls">
+                    <button id="prev-btn" class="btn btn-outline btn-previous">
+                        <span>←</span>
+                        <span>Previous</span>
+                    </button>
+                    <button id="finish-btn" class="btn btn-warning btn-finish">
+                        <span>🏁</span>
+                        <span>Finish Quiz</span>
+                    </button>
+                    <button id="next-btn" class="btn btn-outline btn-next">
+                        <span>Next</span>
+                        <span>→</span>
+                    </button>
                 </div>
-            </div>
-            
-            <div class="options-container" id="options-container">
-                <!-- Options will be dynamically loaded here -->
-            </div>
-            
-            <div class="explanation-box" id="explanation-box">
-                <div class="explanation-title">
-                    <span>📝</span>
-                    <span>Explanation</span>
-                </div>
-                <div class="explanation-text" id="explanation-text">
-                    Loading explanation...
-                </div>
-            </div>
-            
-            <div class="quiz-controls">
-                <button id="prev-btn" class="btn btn-outline">
-                    <span>←</span>
-                    <span>Previous</span>
-                </button>
-                <button id="next-btn" class="btn btn-outline">
-                    <span>Next</span>
-                    <span>→</span>
-                </button>
-                <button id="submit-btn" class="btn btn-primary">
-                    <span>✓</span>
-                    <span>Submit Answer</span>
-                </button>
-                <button id="finish-btn" class="btn btn-warning">
-                    <span>🏁</span>
-                    <span>Finish Quiz</span>
-                </button>
             </div>
         </div>
     </div>
 
     <!-- ===== RESULTS SCREEN ===== -->
     <div id="results-screen" class="screen">
-        <div class="container">
-            <div class="results-container">
-                <div class="results-header">
-                    <h2 class="results-title">Quiz Completed!</h2>
-                    <p class="results-subtitle">Great effort! Here are your results</p>
-                </div>
-                
-                <div class="score-display">
-                    <div class="score-circle-container">
-                        <div class="score-circle-bg" id="score-circle">
-                            <div class="score-value" id="final-score">0</div>
-                            <div class="score-percentage" id="final-percentage">0%</div>
+        <div class="content-wrapper">
+            <div class="main-content">
+                <div class="results-container">
+                    <div class="results-header">
+                        <h2 class="results-title">Quiz Completed!</h2>
+                        <p class="results-subtitle">Great effort! Here are your results</p>
+                    </div>
+                    
+                    <div class="score-display">
+                        <div class="score-circle-container">
+                            <div class="score-circle-bg" id="score-circle">
+                                <div class="score-value" id="final-score">0</div>
+                                <div class="score-percentage" id="final-percentage">0%</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="results-stats" id="results-stats">
-                    <!-- Stats will be dynamically loaded here -->
-                </div>
-                
-                <div class="results-message" id="results-message">
-                    <div class="message-text" id="message-text">Loading your performance analysis...</div>
-                    <div class="message-subtext" id="message-subtext">Keep practicing to improve your score!</div>
-                </div>
-                
-                <div class="results-actions">
-                    <button id="retry-btn" class="btn btn-primary">
-                        <span>🔄</span>
-                        <span>Retry This Chapter</span>
-                    </button>
-                    <button id="new-chapter-btn" class="btn btn-secondary">
-                        <span>📚</span>
-                        <span>Try Another Chapter</span>
-                    </button>
+                    
+                    <div class="results-stats" id="results-stats">
+                        <!-- Stats will be dynamically loaded here -->
+                    </div>
+                    
+                    <div class="results-message" id="results-message">
+                        <div class="message-text" id="message-text">Loading your performance analysis...</div>
+                        <div class="message-subtext" id="message-subtext">Keep practicing to improve your score!</div>
+                    </div>
+                    
+                    <div class="results-actions">
+                        <button id="retry-btn" class="btn btn-primary">
+                            <span>🔄</span>
+                            <span>Retry This Chapter</span>
+                        </button>
+                        <button id="new-chapter-btn" class="btn btn-secondary">
+                            <span>📚</span>
+                            <span>Try Another Chapter</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1599,7 +1634,6 @@
         const explanationText = document.getElementById('explanation-text');
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
-        const submitBtn = document.getElementById('submit-btn');
         const finishBtn = document.getElementById('finish-btn');
 
         // Results screen elements
@@ -1703,7 +1737,6 @@
             // Quiz question screen
             prevBtn.addEventListener('click', goToPreviousQuestion);
             nextBtn.addEventListener('click', goToNextQuestion);
-            submitBtn.addEventListener('click', submitAnswer);
             finishBtn.addEventListener('click', finishQuiz);
 
             // Results screen
@@ -2269,14 +2302,19 @@
                     <div class="option-text">${option}</div>
                 `;
                 
-                optionDiv.addEventListener('click', () => selectOption(index));
+                optionDiv.addEventListener('click', () => {
+                    if (userAnswers[currentQuestionIndex] === null) {
+                        selectOption(index);
+                        // Auto-submit answer
+                        submitAnswer();
+                    }
+                });
                 optionsContainer.appendChild(optionDiv);
             });
             
             // Update button states
             prevBtn.disabled = currentQuestionIndex === 0;
             nextBtn.disabled = currentQuestionIndex === currentQuestions.length - 1;
-            submitBtn.disabled = userAnswers[currentQuestionIndex] !== null || answeredQuestions.has(currentQuestionIndex);
             finishBtn.disabled = false;
             
             // Show explanation if already answered
@@ -2290,7 +2328,7 @@
 
         function selectOption(index) {
             userAnswers[currentQuestionIndex] = index;
-            loadQuestion();
+            // Don't reload question immediately - let submitAnswer handle it
         }
 
         function showAnswerFeedback() {
@@ -2309,13 +2347,10 @@
             
             explanationText.textContent = question.explanation;
             explanationBox.style.display = 'block';
-            
-            submitBtn.disabled = true;
         }
 
         function submitAnswer() {
             if (userAnswers[currentQuestionIndex] === null) {
-                alert('Please select an answer first.');
                 return;
             }
             
@@ -2323,13 +2358,21 @@
             const selectedIndex = userAnswers[currentQuestionIndex];
             const isCorrect = selectedIndex === question.correctIndex;
             
-            if (isCorrect) {
+            if (isCorrect && !answeredQuestions.has(currentQuestionIndex)) {
                 score++;
                 scoreInfo.textContent = `Score: ${score}`;
             }
             
             answeredQuestions.add(currentQuestionIndex);
             showAnswerFeedback();
+            
+            // Auto-move to next question after 1.5 seconds
+            setTimeout(() => {
+                if (currentQuestionIndex < currentQuestions.length - 1) {
+                    currentQuestionIndex++;
+                    loadQuestion();
+                }
+            }, 1500);
         }
 
         function goToPreviousQuestion() {
