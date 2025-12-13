@@ -1808,7 +1808,7 @@
         startBtnEl.disabled = false;
         quizTopicNameEl.textContent = "No chapter selected";
         quizQuestionCountEl.textContent = `${chaptersList.length} chapters available`;
-        questionTextEl.textContent = "Select a chapter to start the quiz.";
+        questionTextEl.textContent = "Select a chapter to start.";
         
         console.log(`Populated dropdown with ${chaptersList.length} chapters`);
       } else {
@@ -1850,7 +1850,7 @@
       isReviewMode = false;
       
       // Reset UI
-      questionTextEl.textContent = "Please select a chapter to start the quiz.";
+      questionTextEl.textContent = "Please select a chapter to start.";
       optionsListEl.innerHTML = "";
       feedbackEl.textContent = "";
       feedbackEl.className = "feedback";
@@ -1867,7 +1867,7 @@
       };
       finalScoreEl.style.display = "none";
       progressBarFillEl.style.width = "0%";
-      questionCounterEl.textContent = "Choose a chapter and click Start Quiz";
+      questionCounterEl.textContent = "Choose a chapter and click Start";
       scoreMiniEl.textContent = "Score: 0";
       quizTopicNameEl.textContent = "No chapter selected";
       quizQuestionCountEl.textContent = "0 questions";
@@ -2716,4 +2716,5 @@
   </script>
 </body>
 </html>
+
 
