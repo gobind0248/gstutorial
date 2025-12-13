@@ -12,14 +12,14 @@
               "name": "Crop Production and Management",
               "file": "chapters/class8_science_chapter1.xml",
               "description": "Learn about agricultural practices, crop production, and management techniques.",
-              "questions": 15,
+            
               "difficulty": "Medium"
             },
             {
               "name": "Microorganisms: Friend and Foe",
               "file": "chapters/class8_science_chapter2.xml",
               "description": "Study microorganisms, their types, uses, and harmful effects.",
-              "questions": 12,
+             
               "difficulty": "Medium"
             }
           ]
@@ -32,7 +32,7 @@
               "name": "Rational Numbers",
               "file": "chapters/class8_maths_chapter1.xml",
               "description": "Master rational numbers, their properties, and operations.",
-              "questions": 20,
+             
               "difficulty": "Medium"
             }
           ]
@@ -51,7 +51,7 @@
               "name": "Matter in Our Surroundings",
               "file": "chapters/class9_science_chapter1.xml",
               "description": "Explore states of matter and their properties.",
-              "questions": 15,
+              
               "difficulty": "Medium"
             }
           ]
@@ -70,7 +70,7 @@
               "name": "Chemical Reactions and Equations",
               "file": "chapters/class10_science_chapter1.xml",
               "description": "Learn about chemical reactions, equations, and balancing.",
-              "questions": 20,
+             
               "difficulty": "Hard"
             }
           ]
@@ -79,3 +79,4 @@
     }
   ]
 }
+
