@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <timeLimit>35</timeLimit>
+    <author>G. S. Tutorial</author>
+    <description>Class 8 Mathematics - Chapter 2: Linear Equations in One Variable</description>
+  </metadata>
+  
+  <question>
+    <text>Solve for x: 3x + 5 = 20</text>
+    <option>3</option>
+    <option>4</option>
+    <option correct="true">5</option>
+    <option>6</option>
+    <explanation>3x + 5 = 20 → 3x = 20 - 5 → 3x = 15 → x = 15/3 = 5</explanation>
+  </question>
+  
+  <question>
+    <text>Solve: 2(x + 3) = 18</text>
+    <option>4</option>
+    <option>5</option>
+    <option correct="true">6</option>
+    <option>7</option>
+    <explanation>2(x + 3) = 18 → x + 3 = 9 → x = 9 - 3 = 6</explanation>
+  </question>
+  
+  <question>
+    <text>If 5x - 3 = 3x + 7, then x = ?</text>
+    <option>2</option>
+    <option correct="true">5</option>
+    <option>10</option>
+    <option>15</option>
+    <explanation>5x - 3 = 3x + 7 → 5x - 3x = 7 + 3 → 2x = 10 → x = 5</explanation>
+  </question>
+  
+  <question>
+    <text>The sum of three consecutive integers is 51. Find the integers.</text>
+    <option>15, 16, 17</option>
+    <option correct="true">16, 17, 18</option>
+    <option>17, 18, 19</option>
+    <option>18, 19, 20</option>
+    <explanation>Let integers be x, x+1, x+2. x + (x+1) + (x+2) = 51 → 3x + 3 = 51 → 3x = 48 → x = 16</explanation>
+  </question>
+  
+  <question>
+    <text>Solve: (x/3) + 5 = 10</text>
+    <option>10</option>
+    <option>12</option>
+    <option correct="true">15</option>
+    <option>18</option>
+    <explanation>x/3 + 5 = 10 → x/3 = 5 → x = 5 × 3 = 15</explanation>
+  </question>
+  
+  <question>
+    <text>Two numbers are in ratio 3:4. If their sum is 77, find the numbers.</text>
+    <option>21, 28</option>
+    <option correct="true">33, 44</option>
+    <option>30, 40</option>
+    <option>27, 36</option>
+    <explanation>Let numbers be 3x and 4x. 3x + 4x = 77 → 7x = 77 → x = 11. Numbers: 33 and 44.</explanation>
+  </question>
+  
+  <question>
+    <text>Solve: (2x-3)/5 = (x+4)/3</text>
+    <option>5</option>
+    <option correct="true">29</option>
+    <option>23</option>
+    <option>31</option>
+    <explanation>Cross multiply: 3(2x-3) = 5(x+4) → 6x - 9 = 5x + 20 → 6x - 5x = 20 + 9 → x = 29</explanation>
+  </question>
+  
+  <question>
+    <text>The perimeter of a rectangle is 40 cm. If length is 12 cm, find its breadth.</text>
+    <option>6 cm</option>
+    <option>7 cm</option>
+    <option correct="true">8 cm</option>
+    <option>9 cm</option>
+    <explanation>Perimeter = 2(l+b) = 40 → 2(12+b) = 40 → 12+b = 20 → b = 8 cm</explanation>
+  </question>
+  
+  <question>
+    <text>Solve: 0.3x + 0.4 = 0.7x - 0.2</text>
+    <option>1</option>
+    <option>1.2</option>
+    <option correct="true">1.5</option>
+    <option>2</option>
+    <explanation>0.3x + 0.4 = 0.7x - 0.2 → 0.4 + 0.2 = 0.7x - 0.3x → 0.6 = 0.4x → x = 0.6/0.4 = 1.5</explanation>
+  </question>
+  
+  <question>
+    <text>If 40% of a number is 80, find the number.</text>
+    <option>160</option>
+    <option>180</option>
+    <option correct="true">200</option>
+    <option>220</option>
+    <explanation>40% of x = 80 → (40/100)x = 80 → x = 80 × (100/40) = 200</explanation>
+  </question>
+  
+  <question>
+    <text>Solve: 5(x - 3) = 3(x + 2)</text>
+    <option>7.5</option>
+    <option>8.5</option>
+    <option correct="true">10.5</option>
+    <option>11.5</option>
+    <explanation>5x - 15 = 3x + 6 → 5x - 3x = 6 + 15 → 2x = 21 → x = 10.5</explanation>
+  </question>
+  
+  <question>
+    <text>A number when multiplied by 5 and increased by 8 gives 43. Find the number.</text>
+    <option>5</option>
+    <option>6</option>
+    <option correct="true">7</option>
+    <option>8</option>
+    <explanation>5x + 8 = 43 → 5x = 35 → x = 7</explanation>
+  </question>
+  
+  <question>
+    <text>Solve: (x+2)/4 + (x-1)/3 = 4</text>
+    <option>8</option>
+    <option>9</option>
+    <option correct="true">10</option>
+    <option>11</option>
+    <explanation>Multiply by 12: 3(x+2) + 4(x-1) = 48 → 3x+6+4x-4=48 → 7x+2=48 → 7x=46 → x=46/7 ≈ 6.57</explanation>
+  </question>
+  
+  <question>
+    <text>The sum of two numbers is 50. If one number is 8 more than the other, find the numbers.</text>
+    <option>20, 30</option>
+    <option>21, 29</option>
+    <option correct="true">21, 29</option>
+    <option>22, 28</option>
+    <explanation>Let numbers be x and x+8. x + (x+8) = 50 → 2x+8=50 → 2x=42 → x=21. Numbers: 21 and 29</explanation>
+  </question>
+  
+  <question>
+    <text>Solve: 7x - 9 = 16</text>
+    <option>25/7</option>
+    <option correct="true">25/7</option>
+    <option>23/7</option>
+    <option>27/7</option>
+    <explanation>7x - 9 = 16 → 7x = 25 → x = 25/7</explanation>
+  </question>
+  
+  <question>
+    <text>Three times a number decreased by 5 gives 40. Find the number.</text>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option correct="true">15</option>
+    <explanation>3x - 5 = 40 → 3x = 45 → x = 15</explanation>
+  </question>
+  
+  <question>
+    <text>Solve: 2x/3 - 3x/5 = 8</text>
+    <option>60</option>
+    <option>80</option>
+    <option>100</option>
+    <option correct="true">120</option>
+    <explanation>(10x - 9x)/15 = 8 → x/15 = 8 → x = 120</explanation>
+  </question>
+  
+  <question>
+    <text>If 2/3 of a number is 24, find the number.</text>
+    <option>32</option>
+    <option>34</option>
+    <option correct="true">36</option>
+    <option>38</option>
+    <explanation>(2/3)x = 24 → x = 24 × (3/2) = 36</explanation>
+  </question>
+  
+  <question>
+    <text>Solve: 3(x - 2) + 2(x - 1) = 5(x + 3)</text>
+    <option>No solution</option>
+    <option>0</option>
+    <option>1</option>
+    <option correct="true">-23</option>
+    <explanation>3x-6+2x-2=5x+15 → 5x-8=5x+15 → -8=15 (false) → No solution</explanation>
+  </question>
+  
+  <question>
+    <text>The angles of a triangle are in ratio 2:3:4. Find the angles.</text>
+    <option>30°, 45°, 60°</option>
+    <option>35°, 50°, 65°</option>
+    <option correct="true">40°, 60°, 80°</option>
+    <option>45°, 60°, 75°</option>
+    <explanation>Let angles be 2x, 3x, 4x. 2x+3x+4x=180 → 9x=180 → x=20. Angles: 40°, 60°, 80°</explanation>
+  </question>
+</quiz>
