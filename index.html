@@ -42,41 +42,44 @@
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .header-top {
-      display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 12px;
     }
 
-    .header-center {
-      flex: 1;
-      text-align: center;
-      min-width: 0;
-      overflow: hidden;
+    .header-left {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
+      gap: 12px;
+      min-width: 0;
+      flex: 1;
     }
 
-    /* Logo styles */
-    .logo {
-      width: 40px;
-      height: 40px;
+    /* Logo styles - LARGER SIZE */
+    .logo-header {
+      width: 50px;  /* Increased from 30px */
+      height: 50px; /* Increased from 30px */
       border-radius: 8px;
       object-fit: contain;
       flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3px;
     }
 
-    .logo-small {
-      width: 30px;
-      height: 30px;
-      margin-right: 8px;
+    .logo-login {
+      width: 70px;  /* Increased from 60px */
+      height: 70px; /* Increased from 60px */
+      border-radius: 12px;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 5px;
+    }
+
+    .header-title-container {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      flex: 1;
     }
 
     .header-title {
@@ -91,11 +94,7 @@
       text-overflow: ellipsis;
       line-height: 1.2;
       margin: 0;
-      text-align: center;
       letter-spacing: 0.5px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
     .header-subtitle {
@@ -105,16 +104,14 @@
       overflow: hidden;
       text-overflow: ellipsis;
       line-height: 1.2;
-      text-align: center;
       margin-top: 2px;
     }
 
-    .header-bottom {
+    .header-right {
       display: flex;
-      justify-content: center;
       align-items: center;
       gap: 12px;
-      padding: 3px 0;
+      flex-shrink: 0;
     }
 
     .user-info {
@@ -193,15 +190,6 @@
       flex-direction: column;
       align-items: center;
       gap: 15px;
-    }
-
-    .login-logo {
-      width: 60px;
-      height: 60px;
-      border-radius: 12px;
-      object-fit: contain;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 5px;
     }
 
     .login-title {
@@ -301,7 +289,6 @@
       text-align: center;
     }
 
-    /* Configuration info panel */
     .config-info {
       background: rgba(59, 130, 246, 0.1);
       border: 1px solid rgba(59, 130, 246, 0.3);
@@ -311,15 +298,6 @@
       font-size: 0.8rem;
       color: #93c5fd;
       text-align: center;
-    }
-
-    .config-info a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-
-    .config-info a:hover {
-      text-decoration: underline;
     }
 
     /* ===== CLASS SELECTION SCREEN ===== */
@@ -1041,45 +1019,49 @@
         padding: 8px 12px;
       }
       
-      .header-title {
-        font-size: 1.1rem;
+      .header-content {
         flex-direction: column;
-        gap: 5px;
+        gap: 8px;
       }
       
-      .logo-small {
-        width: 25px;
-        height: 25px;
-        margin-right: 5px;
+      .header-left {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .header-right {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .logo-header {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .header-title {
+        font-size: 1.1rem;
       }
       
       .header-subtitle {
         font-size: 0.7rem;
       }
       
-      .header-bottom {
-        gap: 8px;
-        justify-content: space-between;
-        padding: 3px 0;
-      }
-      
       .user-info {
         font-size: 0.75rem;
         padding: 4px 8px;
         max-width: 140px;
-        min-width: 0;
-        flex: 1;
       }
       
       .logout-btn {
         font-size: 0.75rem;
         padding: 4px 8px;
         gap: 3px;
-        flex-shrink: 0;
       }
       
       .main-content {
-        margin-top: 95px;
+        margin-top: 110px; /* Increased for larger header */
         padding: 12px;
         gap: 15px;
       }
@@ -1096,9 +1078,9 @@
         margin: 0 12px;
       }
       
-      .login-logo {
-        width: 50px;
-        height: 50px;
+      .logo-login {
+        width: 60px;
+        height: 60px;
       }
       
       .login-title,
@@ -1224,7 +1206,7 @@
       }
       
       .main-content {
-        margin: 90px auto 20px;
+        margin: 100px auto 20px; /* Increased for larger header */
         padding: 20px;
       }
       
@@ -1246,9 +1228,9 @@
         font-size: 0.65rem;
       }
       
-      .logo-small {
-        width: 20px;
-        height: 20px;
+      .logo-header {
+        width: 35px;
+        height: 35px;
       }
       
       .user-info {
@@ -1266,7 +1248,7 @@
       
       .main-content {
         padding: 10px;
-        margin-top: 85px;
+        margin-top: 105px;
       }
       
       .quiz-container,
@@ -1279,13 +1261,9 @@
         padding: 15px;
       }
       
-      .login-logo {
-        width: 40px;
-        height: 40px;
-      }
-      
-      .header-bottom {
-        gap: 6px;
+      .logo-login {
+        width: 50px;
+        height: 50px;
       }
       
       .timer-label {
@@ -1310,40 +1288,20 @@
         font-size: 2rem;
       }
     }
-    
-    @media (max-width: 350px) {
-      .user-info {
-        max-width: 100px;
-        font-size: 0.65rem;
-        padding: 3px 5px;
-      }
-      
-      .logout-btn {
-        font-size: 0.65rem;
-        padding: 3px 5px;
-      }
-      
-      .timer-label {
-        font-size: 0.7rem;
-      }
-      
-      .timer-display {
-        font-size: 0.8rem;
-      }
-    }
   </style>
 </head>
 <body>
   <!-- Fixed Header -->
   <div class="fixed-header" style="display: none;">
     <div class="header-content">
-      <div class="header-top">
-        <div class="header-center">
-          <img src="logo.png" alt="Logo" class="logo-small">
+      <div class="header-left">
+        <img src="logo.png" alt="Logo" class="logo-header">
+        <div class="header-title-container">
           <div class="header-title">G. S. Tutorial - Online MCQ Practice</div>
+          <div class="header-subtitle">Created by Gobind Sharma</div>
         </div>
       </div>
-      <div class="header-bottom">
+      <div class="header-right">
         <div class="user-info" id="header-user-info" style="display: none;">
           👤 <span id="header-username">Guest</span>
         </div>
@@ -1360,7 +1318,7 @@
     <div id="login-container">
       <div class="login-box">
         <div class="login-header">
-          <img src="logo.png" alt="G. S. Tutorial Logo" class="login-logo">
+          <img src="logo.png" alt="G. S. Tutorial Logo" class="logo-login">
           <div class="login-title">🔐 G. S. Tutorial Login</div>
           <div class="login-subtitle">Created by Gobind Sharma</div>
         </div>
@@ -1599,6 +1557,10 @@
         const ROLE_COL = 3;      // Column D
         const CLASS_COL = 4;     // Column E
         
+        console.log(`Total rows in sheet: ${rows.length}`);
+        
+        // IMPORTANT: Start from row 1 (second row in Google Sheets)
+        // Row 0 is the header row
         for (let i = 1; i < rows.length; i++) { // Start from 1 to skip header
           const row = rows[i];
           
@@ -1609,14 +1571,22 @@
             const role = row.c[ROLE_COL] ? row.c[ROLE_COL].v : 'student';
             const userClass = row.c[CLASS_COL] ? row.c[CLASS_COL].v : '';
             
-            if (username && password) {
+            // Convert to string and trim
+            const usernameStr = username ? username.toString().trim() : '';
+            const passwordStr = password ? password.toString().trim() : '';
+            
+            if (usernameStr && passwordStr) {
               userList.push({
-                username: username.toString().trim(),
-                password: password.toString().trim(),
-                name: name.toString().trim(),
-                role: role.toString().trim(),
-                class: userClass.toString().trim()
+                username: usernameStr,
+                password: passwordStr,
+                name: name ? name.toString().trim() : usernameStr,
+                role: role ? role.toString().trim() : 'student',
+                class: userClass ? userClass.toString().trim() : '8'
               });
+              
+              console.log(`Loaded user ${i}: ${usernameStr} (Class: ${userClass || '8'})`);
+            } else {
+              console.log(`Skipping row ${i+1}: Missing username or password`);
             }
           }
         }
@@ -1667,7 +1637,7 @@
       // Load available classes
       loadClasses();
       
-      console.log(`User ${user.name} logged in successfully. Role: ${user.role}, Class: ${user.class}`);
+      console.log(`User ${user.name} logged in successfully. Role: ${user.role}, Class: ${user.class || '8'}`);
     }
 
     function logout() {
@@ -1769,8 +1739,10 @@
     }
 
     function loadClasses() {
-      // For teacher/admin, show all classes
-      // For students, show only their assigned class
+      // Get user's class from Google Sheet, default to "8" if empty
+      const userClassValue = currentUser?.class || "8";
+      console.log(`User class from sheet: "${userClassValue}"`);
+      
       let availableClasses = [];
       
       if (currentUser && currentUser.role === 'teacher') {
@@ -1782,9 +1754,18 @@
         ];
       } else {
         // Student sees only their assigned class
-        const userClass = currentUser?.class || "8";
+        // Handle cases where class might be "None" or empty
+        let studentClass = "8"; // Default
+        
+        if (userClassValue && userClassValue.toLowerCase() !== "none" && userClassValue.trim() !== "") {
+          // Extract numeric part from class value
+          const classMatch = userClassValue.match(/\d+/);
+          studentClass = classMatch ? classMatch[0] : "8";
+        }
+        
+        console.log(`Student will see Class ${studentClass}`);
         availableClasses = [
-          { id: userClass, name: `Class ${userClass}`, icon: "📚", desc: "Mathematics & Science" }
+          { id: studentClass, name: `Class ${studentClass}`, icon: "📚", desc: "Mathematics & Science" }
         ];
       }
       
@@ -1806,6 +1787,8 @@
         
         classGridEl.appendChild(card);
       });
+      
+      console.log(`Loaded ${availableClasses.length} classes for user`);
     }
 
     function loadSubjects() {
