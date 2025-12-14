@@ -1568,7 +1568,7 @@
             const username = row.c[USERNAME_COL] ? row.c[USERNAME_COL].v : '';
             const password = row.c[PASSWORD_COL] ? row.c[PASSWORD_COL].v : '';
             const name = row.c[NAME_COL] ? row.c[NAME_COL].v : username;
-            const role = row.c[ROLE_COL] ? row.c[ROLE_COL].v : 'student';
+            const role = row.c[ROLE_COL] ? row.c[ROLE_COL].v : 'Student';
             const userClass = row.c[CLASS_COL] ? row.c[CLASS_COL].v : '';
             
             // Convert to string and trim
@@ -1580,7 +1580,7 @@
                 username: usernameStr,
                 password: passwordStr,
                 name: name ? name.toString().trim() : usernameStr,
-                role: role ? role.toString().trim() : 'student',
+                role: role ? role.toString().trim() : 'Student',
                 class: userClass ? userClass.toString().trim() : '8'
               });
               
@@ -1745,7 +1745,7 @@
       
       let availableClasses = [];
       
-      if (currentUser && currentUser.role === 'teacher') {
+      if (currentUser && currentUser.role === 'Teacher') {
         // Teacher sees all classes
         availableClasses = [
           { id: "8", name: "Class 8", icon: "📚", desc: "Mathematics & Science" },
@@ -2848,5 +2848,6 @@
   </script>
 </body>
 </html>
+
 
 
