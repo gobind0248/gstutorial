@@ -1,188 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quiz>
-  <metadata>
-    <timeLimit>25</timeLimit>
-    <author>G. S. Tutorial</author>
-    <description>Class 9 Science - 1: Matter in Our Surroundings</description>
-  </metadata>
-  
-  <question>
-    <text>Which state of matter has definite volume but no definite shape?</text>
-    <option>Solid</option>
-    <option correct="true">Liquid</option>
-    <option>Gas</option>
-    <option>Plasma</option>
-    <explanation>Liquids have definite volume but take the shape of their container.</explanation>
-  </question>
-  
-  <question>
-    <text>The process of conversion of solid directly to gas is called:</text>
-    <option>Evaporation</option>
-    <option>Condensation</option>
-    <option correct="true">Sublimation</option>
-    <option>Fusion</option>
-    <explanation>Sublimation is direct conversion from solid to gas without passing through liquid state.</explanation>
-  </question>
-  
-  <question>
-    <text>Which of these shows maximum expansion on heating?</text>
-    <option>Solid</option>
-    <option>Liquid</option>
-    <option correct="true">Gas</option>
-    <option>All expand equally</option>
-    <explanation>Gases expand the most on heating due to large intermolecular spaces.</explanation>
-  </question>
-  
-  <question>
-    <text>The SI unit of temperature is:</text>
-    <option>Fahrenheit</option>
-    <option>Celsius</option>
-    <option correct="true">Kelvin</option>
-    <option>Rankine</option>
-    <explanation>Kelvin is the SI unit of temperature. 0°C = 273.15 K</explanation>
-  </question>
-  
-  <question>
-    <text>Dry ice is:</text>
-    <option>Ice at 0°C</option>
-    <option correct="true">Solid carbon dioxide</option>
-    <option>Ice without water</option>
-    <option>Frozen oxygen</option>
-    <explanation>Dry ice is solid CO₂ which sublimates at -78.5°C.</explanation>
-  </question>
-  
-  <question>
-    <text>Evaporation causes cooling because:</text>
-    <option>Water is cold</option>
-    <option correct="true">Energy is absorbed from surroundings</option>
-    <option>Energy is released</option>
-    <option>Air becomes cool</option>
-    <explanation>During evaporation, molecules with higher kinetic energy escape, lowering average kinetic energy of remaining molecules.</explanation>
-  </question>
-  
-  <question>
-    <text>Which factor does NOT increase the rate of evaporation?</text>
-    <option>Increase in temperature</option>
-    <option>Increase in surface area</option>
-    <option>Decrease in humidity</option>
-    <option correct="true">Increase in atmospheric pressure</option>
-    <explanation>Higher pressure decreases evaporation rate as it's harder for molecules to escape.</explanation>
-  </question>
-  
-  <question>
-    <text>The boiling point of water at sea level is:</text>
-    <option>90°C</option>
-    <option correct="true">100°C</option>
-    <option>110°C</option>
-    <option>120°C</option>
-    <explanation>At standard atmospheric pressure (1 atm), water boils at 100°C.</explanation>
-  </question>
-  
-  <question>
-    <text>Latent heat of vaporization of water is:</text>
-    <option>80 cal/g</option>
-    <option correct="true">540 cal/g</option>
-    <option>100 cal/g</option>
-    <option>1 cal/g</option>
-    <explanation>Water requires 540 calories to convert 1g of liquid to vapor at 100°C.</explanation>
-  </question>
-  
-  <question>
-    <text>Which has highest kinetic energy?</text>
-    <option>Ice at 0°C</option>
-    <option>Water at 0°C</option>
-    <option correct="true">Water vapor at 100°C</option>
-    <option>All have same</option>
-    <explanation>Kinetic energy increases with temperature. Water vapor at 100°C has highest temperature.</explanation>
-  </question>
-  
-  <question>
-    <text>The process of conversion of vapor to liquid is called:</text>
-    <option>Evaporation</option>
-    <option>Sublimation</option>
-    <option correct="true">Condensation</option>
-    <option>Freezing</option>
-    <explanation>Condensation is conversion from gas/vapor to liquid state.</explanation>
-  </question>
-  
-  <question>
-    <text>Which of these is NOT a characteristic of particles of matter?</text>
-    <option>They have space between them</option>
-    <option>They are in continuous motion</option>
-    <option correct="true">They have no attraction between them</option>
-    <option>They are very small</option>
-    <explanation>Particles of matter do have attractive forces between them.</explanation>
-  </question>
-  
-  <question>
-    <text>Density of water is maximum at:</text>
-    <option>0°C</option>
-    <option correct="true">4°C</option>
-    <option>10°C</option>
-    <option>100°C</option>
-    <explanation>Water has maximum density (1 g/cm³) at 4°C due to hydrogen bonding.</explanation>
-  </question>
-  
-  <question>
-    <text>Which shows fluidity?</text>
-    <option>Solid only</option>
-    <option correct="true">Liquid and gas</option>
-    <option>Gas only</option>
-    <option>Solid and liquid</option>
-    <explanation>Fluidity is the ability to flow. Liquids and gases can flow, solids cannot.</explanation>
-  </question>
-  
-  <question>
-    <text>The melting point of ice is:</text>
-    <option correct="true">0°C</option>
-    <option>100°C</option>
-    <option>4°C</option>
-    <option>-10°C</option>
-    <explanation>Ice melts at 0°C under standard atmospheric pressure.</explanation>
-  </question>
-  
-  <question>
-    <text>Why does smell of perfume spread in room?</text>
-    <option>Due to gravity</option>
-    <option correct="true">Due to diffusion</option>
-    <option>Due to evaporation</option>
-    <option>Due to condensation</option>
-    <explanation>Perfume molecules diffuse through air due to random motion of particles.</explanation>
-  </question>
-  
-  <question>
-    <text>Convert 25°C to Kelvin:</text>
-    <option>248 K</option>
-    <option>273 K</option>
-    <option correct="true">298 K</option>
-    <option>323 K</option>
-    <explanation>K = °C + 273 = 25 + 273 = 298 K</explanation>
-  </question>
-  
-  <question>
-    <text>Which will evaporate faster?</text>
-    <option>Water at 30°C</option>
-    <option correct="true">Spirit at 30°C</option>
-    <option>Oil at 30°C</option>
-    <option>All same</option>
-    <explanation>Spirit has lower boiling point and weaker intermolecular forces than water.</explanation>
-  </question>
-  
-  <question>
-    <text>Latent heat of fusion of ice is:</text>
-    <option correct="true">80 cal/g</option>
-    <option>540 cal/g</option>
-    <option>100 cal/g</option>
-    <option>1 cal/g</option>
-    <explanation>Ice requires 80 calories to melt 1g at 0°C without temperature change.</explanation>
-  </question>
-  
-  <question>
-    <text>Which has strongest intermolecular forces?</text>
-    <option correct="true">Solid</option>
-    <option>Liquid</option>
-    <option>Gas</option>
-    <option>Plasma</option>
-    <explanation>Solids have strongest intermolecular forces, which is why they have definite shape and volume.</explanation>
-  </question>
+<metadata>
+  <chapter>1. Matter in Our Surroundings</chapter>
+  <timeLimit>30</timeLimit>
+  <author>CBSE Exam Important Questions</author>
+</metadata>
+
+<question>
+  <text>Which of the following has the strongest intermolecular forces?</text>
+  <option correct="true">Iron nail at room temperature</option>
+  <option>Water at 25°C</option>
+  <option>Oxygen gas</option>
+  <option>Kerosene oil</option>
+  <explanation>Solids have strongest intermolecular forces. Iron is solid at room temperature.</explanation>
+</question>
+
+<question>
+  <text>What happens to the density of water when it cools from 10°C to 4°C?</text>
+  <option correct="true">Increases</option>
+  <option>Decreases</option>
+  <option>Remains constant</option>
+  <option>First decreases then increases</option>
+  <explanation>Water has maximum density at 4°C, so density increases as it cools to 4°C.</explanation>
+</question>
+
+<question>
+  <text>The process of conversion of water vapor into water is called:</text>
+  <option>Evaporation</option>
+  <option correct="true">Condensation</option>
+  <option>Sublimation</option>
+  <option>Freezing</option>
+  <explanation>Condensation is the process where gas/vapor changes to liquid.</explanation>
+</question>
+
+<question>
+  <text>Which of the following will cause the fastest evaporation?</text>
+  <option>Water in a cup</option>
+  <option correct="true">Water spread on a plate</option>
+  <option>Water in a closed bottle</option>
+  <option>Water in a deep container</option>
+  <explanation>More surface area increases evaporation rate.</explanation>
+</question>
+
+<question>
+  <text>Dry ice is:</text>
+  <option>Ice without water</option>
+  <option correct="true">Solid carbon dioxide</option>
+  <option>Solid oxygen</option>
+  <option>Frozen nitrogen</option>
+  <explanation>Dry ice is solid CO₂ which sublimates directly to gas.</explanation>
+</question>
+
+<question>
+  <text>Which of these factors increases the rate of evaporation?</text>
+  <option>Increase in humidity</option>
+  <option>Decrease in temperature</option>
+  <option correct="true">Increase in wind speed</option>
+  <option>Decrease in surface area</option>
+  <explanation>Wind speed increases evaporation by removing vapor particles from surface.</explanation>
+</question>
+
+<question>
+  <text>The temperature at which a liquid starts boiling at atmospheric pressure is called:</text>
+  <option>Melting point</option>
+  <option>Freezing point</option>
+  <option correct="true">Boiling point</option>
+  <option>Sublimation point</option>
+  <explanation>Boiling point is temperature where vapor pressure equals atmospheric pressure.</explanation>
+</question>
+
+<question>
+  <text>Which state of matter has maximum compressibility?</text>
+  <option>Solid</option>
+  <option>Liquid</option>
+  <option correct="true">Gas</option>
+  <option>Plasma</option>
+  <explanation>Gases have large intermolecular spaces, making them highly compressible.</explanation>
+</question>
+
+<question>
+  <text>Latent heat of fusion of ice is:</text>
+  <option correct="true">80 cal/g</option>
+  <option>540 cal/g</option>
+  <option>100 cal/g</option>
+  <option>1 cal/g</option>
+  <explanation>Ice requires 80 cal/g to melt at 0°C without temperature change.</explanation>
+</question>
+
+<question>
+  <text>Convert 300 K to Celsius:</text>
+  <option correct="true">27°C</option>
+  <option>0°C</option>
+  <option>100°C</option>
+  <option>-273°C</option>
+  <explanation>°C = K - 273 = 300 - 273 = 27°C</explanation>
+</question>
+
+<question>
+  <text>Which shows the phenomenon of diffusion?</text>
+  <option>Melting of ice</option>
+  <option>Freezing of water</option>
+  <option correct="true">Smell of perfume spreading</option>
+  <option>Boiling of water</option>
+  <explanation>Diffusion is mixing of particles due to their random motion.</explanation>
+</question>
+
+<question>
+  <text>The process of conversion of solid directly to gas is:</text>
+  <option>Evaporation</option>
+  <option>Condensation</option>
+  <option correct="true">Sublimation</option>
+  <option>Fusion</option>
+  <explanation>Sublimation bypasses liquid state (e.g., camphor, dry ice).</explanation>
+</question>
+
+<question>
+  <text>Why do wet clothes dry faster on a windy day?</text>
+  <option>Temperature decreases</option>
+  <option correct="true">Rate of evaporation increases</option>
+  <option>Humidity increases</option>
+  <option>Wind decreases boiling point</option>
+  <explanation>Wind removes water vapor, maintaining concentration gradient for evaporation.</explanation>
+</question>
+
+<question>
+  <text>Which has maximum kinetic energy at room temperature?</text>
+  <option>Ice cubes</option>
+  <option>Water in glass</option>
+  <option correct="true">Water vapor</option>
+  <option>All have same</option>
+  <explanation>Higher temperature means higher kinetic energy. Water vapor has higher temp than ice/water.</explanation>
+</question>
+
+<question>
+  <text>SI unit of temperature is:</text>
+  <option>Celsius</option>
+  <option correct="true">Kelvin</option>
+  <option>Fahrenheit</option>
+  <option>Rankine</option>
+  <explanation>Kelvin is SI base unit of thermodynamic temperature.</explanation>
+</question>
+
+<question>
+  <text>Why does evaporation cause cooling?</text>
+  <option>Water absorbs heat</option>
+  <option correct="true">High energy molecules escape</option>
+  <option>Air becomes cold</option>
+  <option>Latent heat is released</option>
+  <explanation>Molecules with highest kinetic energy evaporate, lowering average energy of remaining liquid.</explanation>
+</question>
+
+<question>
+  <text>Which of these is NOT a characteristic of particles of matter?</text>
+  <option>They are in continuous motion</option>
+  <option>They have space between them</option>
+  <option correct="true">They have no attractive forces</option>
+  <option>They are very small</option>
+  <explanation>Particles of matter do have attractive forces (intermolecular forces).</explanation>
+</question>
+
+<question>
+  <text>Density of water is maximum at:</text>
+  <option>0°C</option>
+  <option correct="true">4°C</option>
+  <option>10°C</option>
+  <option>100°C</option>
+  <explanation>Water exhibits anomalous expansion, with maximum density at 4°C.</explanation>
+</question>
+
+<question>
+  <text>Which can flow easily?</text>
+  <option>Solid</option>
+  <option correct="true">Liquid</option>
+  <option>Both solid and liquid</option>
+  <option>None of these</option>
+  <explanation>Liquids can flow due to weaker intermolecular forces than solids.</explanation>
+</question>
+
+<question>
+  <text>The melting point of ice decreases with:</text>
+  <option>Decrease in pressure</option>
+  <option correct="true">Increase in pressure</option>
+  <option>Increase in temperature</option>
+  <option>Increase in volume</option>
+  <explanation>Increased pressure lowers melting point of ice (regelation phenomenon).</explanation>
+</question>
+
+<question>
+  <text>Why does naphthalene balls disappear with time?</text>
+  <option>They melt</option>
+  <option correct="true">They sublime</option>
+  <option>They evaporate</option>
+  <option>They dissolve</option>
+  <explanation>Naphthalene undergoes sublimation directly from solid to gas.</explanation>
+</question>
+
+<question>
+  <text>Boiling point of water at high altitude is:</text>
+  <option>Same as sea level</option>
+  <option correct="true">Less than 100°C</option>
+  <option>More than 100°C</option>
+  <option>0°C</option>
+  <explanation>Lower atmospheric pressure at high altitudes reduces boiling point.</explanation>
+</question>
+
+<question>
+  <text>Which process requires absorption of heat energy?</text>
+  <option>Condensation</option>
+  <option>Freezing</option>
+  <option correct="true">Evaporation</option>
+  <option>All of these</option>
+  <explanation>Evaporation is endothermic (absorbs heat from surroundings).</explanation>
+</question>
+
+<question>
+  <text>The smell of food being cooked reaches us by:</text>
+  <option>Conduction</option>
+  <option>Convection</option>
+  <option correct="true">Diffusion</option>
+  <option>Radiation</option>
+  <explanation>Food particles diffuse through air to reach our nose.</explanation>
+</question>
+
+<question>
+  <text>Liquids have:</text>
+  <option>Definite shape and volume</option>
+  <option correct="true">Definite volume but no definite shape</option>
+  <option>No definite shape or volume</option>
+  <option>Definite shape but no definite volume</option>
+  <explanation>Liquids take shape of container but have fixed volume.</explanation>
+</question>
 </quiz>
