@@ -1,98 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quiz>
 <metadata>
-  <chapter>Is Matter Around Us Pure</chapter>
-  <timeLimit>25</timeLimit>
-  <author>G. S. Tutorial</author>
+  <chapter>2. Is Matter Around Us Pure</chapter>
+  <timeLimit>30</timeLimit>
+  <author>CBSE Exam Important Questions</author>
 </metadata>
 
 <question>
-  <text>What is a pure substance?</text>
-  <option correct="true">Substance with fixed composition</option>
-  <option>Mixture of elements</option>
-  <option>Impure substance</option>
-  <option>All of these</option>
-  <explanation>A pure substance has definite chemical composition and properties throughout.</explanation>
-</question>
-
-<question>
-  <text>Which of the following is a homogeneous mixture?</text>
-  <option>Sand and water</option>
-  <option>Oil and water</option>
-  <option correct="true">Sugar solution</option>
-  <option>Soil</option>
-  <explanation>Sugar solution is homogeneous as sugar particles are uniformly distributed in water.</explanation>
-</question>
-
-<question>
-  <text>What method separates immiscible liquids?</text>
-  <option>Distillation</option>
-  <option>Chromatography</option>
-  <option correct="true">Separating funnel</option>
-  <option>Evaporation</option>
-  <explanation>Separating funnel is used to separate immiscible liquids based on density differences.</explanation>
-</question>
-
-<question>
-  <text>Tyndall effect is shown by:</text>
-  <option>True solutions</option>
-  <option correct="true">Colloidal solutions</option>
-  <option>Compounds</option>
-  <option>Elements</option>
-  <explanation>Colloids scatter light beam, making its path visible (Tyndall effect).</explanation>
-</question>
-
-<question>
-  <text>What is the size of particles in a true solution?</text>
-  <option>More than 100 nm</option>
-  <option>1-100 nm</option>
-  <option correct="true">Less than 1 nm</option>
-  <option>10-1000 nm</option>
-  <explanation>True solution particles are less than 1 nm in diameter and invisible even under microscope.</explanation>
-</question>
-
-<question>
-  <text>Which is a compound?</text>
+  <text>Which of the following is a pure substance?</text>
+  <option>Milk</option>
   <option>Air</option>
-  <option>Gold</option>
-  <option correct="true">Water</option>
-  <option>Brass</option>
-  <explanation>Water (H₂O) is a compound made of hydrogen and oxygen chemically combined.</explanation>
+  <option correct="true">Distilled water</option>
+  <option>Soil</option>
+  <explanation>Distilled water has uniform composition and fixed properties.</explanation>
 </question>
 
 <question>
-  <text>Chromatography is used to separate:</text>
-  <option>Solid from liquid</option>
-  <option correct="true">Colored substances</option>
-  <option>Metals from ores</option>
-  <option>Immiscible liquids</option>
-  <explanation>Chromatography separates components of a mixture based on their different rates of movement.</explanation>
+  <text>A mixture of sulphur and carbon disulphide is:</text>
+  <option>Heterogeneous and shows Tyndall effect</option>
+  <option>Homogeneous and shows Tyndall effect</option>
+  <option correct="true">Homogeneous and does not show Tyndall effect</option>
+  <option>Heterogeneous and does not show Tyndall effect</option>
+  <explanation>Sulphur dissolves in CS₂ forming true solution (homogeneous, no Tyndall).</explanation>
 </question>
 
 <question>
-  <text>Which is NOT a characteristic of mixture?</text>
-  <option>Variable composition</option>
-  <option>No chemical reaction</option>
-  <option correct="true">Fixed boiling point</option>
-  <option>Components can be separated</option>
-  <explanation>Mixtures don't have fixed boiling points as composition varies.</explanation>
+  <text>Which separation technique is used to separate dyes in ink?</text>
+  <option>Distillation</option>
+  <option correct="true">Chromatography</option>
+  <option>Crystallization</option>
+  <option>Filtration</option>
+  <explanation>Chromatography separates colored components based on adsorption.</explanation>
+</question>
+
+<question>
+  <text>Tyndall effect is observed when:</text>
+  <option>The particle size is less than 1 nm</option>
+  <option correct="true">The particle size is between 1-100 nm</option>
+  <option>The particle size is more than 100 nm</option>
+  <option>In all types of mixtures</option>
+  <explanation>Tyndall effect is characteristic of colloids (1-100 nm particles).</explanation>
 </question>
 
 <question>
   <text>Brass is an example of:</text>
   <option>Compound</option>
-  <option>Element</option>
   <option correct="true">Homogeneous mixture</option>
   <option>Heterogeneous mixture</option>
-  <explanation>Brass (copper + zinc) is a homogeneous mixture (alloy).</explanation>
+  <option>Element</option>
+  <explanation>Brass (copper+zinc) is homogeneous alloy with uniform composition.</explanation>
 </question>
 
 <question>
-  <text>What is the process of obtaining pure water from seawater?</text>
+  <text>Which method would you use to separate cream from milk?</text>
+  <option>Distillation</option>
+  <option>Chromatography</option>
+  <option correct="true">Centrifugation</option>
   <option>Filtration</option>
-  <option>Crystallization</option>
-  <option correct="true">Distillation</option>
+  <explanation>Centrifugation uses centrifugal force to separate cream (lighter) from milk.</explanation>
+</question>
+
+<question>
+  <text>Colloidal solution shows:</text>
+  <option correct="true">Tyndall effect</option>
+  <option>Brownian movement</option>
+  <option>Both Tyndall effect and Brownian movement</option>
+  <option>Neither Tyndall effect nor Brownian movement</option>
+  <explanation>Colloids show both Tyndall effect and Brownian motion.</explanation>
+</question>
+
+<question>
+  <text>Which is NOT a pure substance?</text>
+  <option>Gold</option>
+  <option>Oxygen</option>
+  <option correct="true">Sea water</option>
+  <option>Carbon dioxide</option>
+  <explanation>Sea water contains salts and minerals - it's a mixture.</explanation>
+</question>
+
+<question>
+  <text>Blood is an example of:</text>
+  <option>Suspension</option>
+  <option correct="true">Colloid</option>
+  <option>True solution</option>
+  <option>Compound</option>
+  <explanation>Blood is colloidal solution (particle size 1-100 nm).</explanation>
+</question>
+
+<question>
+  <text>Which process gives pure copper sulphate from impure sample?</text>
+  <option>Distillation</option>
+  <option>Filtration</option>
+  <option correct="true">Crystallization</option>
   <option>Sedimentation</option>
-  <explanation>Distillation involves boiling and condensation to obtain pure water from seawater.</explanation>
+  <explanation>Crystallization purifies solids by dissolving and recrystallizing.</explanation>
+</question>
+
+<question>
+  <text>A solution which cannot dissolve more solute is called:</text>
+  <option>Unsaturated solution</option>
+  <option correct="true">Saturated solution</option>
+  <option>Supersaturated solution</option>
+  <option>Dilute solution</option>
+  <explanation>Saturated solution contains maximum solute at given temperature.</explanation>
+</question>
+
+<question>
+  <text>Smoke is an example of:</text>
+  <option>Solid in gas colloid</option>
+  <option correct="true">Aerosol</option>
+  <option>Foam</option>
+  <option>Emulsion</option>
+  <explanation>Smoke is solid particles dispersed in gas (aerosol).</explanation>
+</question>
+
+<question>
+  <text>Which property is same for compounds and mixtures?</text>
+  <option>Fixed composition</option>
+  <option>Components can be separated by physical methods</option>
+  <option correct="true">Made up of two or more substances</option>
+  <option>Formed by chemical reaction</option>
+  <explanation>Both contain two or more substances, but compounds have fixed composition.</explanation>
+</question>
+
+<question>
+  <text>Which mixture can be separated by magnetic separation?</text>
+  <option>Sugar and sand</option>
+  <option correct="true">Iron filings and sulphur</option>
+  <option>Salt and water</option>
+  <option>Alcohol and water</option>
+  <explanation>Iron is magnetic, sulphur is not - they can be separated by magnet.</explanation>
+</question>
+
+<question>
+  <text>Blue vitriol is:</text>
+  <option>CuSO₄.2H₂O</option>
+  <option correct="true">CuSO₄.5H₂O</option>
+  <option>CuSO₄.7H₂O</option>
+  <option>CuSO₄</option>
+  <explanation>Blue vitriol is copper sulphate pentahydrate (CuSO₄.5H₂O).</explanation>
+</question>
+
+<question>
+  <text>Which is a heterogeneous mixture?</text>
+  <option>Sugar solution</option>
+  <option>Salt solution</option>
+  <option correct="true">Muddy water</option>
+  <option>Alcohol in water</option>
+  <explanation>Muddy water has visible particles settling down - heterogeneous.</explanation>
+</question>
+
+<question>
+  <text>Fractional distillation is used to separate:</text>
+  <option>Solid from liquid</option>
+  <option correct="true">Miscible liquids</option>
+  <option>Immiscible liquids</option>
+  <option>Solid from solid</option>
+  <explanation>Fractional distillation separates liquids with close boiling points.</explanation>
+</question>
+
+<question>
+  <text>Which shows Brownian movement?</text>
+  <option>True solution</option>
+  <option correct="true">Colloidal solution</option>
+  <option>Compound</option>
+  <option>Element</option>
+  <explanation>Colloidal particles show random zigzag motion called Brownian movement.</explanation>
+</question>
+
+<question>
+  <text>A tincture of iodine contains:</text>
+  <option>Iodine in water</option>
+  <option correct="true">Iodine in alcohol</option>
+  <option>Iodine in kerosene</option>
+  <option>Iodine in petrol</option>
+  <explanation>Tincture iodine is iodine dissolved in alcohol (antiseptic).</explanation>
+</question>
+
+<question>
+  <text>Butter is an example of:</text>
+  <option>Foam</option>
+  <option>Sol</option>
+  <option correct="true">Gel</option>
+  <option>Emulsion</option>
+  <explanation>Butter is gel - liquid dispersed in solid.</explanation>
+</question>
+
+<question>
+  <text>Which technique separates sodium chloride from its solution in water?</text>
+  <option>Distillation</option>
+  <option correct="true">Evaporation</option>
+  <option>Chromatography</option>
+  <option>Filtration</option>
+  <explanation>Evaporate water to get solid salt back.</explanation>
+</question>
+
+<question>
+  <text>An alloy is:</text>
+  <option>A compound of metals</option>
+  <option correct="true">Homogeneous mixture of metals</option>
+  <option>Heterogeneous mixture of metals</option>
+  <option>Pure metal</option>
+  <explanation>Alloy is homogeneous mixture of metals or metal with non-metal.</explanation>
+</question>
+
+<question>
+  <text>Which is NOT a chemical change?</text>
+  <option>Rusting of iron</option>
+  <option>Burning of paper</option>
+  <option correct="true">Melting of ice</option>
+  <option>Digestion of food</option>
+  <explanation>Melting is physical change - only state changes, not composition.</explanation>
+</question>
+
+<question>
+  <text>Suspension shows:</text>
+  <option>Tyndall effect</option>
+  <option>Particles settle down</option>
+  <option>Can be filtered</option>
+  <option correct="true">All of these</option>
+  <explanation>Suspensions show Tyndall, settle on standing, and can be filtered.</explanation>
+</question>
+
+<question>
+  <text>Chalk powder in water forms:</text>
+  <option>True solution</option>
+  <option>Colloid</option>
+  <option correct="true">Suspension</option>
+  <option>Compound</option>
+  <explanation>Chalk particles are >100 nm, so suspension forms.</explanation>
 </question>
 </quiz>
