@@ -220,6 +220,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      position: relative;
     }
 
     .form-group label {
@@ -237,6 +238,7 @@
       font-size: 0.95rem;
       transition: all 0.2s ease;
       width: 100%;
+      padding-right: 45px; /* Space for eye icon */
     }
 
     .form-input:focus {
@@ -247,6 +249,66 @@
 
     .form-input::placeholder {
       color: #6b7280;
+    }
+
+    /* Password toggle eye icon */
+    .password-toggle {
+      position: absolute;
+      right: 12px;
+      top: 35px;
+      background: transparent;
+      border: none;
+      color: #9ca3af;
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: color 0.2s ease;
+      z-index: 10;
+    }
+
+    .password-toggle:hover {
+      color: #60a5fa;
+    }
+
+    .password-toggle:active {
+      transform: scale(0.95);
+    }
+
+    .attempt-counter {
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .attempt-counter.warning {
+      color: #fbbf24;
+    }
+
+    .attempt-counter.critical {
+      color: #ef4444;
+    }
+
+    .cooldown-message {
+      margin-top: 8px;
+      padding: 10px;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #fca5a5;
+      text-align: center;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
     }
 
     .login-btn {
@@ -300,6 +362,7 @@
       text-align: center;
     }
 
+    /* Rest of the CSS remains exactly the same... */
     /* ===== CLASS SELECTION SCREEN ===== */
     .class-selection {
       background: #020617;
@@ -1198,6 +1261,11 @@
       .result-header {
         font-size: 1.1rem;
       }
+      
+      .password-toggle {
+        top: 33px;
+        right: 10px;
+      }
     }
 
     @media (min-width: 701px) {
@@ -1287,6 +1355,12 @@
       .subject-icon {
         font-size: 2rem;
       }
+      
+      .password-toggle {
+        top: 31px;
+        right: 8px;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -1331,7 +1405,18 @@
           
           <div class="form-group">
             <label for="password">🔒 Password</label>
-            <input type="password" id="password" class="form-input" placeholder="Enter your password" required autocomplete="current-password">
+            <div class="password-input-wrapper">
+              <input type="password" id="password" class="form-input" placeholder="Enter your password" required autocomplete="current-password">
+              <button type="button" class="password-toggle" id="password-toggle" aria-label="Show password">
+                👁️
+              </button>
+            </div>
+            <div id="attempt-counter" class="attempt-counter" style="display: none;">
+              🔄 Attempts remaining: <span id="attempts-remaining">3</span>
+            </div>
+            <div id="cooldown-message" class="cooldown-message" style="display: none;">
+              ⏳ Too many failed attempts. Please wait <span id="cooldown-timer">30</span> seconds.
+            </div>
           </div>
           
           <div id="login-error" class="login-error"></div>
@@ -1479,6 +1564,13 @@
     let inactivityTimer = null;
     const INACTIVITY_TIMEOUT = 15 * 60 * 1000; // 15 minutes
     
+    // Login attempt tracking variables
+    let failedAttempts = 0;
+    const MAX_ATTEMPTS = 3;
+    const COOLDOWN_TIME = 30; // 30 seconds
+    let isOnCooldown = false;
+    let cooldownTimer = null;
+    
     // Navigation variables
     let currentClass = "";
     let currentSubject = "";
@@ -1498,8 +1590,13 @@
     const loginFormEl = document.getElementById("login-form");
     const usernameEl = document.getElementById("username");
     const passwordEl = document.getElementById("password");
+    const passwordToggleEl = document.getElementById("password-toggle");
     const loginErrorEl = document.getElementById("login-error");
     const loginBtnEl = document.getElementById("login-btn");
+    const attemptCounterEl = document.getElementById("attempt-counter");
+    const attemptsRemainingEl = document.getElementById("attempts-remaining");
+    const cooldownMessageEl = document.getElementById("cooldown-message");
+    const cooldownTimerEl = document.getElementById("cooldown-timer");
     
     const classGridEl = document.getElementById("class-grid");
     const subjectGridEl = document.getElementById("subject-grid");
@@ -1525,6 +1622,85 @@
     const progressBarFillEl = document.getElementById("progress-bar-fill");
     const scoreMiniEl = document.getElementById("score-mini");
     const finalScoreEl = document.getElementById("final-score");
+
+    // ========== PASSWORD TOGGLE FUNCTIONALITY ==========
+    function togglePasswordVisibility() {
+      if (passwordEl.type === 'password') {
+        passwordEl.type = 'text';
+        passwordToggleEl.textContent = '🙈';
+        passwordToggleEl.setAttribute('aria-label', 'Hide password');
+      } else {
+        passwordEl.type = 'password';
+        passwordToggleEl.textContent = '👁️';
+        passwordToggleEl.setAttribute('aria-label', 'Show password');
+      }
+      resetInactivityTimer();
+    }
+
+    // ========== LOGIN ATTEMPT TRACKING ==========
+    function resetFailedAttempts() {
+      failedAttempts = 0;
+      isOnCooldown = false;
+      attemptCounterEl.style.display = 'none';
+      cooldownMessageEl.style.display = 'none';
+      updateAttemptCounter();
+      if (cooldownTimer) {
+        clearInterval(cooldownTimer);
+        cooldownTimer = null;
+      }
+    }
+
+    function updateAttemptCounter() {
+      const remaining = MAX_ATTEMPTS - failedAttempts;
+      attemptsRemainingEl.textContent = remaining;
+      
+      if (failedAttempts > 0) {
+        attemptCounterEl.style.display = 'flex';
+        
+        if (remaining <= 1) {
+          attemptCounterEl.className = 'attempt-counter critical';
+        } else if (remaining <= 2) {
+          attemptCounterEl.className = 'attempt-counter warning';
+        } else {
+          attemptCounterEl.className = 'attempt-counter';
+        }
+      } else {
+        attemptCounterEl.style.display = 'none';
+      }
+    }
+
+    function startCooldown() {
+      isOnCooldown = true;
+      loginBtnEl.disabled = true;
+      cooldownMessageEl.style.display = 'block';
+      attemptCounterEl.style.display = 'none';
+      
+      let seconds = COOLDOWN_TIME;
+      cooldownTimerEl.textContent = seconds;
+      
+      cooldownTimer = setInterval(() => {
+        seconds--;
+        cooldownTimerEl.textContent = seconds;
+        
+        if (seconds <= 0) {
+          clearInterval(cooldownTimer);
+          isOnCooldown = false;
+          loginBtnEl.disabled = false;
+          cooldownMessageEl.style.display = 'none';
+          resetFailedAttempts();
+          usernameEl.focus();
+        }
+      }, 1000);
+    }
+
+    function recordFailedAttempt() {
+      failedAttempts++;
+      updateAttemptCounter();
+      
+      if (failedAttempts >= MAX_ATTEMPTS) {
+        startCooldown();
+      }
+    }
 
     // ========== GOOGLE SHEETS FUNCTIONS ==========
     async function loadUsersFromGoogleSheet() {
@@ -1631,6 +1807,9 @@
       loginContainerEl.style.display = "none";
       classSelectionEl.style.display = "block";
       
+      // Reset failed attempts and cooldown
+      resetFailedAttempts();
+      
       // Reset inactivity timer
       resetInactivityTimer();
       
@@ -1653,6 +1832,11 @@
           inactivityTimer = null;
         }
         
+        if (cooldownTimer) {
+          clearInterval(cooldownTimer);
+          cooldownTimer = null;
+        }
+        
         // Remove activity listeners
         document.removeEventListener('mousemove', resetInactivityTimer);
         document.removeEventListener('keypress', resetInactivityTimer);
@@ -1660,6 +1844,7 @@
         
         // Reset state
         resetQuizState();
+        resetFailedAttempts();
         
         // Clear current user
         currentUser = null;
@@ -1673,6 +1858,8 @@
         
         // Clear login form
         loginFormEl.reset();
+        passwordEl.type = 'password';
+        passwordToggleEl.textContent = '👁️';
         loginErrorEl.textContent = "";
         loginErrorEl.style.display = "none";
         
@@ -2755,6 +2942,13 @@
     loginFormEl.addEventListener("submit", async function(e) {
       e.preventDefault();
       
+      // Check if on cooldown
+      if (isOnCooldown) {
+        loginErrorEl.textContent = "Please wait for the cooldown period to end before trying again.";
+        loginErrorEl.style.display = "block";
+        return;
+      }
+      
       const username = usernameEl.value.trim();
       const password = passwordEl.value.trim();
       
@@ -2768,7 +2962,7 @@
       loginErrorEl.style.display = "none";
       
       loginBtnEl.disabled = true;
-      loginBtnEl.innerHTML = '<span class="btn-loader">Loading...</span>';
+      loginBtnEl.innerHTML = '⏳ Loading...';
       
       // Always load fresh data from Google Sheets
       const loaded = await loadUsersFromGoogleSheet();
@@ -2777,7 +2971,7 @@
         loginErrorEl.textContent = "⚠️ Cannot load users. Please check your internet connection.";
         loginErrorEl.style.display = "block";
         loginBtnEl.disabled = false;
-        loginBtnEl.innerHTML = 'Login';
+        loginBtnEl.innerHTML = '🔒 Login';
         return;
       }
       
@@ -2785,19 +2979,29 @@
         const user = authenticateUser(username, password);
         
         if (user) {
+          // Successful login - reset failed attempts
+          resetFailedAttempts();
           login(user);
         } else {
-          loginErrorEl.textContent = "Invalid username or password";
+          // Failed login - record attempt
+          recordFailedAttempt();
+          
+          if (failedAttempts >= MAX_ATTEMPTS) {
+            loginErrorEl.textContent = `Too many failed attempts. Please wait ${COOLDOWN_TIME} seconds.`;
+          } else {
+            loginErrorEl.textContent = `Invalid username or password. ${MAX_ATTEMPTS - failedAttempts} attempt(s) remaining.`;
+          }
           loginErrorEl.style.display = "block";
           usernameEl.focus();
           usernameEl.select();
         }
         
         loginBtnEl.disabled = false;
-        loginBtnEl.innerHTML = 'Login';
+        loginBtnEl.innerHTML = '🔒 Login';
       }, 500);
     });
 
+    passwordToggleEl.addEventListener("click", togglePasswordVisibility);
     headerLogoutBtnEl.addEventListener("click", logout);
     backToClassesBtn.addEventListener("click", () => {
       showClassSelection();
@@ -2842,12 +3046,12 @@
       document.addEventListener('mousemove', resetInactivityTimer);
       document.addEventListener('keypress', resetInactivityTimer);
       document.addEventListener('click', resetInactivityTimer);
+      
+      // Initialize failed attempts tracking
+      resetFailedAttempts();
     }
 
     document.addEventListener("DOMContentLoaded", initializeApp);
   </script>
 </body>
-</html>
-
-
-
+          </html>
