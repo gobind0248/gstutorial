@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<metadata>
+  <testName>Class 9 Science Complete Practice Test - 50 Questions</testName>
+  <timeLimit>60</timeLimit>
+  <author>CBSE Final Revision Test</author>
+  <description>50 Important Mixed Questions from All Chapters</description>
+</metadata>
+
+<question>
+  <text>Which of the following will show Tyndall effect?</text>
+  <option>Sugar solution</option>
+  <option>Salt solution</option>
+  <option correct="true">Milk diluted with water</option>
+  <option>Copper sulphate solution</option>
+  <explanation>Milk is a colloid which scatters light (Tyndall effect).</explanation>
+</question>
+
+<question>
+  <text>A body of mass 5 kg is moving with velocity 4 m/s. Its momentum is:</text>
+  <option>9 kg m/s</option>
+  <option>1.25 kg m/s</option>
+  <option correct="true">20 kg m/s</option>
+  <option>0.8 kg m/s</option>
+  <explanation>Momentum = mass × velocity = 5 × 4 = 20 kg m/s.</explanation>
+</question>
+
+<question>
+  <text>The atomic number of an element is 17. Its electronic configuration is:</text>
+  <option>2,8,8</option>
+  <option>2,8,7</option>
+  <option>2,8,8,1</option>
+  <option correct="true">2,8,7</option>
+  <explanation>Chlorine (Z=17): K=2, L=8, M=7 electrons.</explanation>
+</question>
+
+<question>
+  <text>Which tissue is responsible for transportation of food in plants?</text>
+  <option>Xylem</option>
+  <option correct="true">Phloem</option>
+  <option>Epidermis</option>
+  <option>Parenchyma</option>
+  <explanation>Phloem transports organic nutrients from leaves.</explanation>
+</question>
+
+<question>
+  <text>If the distance between two objects is doubled, gravitational force becomes:</text>
+  <option>Double</option>
+  <option>Half</option>
+  <option correct="true">One-fourth</option>
+  <option>Four times</option>
+  <explanation>F ∝ 1/r², so if r becomes 2r, F becomes F/4.</explanation>
+</question>
+
+<question>
+  <text>Which of the following is NOT a characteristic of solids?</text>
+  <option>Definite shape</option>
+  <option>Definite volume</option>
+  <option>High density</option>
+  <option correct="true">High compressibility</option>
+  <explanation>Solids have low compressibility due to closely packed particles.</explanation>
+</question>
+
+<question>
+  <text>A body travels 20 m in 2 s and 30 m in next 4 s. Its average speed is:</text>
+  <option>5 m/s</option>
+  <option>7.5 m/s</option>
+  <option correct="true">8.33 m/s</option>
+  <option>10 m/s</option>
+  <explanation>Total distance = 50 m, Total time = 6 s, Avg speed = 50/6 = 8.33 m/s.</explanation>
+</question>
+
+<question>
+  <text>Which kingdom includes organisms with cell walls made of chitin?</text>
+  <option>Monera</option>
+  <option>Protista</option>
+  <option>Plantae</option>
+  <option correct="true">Fungi</option>
+  <explanation>Fungal cell walls contain chitin, not cellulose.</explanation>
+</question>
+
+<question>
+  <text>Work done when a force of 10 N moves a body through 5 m at 60° to direction of force is:</text>
+  <option>50 J</option>
+  <option correct="true">25 J</option>
+  <option>43.3 J</option>
+  <option>0 J</option>
+  <explanation>W = F s cosθ = 10 × 5 × cos60° = 10 × 5 × 0.5 = 25 J.</explanation>
+</question>
+
+<question>
+  <text>Which of the following is a viral disease?</text>
+  <option>Typhoid</option>
+  <option>Tuberculosis</option>
+  <option>Cholera</option>
+  <option correct="true">Polio</option>
+  <explanation>Polio is caused by poliovirus. Others are bacterial.</explanation>
+</question>
+
+<question>
+  <text>The molecular formula of glucose is C₆H₁₂O₆. Its molecular mass is:</text>
+  <option>100 u</option>
+  <option>150 u</option>
+  <option correct="true">180 u</option>
+  <option>200 u</option>
+  <explanation>C₆(12×6=72) + H₁₂(1×12=12) + O₆(16×6=96) = 180 u.</explanation>
+</question>
+
+<question>
+  <text>Sound cannot travel through:</text>
+  <option>Steel</option>
+  <option>Water</option>
+  <option>Air</option>
+  <option correct="true">Vacuum</option>
+  <explanation>Sound needs material medium; cannot propagate in vacuum.</explanation>
+</question>
+
+<question>
+  <text>Which of these is a heterogeneous mixture?</text>
+  <option>Sugar solution</option>
+  <option>Salt solution</option>
+  <option correct="true">Soil</option>
+  <option>Alcohol in water</option>
+  <explanation>Soil has visible different components - heterogeneous.</explanation>
+</question>
+
+<question>
+  <text>Newton's first law of motion is also called:</text>
+  <option>Law of momentum</option>
+  <option correct="true">Law of inertia</option>
+  <option>Law of action-reaction</option>
+  <option>Law of acceleration</option>
+  <explanation>First law defines inertia - tendency to resist change in motion.</explanation>
+</question>
+
+<question>
+  <text>Powerhouse of the cell is:</text>
+  <option>Nucleus</option>
+  <option>Ribosome</option>
+  <option correct="true">Mitochondria</option>
+  <option>Golgi apparatus</option>
+  <explanation>Mitochondria produce ATP through cellular respiration.</explanation>
+</question>
+
+<question>
+  <text>Weight of an object on moon is about ____ of its weight on Earth:</text>
+  <option>1/2</option>
+  <option>1/4</option>
+  <option correct="true">1/6</option>
+  <option>1/10</option>
+  <explanation>g_moon ≈ g_earth/6, so weight_moon ≈ weight_earth/6.</explanation>
+</question>
+
+<question>
+  <text>Which of the following is a chemical change?</text>
+  <option>Melting of ice</option>
+  <option>Dissolving sugar in water</option>
+  <option correct="true">Burning of paper</option>
+  <option>Breaking of glass</option>
+  <explanation>Burning produces new substances (ash, gases) - chemical change.</explanation>
+</question>
+
+<question>
+  <text>The velocity-time graph of a body is parallel to time axis. This indicates:</text>
+  <option>Body is at rest</option>
+  <option correct="true">Body has uniform velocity</option>
+  <option>Body has uniform acceleration</option>
+  <option>Body has variable acceleration</option>
+  <explanation>Parallel to time axis means constant velocity (zero acceleration).</explanation>
+</question>
+
+<question>
+  <text>Which blood cells produce antibodies?</text>
+  <option>Red blood cells</option>
+  <option correct="true">White blood cells (lymphocytes)</option>
+  <option>Platelets</option>
+  <option>All blood cells</option>
+  <explanation>Lymphocytes (WBCs) produce antibodies for immunity.</explanation>
+</question>
+
+<question>
+  <text>Kinetic energy of a body of mass m moving with velocity v is:</text>
+  <option>mv</option>
+  <option>mv²</option>
+  <option correct="true">½ mv²</option>
+  <option>mgh</option>
+  <explanation>K.E. = ½ × mass × (velocity)².</explanation>
+</question>
+
+<question>
+  <text>The process of conversion of solid directly to gas is called:</text>
+  <option>Evaporation</option>
+  <option>Condensation</option>
+  <option correct="true">Sublimation</option>
+  <option>Freezing</option>
+  <explanation>Sublimation bypasses liquid state (e.g., camphor, dry ice).</explanation>
+</question>
+
+<question>
+  <text>Which phylum includes animals with jointed legs?</text>
+  <option>Mollusca</option>
+  <option>Annelida</option>
+  <option correct="true">Arthropoda</option>
+  <option>Nematoda</option>
+  <explanation>Arthropoda means "jointed legs" (insects, spiders, crustaceans).</explanation>
+</question>
+
+<question>
+  <text>A force of 50 N acts on a body of mass 10 kg. Its acceleration is:</text>
+  <option>0.2 m/s²</option>
+  <option correct="true">5 m/s²</option>
+  <option>50 m/s²</option>
+  <option>500 m/s²</option>
+  <explanation>a = F/m = 50/10 = 5 m/s².</explanation>
+</question>
+
+<question>
+  <text>Blue vitriol is:</text>
+  <option>FeSO₄·7H₂O</option>
+  <option correct="true">CuSO₄·5H₂O</option>
+  <option>ZnSO₄·7H₂O</option>
+  <option>MgSO₄·7H₂O</option>
+  <explanation>Blue vitriol = Copper sulphate pentahydrate (blue crystals).</explanation>
+</question>
+
+<question>
+  <text>The ozone layer protects us from:</text>
+  <option>Infrared rays</option>
+  <option>Visible light</option>
+  <option correct="true">Ultraviolet rays</option>
+  <option>X-rays</option>
+  <explanation>Ozone in stratosphere absorbs harmful UV-B radiation.</explanation>
+</question>
+
+<question>
+  <text>Which is NOT a characteristic of particles of matter?</text>
+  <option>They have space between them</option>
+  <option>They are in continuous motion</option>
+  <option correct="true">They have no attractive forces</option>
+  <option>They are very small</option>
+  <explanation>Particles of matter do have attractive forces (intermolecular forces).</explanation>
+</question>
+
+<question>
+  <text>Speed of sound is maximum in:</text>
+  <option>Air</option>
+  <option>Water</option>
+  <option correct="true">Steel</option>
+  <option>Vacuum</option>
+  <explanation>Sound travels fastest in solids due to closely packed particles.</explanation>
+</question>
+
+<question>
+  <text>Manure is preferred over fertilizers because it:</text>
+  <option>Gives quick results</option>
+  <option correct="true">Improves soil texture</option>
+  <option>Has higher nutrient content</option>
+  <option>Is cheaper</option>
+  <explanation>Manure adds humus, improves soil structure and water retention.</explanation>
+</question>
+
+<question>
+  <text>Isotopes have same:</text>
+  <option>Mass number</option>
+  <option correct="true">Atomic number</option>
+  <option>Number of neutrons</option>
+  <option>Physical properties</option>
+  <explanation>Isotopes have same protons (atomic number) but different neutrons.</explanation>
+</question>
+
+<question>
+  <text>Cardiac muscle is found in:</text>
+  <option>Limbs</option>
+  <option>Stomach</option>
+  <option correct="true">Heart</option>
+  <option>Intestine</option>
+  <explanation>Cardiac muscle is exclusively in heart walls.</explanation>
+</question>
+
+<question>
+  <text>1 kilowatt-hour equals:</text>
+  <option>3600 J</option>
+  <option>36000 J</option>
+  <option>360000 J</option>
+  <option correct="true">3.6 × 10⁶ J</option>
+  <explanation>1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J.</explanation>
+</question>
+
+<question>
+  <text>Which is a communicable disease?</text>
+  <option>Diabetes</option>
+  <option>Cancer</option>
+  <option correct="true">Tuberculosis</option>
+  <option>Hypertension</option>
+  <explanation>TB spreads through air droplets - communicable.</explanation>
+</question>
+
+<question>
+  <text>The SI unit of temperature is:</text>
+  <option>Celsius</option>
+  <option correct="true">Kelvin</option>
+  <option>Fahrenheit</option>
+  <option>Rankine</option>
+  <explanation>Kelvin is SI base unit of thermodynamic temperature.</explanation>
+</question>
+
+<question>
+  <text>Formula of calcium phosphate is:</text>
+  <option>CaPO₄</option>
+  <option>Ca₂(PO₄)₃</option>
+  <option correct="true">Ca₃(PO₄)₂</option>
+  <option>Ca(PO₄)₂</option>
+  <explanation>Ca²⁺ and PO₄³⁻ combine as Ca₃(PO₄)₂.</explanation>
+</question>
+
+<question>
+  <text>A body falls freely from rest. After 3 seconds, its velocity will be (g=10 m/s²):</text>
+  <option>10 m/s</option>
+  <option>20 m/s</option>
+  <option correct="true">30 m/s</option>
+  <option>45 m/s</option>
+  <explanation>v = u + gt = 0 + 10×3 = 30 m/s.</explanation>
+</question>
+
+<question>
+  <text>Which cell organelle is called suicide bag?</text>
+  <option>Mitochondria</option>
+  <option>Ribosome</option>
+  <option correct="true">Lysosome</option>
+  <option>Golgi apparatus</option>
+  <explanation>Lysosomes contain digestive enzymes that can break down cell components.</explanation>
+</question>
+
+<question>
+  <text>The process of nitrogen fixation is carried out by:</text>
+  <option>Denitrifying bacteria</option>
+  <option correct="true">Rhizobium bacteria</option>
+  <option>Putrefying bacteria</option>
+  <option>Nitrifying bacteria</option>
+  <explanation>Rhizobium in legume root nodules converts atmospheric N₂ to nitrates.</explanation>
+</question>
+
+<question>
+  <text>If velocity of a body is doubled, its kinetic energy becomes:</text>
+  <option>Same</option>
+  <option>Double</option>
+  <option correct="true">Four times</option>
+  <option>Half</option>
+  <explanation>K.E. ∝ v². If v becomes 2v, K.E. becomes 4 times.</explanation>
+</question>
+
+<question>
+  <text>Which of the following is a true solution?</text>
+  <option>Milk</option>
+  <option>Blood</option>
+  <option correct="true">Salt in water</option>
+  <option>Starch in water</option>
+  <explanation>Salt solution is homogeneous with particle size < 1 nm.</explanation>
+</question>
+
+<question>
+  <text>White revolution is associated with:</text>
+  <option>Crop production</option>
+  <option correct="true">Milk production</option>
+  <option>Egg production</option>
+  <option>Fish production</option>
+  <explanation>White revolution (Operation Flood) increased milk production in India.</explanation>
+</question>
+
+<question>
+  <text>The number of neutrons in C-14 atom is:</text>
+  <option>6</option>
+  <option correct="true">8</option>
+  <option>12</option>
+  <option>14</option>
+  <explanation>Carbon-14: Atomic number 6, Mass number 14. Neutrons = 14-6 = 8.</explanation>
+</question>
+
+<question>
+  <text>Xylem tissue in plants is responsible for:</text>
+  <option>Transport of food</option>
+  <option>Photosynthesis</option>
+  <option correct="true">Transport of water and minerals</option>
+  <option>Storage of starch</option>
+  <explanation>Xylem conducts water and minerals from roots to leaves.</explanation>
+</question>
+
+<question>
+  <text>Echo is due to:</text>
+  <option>Refraction of sound</option>
+  <option>Diffraction of sound</option>
+  <option correct="true">Reflection of sound</option>
+  <option>Interference of sound</option>
+  <explanation>Echo is sound reflection from hard surface.</explanation>
+</question>
+
+<question>
+  <text>Which is a rabi crop?</text>
+  <option>Rice</option>
+  <option>Maize</option>
+  <option>Soybean</option>
+  <option correct="true">Wheat</option>
+  <explanation>Rabi crops (winter): wheat, barley, gram, mustard.</explanation>
+</question>
+
+<question>
+  <text>Work done by centripetal force in uniform circular motion is:</text>
+  <option>Maximum</option>
+  <option>Positive</option>
+  <option>Negative</option>
+  <option correct="true">Zero</option>
+  <explanation>Force is perpendicular to displacement at every point, so W = 0.</explanation>
+</question>
+
+<question>
+  <text>DPT vaccine prevents:</text>
+  <option>Diphtheria, Polio, Tetanus</option>
+  <option correct="true">Diphtheria, Pertussis, Tetanus</option>
+  <option>Dysentery, Pneumonia, Typhoid</option>
+  <option>Dengue, Polio, Tetanus</option>
+  <explanation>DPT = Diphtheria, Pertussis (whooping cough), Tetanus.</explanation>
+</question>
+
+<question>
+  <text>The acceleration due to gravity on Earth is approximately:</text>
+  <option>8.9 m/s²</option>
+  <option correct="true">9.8 m/s²</option>
+  <option>10 m/s²</option>
+  <option>6.67 × 10⁻¹¹ N m²/kg²</option>
+  <explanation>Standard value of g on Earth's surface ≈ 9.8 m/s².</explanation>
+</question>
+
+<question>
+  <text>Which of these is a colloid?</text>
+  <option>Sugar solution</option>
+  <option>Salt solution</option>
+  <option correct="true">Milk</option>
+  <option>Copper sulphate solution</option>
+  <explanation>Milk is an emulsion (liquid in liquid colloid).</explanation>
+</question>
+
+<question>
+  <text>Law of conservation of momentum states that:</text>
+  <option>Momentum is constant</option>
+  <option correct="true">Total momentum remains constant in absence of external force</option>
+  <option>Momentum decreases with time</option>
+  <option>Momentum increases with mass</option>
+  <explanation>In isolated system, total momentum before collision = total momentum after.</explanation>
+</question>
+
+<question>
+  <text>Plasmolysis occurs in:</text>
+  <option>Animal cells</option>
+  <option correct="true">Plant cells</option>
+  <option>Bacterial cells</option>
+  <option>All cells</option>
+  <explanation>Shrinkage of cytoplasm from cell wall in hypertonic solution.</explanation>
+</question>
+
+<question>
+  <text>Which is NOT a renewable resource?</text>
+  <option>Solar energy</option>
+  <option>Wind energy</option>
+  <option correct="true">Natural gas</option>
+  <option>Tidal energy</option>
+  <explanation>Natural gas is fossil fuel - non-renewable.</explanation>
+</question>
+
+<question>
+  <text>1 mole of carbon atoms contains:</text>
+  <option>6.022 × 10²² atoms</option>
+  <option correct="true">6.022 × 10²³ atoms</option>
+  <option>6.022 × 10²⁴ atoms</option>
+  <option>6.022 × 10²⁵ atoms</option>
+  <explanation>Avogadro's number = 6.022 × 10²³ entities per mole.</explanation>
+</question>
+
+<question>
+  <text>Which muscle is voluntary?</text>
+  <option>Smooth muscle</option>
+  <option>Cardiac muscle</option>
+  <option correct="true">Skeletal muscle</option>
+  <option>All muscles</option>
+  <explanation>Skeletal muscles are under voluntary control.</explanation>
+</question>
+
+<question>
+  <text>Dry ice is:</text>
+  <option>Ice without water</option>
+  <option correct="true">Solid carbon dioxide</option>
+  <option>Solid oxygen</option>
+  <option>Frozen nitrogen</option>
+  <explanation>Dry ice is solid CO₂ which sublimates directly to gas.</explanation>
+</question>
+
+<question>
+  <text>Audible range for humans is:</text>
+  <option>20 Hz - 2000 Hz</option>
+  <option correct="true">20 Hz - 20,000 Hz</option>
+  <option>200 Hz - 2000 Hz</option>
+  <option>2 Hz - 200 Hz</option>
+  <explanation>Normal human hearing range: 20 Hz to 20 kHz.</explanation>
+</question>
+
+<question>
+  <text>Loudness of sound depends on:</text>
+  <option>Frequency</option>
+  <option correct="true">Amplitude</option>
+  <option>Wavelength</option>
+  <option>Speed</option>
+  <explanation>Larger amplitude means louder sound.</explanation>
+</question>
+
+<question>
+  <text>Which element has the symbol K?</text>
+  <option>Krypton</option>
+  <option correct="true">Potassium</option>
+  <option>Kurchatovium</option>
+  <option>Kryptonite</option>
+  <explanation>K is from Latin 'Kalium' for potassium.</explanation>
+</question>
+
+<question>
+  <text>Fungi are classified in kingdom:</text>
+  <option>Monera</option>
+  <option>Protista</option>
+  <option correct="true">Fungi</option>
+  <option>Plantae</option>
+  <explanation>Fungi have their own separate kingdom in Whittaker's classification.</explanation>
+</question>
+
+<question>
+  <text>Latent heat of fusion of ice is:</text>
+  <option correct="true">80 cal/g</option>
+  <option>540 cal/g</option>
+  <option>100 cal/g</option>
+  <option>1 cal/g</option>
+  <explanation>Ice requires 80 calories to melt 1g at 0°C without temperature change.</explanation>
+</question>
+
+<question>
+  <text>The value of gravitational constant G is:</text>
+  <option>9.8 N m²/kg²</option>
+  <option correct="true">6.67 × 10⁻¹¹ N m²/kg²</option>
+  <option>6.67 × 10⁻¹¹ m/s²</option>
+  <option>9.8 × 10¹¹ N m²/kg²</option>
+  <explanation>G = 6.67430 × 10⁻¹¹ N m²/kg².</explanation>
+</question>
+
+<question>
+  <text>Rohu, Catla and Mrigal are examples of:</text>
+  <option>Marine fish</option>
+  <option correct="true">Freshwater fish</option>
+  <option>Shellfish</option>
+  <option>Exotic fish</option>
+  <explanation>Indian major carps used in composite fish culture.</explanation>
+</question>
+
+<question>
+  <text>Acid rain is caused by oxides of:</text>
+  <option>Carbon and nitrogen</option>
+  <option correct="true">Sulfur and nitrogen</option>
+  <option>Carbon and sulfur</option>
+  <option>Nitrogen and phosphorus</option>
+  <explanation>SO₂ and NOx from industries/vehicles form sulfuric and nitric acid.</explanation>
+</question>
+</quiz>
