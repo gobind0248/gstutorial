@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quiz>
 <metadata>
-  <chapter>Structure of the Atom</chapter>
-  <timeLimit>25</timeLimit>
-  <author>G. S. Tutorial</author>
+  <chapter>4. Structure of Atom</chapter>
+  <timeLimit>30</timeLimit>
+  <author>CBSE Exam Important Questions</author>
 </metadata>
 
 <question>
-  <text>Who discovered the nucleus?</text>
-  <option>J.J. Thomson</option>
-  <option correct="true">Ernest Rutherford</option>
+  <text>Who discovered electrons?</text>
+  <option>Ernest Rutherford</option>
+  <option correct="true">J.J. Thomson</option>
   <option>Neils Bohr</option>
   <option>James Chadwick</option>
-  <explanation>Rutherford discovered nucleus through gold foil experiment in 1911.</explanation>
+  <explanation>J.J. Thomson discovered electrons using cathode ray tube in 1897.</explanation>
 </question>
 
 <question>
@@ -21,79 +21,214 @@
   <option>Electron</option>
   <option correct="true">Neutron</option>
   <option>Positron</option>
-  <explanation>Neutron is electrically neutral (no charge).</explanation>
+  <explanation>Neutron is electrically neutral.</explanation>
 </question>
 
 <question>
-  <text>What are isotopes?</text>
-  <option>Atoms of different elements</option>
-  <option correct="true">Atoms with same atomic number but different mass</option>
-  <option>Atoms with same mass but different atomic number</option>
-  <option>Atoms with same number of neutrons</option>
-  <explanation>Isotopes have same number of protons but different number of neutrons.</explanation>
-</question>
-
-<question>
-  <text>Maximum electrons in M shell?</text>
-  <option>2</option>
-  <option>8</option>
-  <option correct="true">18</option>
-  <option>32</option>
-  <explanation>M shell (n=3) can hold maximum 18 electrons (2n² formula).</explanation>
-</question>
-
-<question>
-  <text>What determines chemical properties of an element?</text>
-  <option>Number of neutrons</option>
+  <text>Isotopes have same:</text>
   <option>Mass number</option>
-  <option correct="true">Number of valence electrons</option>
-  <option>Atomic mass</option>
-  <explanation>Chemical properties depend on valence electrons and their configuration.</explanation>
+  <option correct="true">Atomic number</option>
+  <option>Number of neutrons</option>
+  <option>None of these</option>
+  <explanation>Isotopes have same protons (atomic number) but different neutrons.</explanation>
 </question>
 
 <question>
-  <text>Who proposed planetary model of atom?</text>
-  <option>Dalton</option>
-  <option>Thomson</option>
-  <option correct="true">Bohr</option>
-  <option>Rutherford</option>
-  <explanation>Neils Bohr proposed electrons revolve in fixed orbits around nucleus.</explanation>
+  <text>Maximum electrons in L shell:</text>
+  <option>2</option>
+  <option correct="true">8</option>
+  <option>18</option>
+  <option>32</option>
+  <explanation>L shell (n=2) holds max 2n² = 8 electrons.</explanation>
 </question>
 
 <question>
-  <text>What is the electronic configuration of sodium (Z=11)?</text>
-  <option>2,8,1</option>
+  <text>Who discovered nucleus?</text>
+  <option correct="true">Ernest Rutherford</option>
+  <option>J.J. Thomson</option>
+  <option>Neils Bohr</option>
+  <option>John Dalton</option>
+  <explanation>Rutherford discovered nucleus through gold foil experiment (1911).</explanation>
+</question>
+
+<question>
+  <text>Electronic configuration of sodium (Z=11) is:</text>
+  <option correct="true">2,8,1</option>
   <option>2,8,2</option>
   <option>2,8,3</option>
   <option>2,8,8,1</option>
-  <correct>2,8,1</correct>
-  <explanation>Sodium has 11 electrons: K=2, L=8, M=1.</explanation>
+  <explanation>Sodium: 11 electrons. K=2, L=8, M=1.</explanation>
 </question>
 
 <question>
-  <text>Which is not a fundamental particle?</text>
-  <option>Proton</option>
-  <option>Neutron</option>
-  <option>Electron</option>
-  <option correct="true">Positron</option>
-  <explanation>Proton, neutron, and electron are fundamental. Positron is antiparticle of electron.</explanation>
-</question>
-
-<question>
-  <text>What is atomic mass unit?</text>
-  <option>Mass of hydrogen atom</option>
-  <option correct="true">1/12th mass of carbon-12 atom</option>
-  <option>Mass of oxygen atom</option>
-  <option>Mass of electron</option>
-  <explanation>1 amu = 1/12th of mass of one carbon-12 atom.</explanation>
-</question>
-
-<question>
-  <text>Mass number is sum of:</text>
-  <option>Electrons and protons</option>
-  <option correct="true">Protons and neutrons</option>
-  <option>Electrons and neutrons</option>
+  <text>Mass number =</text>
+  <option>Protons + Electrons</option>
+  <option correct="true">Protons + Neutrons</option>
+  <option>Neutrons + Electrons</option>
   <option>Protons only</option>
   <explanation>Mass number (A) = Number of protons (Z) + Number of neutrons (N).</explanation>
+</question>
+
+<question>
+  <text>Which model proposed electrons in fixed orbits?</text>
+  <option>Dalton's model</option>
+  <option>Thomson's model</option>
+  <option correct="true">Bohr's model</option>
+  <option>Rutherford's model</option>
+  <explanation>Bohr proposed electrons revolve in fixed energy levels/orbits.</explanation>
+</question>
+
+<question>
+  <text>Number of neutrons in C-14:</text>
+  <option>6</option>
+  <option correct="true">8</option>
+  <option>12</option>
+  <option>14</option>
+  <explanation>C-14: Atomic number 6, Mass number 14. Neutrons = 14-6 = 8.</explanation>
+</question>
+
+<question>
+  <text>Valence electrons determine:</text>
+  <option>Atomic mass</option>
+  <option>Atomic number</option>
+  <option correct="true">Chemical properties</option>
+  <option>Radioactivity</option>
+  <explanation>Chemical properties depend on valence electrons.</explanation>
+</question>
+
+<question>
+  <text>Who discovered neutrons?</text>
+  <option>Rutherford</option>
+  <option>Thomson</option>
+  <option>Bohr</option>
+  <option correct="true">Chadwick</option>
+  <explanation>James Chadwick discovered neutrons in 1932.</explanation>
+</question>
+
+<question>
+  <text>Isotopes of hydrogen are:</text>
+  <option>Protium and deuterium</option>
+  <option>Deuterium and tritium</option>
+  <option>Protium and tritium</option>
+  <option correct="true">All of these</option>
+  <explanation>Hydrogen has 3 isotopes: Protium (¹H), Deuterium (²H), Tritium (³H).</explanation>
+</question>
+
+<question>
+  <text>Electronic configuration of chlorine (Z=17):</text>
+  <option>2,8,7</option>
+  <option>2,8,8</option>
+  <option>2,8,8,1</option>
+  <option>2,8,8,7</option>
+  <correct>2,8,7</correct>
+  <explanation>Chlorine: 17 electrons. K=2, L=8, M=7.</explanation>
+</question>
+
+<question>
+  <text>Alpha particles are:</text>
+  <option>Electrons</option>
+  <option>Neutrons</option>
+  <option correct="true">Helium nuclei</option>
+  <option>Protons</option>
+  <explanation>Alpha particles are He²⁺ ions (2 protons + 2 neutrons).</explanation>
+</question>
+
+<question>
+  <text>Maximum electrons in N shell:</text>
+  <option>8</option>
+  <option>18</option>
+  <option correct="true">32</option>
+  <option>50</option>
+  <explanation>N shell (n=4) holds max 2n² = 32 electrons.</explanation>
+</question>
+
+<question>
+  <text>Atomic number =</text>
+  <option>Electrons in atom</option>
+  <option>Protons in nucleus</option>
+  <option correct="true">Both of these</option>
+  <option>Neutrons in nucleus</option>
+  <explanation>Atomic number = Protons = Electrons (in neutral atom).</explanation>
+</question>
+
+<question>
+  <text>Thomson's model is called:</text>
+  <option>Nuclear model</option>
+  <option>Planetary model</option>
+  <option correct="true">Plum pudding model</option>
+  <option>Quantum model</option>
+  <explanation>Thomson proposed atom as sphere of positive charge with electrons embedded.</explanation>
+</question>
+
+<question>
+  <text>Which isotope is radioactive?</text>
+  <option>C-12</option>
+  <option>O-16</option>
+  <option correct="true">C-14</option>
+  <option>H-1</option>
+  <explanation>C-14 is radioactive isotope used in carbon dating.</explanation>
+</question>
+
+<question>
+  <text>Number of electrons in M shell of argon (Z=18):</text>
+  <option>2</option>
+  <option>6</option>
+  <option correct="true">8</option>
+  <option>18</option>
+  <explanation>Argon: 2,8,8. M shell has 8 electrons.</explanation>
+</question>
+
+<question>
+  <text>Rutherford's experiment showed atom has:</text>
+  <option>Uniform positive charge</option>
+  <option>Electrons in orbits</option>
+  <option correct="true>Small, dense nucleus</option>
+  <option>No empty space</option>
+  <explanation>Gold foil experiment proved atom has small, dense, positive nucleus.</explanation>
+</question>
+
+<question>
+  <text>Mass of electron is approximately:</text>
+  <option>Same as proton</option>
+  <option correct="true">1/1837 of proton</option>
+  <option>Double of proton</option>
+  <option>1/1000 of neutron</option>
+  <explanation>Electron mass = 9.1×10⁻³¹ kg, Proton mass = 1.67×10⁻²⁷ kg.</explanation>
+</question>
+
+<question>
+  <text>Which has completely filled valence shell?</text>
+  <option>Sodium</option>
+  <option>Chlorine</option>
+  <option correct="true">Neon</option>
+  <option>Carbon</option>
+  <explanation>Neon (noble gas) has 8 electrons in valence shell - stable octet.</explanation>
+</question>
+
+<question>
+  <text>Charge on electron is:</text>
+  <option>+1.6 × 10⁻¹⁹ C</option>
+  <option correct="true">-1.6 × 10⁻¹⁹ C</option>
+  <option>Zero</option>
+  <option>+1 C</option>
+  <explanation>Electron has negative charge of 1.6×10⁻¹⁹ coulombs.</explanation>
+</question>
+
+<question>
+  <text>In Bohr's model, electrons move in:</text>
+  <option>Random paths</option>
+  <option correct="true">Fixed orbits</option>
+  <option>Straight lines</option>
+  <option>Spiral paths</option>
+  <explanation>Bohr proposed electrons revolve in fixed circular orbits with definite energy.</explanation>
+</question>
+
+<question>
+  <text>Which determines atomic number?</text>
+  <option>Neutrons</option>
+  <option>Electrons</option>
+  <option correct="true">Protons</option>
+  <option>Mass number</option>
+  <explanation>Atomic number = Number of protons (unique for each element).</explanation>
 </question>
 </quiz>
