@@ -1,0 +1,86 @@
+{
+  "classes": [
+    {
+      "id": "8",
+      "name": "Class 8",
+      "icon": "📚",
+      "description": "Mathematics & Science",
+      "subjects": [
+        {
+          "id": "mathematics",
+          "name": "Mathematics",
+          "icon": "📐",
+          "description": "Algebra, Geometry, Mensuration"
+        },
+        {
+          "id": "science",
+          "name": "Science",
+          "icon": "🔬",
+          "description": "Physics, Chemistry, Biology"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Class 9",
+      "icon": "🎓",
+      "description": "Mathematics & Science",
+      "subjects": [
+        {
+          "id": "mathematics",
+          "name": "Mathematics",
+          "icon": "📐",
+          "description": "Algebra, Geometry, Trigonometry"
+        },
+        {
+          "id": "science",
+          "name": "Science",
+          "icon": "🔬",
+          "description": "Physics, Chemistry, Biology"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Class 10",
+      "icon": "🏆",
+      "description": "Board Preparation",
+      "subjects": [
+        {
+          "id": "mathematics",
+          "name": "Mathematics",
+          "icon": "📐",
+          "description": "Full Syllabus Revision"
+        },
+        {
+          "id": "science",
+          "name": "Science",
+          "icon": "🔬",
+          "description": "Physics, Chemistry, Biology"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "JE",
+      "icon": "🎯",
+      "description": "Junior Engineer",
+      "subjects": [
+        {
+          "id": "dpq",
+          "name": "DPQ",
+          "icon": "⚛️",
+          "description": "ICF, Wagon etc."
+        },
+        {
+          "id": "ldce",
+          "name": "LDCE",
+          "icon": "🧪",
+          "description": "ICF, Wagon etc."
+        }
+      ]
+    }
+      ]
+    }
+  ]
+}
