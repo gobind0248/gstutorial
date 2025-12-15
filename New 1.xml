@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question>
+    <text>The standard wheel gauge of passenger BG coaching stock is –</text>
+    <option correct="false">1602 mm</option>
+    <option correct="false">1601 mm</option>
+    <option correct="true">1600 mm</option>
+    <option correct="false">1598 mm</option>
+  </question>
+
+  <question>
+    <text>The maximum wheel gauge of passenger BG coaching stock is -</text>
+    <option correct="false">1600 mm</option>
+    <option correct="false">1601 mm</option>
+    <option correct="false">1598.5mm</option>
+    <option correct="true">1602 mm</option>
+  </question>
+
+  <question>
+    <text>The minimum permissible wheel gauge of passenger BG coaching stock is –</text>
+    <option correct="false">1601.5 mm</option>
+    <option correct="false">1600 mm</option>
+    <option correct="true">1599 mm</option>
+    <option correct="false">1601 mm</option>
+  </question>
+
+  <question>
+    <text>Length over body of ICF BG coaches is –</text>
+    <option correct="false">2334 mm</option>
+    <option correct="false">2310 mm</option>
+    <option correct="true">21337 mm</option>
+    <option correct="false">22132 mm</option>
+  </question>
+
+  <question>
+    <text>Rigid wheelbase of ICF BG trolley is –</text>
+    <option correct="true">2896 mm</option>
+    <option correct="false">2803 mm</option>
+    <option correct="false">2990 mm</option>
+    <option correct="false">2837 mm</option>
+  </question>
+
+  <question>
+    <text>At what interval, the intensive cleaning of any coach is?</text>
+    <option correct="false">Three month</option>
+    <option correct="false">One month</option>
+    <option correct="true">Six month</option>
+    <option correct="false">Eight month</option>
+  </question>
+
+  <question>
+    <text>What is the interval for cleaning coach water tank?</text>
+    <option correct="false">15 days</option>
+    <option correct="false">25 days</option>
+    <option correct="true">one month</option>
+    <option correct="false">two month</option>
+  </question>
+
+  <question>
+    <text>What is the period for the POH of any OCV attached to a passenger train?</text>
+    <option correct="false">Nine month</option>
+    <option correct="false">12 month</option>
+    <option correct="true">18 month</option>
+    <option correct="false">24 month</option>
+  </question>
+
+  <question>
+    <text>What shall be the period for POH for a coach attached to Mail/ Express train?</text>
+    <option correct="false">9 month</option>
+    <option correct="false">12 month</option>
+    <option correct="true">18 month</option>
+    <option correct="false">24 month</option>
+  </question>
+
+  <question>
+    <text>What shall be the period for POH of PCV attached with any other than train mail/ Express train?</text>
+    <option correct="false">9 month</option>
+    <option correct="true">12 month</option>
+    <option correct="false">18 month</option>
+    <option correct="false">24 month</option>
+  </question>
+
+  <question>
+    <text>The other name of pilot valve is –</text>
+    <option correct="false">PESAD</option>
+    <option correct="true">PEASD</option>
+    <option correct="false">PDEAS</option>
+    <option correct="false">EPASD</option>
+  </question>
+
+  <question>
+    <text>What is the period for POH of departmental coach except ART/ARME?</text>
+    <option correct="false">24 month</option>
+    <option correct="false">36 month</option>
+    <option correct="true">48 month</option>
+    <option correct="false">60 month</option>
+  </question>
+
+  <question>
+    <text>Transportation code of the ladies compartment is –</text>
+    <option correct="false">X</option>
+    <option correct="false">Z</option>
+    <option correct="true">Y</option>
+    <option correct="false">L</option>
+  </question>
+
+  <question>
+    <text>What is the Transportation code of second class fitted with self-generating electrical equipment?</text>
+    <option correct="false">SG</option>
+    <option correct="true">GS</option>
+    <option correct="false">GY</option>
+    <option correct="false">GSD</option>
+  </question>
+
+  <question>
+    <text>What is the Transportation code of inspection carriage (Administrative)?</text>
+    <option correct="false">AR</option>
+    <option correct="false">CR</option>
+    <option correct="false">IC</option>
+    <option correct="true">RA</option>
+  </question>
+
+  <question>
+    <text>Transportation codes of the pantry car is –</text>
+    <option correct="false">BC</option>
+    <option correct="true">PC</option>
+    <option correct="false">WCB</option>
+    <option correct="false">CD</option>
+  </question>
+
+  <question>
+    <text>Which part is not used in ICF trolley?</text>
+    <option correct="false">Dashpot</option>
+    <option correct="false">Side bearer</option>
+    <option correct="false">Shock absorber</option>
+    <option correct="true">Drag link</option>
+  </question>
+
+  <question>
+    <text>Transportation codes of vestibule second class 3- tier sleeper coach fitted with self-generating electrical equipment is –</text>
+    <option correct="true">WGSCNA</option>
+    <option correct="false">WGSCN</option>
+    <option correct="false">MGSCN</option>
+    <option correct="false">GSMGCN</option>
+  </question>
+
+  <question>
+    <text>What is the Transportation code of vestibuled three-tier sleeper coach fitted with Self-generating electrical equipment and ladies compartment?</text>
+    <option correct="false">WCBSCZA</option>
+    <option correct="true">WGSCNY</option>
+    <option correct="false">WGSCWY</option>
+    <option correct="false">YZZFS</option>
+  </question>
+
+  <question>
+    <text>What is the maximum permissible clearance between brake gear pin and bushes?</text>
+    <option correct="false">0.5 mm</option>
+    <option correct="false">1.0 mm</option>
+    <option correct="true">1.5 mm</option>
+    <option correct="false">2.0 mm</option>
+  </question>
+
+  <question>
+    <text>As per policy circular No-4(2017) secondary examination of mail/express has been skipped on round trip upto __ for ICF coaches</text>
+    <option correct="false">800 Km</option>
+    <option correct="false">1500 Km</option>
+    <option correct="true">3500 Km</option>
+    <option correct="false">1800 Km</option>
+  </question>
+
+  <question>
+    <text>In coach, the load transmission takes place through -</text>
+    <option correct="true">Center pivot</option>
+    <option correct="false">Bogie</option>
+    <option correct="false">Side bearer</option>
+    <option correct="false">Wheel</option>
+  </question>
+
+  <question>
+    <text>The CI brake block should be changed, if worn out beyond-</text>
+    <option correct="false">10 mm</option>
+    <option correct="true">15 mm</option>
+    <option correct="false">20 mm</option>
+    <option correct="false">22 mm</option>
+  </question>
+
+  <question>
+    <text>The ‘L’ type composite brake block should be changed, if worn out beyond-</text>
+    <option correct="true">10 mm</option>
+    <option correct="false">15 mm</option>
+    <option correct="false">20 mm</option>
+    <option correct="false">22 mm</option>
+  </question>
+
+  <question>
+    <text>The ‘K’ type composite brake block should be changed, if worn out beyond-</text>
+    <option correct="false">10 mm</option>
+    <option correct="true">12 mm</option>
+    <option correct="false">20 mm</option>
+    <option correct="false">22 mm</option>
+  </question>
+
+  <question>
+    <text>Std. packing pieces of ICF coach is –</text>
+    <option correct="true">13,14,26 mm</option>
+    <option correct="false">13,22,28 mm</option>
+    <option correct="false">13,26,38</option>
+    <option correct="false">22,26,32 mm</option>
+  </question>
+
+  <question>
+    <text>Coaching stock accident involving human life enquiry by-</text>
+    <option correct="false">CME</option>
+    <option correct="true">CRS</option>
+    <option correct="false">Sr.DME</option>
+    <option correct="false">ADRM</option>
+  </question>
+
+  <question>
+    <text>Yellow strips on end body of ICF indicate is –</text>
+    <option correct="true">Antitelescopic</option>
+    <option correct="false">Dual brake</option>
+    <option correct="false">In built air brake</option>
+    <option correct="false">Non-Antitelescope</option>
+  </question>
+
+  <question>
+    <text>What defect is detecting UST test?</text>
+    <option correct="true">Internal crack</option>
+    <option correct="false">external crack</option>
+    <option correct="false">Air flow crack</option>
+    <option correct="false">None of the above</option>
+  </question>
+
+  <question>
+    <text>The Maximum permitted speed of ICF All coiled bogie-</text>
+    <option correct="false">92 km/h</option>
+    <option correct="true">110 km/h</option>
+    <option correct="false">92 km/h</option>
+    <option correct="false">92 km/h</option>
+  </question>
+
+  <question>
+    <text>What is Codal life of steel bodied coaches (Including dining / pantry cars) -</text>
+    <option correct="false">40 years</option>
+    <option correct="true">30 years</option>
+    <option correct="false">25 years</option>
+    <option correct="false">22 years</option>
+  </question>
+
+  <question>
+    <text>What is codal life of ICF coaches?</text>
+    <option correct="false">40 years</option>
+    <option correct="false">30 years</option>
+    <option correct="true">25 years</option>
+    <option correct="false">20 years</option>
+  </question>
+
+  <question>
+    <text>Codal life of light utilisation categories of coaches is -</text>
+    <option correct="true">40 years</option>
+    <option correct="false">30 years</option>
+    <option correct="false">25 years</option>
+    <option correct="false">20 years</option>
+  </question>
+
+  <question>
+    <text>Dirt collector should be cleaned during -</text>
+    <option correct="false">At A-schedule</option>
+    <option correct="false">Any schedule</option>
+    <option correct="true">IOH schedule</option>
+    <option correct="false">None</option>
+  </question>
+
+  <question>
+    <text>The standard thickness of compensating rings is -</text>
+    <option correct="false">2 mm</option>
+    <option correct="false">4 mm</option>
+    <option correct="true">6 mm</option>
+    <option correct="false">8 mm</option>
+  </question>
+
+  <question>
+    <text>Tare weight of the WGS CZAC coach is -</text>
+    <option correct="false">50.30t</option>
+    <option correct="false">49.30t</option>
+    <option correct="true">48.77 t</option>
+    <option correct="false">47.22 t</option>
+  </question>
+
+  <question>
+    <text>Payload of the WGSCZAC coach is -</text>
+    <option correct="false">6.38t</option>
+    <option correct="false">7.22 t</option>
+    <option correct="false">5.680 t</option>
+    <option correct="true">4.889 t</option>
+  </question>
+
+  <question>
+    <text>Gross weight of the WGSCZAC coach is -</text>
+    <option correct="true">54.98 t</option>
+    <option correct="false">56.36 t</option>
+    <option correct="false">59.22 t</option>
+    <option correct="false">52.23t</option>
+  </question>
+
+  <question>
+    <text>Tare weight of the WGSCWAC coach is -</text>
+    <option correct="true">49.75 t</option>
+    <option correct="false">49.30 t</option>
+    <option correct="false">50.00 t</option>
+    <option correct="false">46.50 t</option>
+  </question>
+
+  <question>
+    <text>Total payload of the WGSCWAC coach is -</text>
+    <option correct="false">1.440 t</option>
+    <option correct="false">5.680 t</option>
+    <option correct="false">3.680 t</option>
+    <option correct="true">2.275 t</option>
+  </question>
+
+  <question>
+    <text>Tare weight of the GS coach is -</text>
+    <option correct="true">36.99 t</option>
+    <option correct="false">46.99 t</option>
+    <option correct="false">38.03 t</option>
+    <option correct="false">37.70 t</option>
+  </question>
+
+  <question>
+    <text>Normal payload of the GS coach is -</text>
+    <option correct="false">6.98 t</option>
+    <option correct="true">5.85 t</option>
+    <option correct="false">6.67 t</option>
+    <option correct="false">7.21 t</option>
+  </question>
+
+  <question>
+    <text>What is overload of the GS coach?</text>
+    <option correct="false">85%</option>
+    <option correct="false">90%</option>
+    <option correct="false">100%</option>
+    <option correct="true">150%</option>
+  </question>
+
+  <question>
+    <text>Total payload of the GS coach is -</text>
+    <option correct="false">5.79 t</option>
+    <option correct="false">12.60 t</option>
+    <option correct="false">11.70 t</option>
+    <option correct="true">14.04 t</option>
+  </question>
+
+  <question>
+    <text>In tare condition the bogie frame bolster clearance of non-AC, GS, SDC, SCN coach is -</text>
+    <option correct="false">48+/-  3mm</option>
+    <option correct="false">40+/-  5mm</option>
+    <option correct="false">47 +/-  2mm</option>
+    <option correct="true">29+/-  3mm</option>
+  </question>
+
+  <question>
+    <text>In gross load condition, the bogie frame bolster clearance of non AC, GS coach is -</text>
+    <option correct="false">75+/-  3mm</option>
+    <option correct="true">78+/-  2mm</option>
+    <option correct="false">74 +/-  3mm</option>
+    <option correct="false">71 +/-  2mm</option>
+  </question>
+
+  <question>
+    <text>In tare condition the body bogie clearance of non AC, GS, SDC, SCN coach is -</text>
+    <option correct="true">70 +/-  3mm</option>
+    <option correct="false">72+/-  3mm</option>
+    <option correct="false">75+/-  3mm</option>
+    <option correct="false">78+/-  2mm</option>
+  </question>
+
+  <question>
+    <text>In gross load condition, the body bogie clearance of non-AC, GS, coach is -</text>
+    <option correct="false">26 +/-  3mm</option>
+    <option correct="true">29+/-  2mm</option>
+    <option correct="false">30 +/-  2mm</option>
+    <option correct="false">36+/-  3mm</option>
+  </question>
+
+  <question>
+    <text>What shall be the period for cleaning of carpet of AC compartment?</text>
+    <option correct="false">Two month</option>
+    <option correct="true">one month</option>
+    <option correct="false">15 day</option>
+    <option correct="false">Three month</option>
+  </question>
+
+  <question>
+    <text>All newly built coaches shall be given IOH after -</text>
+    <option correct="false">One month</option>
+    <option correct="false">six month</option>
+    <option correct="true">one year</option>
+    <option correct="false">two year</option>
+  </question>
+
+  <question>
+    <text>The revised maximum payloads of NMG coaches are -</text>
+    <option correct="false">7.39 t</option>
+    <option correct="false">8.23 t</option>
+    <option correct="false">9.20 t</option>
+    <option correct="true">10.32 t</option>
+  </question>
+
+  <question>
+    <text>The length of over body of IRS coach is -</text>
+    <option correct="false">21337 mm</option>
+    <option correct="false">21336 mm</option>
+    <option correct="true">21996 mm</option>
+    <option correct="false">21030 mm</option>
+  </question>
+
+  <question>
+    <text>The length over buffer of ICF/ RCF coach is -</text>
+    <option correct="true">22297 mm</option>
+    <option correct="false">22299 mm</option>
+    <option correct="false">21996 mm</option>
+    <option correct="false">21030 mm</option>
+  </question>
+
+  <question>
+    <text>What is the length of coach over buffer of IRS coach?</text>
+    <option correct="false">22297 mm</option>
+    <option correct="false">22296 mm</option>
+    <option correct="false">21336 mm</option>
+    <option correct="true">21996 mm</option>
+  </question>
+
+  <question>
+    <text>Over all width of ICF/ RCF coach is -</text>
+    <option correct="false">3251 mm</option>
+    <option correct="true">3250 mm</option>
+    <option correct="false">3245 mm</option>
+    <option correct="false">3991 mm</option>
+  </question>
+
+  <question>
+    <text>In IRS coach, what is the overall width?</text>
+    <option correct="true">3251 mm</option>
+    <option correct="false">3250 mm</option>
+    <option correct="false">3245 mm</option>
+    <option correct="false">3.991 mm</option>
+  </question>
+
+  <question>
+    <text>The height from rail level of ICF/ RCF coach is -</text>
+    <option correct="false">3886 mm</option>
+    <option correct="false">4025 mm</option>
+    <option correct="true">3991 mm</option>
+    <option correct="false">3251 mm</option>
+  </question>
+
+  <question>
+    <text>In IRS coaches, the maximum height from rail level top of the roof is -</text>
+    <option correct="false">4025 mm</option>
+    <option correct="true">3991 mm</option>
+    <option correct="false">3786mm</option>
+    <option correct="false">3886 mm</option>
+  </question>
+
+  <question>
+    <text>In ICF coach, replace Headstock if the thickness is reduce more than -</text>
+    <option correct="false">2 mm</option>
+    <option correct="false">8 mm</option>
+    <option correct="true">4 mm</option>
+    <option correct="false">6 mm</option>
+  </question>
+
+  <question>
+    <text>Maintenance and repair procedure for hydraulic shock absorbers used on coaching stock, what RDSO technical pamphlet is used -</text>
+    <option correct="true">C-7512</option>
+    <option correct="false">C-7301</option>
+    <option correct="false">C-6803</option>
+    <option correct="false">C-7607</option>
+  </question>
+
+  <question>
+    <text>Maintenance and repair procedure for wheel and axle manual, what RDSO’s technical pamphlet is used -</text>
+    <option correct="false">C-7512</option>
+    <option correct="false">C-7907</option>
+    <option correct="true">C-7901</option>
+    <option correct="false">C-7809</option>
+  </question>
+
+  <question>
+    <text>Instruction for Inspection/ maintenance of air brake equipment on passenger coaches, what RDSO’s technical pamphlet is used -</text>
+    <option correct="false">C-7512</option>
+    <option correct="false">C-7907</option>
+    <option correct="false">C-8805</option>
+    <option correct="true">C-8703</option>
+  </question>
+
+  <question>
+    <text>At what schedule over hauling of PEASD is done</text>
+    <option correct="false">A-Schedule</option>
+    <option correct="false">B -Schedule</option>
+    <option correct="false">IOH schedule</option>
+    <option correct="true">All</option>
+  </question>
+
+  <question>
+    <text>Maintenance manual for IRSA-600 slack adjuster, what RDSO’s technical pamphlet is used -</text>
+    <option correct="false">G-92</option>
+    <option correct="false">G-97</option>
+    <option correct="false">G-67</option>
+    <option correct="true">G-94</option>
+  </question>
+
+  <question>
+    <text>At what schedule the painting of lavatories from inside is done –</text>
+    <option correct="true">‘B’ schedules</option>
+    <option correct="false">‘A’ schedule</option>
+    <option correct="false">‘C’ schedule</option>
+    <option correct="false">Special schedule</option>
+  </question>
+
+  <question>
+    <text>Permitted luggage allowed for 2nd class pass is –</text>
+    <option correct="false">35 Kg/ head</option>
+    <option correct="false">50 Kg/ head</option>
+    <option correct="true">70 Kg/ head</option>
+    <option correct="false">100 Kg/ head</option>
+  </question>
+
+  <question>
+    <text>Permitted luggage allowed for 1st class pass is –</text>
+    <option correct="false">35 Kg/ head</option>
+    <option correct="false">50 Kg/ head</option>
+    <option correct="false">70 Kg/ head</option>
+    <option correct="true">100 Kg/ head</option>
+  </question>
+
+  <question>
+    <text>Re painting of coaching stock as per “C” schedule is done at every –</text>
+    <option correct="false">3.0 year</option>
+    <option correct="false">3.5 year</option>
+    <option correct="true">4.5 year</option>
+    <option correct="false">5.0 year</option>
+  </question>
+
+  <question>
+    <text>Rehabilitation of coaching stock is carried out between –</text>
+    <option correct="false">10 to 12 year</option>
+    <option correct="true">12 to 15 year</option>
+    <option correct="false">15 to 18 year</option>
+    <option correct="false">18 20 year</option>
+  </question>
+
+  <question>
+    <text>How many emergency windows provided in AC ICF/RCF coaches are –</text>
+    <option correct="false">Two</option>
+    <option correct="false">Three</option>
+    <option correct="true">Four</option>
+    <option correct="false">Five</option>
+  </question>
+
+  <question>
+    <text>Rehabilitation cost of coaching stock is –</text>
+    <option correct="false">15% of the total cost</option>
+    <option correct="false">20% of the total cost</option>
+    <option correct="true">25% of the total cost</option>
+    <option correct="false">35% of the total cost</option>
+  </question>
+
+  <question>
+    <text>At what interval, the schedule ‘C’ examination of a BG coach is?</text>
+    <option correct="false">One month ± 3 days</option>
+    <option correct="false">Three month ± 3 days</option>
+    <option correct="true">Six month ± 7 days</option>
+    <option correct="false">Nine month ± 7days</option>
+  </question>
+
+  <question>
+    <text>What is the interval of schedule ‘A’ examination of a coach?</text>
+    <option correct="true">One month ±3 days</option>
+    <option correct="false">Two months ±3 days</option>
+    <option correct="false">Three months ±6 days</option>
+    <option correct="false">None of the above</option>
+  </question>
+
+  <question>
+    <text>What is the interval of schedule ‘B’ examination of a coach?</text>
+    <option correct="false">One month ±3 days</option>
+    <option correct="false">Two months ±3 days</option>
+    <option correct="true">Three months ±7 days</option>
+    <option correct="false">None of the above</option>
+  </question>
+
+  <question>
+    <text>What is the purpose of manipulator?</text>
+    <option correct="false">For testing roller bearing</option>
+    <option correct="true">For down hand welding</option>
+    <option correct="false">For ROH</option>
+    <option correct="false">For brake ringing Adjustment</option>
+  </question>
+
+  <question>
+    <text>What is the interval of metallic commode chute panting?</text>
+    <option correct="false">Every 15 days</option>
+    <option correct="true">Every month</option>
+    <option correct="false">Every 45 days</option>
+    <option correct="false">Every 90 days</option>
+  </question>
+
+  <question>
+    <text>What is the interval of cleaning/ flushing of overhead water tank?</text>
+    <option correct="false">Every trip</option>
+    <option correct="false">Every month</option>
+    <option correct="true">Every three month</option>
+    <option correct="false">Every Six month</option>
+  </question>
+
+  <question>
+    <text>At what interval, check the anticorrosive paint in commode?</text>
+    <option correct="false">One month</option>
+    <option correct="false">Three month</option>
+    <option correct="true">Six month</option>
+    <option correct="false">None of the above</option>
+  </question>
+
+  <question>
+    <text>At what interval IOH of ICF coaches is done -</text>
+    <option correct="false">Two month</option>
+    <option correct="false">Three month +- 15 days</option>
+    <option correct="true">Six month +- 7 day</option>
+    <option correct="false">Ninemonth +30 day</option>
+  </question>
+
+  <question>
+    <text>What do you mean by FRP?</text>
+    <option correct="false">Fibre recalling panel</option>
+    <option correct="true">Fibre reinforced plastic</option>
+    <option correct="false">First reduction plastic</option>
+    <option correct="false">Fine reinforced panel</option>
+  </question>
+
+  <question>
+    <text>Where has been distraction tube provided in ICF/RCF coaches?</text>
+    <option correct="false">Outer main head stock</option>
+    <option correct="false">Between main head stock and axially head stock</option>
+    <option correct="true">With axially head stock</option>
+    <option correct="false">None of the above</option>
+  </question>
+
+  <question>
+    <text>The maximum standard buffer height above rail level to center of buffer is –</text>
+    <option correct="true">1085 mm</option>
+    <option correct="false">1100 mm</option>
+    <option correct="false">1105 mm</option>
+    <option correct="false">1030 mm</option>
+  </question>
+
+  <question>
+    <text>The minimum permissible buffer height above rail level to center of buffer is –</text>
+    <option correct="false">1105 mm</option>
+    <option correct="false">1145 mm</option>
+    <option correct="false">1115 mm</option>
+    <option correct="true">1030 mm</option>
+  </question>
+
+  <question>
+    <text>Standard buffer projection from Headstock is –</text>
+    <option correct="false">650 mm</option>
+    <option correct="true">635 mm</option>
+    <option correct="false">620 mm</option>
+    <option correct="false">660 mm</option>
+  </question>
+
+  <question>
+    <text>Minimum Permissible buffer projection from Headstock is –</text>
+    <option correct="false">635 mm</option>
+    <option correct="false">605 mm</option>
+    <option correct="false">590 mm</option>
+    <option correct="true">584 mm</option>
+  </question>
+
+  <question>
+    <text>The diameter of buffer plunger face of ICF coaches is –</text>
+    <option correct="false">552 mm</option>
+    <option correct="true">457 mm</option>
+    <option correct="false">493 mm</option>
+    <option correct="false">510 mm</option>
+  </question>
+
+  <question>
+    <text>In ICF coach drawbar and Headstock, what should be the maximum buffer projection in mm?</text>
+    <option correct="true">92.0 mm</option>
+    <option correct="false">34.0 mm</option>
+    <option correct="false">36.0 mm</option>
+    <option correct="false">38.0 mm</option>
+  </question>
+
+  <question>
+    <text>What is the distance between two buffers at one end?</text>
+    <option correct="false">1952 mm</option>
+    <option correct="false">1976 mm</option>
+    <option correct="true">1956 mm</option>
+    <option correct="false">1992 mm</option>
+  </question>
+
+  <question>
+    <text>What is the maximum buffer plunger stroke in mm?</text>
+    <option correct="true">127.0 mm</option>
+    <option correct="false">129.0 mm</option>
+    <option correct="false">131.0 mm</option>
+    <option correct="false">133.0 mm</option>
+  </question>
+
+  <question>
+    <text>How the weight of the body is transferred on trolley in ICF coach?</text>
+    <option correct="false">Journal</option>
+    <option correct="false">Wheel</option>
+    <option correct="true">Side bearer</option>
+    <option correct="false">Dashpot</option>
+  </question>
+
+  <question>
+    <text>What should be the minimum buffer height after POH?</text>
+    <option correct="true">1050 mm</option>
+    <option correct="false">1060 mm</option>
+    <option correct="false">1080 mm</option>
+    <option correct="false">1090 mm</option>
+  </question>
+
+  <question>
+    <text>The ICF buffer plunger is made of –</text>
+    <option correct="false">Mild steel</option>
+    <option correct="false">Cost iron</option>
+    <option correct="true">Cast steel</option>
+    <option correct="false">Aluminum Alloy</option>
+  </question>
+
+  <question>
+    <text>In loaded condition, the minimum permissible height of buffer in ICF coach is –</text>
+    <option correct="false">1090 mm</option>
+    <option correct="false">1105 mm</option>
+    <option correct="true">1030 mm</option>
+    <option correct="false">None of the above</option>
+  </question>
+
+  <question>
+    <text>What is the buffer stroke in ICF coach?</text>
+    <option correct="true">127.0 mm</option>
+    <option correct="false">129.0 mm</option>
+    <option correct="false">131.0 mm</option>
+    <option correct="false">133.0 mm</option>
+  </question>
+
+  <question>
+    <text>The new thickness of a draft pad in ICF coach is -</text>
+    <option correct="false">30.0 mm</option>
+    <option correct="true">32.0 mm</option>
+    <option correct="false">33.0 mm</option>
+    <option correct="false">34.0 mm</option>
+  </question>
+
+  <question>
+    <text>The condemning thickness of draft pad in ICF coaches?</text>
+    <option correct="true">30.0 mm</option>
+    <option correct="false">32.0 mm</option>
+    <option correct="false">33.0 mm</option>
+    <option correct="false">34.0 mm</option>
+  </question>
+
+</quiz>
