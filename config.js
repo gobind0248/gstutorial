@@ -1,4 +1,4 @@
-// Google Sheets Configuration
+
 const GOOGLE_SHEETS_CONFIG = {
     // Replace with your Google Sheet ID
     SHEET_ID: '1G6tTHT56T6FmqOwOvVFVPoVqoSs-TSBz_-SiW9imQvk',
