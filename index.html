@@ -57,8 +57,8 @@
 
     /* Logo styles - LARGER SIZE */
     .logo-header {
-      width: 50px;  /* Increased from 30px */
-      height: 50px; /* Increased from 30px */
+      width: 50px;
+      height: 50px;
       border-radius: 8px;
       object-fit: contain;
       flex-shrink: 0;
@@ -67,8 +67,8 @@
     }
 
     .logo-login {
-      width: 70px;  /* Increased from 60px */
-      height: 70px; /* Increased from 60px */
+      width: 70px;
+      height: 70px;
       border-radius: 12px;
       object-fit: contain;
       background: rgba(255, 255, 255, 0.1);
@@ -362,7 +362,6 @@
       text-align: center;
     }
 
-    /* Rest of the CSS remains exactly the same... */
     /* ===== CLASS SELECTION SCREEN ===== */
     .class-selection {
       background: #020617;
@@ -1124,7 +1123,7 @@
       }
       
       .main-content {
-        margin-top: 110px; /* Increased for larger header */
+        margin-top: 110px;
         padding: 12px;
         gap: 15px;
       }
@@ -1274,7 +1273,7 @@
       }
       
       .main-content {
-        margin: 100px auto 20px; /* Increased for larger header */
+        margin: 100px auto 20px;
         padding: 20px;
       }
       
@@ -1526,21 +1525,37 @@
   </div>
 
   <script>
-    // ========== GOOGLE SHEETS CONFIGURATION ==========
-    const GOOGLE_SHEETS_CONFIG = {
-        // ========== CONFIGURE YOUR SHEET HERE ==========
-        // Replace with your Google Sheet ID
-        SHEET_ID: '1G6tTHT56T6FmqOwOvVFVPoVqoSs-TSBz_-SiW9imQvk',
-        
-        // Replace with your Sheet GID (usually 0 for first sheet)
-        GID: '0',
-        // ===============================================
-        
-        // API endpoint to fetch sheet data
-        get API_URL() {
-            return `https://docs.google.com/spreadsheets/d/${this.SHEET_ID}/gviz/tq?tqx=out:json&gid=${this.GID}`;
-        }
+    // ========== CONFIGURATION ==========
+    let appConfig = {
+      googleSheets: null,
+      classesData: null
     };
+
+    async function loadConfig() {
+      try {
+        // Load Google Sheets configuration
+        const configResponse = await fetch('config.json');
+        const configData = await configResponse.json();
+        appConfig.googleSheets = configData.googleSheets;
+        console.log('Google Sheets config loaded:', appConfig.googleSheets);
+        
+        // Load classes configuration
+        const classesResponse = await fetch('classes.json');
+        appConfig.classesData = await classesResponse.json();
+        console.log('Classes configuration loaded:', appConfig.classesData);
+        
+        return true;
+      } catch (error) {
+        console.error('Error loading configuration:', error);
+        return false;
+      }
+    }
+
+    // Google Sheets API URL getter
+    function getGoogleSheetsApiUrl() {
+      if (!appConfig.googleSheets) return null;
+      return `https://docs.google.com/spreadsheets/d/${appConfig.googleSheets.SHEET_ID}/gviz/tq?tqx=out:json&gid=${appConfig.googleSheets.GID}`;
+    }
 
     // ========== GLOBAL VARIABLES ==========
     let questions = [];
@@ -1707,8 +1722,11 @@
       try {
         console.log("Loading users from Google Sheet...");
         
-        // Create the API URL using the config
-        const apiUrl = GOOGLE_SHEETS_CONFIG.API_URL;
+        const apiUrl = getGoogleSheetsApiUrl();
+        if (!apiUrl) {
+          throw new Error("Google Sheets configuration not loaded");
+        }
+        
         console.log("Fetching from:", apiUrl);
         
         const response = await fetch(apiUrl);
@@ -1725,29 +1743,26 @@
         const rows = jsonData.table.rows;
         userList = [];
         
-        // Expected column indices (adjust if your sheet has different order)
-        // Based on your description: username, password, name, role, class
-        const USERNAME_COL = 0;  // Column A
-        const PASSWORD_COL = 1;  // Column B
-        const NAME_COL = 2;      // Column C
-        const ROLE_COL = 3;      // Column D
-        const CLASS_COL = 4;     // Column E
+        // Expected column indices
+        const USERNAME_COL = 0;
+        const PASSWORD_COL = 1;
+        const NAME_COL = 2;
+        const ROLE_COL = 3;
+        const CLASS_COL = 4;
         
         console.log(`Total rows in sheet: ${rows.length}`);
         
-        // IMPORTANT: Start from row 1 (second row in Google Sheets)
-        // Row 0 is the header row
-        for (let i = 1; i < rows.length; i++) { // Start from 1 to skip header
+        // Start from row 1 (second row in Google Sheets)
+        for (let i = 1; i < rows.length; i++) {
           const row = rows[i];
           
-          if (row.c && row.c.length >= 2) { // At least username and password
+          if (row.c && row.c.length >= 2) {
             const username = row.c[USERNAME_COL] ? row.c[USERNAME_COL].v : '';
             const password = row.c[PASSWORD_COL] ? row.c[PASSWORD_COL].v : '';
             const name = row.c[NAME_COL] ? row.c[NAME_COL].v : username;
             const role = row.c[ROLE_COL] ? row.c[ROLE_COL].v : 'Student';
             const userClass = row.c[CLASS_COL] ? row.c[CLASS_COL].v : '';
             
-            // Convert to string and trim
             const usernameStr = username ? username.toString().trim() : '';
             const passwordStr = password ? password.toString().trim() : '';
             
@@ -1768,8 +1783,8 @@
         }
         
         if (userList.length === 0) {
-          console.warn("No users found in Google Sheet. Using fallback.");
-          userList = []; // Return empty array
+          console.warn("No users found in Google Sheet.");
+          userList = [];
         }
         
         console.log(`Loaded ${userList.length} users from Google Sheet`);
@@ -1778,11 +1793,9 @@
       } catch (error) {
         console.error("Error loading users from Google Sheet:", error);
         
-        // Show user-friendly error
         loginErrorEl.textContent = "⚠️ Cannot connect to login database. Please check your internet connection.";
         loginErrorEl.style.display = "block";
         
-        // Return empty user list
         userList = [];
         return false;
       }
@@ -1926,6 +1939,11 @@
     }
 
     function loadClasses() {
+      if (!appConfig.classesData || !appConfig.classesData.classes) {
+        console.error('Classes data not loaded');
+        return;
+      }
+      
       // Get user's class from Google Sheet, default to "8" if empty
       const userClassValue = currentUser?.class || "8";
       console.log(`User class from sheet: "${userClassValue}"`);
@@ -1933,15 +1951,10 @@
       let availableClasses = [];
       
       if (currentUser && currentUser.role === 'Teacher') {
-        // Teacher sees all classes
-        availableClasses = [
-          { id: "8", name: "Class 8", icon: "📚", desc: "Mathematics & Science" },
-          { id: "9", name: "Class 9", icon: "🎓", desc: "Mathematics & Science" },
-          { id: "10", name: "Class 10", icon: "🏆", desc: "Mathematics & Science" }
-        ];
+        // Teacher sees all classes from classes.json
+        availableClasses = appConfig.classesData.classes;
       } else {
         // Student sees only their assigned class
-        // Handle cases where class might be "None" or empty
         let studentClass = "8"; // Default
         
         if (userClassValue && userClassValue.toLowerCase() !== "none" && userClassValue.trim() !== "") {
@@ -1951,9 +1964,17 @@
         }
         
         console.log(`Student will see Class ${studentClass}`);
-        availableClasses = [
-          { id: studentClass, name: `Class ${studentClass}`, icon: "📚", desc: "Mathematics & Science" }
-        ];
+        
+        // Find the specific class from classes.json
+        const studentClassData = appConfig.classesData.classes.find(cls => cls.id === studentClass);
+        
+        if (studentClassData) {
+          availableClasses = [studentClassData];
+        } else {
+          // If class not found in config, show default Class 8
+          const defaultClass = appConfig.classesData.classes.find(cls => cls.id === "8");
+          availableClasses = defaultClass ? [defaultClass] : [appConfig.classesData.classes[0]];
+        }
       }
       
       classGridEl.innerHTML = "";
@@ -1964,7 +1985,7 @@
         card.innerHTML = `
           <div class="class-icon">${cls.icon}</div>
           <div class="class-name">${cls.name}</div>
-          <div class="class-desc">${cls.desc}</div>
+          <div class="class-desc">${cls.description}</div>
         `;
         
         card.addEventListener("click", () => {
@@ -1979,12 +2000,21 @@
     }
 
     function loadSubjects() {
-      // Subjects are fixed: Mathematics and Science
-      const subjects = [
-        { id: "mathematics", name: "Mathematics", icon: "📐", desc: "Algebra, Geometry, Mensuration" },
-        { id: "science", name: "Science", icon: "🔬", desc: "Physics, Chemistry, Biology" }
-      ];
+      if (!appConfig.classesData || !appConfig.classesData.classes) {
+        console.error('Classes data not loaded');
+        return;
+      }
       
+      // Find the selected class
+      const selectedClass = appConfig.classesData.classes.find(cls => cls.id === currentClass);
+      
+      if (!selectedClass || !selectedClass.subjects || selectedClass.subjects.length === 0) {
+        console.error(`No subjects found for class ${currentClass}`);
+        subjectGridEl.innerHTML = '<div class="subject-card"><div class="subject-name">No subjects available</div></div>';
+        return;
+      }
+      
+      const subjects = selectedClass.subjects;
       subjectGridEl.innerHTML = "";
       
       subjects.forEach(subject => {
@@ -1993,7 +2023,7 @@
         card.innerHTML = `
           <div class="subject-icon">${subject.icon}</div>
           <div class="subject-name">${subject.name}</div>
-          <div class="subject-desc">${subject.desc}</div>
+          <div class="subject-desc">${subject.description}</div>
         `;
         
         card.addEventListener("click", () => {
@@ -2005,28 +2035,35 @@
         
         subjectGridEl.appendChild(card);
       });
+      
+      console.log(`Loaded ${subjects.length} subjects for Class ${currentClass}`);
     }
 
     async function loadChapters() {
       try {
-        // Clean the subject name for URL
-        const cleanSubject = currentSubject.toLowerCase()
-          .replace(/ /g, '-')
-          .replace(/[^a-z0-9-]/g, '');
+        // Find the selected class and subject
+        const selectedClass = appConfig.classesData.classes.find(cls => cls.id === currentClass);
+        if (!selectedClass) {
+          throw new Error(`Class ${currentClass} not found in configuration`);
+        }
+        
+        const selectedSubject = selectedClass.subjects.find(sub => sub.name === currentSubject);
+        if (!selectedSubject) {
+          throw new Error(`Subject ${currentSubject} not found in configuration for Class ${currentClass}`);
+        }
+        
+        // Use subject ID for folder structure
+        const subjectFolder = selectedSubject.id.toLowerCase().replace(/ /g, '-');
         
         // Try multiple path combinations
         const pathOptions = [
-          // Option 1: With "Class " prefix and original subject name
-          `Class ${currentClass}/${currentSubject.toLowerCase()}/chapters.json`,
+          // Option 1: With "Class " prefix
+          `Class ${currentClass}/${subjectFolder}/chapters.json`,
           // Option 2: Without "Class " prefix
-          `${currentClass}/${currentSubject.toLowerCase()}/chapters.json`,
-          // Option 3: With "Class " prefix and cleaned subject name
-          `Class ${currentClass}/${cleanSubject}/chapters.json`,
-          // Option 4: Without "Class " prefix and cleaned subject name
-          `${currentClass}/${cleanSubject}/chapters.json`,
-          // Option 5: Relative path with uppercase first letter
-          `Class ${currentClass}/${currentSubject.charAt(0).toUpperCase() + currentSubject.slice(1).toLowerCase()}/chapters.json`,
-          // Option 6: Just the class number
+          `${currentClass}/${subjectFolder}/chapters.json`,
+          // Option 3: Subject name with spaces
+          `Class ${currentClass}/${currentSubject}/chapters.json`,
+          // Option 4: Just class and subject name
           `${currentClass}/${currentSubject}/chapters.json`
         ];
         
@@ -2781,29 +2818,34 @@
       // Clean the filename - remove any invalid characters
       const cleanChapterName = trimmed.replace(/[<>:"/\\|?*]/g, '');
       
-      // Clean the subject name for URL
-      const cleanSubject = currentSubject.toLowerCase()
-        .replace(/ /g, '-')
-        .replace(/[^a-z0-9-]/g, '');
+      // Find the selected class and subject
+      const selectedClass = appConfig.classesData.classes.find(cls => cls.id === currentClass);
+      if (!selectedClass) {
+        alert("Class not found in configuration.");
+        return;
+      }
+      
+      const selectedSubject = selectedClass.subjects.find(sub => sub.name === currentSubject);
+      if (!selectedSubject) {
+        alert("Subject not found in configuration.");
+        return;
+      }
+      
+      // Use subject ID for folder structure
+      const subjectFolder = selectedSubject.id.toLowerCase().replace(/ /g, '-');
       
       // Try multiple path combinations
       const pathOptions = [
-        // Option 1: With "Class " prefix and original subject name
-        `Class ${currentClass}/${currentSubject.toLowerCase()}/${cleanChapterName}.xml`,
+        // Option 1: With "Class " prefix
+        `Class ${currentClass}/${subjectFolder}/${cleanChapterName}.xml`,
         // Option 2: Without "Class " prefix
-        `${currentClass}/${currentSubject.toLowerCase()}/${cleanChapterName}.xml`,
-        // Option 3: Clean subject name
-        `${currentClass}/${cleanSubject}/${cleanChapterName}.xml`,
-        // Option 4: With Class prefix and clean subject
-        `Class ${currentClass}/${cleanSubject}/${cleanChapterName}.xml`,
-        // Option 5: Original chapter name (not cleaned)
-        `Class ${currentClass}/${currentSubject.toLowerCase()}/${trimmed}.xml`,
-        // Option 6: Encoded chapter name
-        `${currentClass}/${currentSubject.toLowerCase()}/${encodeURIComponent(trimmed)}.xml`,
-        // Option 7: Just the class number
+        `${currentClass}/${subjectFolder}/${cleanChapterName}.xml`,
+        // Option 3: Original chapter name
+        `Class ${currentClass}/${subjectFolder}/${trimmed}.xml`,
+        // Option 4: Just class and subject
         `${currentClass}/${currentSubject}/${cleanChapterName}.xml`,
-        // Option 8: Encoded with Class prefix
-        `Class ${currentClass}/${currentSubject.toLowerCase()}/${encodeURIComponent(trimmed)}.xml`
+        // Option 5: Encoded chapter name
+        `Class ${currentClass}/${subjectFolder}/${encodeURIComponent(trimmed)}.xml`
       ];
       
       quizTopicNameEl.textContent = trimmed;
@@ -2834,7 +2876,6 @@
         removeTimerNotification();
 
         let xmlText = null;
-        let lastError = null;
         let successfulPath = null;
         
         // Try all path options
@@ -2851,7 +2892,6 @@
               console.log(`Failed to load from: ${path} (Status: ${res.status})`);
             }
           } catch (err) {
-            lastError = err;
             console.log(`Error loading from ${path}:`, err.message);
           }
         }
@@ -2861,7 +2901,6 @@
           const cleanErrorMessage = `XML file not found for chapter: "${trimmed}".xml`;
           console.error("XML file not found. Tried paths:", pathOptions);
           
-          // Show user-friendly error
           questionTextEl.textContent = `Error: ${cleanErrorMessage}`;
           optionsListEl.innerHTML = "";
           feedbackEl.textContent = "";
@@ -2874,7 +2913,6 @@
           quizTopicNameEl.style.color = "#fca5a5";
           quizQuestionCountEl.textContent = "0 questions";
           
-          // Show error in console for debugging but clean message to user
           console.error("Full error details for debugging:", {
             chapter: trimmed,
             cleanedChapter: cleanChapterName,
@@ -2919,7 +2957,6 @@
       } catch (err) {
         console.error("Error loading questions:", err);
         
-        // Show clean error message without path details
         const errorMessage = err.message.includes("not found") 
           ? `XML file not found for chapter: "${trimmed}".xml` 
           : err.message;
@@ -2964,7 +3001,7 @@
       loginBtnEl.disabled = true;
       loginBtnEl.innerHTML = '⏳ Loading...';
       
-      // Always load fresh data from Google Sheets
+      // Load fresh data from Google Sheets
       const loaded = await loadUsersFromGoogleSheet();
       
       if (!loaded || userList.length === 0) {
@@ -3036,11 +3073,26 @@
       console.log("G. S. Tutorial App initialized. Created by Gobind Sharma.");
       console.log("Google Sheets Login System Ready");
       
+      // Load configuration
+      const configLoaded = await loadConfig();
+      
+      if (!configLoaded) {
+        loginErrorEl.textContent = "⚠️ Cannot load configuration files. Please check your internet connection.";
+        loginErrorEl.style.display = "block";
+        return;
+      }
+      
       // Show configuration info in console
-      console.log("Current Google Sheets Configuration:");
-      console.log(`- Sheet ID: ${GOOGLE_SHEETS_CONFIG.SHEET_ID}`);
-      console.log(`- GID: ${GOOGLE_SHEETS_CONFIG.GID}`);
-      console.log(`- API URL: ${GOOGLE_SHEETS_CONFIG.API_URL}`);
+      if (appConfig.googleSheets) {
+        console.log("Google Sheets Configuration:");
+        console.log(`- Sheet ID: ${appConfig.googleSheets.SHEET_ID}`);
+        console.log(`- GID: ${appConfig.googleSheets.GID}`);
+        console.log(`- API URL: ${getGoogleSheetsApiUrl()}`);
+      }
+      
+      if (appConfig.classesData) {
+        console.log(`Loaded ${appConfig.classesData.classes.length} classes from classes.json`);
+      }
       
       // Add activity listeners for inactivity timer
       document.addEventListener('mousemove', resetInactivityTimer);
@@ -3054,5 +3106,4 @@
     document.addEventListener("DOMContentLoaded", initializeApp);
   </script>
 </body>
-          </html>
-
+</html>
