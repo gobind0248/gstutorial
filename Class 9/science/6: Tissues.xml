@@ -1,235 +1,335 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quiz>
-<metadata>
-  <chapter>6. Tissues</chapter>
-  <timeLimit>30</timeLimit>
-  <author>CBSE Exam Important Questions</author>
-</metadata>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 9 Science - Chapter 6: Tissues</description>
+  </metadata>
 
-<question>
-  <text>Which tissue is responsible for movement in our body?</text>
-  <option>Epithelial tissue</option>
-  <option>Connective tissue</option>
-  <option correct="true">Muscular tissue</option>
-  <option>Nervous tissue</option>
-  <explanation>Muscular tissue contracts to produce movement.</explanation>
-</question>
+  <!-- Previous Year Questions (CBSE/SEBA) -->
 
-<question>
-  <text>Parenchyma tissue performs:</text>
-  <option>Protection</option>
-  <option>Support</option>
-  <option correct="true">Storage and photosynthesis</option>
-  <option>Conduction</option>
-  <explanation>Parenchyma stores food, performs photosynthesis in leaves.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2023) Which tissue is responsible for movement in our body?</text>
+    <option>Epithelial tissue</option>
+    <option>Nervous tissue</option>
+    <option correct="true">Muscular tissue</option>
+    <option>Connective tissue</option>
+    <explanation>Muscular tissue contracts and relaxes to produce movement. Three types: skeletal, smooth, cardiac.</explanation>
+  </question>
 
-<question>
-  <text>Neurons are part of:</text>
-  <option>Epithelial tissue</option>
-  <option>Muscular tissue</option>
-  <option>Connective tissue</option>
-  <option correct="true">Nervous tissue</option>
-  <explanation>Neurons are nerve cells that transmit impulses.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2023) The tissue that connects bone to bone is:</text>
+    <option>Tendon</option>
+    <option correct="true">Ligament</option>
+    <option>Cartilage</option>
+    <option>Areolar tissue</option>
+    <explanation>Ligament: bone to bone (elastic, yellow fibers). Tendon: muscle to bone (white fibers, less elastic).</explanation>
+  </question>
 
-<question>
-  <text>Which tissue has lignified walls?</text>
-  <option>Parenchyma</option>
-  <option>Collenchyma</option>
-  <option correct="true">Sclerenchyma</option>
-  <option>Chlorenchyma</option>
-  <explanation>Sclerenchyma has thick lignified walls for support.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2022) Which of these is a simple permanent tissue?</text>
+    <option>Xylem</option>
+    <option>Phloem</option>
+    <option correct="true">Parenchyma</option>
+    <option>Epidermis</option>
+    <explanation>Simple permanent tissues: parenchyma, collenchyma, sclerenchyma. Complex tissues: xylem and phloem.</explanation>
+  </question>
 
-<question>
-  <text>Blood is a type of:</text>
-  <option>Epithelial tissue</option>
-  <option correct="true">Connective tissue</option>
-  <option>Muscular tissue</option>
-  <option>Nervous tissue</option>
-  <explanation>Blood is fluid connective tissue with plasma and cells.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2022) The tissue that transports food in plants is:</text>
+    <option correct="true">Phloem</option>
+    <option>Xylem</option>
+    <option>Parenchyma</option>
+    <option>Sclerenchyma</option>
+    <explanation>Phloem transports organic nutrients (photosynthates) from leaves to other parts. Bidirectional flow.</explanation>
+  </question>
 
-<question>
-  <text>Meristematic tissue is found in:</text>
-  <option>Root tips</option>
-  <option>Stem tips</option>
-  <option>Cambium</option>
-  <option correct="true">All of these</option>
-  <explanation>Meristematic tissue is in growing regions - tips, cambium.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2021) Which epithelial tissue is found in kidney tubules?</text>
+    <option>Squamous epithelium</option>
+    <option correct="true">Cuboidal epithelium</option>
+    <option>Columnar epithelium</option>
+    <option>Ciliated epithelium</option>
+    <explanation>Cuboidal epithelium: cube-shaped cells, found in kidney tubules, salivary glands, for secretion and absorption.</explanation>
+  </question>
 
-<question>
-  <text>Which muscle is voluntary?</text>
-  <option>Smooth muscle</option>
-  <option>Cardiac muscle</option>
-  <option correct="true">Skeletal muscle</option>
-  <option>All muscles</option>
-  <explanation>Skeletal muscles are under voluntary control.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2021) The dead element of phloem is:</text>
+    <option>Sieve tubes</option>
+    <option>Companion cells</option>
+    <option>Phloem parenchyma</option>
+    <option correct="true">Phloem fibers</option>
+    <explanation>Phloem fibers (bast fibers) are dead, provide mechanical support. Sieve tubes, companion cells, phloem parenchyma are living.</explanation>
+  </question>
 
-<question>
-  <text>Phloem transports:</text>
-  <option>Water and minerals</option>
-  <option correct="true">Food and nutrients</option>
-  <option>Hormones</option>
-  <option>Oxygen</option>
-  <explanation>Phloem transports organic food from leaves to other parts.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2020) Which tissue stores fat in our body?</text>
+    <option>Areolar tissue</option>
+    <option correct="true">Adipose tissue</option>
+    <option>Ligament</option>
+    <option>Tendon</option>
+    <explanation>Adipose tissue stores fat (triglycerides) as energy reserve, insulation, cushioning. Found under skin, around organs.</explanation>
+  </question>
 
-<question>
-  <text>Tendons connect:</text>
-  <option>Bone to bone</option>
-  <option correct="true">Muscle to bone</option>
-  <option>Muscle to muscle</option>
-  <option>Bone to cartilage</option>
-  <explanation>Tendons are fibrous connective tissue joining muscle to bone.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2020) The tissue present in the growing tips of roots and stems is:</text>
+    <option>Permanent tissue</option>
+    <option correct="true">Meristematic tissue</option>
+    <option>Parenchyma</option>
+    <option>Sclerenchyma</option>
+    <explanation>Meristematic tissue: actively dividing cells, found at growing tips (apical meristem), responsible for growth.</explanation>
+  </question>
 
-<question>
-  <text>Which epithelial tissue is thin and flat?</text>
-  <option>Cuboidal</option>
-  <option>Columnar</option>
-  <option correct="true">Squamous</option>
-  <option>Ciliated</option>
-  <explanation>Squamous epithelium has flat, scale-like cells.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2019) Which muscle tissue shows rhythmic contractions throughout life?</text>
+    <option>Skeletal muscle</option>
+    <option>Smooth muscle</option>
+    <option correct="true">Cardiac muscle</option>
+    <option>All muscles</option>
+    <explanation>Cardiac muscle: involuntary, rhythmic contractions (heartbeat), branched cells with intercalated discs.</explanation>
+  </question>
 
-<question>
-  <text>Xylem consists of:</text>
-  <option>Tracheids and vessels</option>
-  <option>Xylem parenchyma</option>
-  <option>Xylem fibers</option>
-  <option correct="true">All of these</option>
-  <explanation>Xylem has tracheids, vessels, parenchyma and fibers.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2019) The tissue that transports water in plants is:</text>
+    <option correct="true">Xylem</option>
+    <option>Phloem</option>
+    <option>Parenchyma</option>
+    <option>Collenchyma</option>
+    <explanation>Xylem transports water and minerals from roots to leaves. Unidirectional flow. Contains tracheids, vessels, xylem parenchyma, fibers.</explanation>
+  </question>
 
-<question>
-  <text>Cardiac muscle is found in:</text>
-  <option>Limbs</option>
-  <option>Stomach</option>
-  <option correct="true">Heart</option>
-  <option>Intestine</option>
-  <explanation>Cardiac muscle is exclusively in heart walls.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2018) Which connective tissue has fluid matrix?</text>
+    <option>Bone</option>
+    <option>Cartilage</option>
+    <option correct="true">Blood</option>
+    <option>Tendon</option>
+    <explanation>Blood: fluid connective tissue, plasma (matrix) + formed elements (RBCs, WBCs, platelets). Transports gases, nutrients, wastes.</explanation>
+  </question>
 
-<question>
-  <text>Ligaments connect:</text>
-  <option correct="true">Bone to bone</option>
-  <option>Muscle to bone</option>
-  <option>Muscle to muscle</option>
-  <option>Bone to cartilage</option>
-  <explanation>Ligaments connect bones at joints.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2018) The tissue that covers the external surface of animal body is:</text>
+    <option>Muscular tissue</option>
+    <option>Nervous tissue</option>
+    <option correct="true">Epithelial tissue</option>
+    <option>Connective tissue</option>
+    <explanation>Epithelial tissue forms covering/lining of organs and body surfaces. Protection, absorption, secretion, sensation.</explanation>
+  </question>
 
-<question>
-  <text>Which tissue provides buoyancy to aquatic plants?</text>
-  <option>Parenchyma</option>
-  <option correct="true">Aerenchyma</option>
-  <option>Collenchyma</option>
-  <option>Sclerenchyma</option>
-  <explanation>Aerenchyma has air cavities for buoyancy in aquatic plants.</explanation>
-</question>
+  <!-- Additional Important MCQs -->
 
-<question>
-  <text>Striated muscles have:</text>
-  <option>Spindle shaped cells</option>
-  <option correct="true">Light and dark bands</option>
-  <option>Single nucleus</option>
-  <option>Involuntary control</option>
-  <explanation>Striated/skeletal muscles show alternating light and dark bands.</explanation>
-</question>
+  <question>
+    <text>Which meristem is responsible for increase in girth?</text>
+    <option>Apical meristem</option>
+    <option correct="true">Lateral meristem</option>
+    <option>Intercalary meristem</option>
+    <option>Primary meristem</option>
+    <explanation>Lateral meristem (cambium) causes secondary growth (increase in thickness). Apical: length, intercalary: at nodes.</explanation>
+  </question>
 
-<question>
-  <text>Complex permanent tissue includes:</text>
-  <option>Parenchyma and collenchyma</option>
-  <option correct="true">Xylem and phloem</option>
-  <option>Epidermis and cork</option>
-  <option>All of these</option>
-  <explanation>Xylem and phloem are complex tissues with multiple cell types.</explanation>
-</question>
+  <question>
+    <text>Which epithelial tissue has hair-like projections?</text>
+    <option>Simple squamous</option>
+    <option>Stratified squamous</option>
+    <option correct="true">Ciliated columnar</option>
+    <option>Cuboidal</option>
+    <explanation>Ciliated columnar epithelium: cilia on free surface, move mucus/particles. Found in respiratory tract, fallopian tubes.</explanation>
+  </question>
 
-<question>
-  <text>Which tissue lines kidney tubules?</text>
-  <option>Squamous epithelium</option>
-  <option correct="true">Cuboidal epithelium</option>
-  <option>Columnar epithelium</option>
-  <option>Ciliated epithelium</option>
-  <explanation>Cuboidal epithelium lines kidney tubules for absorption.</explanation>
-</question>
+  <question>
+    <text>Which is NOT a component of xylem?</text>
+    <option>Tracheids</option>
+    <option>Vessels</option>
+    <option>Xylem parenchyma</option>
+    <option correct="true">Sieve tubes</option>
+    <explanation>Sieve tubes are in phloem. Xylem: tracheids, vessels (water conduction), xylem parenchyma (storage), xylem fibers (support).</explanation>
+  </question>
 
-<question>
-  <text>Adipose tissue stores:</text>
-  <option>Proteins</option>
-  <option>Carbohydrates</option>
-  <option correct="true">Fats</option>
-  <option>Minerals</option>
-  <explanation>Adipose tissue stores fat as energy reserve.</explanation>
-</question>
+  <question>
+    <text>The study of tissues is called:</text>
+    <option>Cytology</option>
+    <option correct="true">Histology</option>
+    <option>Pathology</option>
+    <option>Embryology</option>
+    <explanation>Histology: study of tissues. Cytology: cells. Pathology: diseases. Embryology: embryo development.</explanation>
+  </question>
 
-<question>
-  <text>Sie
+  <question>
+    <text>Which muscle is voluntary and striated?</text>
+    <option>Smooth muscle</option>
+    <option>Cardiac muscle</option>
+    <option correct="true">Skeletal muscle</option>
+    <option>All muscles</option>
+    <explanation>Skeletal muscle: attached to bones, voluntary control, striated (light/dark bands). Smooth: involuntary, non-striated. Cardiac: involuntary, striated.</explanation>
+  </question>
 
-ve tubes are found in:</text>
-  <option>Xylem</option>
-  <option correct="true">Phloem</option>
-  <option>Epidermis</option>
-  <option>Cambium</option>
-  <explanation>Sieve tubes conduct food in phloem tissue.</explanation>
-</question>
+  <question>
+    <text>Which tissue provides buoyancy to aquatic plants?</text>
+    <option>Parenchyma</option>
+    <option correct="true">Aerenchyma</option>
+    <option>Collenchyma</option>
+    <option>Sclerenchyma</option>
+    <explanation>Aerenchyma: parenchyma with large air cavities, provides buoyancy and gas exchange in aquatic plants.</explanation>
+  </question>
 
-<question>
-  <text>Which is dead tissue?</text>
-  <option>Parenchyma</option>
-  <option>Collenchyma</option>
-  <option correct="true">Sclerenchyma</option>
-  <option>Meristem</option>
-  <explanation>Sclerenchyma cells are dead at maturity with thick lignified walls.</explanation>
-</question>
+  <question>
+    <text>The cell body of a neuron is called:</text>
+    <option>Axon</option>
+    <option>Dendrite</option>
+    <option correct="true">Cyton</option>
+    <option>Synapse</option>
+    <explanation>Neuron parts: cyton (cell body with nucleus), dendrites (receive impulses), axon (transmits impulses), synapse (junction).</explanation>
+  </question>
 
-<question>
-  <text>Axon is part of:</text>
-  <option>Muscle cell</option>
-  <option>Blood cell</option>
-  <option correct="true">Nerve cell</option>
-  <option>Epithelial cell</option>
-  <explanation>Axon is long fiber of neuron that conducts impulses away from cell body.</explanation>
-</question>
+  <question>
+    <text>Which connective tissue forms the framework of external ear?</text>
+    <option>Bone</option>
+    <option correct="true">Cartilage</option>
+    <option>Tendon</option>
+    <option>Ligament</option>
+    <explanation>Cartilage: flexible, elastic matrix (chondrin), cells in lacunae. Found in ear, nose, trachea, joints.</explanation>
+  </question>
 
-<question>
-  <text>Cartilage is:</text>
-  <option>Hard and non-flexible</option>
-  <option correct="true">Soft and flexible</option>
-  <option>Liquid</option>
-  <option>Fibrous</option>
-  <explanation>Cartilage is flexible connective tissue at joints, nose, ears.</explanation>
-</question>
+  <question>
+    <text>The tissue between upper and lower epidermis in leaf is:</text>
+    <option correct="true">Mesophyll</option>
+    <option>Epidermis</option>
+    <option>Vascular tissue</option>
+    <option>Parenchyma</option>
+    <explanation>Mesophyll: parenchyma tissue in leaves, contains chloroplasts for photosynthesis. Palisade and spongy mesophyll.</explanation>
+  </question>
 
-<question>
-  <text>Glandular epithelium secretes:</text>
-  <option>Blood</option>
-  <option>Lymph</option>
-  <option correct="true">Enzymes and hormones</option>
-  <option>Mucus only</option>
-  <explanation>Glandular epithelium forms glands that secrete various substances.</explanation>
-</question>
+  <question>
+    <text>Which tissue forms the inner lining of blood vessels?</text>
+    <option correct="true">Squamous epithelium</option>
+    <option>Cuboidal epithelium</option>
+    <option>Columnar epithelium</option>
+    <option>Ciliated epithelium</option>
+    <explanation>Simple squamous epithelium: thin, flat cells, allows diffusion. Lines blood vessels (endothelium), alveoli, body cavities.</explanation>
+  </question>
 
-<question>
-  <text>Vessels are present in:</text>
-  <option>All plants</option>
-  <option correct="true">Angiosperms only</option>
-  <option>Gymnosperms only</option>
-  <option>Bryophytes</option>
-  <explanation>Vessels (perforated) are characteristic of angiosperm xylem.</explanation>
-</question>
+  <question>
+    <text>The hardest connective tissue is:</text>
+    <option correct="true">Bone</option>
+    <option>Cartilage</option>
+    <option>Tendon</option>
+    <option>Blood</option>
+    <explanation>Bone: hard matrix of calcium salts (calcium phosphate), collagen fibers. Provides support, protection, movement.</explanation>
+  </question>
 
-<question>
-  <text>Intercalary meristem is found:</text>
-  <option>At root tip</option>
-  <option>At stem tip</option>
-  <option correct="true>At base of leaves or internodes</option>
-  <option>In cambium</option>
-  <explanation>Intercalary meristem allows growth at leaf bases and internodes.</explanation>
-</question>
+  <question>
+    <text>Which tissue has lignified cell walls?</text>
+    <option>Parenchyma</option>
+    <option>Collenchyma</option>
+    <option correct="true">Sclerenchyma</option>
+    <option>All plant tissues</option>
+    <explanation>Sclerenchyma: dead cells with thick lignified walls, provide mechanical strength. Fibers and sclereids.</explanation>
+  </question>
+
+  <question>
+    <text>The tissue that connects muscle to bone is:</text>
+    <option correct="true">Tendon</option>
+    <option>Ligament</option>
+    <option>Cartilage</option>
+    <option>Areolar tissue</option>
+    <explanation>Tendon: dense regular connective tissue, connects muscle to bone, high tensile strength, white fibers (collagen).</explanation>
+  </question>
+
+  <question>
+    <text>Which meristem is found at the base of leaves?</text>
+    <option>Apical meristem</option>
+    <option>Lateral meristem</option>
+    <option correct="true">Intercalary meristem</option>
+    <option>Secondary meristem</option>
+    <explanation>Intercalary meristem: at base of leaves/internodes, allows regrowth of cut grass/crops. Present in monocots.</explanation>
+  </question>
+
+  <question>
+    <text>Glandular epithelium is modified form of:</text>
+    <option>Muscular tissue</option>
+    <option>Connective tissue</option>
+    <option correct="true">Epithelial tissue</option>
+    <option>Nervous tissue</option>
+    <explanation>Glandular epithelium: epithelial cells specialized for secretion, forms glands (exocrine: ducts, endocrine: ductless).</explanation>
+  </question>
+
+  <question>
+    <text>Which tissue contains chondrocytes?</text>
+    <option>Bone</option>
+    <option correct="true">Cartilage</option>
+    <option>Blood</option>
+    <option>Adipose tissue</option>
+    <explanation>Chondrocytes: cartilage cells in lacunae. Osteocytes: bone cells. Adipocytes: fat cells. Neurons: nerve cells.</explanation>
+  </question>
+
+  <question>
+    <text>The living cells of xylem are:</text>
+    <option>Tracheids</option>
+    <option>Vessels</option>
+    <option correct="true">Xylem parenchyma</option>
+    <option>Xylem fibers</option>
+    <explanation>Tracheids and vessels are dead at maturity. Xylem parenchyma: living, stores food. Xylem fibers: dead, supportive.</explanation>
+  </question>
+
+  <question>
+    <text>Which tissue forms the brain and spinal cord?</text>
+    <option>Epithelial tissue</option>
+    <option>Muscular tissue</option>
+    <option>Connective tissue</option>
+    <option correct="true">Nervous tissue</option>
+    <explanation>Nervous tissue: neurons + neuroglia. Brain, spinal cord, nerves. Receives, transmits, processes impulses.</explanation>
+  </question>
+
+  <question>
+    <text>Which plant tissue provides flexibility?</text>
+    <option>Parenchyma</option>
+    <option correct="true">Collenchyma</option>
+    <option>Sclerenchyma</option>
+    <option>Xylem</option>
+    <explanation>Collenchyma: living cells, thickened at corners (pectin), provides flexibility to young stems, leaf stalks.</explanation>
+  </question>
+
+  <question>
+    <text>The fluid part of blood is called:</text>
+    <option>Serum</option>
+    <option correct="true">Plasma</option>
+    <option>Lymph</option>
+    <option>Hemoglobin</option>
+    <explanation>Plasma: 55% of blood, 90% water, proteins, ions, nutrients, wastes. Serum = plasma without clotting factors.</explanation>
+  </question>
+
+  <question>
+    <text>Which epithelium lines the stomach and intestine?</text>
+    <option>Squamous</option>
+    <option>Cuboidal</option>
+    <option correct="true">Columnar</option>
+    <option>Ciliated</option>
+    <explanation>Columnar epithelium: tall cells, nuclei at base, for absorption/secretion. Lines stomach, intestines, may have microvilli.</explanation>
+  </question>
+
+  <question>
+    <text>The tissue that forms bark of tree is:</text>
+    <option>Epidermis</option>
+    <option correct="true">Cork</option>
+    <option>Vascular cambium</option>
+    <option>Phellogen</option>
+    <explanation>Cork (phellem): dead cells with suberin, impermeable to water/gases, protective. Forms bark with secondary cortex.</explanation>
+  </question>
+
+  <question>
+    <text>Which is NOT a function of areolar tissue?</text>
+    <option>Fills space between organs</option>
+    <option>Helps in repair</option>
+    <option>Provides support</option>
+    <option correct="true">Transports oxygen</option>
+    <explanation>Areolar tissue: loose connective tissue with fibers and cells, binds organs, fills spaces, repairs. Blood transports oxygen.</explanation>
+  </question>
+
+  <question>
+    <text>Vessels are present in:</text>
+    <option>Gymnosperms only</option>
+    <option>Pteridophytes only</option>
+    <option correct="true">Angiosperms only</option>
+    <option>All plants</option>
+    <explanation>Vessels (xylem elements) present in angiosperms, absent in gymnosperms (have tracheids only). More efficient water conduction.</explanation>
+  </question>
 </quiz>
