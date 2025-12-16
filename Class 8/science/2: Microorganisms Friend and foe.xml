@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 8 Science - Chapter 2: Microorganisms: Friend and Foe</description>
+  </metadata>
+
+  <!-- Previous Year Questions (CBSE/SEBA) -->
+  
+  <question>
+    <text>(CBSE 2023) Which of the following microorganisms causes malaria?</text>
+    <option>Bacteria</option>
+    <option>Virus</option>
+    <option correct="true">Protozoa</option>
+    <option>Fungi</option>
+    <explanation>Malaria is caused by a protozoan named Plasmodium, transmitted by the bite of female Anopheles mosquito.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2022) Which of these is a bacterial disease in plants?</text>
+    <option>Citrus canker</option>
+    <option correct="true">Both Citrus canker and Blight of rice</option>
+    <option>Rust of wheat</option>
+    <option>Yellow vein mosaic</option>
+    <explanation>Citrus canker and blight of rice are bacterial diseases. Rust of wheat is fungal, and yellow vein mosaic is viral.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2021) The process of conversion of sugar into alcohol by yeast is called:</text>
+    <option>Fermentation</option>
+    <option correct="true">Fermentation</option>
+    <option>Pasteurization</option>
+    <option>Nitrogen fixation</option>
+    <explanation>Yeast converts sugar into alcohol and carbon dioxide in the absence of oxygen. This process is called fermentation.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2020) Which of the following is not a preservative?</text>
+    <option>Sodium benzoate</option>
+    <option>Salt</option>
+    <option>Sugar</option>
+    <option correct="true">Nitrogen</option>
+    <explanation>Sodium benzoate, salt, and sugar are common preservatives. Nitrogen is not used as a preservative in food.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2019) Which microorganism is used to make bread soft and fluffy?</text>
+    <option>Lactobacillus</option>
+    <option correct="true">Yeast</option>
+    <option>Rhizobium</option>
+    <option>Penicillium</option>
+    <explanation>Yeast is used in baking to produce carbon dioxide during fermentation, which makes bread soft and fluffy.</explanation>
+  </question>
+
+  <!-- Additional Important MCQs -->
+
+  <question>
+    <text>Which of these is a viral disease?</text>
+    <option>Tuberculosis</option>
+    <option>Typhoid</option>
+    <option correct="true">Polio</option>
+    <option>Cholera</option>
+    <explanation>Polio is caused by a virus. Tuberculosis and typhoid are bacterial, cholera is also bacterial.</explanation>
+  </question>
+
+  <question>
+    <text>Which microorganism helps in nitrogen fixation?</text>
+    <option correct="true">Rhizobium</option>
+    <option>Yeast</option>
+    <option>Lactobacillus</option>
+    <option>Plasmodium</option>
+    <explanation>Rhizobium bacteria live in root nodules of leguminous plants and convert atmospheric nitrogen into soluble forms.</explanation>
+  </question>
+
+  <question>
+    <text>What is the process of heating milk to kill harmful bacteria called?</text>
+    <option>Fermentation</option>
+    <option correct="true">Pasteurization</option>
+    <option>Vaccination</option>
+    <option>Sterilization</option>
+    <explanation>Pasteurization involves heating milk to about 70°C for 15-30 seconds to kill harmful microbes without affecting nutrition.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these diseases is caused by fungi?</text>
+    <option>Common cold</option>
+    <option>Malaria</option>
+    <option correct="true">Athlete's foot</option>
+    <option>Cholera</option>
+    <explanation>Athlete's foot is a fungal infection. Common cold is viral, malaria is protozoan, cholera is bacterial.</explanation>
+  </question>
+
+  <question>
+    <text>Which of the following is a communicable disease?</text>
+    <option>Diabetes</option>
+    <option correct="true">Tuberculosis</option>
+    <option>Cancer</option>
+    <option>Heart disease</option>
+    <explanation>Tuberculosis is caused by bacteria and spreads through air. Diabetes, cancer, and heart diseases are non-communicable.</explanation>
+  </question>
+
+  <question>
+    <text>What are antibiotics used to treat?</text>
+    <option>Viral infections</option>
+    <option correct="true">Bacterial infections</option>
+    <option>Fungal infections</option>
+    <option>All microbial infections</option>
+    <explanation>Antibiotics are medicines that kill or stop the growth of bacteria. They are not effective against viruses or fungi.</explanation>
+  </question>
+
+  <question>
+    <text>Which microorganism is used to produce alcohol commercially?</text>
+    <option>Lactobacillus</option>
+    <option>Rhizobium</option>
+    <option correct="true">Yeast</option>
+    <option>E. coli</option>
+    <explanation>Yeast is used in fermentation to produce alcohol (ethanol) from sugars.</explanation>
+  </question>
+
+  <question>
+    <text>What is the role of microorganisms in the soil?</text>
+    <option>Cause diseases</option>
+    <option>Fix nitrogen</option>
+    <option>Decompose organic matter</option>
+    <option correct="true">Both Fix nitrogen and Decompose organic matter</option>
+    <explanation>Microorganisms like bacteria decompose dead organic matter and some (like Rhizobium) fix atmospheric nitrogen.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is a carrier of dengue virus?</text>
+    <option>Housefly</option>
+    <option correct="true">Aedes mosquito</option>
+    <option>Anopheles mosquito</option>
+    <option>Cockroach</option>
+    <explanation>The Aedes mosquito transmits dengue virus. Anopheles mosquito transmits malaria.</explanation>
+  </question>
+
+  <question>
+    <text>What is a vaccine?</text>
+    <option>A medicine to cure disease</option>
+    <option correct="true">A preparation of weakened germs to prevent disease</option>
+    <option>A type of antibiotic</option>
+    <option>A chemical preservative</option>
+    <explanation>A vaccine contains weakened or dead germs that stimulate the body to produce antibodies, providing immunity.</explanation>
+  </question>
+
+  <question>
+    <text>Which of the following is not a beneficial use of microorganisms?</text>
+    <option>Making curd</option>
+    <option>Making bread</option>
+    <option>Cleaning the environment</option>
+    <option correct="true">Causing food poisoning</option>
+    <explanation>Food poisoning is harmful. Making curd, bread, and cleaning environment are beneficial uses of microbes.</explanation>
+  </question>
+
+  <question>
+    <text>Which disease is prevented by the BCG vaccine?</text>
+    <option>Polio</option>
+    <option>Typhoid</option>
+    <option correct="true">Tuberculosis</option>
+    <option>Cholera</option>
+    <explanation>BCG vaccine is given to prevent tuberculosis.</explanation>
+  </question>
+
+  <question>
+    <text>What is the chemical name of vinegar?</text>
+    <option>Lactic acid</option>
+    <option>Citric acid</option>
+    <option correct="true">Acetic acid</option>
+    <option>Formic acid</option>
+    <explanation>Vinegar is acetic acid, produced by the fermentation of ethanol by acetic acid bacteria.</explanation>
+  </question>
+
+  <question>
+    <text>Which organism causes fermentation in sauerkraut?</text>
+    <option>Yeast</option>
+    <option correct="true">Lactic acid bacteria</option>
+    <option>Acetic acid bacteria</option>
+    <option>Rhizobium</option>
+    <explanation>Sauerkraut is made by fermentation of cabbage by lactic acid bacteria.</explanation>
+  </question>
+
+  <question>
+    <text>What is the carrier of malaria called?</text>
+    <option>Vector</option>
+    <option correct="true">Vector</option>
+    <option>Host</option>
+    <option>Parasite</option>
+    <explanation>Mosquito is the vector (carrier) that transmits the malaria parasite (Plasmodium) to humans.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is a fungal disease in plants?</text>
+    <option>Citrus canker</option>
+    <option>Yellow vein mosaic</option>
+    <option correct="true">Rust of wheat</option>
+    <option>Blast of rice</option>
+    <explanation>Rust of wheat is caused by fungi. Citrus canker is bacterial, yellow vein mosaic is viral.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is a method of food preservation?</text>
+    <option>Drying</option>
+    <option>Refrigeration</option>
+    <option>Adding preservatives</option>
+    <option correct="true">All of these</option>
+    <explanation>Drying, refrigeration, and adding preservatives (like salt, sugar, vinegar) are all methods to preserve food by inhibiting microbial growth.</explanation>
+  </question>
+
+  <question>
+    <text>What is nitrogen fixation?</text>
+    <option>Conversion of nitrogen into nitrates</option>
+    <option correct="true">Conversion of atmospheric nitrogen into usable compounds</option>
+    <option>Release of nitrogen from dead plants</option>
+    <option>Absorption of nitrogen by plants</option>
+    <explanation>Nitrogen fixation is the conversion of atmospheric nitrogen into ammonia or nitrates by certain bacteria.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is an example of a communicable disease?</text>
+    <option>Asthma</option>
+    <option correct="true">Chickenpox</option>
+    <option>Arthritis</option>
+    <option>Hypertension</option>
+    <explanation>Chickenpox is a viral disease that spreads from person to person. Others are non-communicable.</explanation>
+  </question>
+
+  <question>
+    <text>What does a vaccine contain?</text>
+    <option>Live strong germs</option>
+    <option>Antibiotics</option>
+    <option correct="true">Weakened or killed germs</option>
+    <option>Preservatives</option>
+    <explanation>Vaccines contain weakened or dead germs that trigger immune response without causing disease.</explanation>
+  </question>
+
+  <question>
+    <text>Which microorganism is used to make idli and dosa batter fluffy?</text>
+    <option>Yeast</option>
+    <option>Lactobacillus</option>
+    <option correct="true">Both Yeast and Bacteria</option>
+    <option>Fungi</option>
+    <explanation>Fermentation of idli/dosa batter involves both yeast and lactic acid bacteria, producing CO₂ that makes it fluffy.</explanation>
+  </question>
+
+  <question>
+    <text>What is the full form of ORS?</text>
+    <option>Oral Rehydration Solution</option>
+    <option correct="true">Oral Rehydration Solution</option>
+    <option>Oral Rehydration Salt</option>
+    <option>Oral Rehydration System</option>
+    <explanation>ORS stands for Oral Rehydration Solution, used to treat dehydration caused by diarrhoea.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is not a water-borne disease?</text>
+    <option>Cholera</option>
+    <option>Typhoid</option>
+    <option>Hepatitis A</option>
+    <option correct="true">Tetanus</option>
+    <explanation>Tetanus is caused by bacteria entering through wounds, not through water. Others are water-borne.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is a harmful effect of microorganisms?</text>
+    <option>Spoilage of food</option>
+    <option>Causing diseases</option>
+    <option>Damage to crops</option>
+    <option correct="true">All of these</option>
+    <explanation>Microorganisms spoil food, cause diseases in humans, animals and plants, and damage crops and stored grains.</explanation>
+  </question>
+
+  <question>
+    <text>What is the causative agent of AIDS?</text>
+    <option>Bacteria</option>
+    <option>Protozoa</option>
+    <option correct="true">Virus (HIV)</option>
+    <option>Fungus</option>
+    <explanation>AIDS is caused by the Human Immunodeficiency Virus (HIV).</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is a bacterial disease in cattle?</text>
+    <option>Foot and mouth disease</option>
+    <option correct="true">Anthrax</option>
+    <option>Rabies</option>
+    <option>Ringworm</option>
+    <explanation>Anthrax is a bacterial disease. Foot and mouth disease and rabies are viral, ringworm is fungal.</explanation>
+  </question>
+
+  <question>
+    <text>What is the primary source of antibiotics?</text>
+    <option>Viruses</option>
+    <option correct="true">Bacteria and Fungi</option>
+    <option>Protozoa</option>
+    <option>Algae</option>
+    <explanation>Antibiotics are mainly obtained from bacteria (e.g., Streptomycin) and fungi (e.g., Penicillin from Penicillium).</explanation>
+  </question>
+</quiz>
