@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <timeLimit>3</timeLimit>
+    <author>G. S. Tutorial</author>
+    <description>Class 10 Mathematics - Chapter 1: Real Numbers</description>
+  </metadata>
+  
+  
+  <question>
+    <text>After how many places will 17/8 terminate?</text>
+    <option>1</option>
+    <option>2</option>
+    <option correct="true">3</option>
+    <option>4</option>
+    <explanation>17/8=2.125 terminates after 3 decimal places.</explanation>
+  </question>
+</quiz>
