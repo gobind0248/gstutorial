@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 8 Science - Most Important 50 Questions for Final Exam</description>
+ <timer>50</timer>
+  </metadata>
+
+  <!-- Most Important 50 Questions from All Chapters -->
+
+  <question>
+    <text>Which of these is NOT a rabi crop?</text>
+    <option>Wheat</option>
+    <option>Gram</option>
+    <option>Mustard</option>
+    <option correct="true">Cotton</option>
+    <explanation>Rabi crops are winter crops (Oct-Dec). Cotton is a kharif crop sown in rainy season.</explanation>
+  </question>
+
+  <question>
+    <text>Rhizobium bacteria are found in roots of:</text>
+    <option>Cereal crops</option>
+    <option correct="true">Leguminous plants</option>
+    <option>Oilseed crops</option>
+    <option>Fibre crops</option>
+    <explanation>Rhizobium fixes atmospheric nitrogen in root nodules of legumes like peas, beans.</explanation>
+  </question>
+
+  <question>
+    <text>Which microorganism causes malaria?</text>
+    <option>Bacteria</option>
+    <option>Virus</option>
+    <option correct="true">Protozoa</option>
+    <option>Fungi</option>
+    <explanation>Malaria is caused by Plasmodium protozoa transmitted by female Anopheles mosquito.</explanation>
+  </question>
+
+  <question>
+    <text>The process of conversion of sugar into alcohol by yeast is called:</text>
+    <option correct="true">Fermentation</option>
+    <option>Pasteurization</option>
+    <option>Vaccination</option>
+    <option>Nitrogen fixation</option>
+    <explanation>Yeast converts sugar to alcohol and CO₂ in anaerobic respiration (fermentation).</explanation>
+  </question>
+
+  <question>
+    <text>Which product is obtained from destructive distillation of coal?</text>
+    <option>Petrol</option>
+    <option correct="true">Coal tar</option>
+    <option>Kerosene</option>
+    <option>Diesel</option>
+    <explanation>Coal tar is obtained from coal distillation. Used in making dyes, drugs, perfumes.</explanation>
+  </question>
+
+  <question>
+    <text>Which gas is produced when coal burns in insufficient air?</text>
+    <option>Carbon dioxide</option>
+    <option correct="true">Carbon monoxide</option>
+    <option>Methane</option>
+    <option>Nitrogen dioxide</option>
+    <explanation>Incomplete combustion produces poisonous carbon monoxide.</explanation>
+  </question>
+
+  <question>
+    <text>Which zone of candle flame is hottest?</text>
+    <option>Blue zone</option>
+    <option correct="true">Non-luminous zone (outer)</option>
+    <option>Luminous zone</option>
+    <option>Dark zone</option>
+    <explanation>Outer zone has complete combustion, highest temperature (blue color).</explanation>
+  </question>
+
+  <question>
+    <text>The calorific value of fuel is measured in:</text>
+    <option>Joules</option>
+    <option correct="true">kJ/kg</option>
+    <option>°C</option>
+    <option>m/s</option>
+    <explanation>Calorific value = heat produced by burning 1 kg fuel, measured in kJ/kg.</explanation>
+  </question>
+
+  <question>
+    <text>Which national park is famous for one-horned rhinoceros?</text>
+    <option>Jim Corbett</option>
+    <option>Ranthambore</option>
+    <option correct="true">Kaziranga</option>
+    <option>Sunderbans</option>
+    <explanation>Kaziranga National Park (Assam) is UNESCO World Heritage site for one-horned rhino.</explanation>
+  </question>
+
+  <question>
+    <text>What is the Red Data Book?</text>
+    <option>A book about red animals</option>
+    <option correct="true">Record of endangered species</option>
+    <option>A story book</option>
+    <option>A biology textbook</option>
+    <explanation>Maintained by IUCN, lists threatened species worldwide.</explanation>
+  </question>
+
+  <question>
+    <text>Where does fertilization occur in humans?</text>
+    <option>Uterus</option>
+    <option>Vagina</option>
+    <option correct="true">Fallopian tube</option>
+    <option>Ovary</option>
+    <explanation>Sperm meets egg in fallopian tube, forming zygote that implants in uterus.</explanation>
+  </question>
+
+  <question>
+    <text>Which animal reproduces by external fertilization?</text>
+    <option>Cat</option>
+    <option>Dog</option>
+    <option correct="true">Frog</option>
+    <option>Human</option>
+    <explanation>Frogs release eggs and sperms in water for external fertilization.</explanation>
+  </question>
+
+  <question>
+    <text>Which gland is called "master gland"?</text>
+    <option>Thyroid</option>
+    <option>Adrenal</option>
+    <option correct="true">Pituitary</option>
+    <option>Pancreas</option>
+    <explanation>Pituitary controls other endocrine glands, produces growth hormone.</explanation>
+  </question>
+
+  <question>
+    <text>What is menarche?</text>
+    <option>Stop of menstruation</option>
+    <option>Release of egg</option>
+    <option correct="true">First menstrual period</option>
+    <option>Puberty in boys</option>
+    <explanation>Menarche marks start of reproductive phase in girls (age 10-15).</explanation>
+  </question>
+
+  <question>
+    <text>Which is a contact force?</text>
+    <option>Gravitational force</option>
+    <option>Magnetic force</option>
+    <option correct="true">Frictional force</option>
+    <option>Electrostatic force</option>
+    <explanation>Friction requires contact between surfaces. Others act at distance.</explanation>
+  </question>
+
+  <question>
+    <text>SI unit of pressure is:</text>
+    <option>Newton</option>
+    <option>Joule</option>
+    <option correct="true">Pascal</option>
+    <option>Watt</option>
+    <explanation>Pressure = Force/Area, unit = Pascal (Pa) = 1 N/m².</explanation>
+  </question>
+
+  <question>
+    <text>Why do sharp knives cut better?</text>
+    <option>They are shiny</option>
+    <option correct="true">Small area creates high pressure</option>
+    <option>They are heavy</option>
+    <option>They are made of steel</option>
+    <explanation>Small cutting edge area produces high pressure even with small force.</explanation>
+  </question>
+
+  <question>
+    <text>Which type of friction is largest?</text>
+    <option>Rolling friction</option>
+    <option correct="true">Static friction</option>
+    <option>Sliding friction</option>
+    <option>Fluid friction</option>
+    <explanation>Static > Sliding > Rolling friction. Most force needed to start motion.</explanation>
+  </question>
+
+  <question>
+    <text>Why do tires have grooves?</text>
+    <option>For beauty</option>
+    <option correct="true">To increase friction for grip</option>
+    <option>To reduce weight</option>
+    <option>To reduce cost</option>
+    <explanation>Grooves increase friction, prevent skidding, especially on wet roads.</explanation>
+  </question>
+
+  <question>
+    <text>Sound cannot travel through:</text>
+    <option>Solid</option>
+    <option>Liquid</option>
+    <option>Gas</option>
+    <option correct="true">Vacuum</option>
+    <explanation>Sound needs material medium. No particles in vacuum to vibrate.</explanation>
+  </question>
+
+  <question>
+    <text>Number of oscillations per second is called:</text>
+    <option>Amplitude</option>
+    <option>Time period</option>
+    <option correct="true">Frequency</option>
+    <option>Wavelength</option>
+    <explanation>Frequency measured in Hertz (Hz). Human range: 20 Hz - 20,000 Hz.</explanation>
+  </question>
+
+  <question>
+    <text>Loudness depends on:</text>
+    <option>Frequency</option>
+    <option correct="true">Amplitude</option>
+    <option>Time period</option>
+    <option>Wavelength</option>
+    <explanation>Greater amplitude = louder sound. Measured in decibels (dB).</explanation>
+  </question>
+
+  <question>
+    <text>Which liquid will allow bulb to glow in circuit?</text>
+    <option>Distilled water</option>
+    <option>Kerosene</option>
+    <option>Sugar solution</option>
+    <option correct="true">Lemon juice</option>
+    <explanation>Lemon juice contains ions (acids), conducts electricity. Distilled water poor conductor.</explanation>
+  </question>
+
+  <question>
+    <text>Process of depositing metal layer using electricity is:</text>
+    <option correct="true">Electroplating</option>
+    <option>Electrolysis</option>
+    <option>Galvanization</option>
+    <option>Anodizing</option>
+    <explanation>Electroplating: chromium on taps, gold/silver on jewelry.</explanation>
+  </question>
+
+  <question>
+    <text>Why is tin electroplated on iron cans?</text>
+    <option>For beauty</option>
+    <option correct="true">To prevent rusting (food safe)</option>
+    <option>To make them magnetic</option>
+    <option>To reduce cost</option>
+    <explanation>Tin is non-toxic, prevents iron contact with food, stops rusting.</explanation>
+  </question>
+
+  <question>
+    <text>Instrument to measure earthquake waves:</text>
+    <option>Barometer</option>
+    <option correct="true">Seismograph</option>
+    <option>Thermometer</option>
+    <option>Anemometer</option>
+    <explanation>Seismograph records seismic waves. Record called seismogram.</explanation>
+  </question>
+
+  <question>
+    <text>Point inside Earth where earthquake originates:</text>
+    <option>Epicenter</option>
+    <option correct="true">Focus</option>
+    <option>Crust</option>
+    <option>Seismic zone</option>
+    <explanation>Focus (hypocenter) is origin point. Epicenter is surface point above focus.</explanation>
+  </question>
+
+  <question>
+    <text>Scale to measure earthquake magnitude:</text>
+    <option>Beaufort scale</option>
+    <option>Kelvin scale</option>
+    <option correct="true">Richter scale</option>
+    <option>Celsius scale</option>
+    <explanation>Richter scale: logarithmic, each whole number = 10× amplitude, ~32× energy.</explanation>
+  </question>
+
+  <question>
+    <text>Which mirror always forms virtual image?</text>
+    <option>Concave mirror</option>
+    <option>Plane mirror</option>
+    <option correct="true">Convex mirror</option>
+    <option>All mirrors</option>
+    <explanation>Convex mirrors always form virtual, erect, diminished images (rear view mirrors).</explanation>
+  </question>
+
+  <question>
+    <text>Splitting of white light into colors:</text>
+    <option>Reflection</option>
+    <option>Refraction</option>
+    <option correct="true">Dispersion</option>
+    <option>Scattering</option>
+    <explanation>Dispersion by prism gives VIBGYOR spectrum. Rainbow is natural dispersion.</explanation>
+  </question>
+
+  <question>
+    <text>Part of eye controlling light entry:</text>
+    <option>Retina</option>
+    <option>Cornea</option>
+    <option correct="true">Iris</option>
+    <option>Lens</option>
+    <explanation>Iris adjusts pupil size: constricts in bright light, dilates in dim light.</explanation>
+  </question>
+
+  <question>
+    <text>Which cells detect dim light?</text>
+    <option>Cone cells</option>
+    <option correct="true">Rod cells</option>
+    <option>Optic nerve cells</option>
+    <option>Iris cells</option>
+    <explanation>Rods for dim light (night vision), no color. Cones for color in bright light.</explanation>
+  </question>
+
+  <question>
+    <text>Lens to correct myopia:</text>
+    <option>Convex lens</option>
+    <option correct="true">Concave lens</option>
+    <option>Cylindrical lens</option>
+    <option>Bifocal lens</option>
+    <explanation>Myopia (nearsightedness): concave lens diverges light before eye.</explanation>
+  </question>
+
+  <question>
+    <text>Why sky is blue?</text>
+    <option>Water reflection</option>
+    <option correct="true">Rayleigh scattering of blue light</option>
+    <option>Ozone layer color</option>
+    <option>Sun emits blue light</option>
+    <explanation>Shorter blue wavelengths scatter more than longer red wavelengths in atmosphere.</explanation>
+  </question>
+
+  <question>
+    <text>Process of loosening soil:</text>
+    <option>Sowing</option>
+    <option>Irrigation</option>
+    <option correct="true">Ploughing</option>
+    <option>Harvesting</option>
+    <explanation>Ploughing aerates soil, improves drainage, uproots weeds.</explanation>
+  </question>
+
+  <question>
+    <text>Separating grain from chaff by wind:</text>
+    <option>Threshing</option>
+    <option correct="true">Winnowing</option>
+    <option>Harvesting</option>
+    <option>Irrigation</option>
+    <explanation>Winnowing uses wind: heavy grains fall, light chaff blows away.</explanation>
+  </question>
+
+  <question>
+    <text>Modern irrigation method saving water:</text>
+    <option>Canal irrigation</option>
+    <option>Dhekli</option>
+    <option correct="true">Drip irrigation</option>
+    <option>Moat</option>
+    <explanation>Drip: water directly to roots, minimal evaporation, 30-70% water saved.</explanation>
+  </question>
+
+  <question>
+    <text>Practice of growing different crops alternately:</text>
+    <option>Mixed cropping</option>
+    <option correct="true">Crop rotation</option>
+    <option>Intercropping</option>
+    <option>Plantation</option>
+    <explanation>Crop rotation maintains soil fertility, controls pests/diseases. Legumes fix nitrogen.</explanation>
+  </question>
+
+  <question>
+    <text>Which is NOT a method of irrigation?</text>
+    <option>Sprinkler system</option>
+    <option>Drip system</option>
+    <option>Tube well</option>
+    <option correct="true">Combining</option>
+    <explanation>Combining is harvesting method. Irrigation methods supply water to crops.</explanation>
+  </question>
+
+  <question>
+    <text>Which vaccine prevents tuberculosis?</text>
+    <option>DPT</option>
+    <option>Polio vaccine</option>
+    <option correct="true">BCG</option>
+    <option>TT</option>
+    <explanation>BCG (Bacillus Calmette-Guérin) vaccine for TB, given at birth in India.</explanation>
+  </question>
+
+  <question>
+    <text>Full form of CNG:</text>
+    <option correct="true">Compressed Natural Gas</option>
+    <option>Condensed Natural Gas</option>
+    <option>Combined Natural Gas</option>
+    <option>Controlled Natural Gas</option>
+    <explanation>CNG mainly methane, cleaner fuel for vehicles, less pollution.</explanation>
+  </question>
+
+  <question>
+    <text>Main constituent of natural gas:</text>
+    <option>Ethane</option>
+    <option correct="true">Methane</option>
+    <option>Propane</option>
+    <option>Butane</option>
+    <explanation>Natural gas: 90-95% methane, with small ethane, propane.</explanation>
+  </question>
+
+  <question>
+    <text>Petroleum product for road surfacing:</text>
+    <option>Kerosene</option>
+    <option>Paraffin wax</option>
+    <option correct="true">Bitumen</option>
+    <option>LPG</option>
+    <explanation>Bitumen (asphalt) for roads, waterproofing. Heaviest fraction from petroleum.</explanation>
+  </question>
+
+  <question>
+    <text>Lowest ignition temperature:</text>
+    <option>Wood</option>
+    <option>Coal</option>
+    <option correct="true">White phosphorus</option>
+    <option>Paper</option>
+    <explanation>White phosphorus ignites at 35°C in air, stored underwater.</explanation>
+  </question>
+
+  <question>
+    <text>Fire extinguisher for electrical fires:</text>
+    <option>Water</option>
+    <option>Soda-acid</option>
+    <option correct="true">Carbon dioxide</option>
+    <option>Foam</option>
+    <explanation>CO₂ doesn't conduct electricity, cuts oxygen, leaves no residue.</explanation>
+  </question>
+
+  <question>
+    <text>Project to protect tigers:</text>
+    <option>Project Elephant</option>
+    <option>Project Rhino</option>
+    <option correct="true">Project Tiger</option>
+    <option>Project Lion</option>
+    <explanation>Project Tiger launched 1973. Increased tiger population from 1200 to ~3000.</explanation>
+  </question>
+
+  <question>
+    <text>Full form of IUCN:</text>
+    <option correct="true">International Union for Conservation of Nature</option>
+    <option>Indian Union for Conservation of Nature</option>
+    <option>International Union of Conservation Networks</option>
+    <option>Indian Union of Conservation and Nature</option>
+    <explanation>IUCN maintains Red Data Book, sets conservation status.</explanation>
+  </question>
+
+  <question>
+    <text>Animal showing metamorphosis:</text>
+    <option>Human</option>
+    <option>Dog</option>
+    <option correct="true">Frog</option>
+    <option>Elephant</option>
+    <explanation>Frog: egg → tadpole → froglet → adult. Butterfly also metamorphosis.</explanation>
+  </question>
+
+  <question>
+    <text>Gestation period in humans:</text>
+    <option>6 months</option>
+    <option correct="true">9 months</option>
+    <option>12 months</option>
+    <option>3 months</option>
+    <explanation>Approximately 40 weeks (280 days) from fertilization to birth.</explanation>
+  </question>
+
+  <question>
+    <text>Metal coated on iron for galvanization:</text>
+    <option>Copper</option>
+    <option>Tin</option>
+    <option correct="true">Zinc</option>
+    <option>Nickel</option>
+    <explanation>Galvanization: zinc coating protects iron even if scratched (sacrificial protection).</explanation>
+  </question>
+
+  <question>
+    <text>Device to detect weak electric current:</text>
+    <option>Ammeter</option>
+    <option>Voltmeter</option>
+    <option correct="true">LED or magnetic compass</option>
+    <option>Bulb</option>
+    <explanation>LED glows with small current. Compass needle deflects with current in wire.</explanation>
+  </question>
+
+  <question>
+    <text>Charge acquired by glass rod rubbed with silk:</text>
+    <option>Negative</option>
+    <option correct="true">Positive</option>
+    <option>Neutral</option>
+    <option>Both</option>
+    <explanation>Glass loses electrons to silk → positive. Silk gains electrons → negative.</explanation>
+  </question>
+
+  <question>
+    <text>Like charges:</text>
+    <option>Attract</option>
+    <option correct="true">Repel</option>
+    <option>Do nothing</option>
+    <option>Combine</option>
+    <explanation>Like charges repel (++ or --). Unlike charges attract (+-).</explanation>
+  </question>
+</quiz>
