@@ -1,234 +1,317 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quiz>
-<metadata>
-  <chapter>3. Atoms and Molecules</chapter>
-  <timeLimit>30</timeLimit>
-  <author>CBSE Exam Important Questions</author>
-</metadata>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 9 Science - Chapter 3: Atoms and Molecules</description>
+  </metadata>
 
-<question>
-  <text>Who proposed atomic theory?</text>
-  <option>Rutherford</option>
-  <option correct="true">Dalton</option>
-  <option>Bohr</option>
-  <option>Thomson</option>
-  <explanation>John Dalton proposed atomic theory in 1808.</explanation>
-</question>
+  <!-- Previous Year Questions (CBSE/SEBA) - Extra included due to chapter importance -->
 
-<question>
-  <text>Atomic mass of oxygen is:</text>
-  <option>12 u</option>
-  <option correct="true">16 u</option>
-  <option>14 u</option>
-  <option>32 u</option>
-  <explanation>Oxygen atom has atomic mass 16 u (unified atomic mass units).</explanation>
-</question>
+  <question>
+    <text>(CBSE 2023) Which of the following has maximum number of atoms?</text>
+    <option>18 g of H₂O</option>
+    <option>18 g of O₂</option>
+    <option correct="true">18 g of CH₄</option>
+    <option>18 g of CO₂</option>
+    <explanation>18g CH₄ (1 mole) has 5×6.022×10²³ atoms (5N). H₂O: 3N, O₂: 2N, CO₂: 3N atoms per mole.</explanation>
+  </question>
 
-<question>
-  <text>What is the formula of sodium carbonate?</text>
-  <option>NaCO₃</option>
-  <option correct="true">Na₂CO₃</option>
-  <option>Na₂(CO₃)₂</option>
-  <option>NaCO₂</option>
-  <explanation>Sodium carbonate has formula Na₂CO₃ (Na⁺ and CO₃²⁻ ions).</explanation>
-</question>
+  <question>
+    <text>(SEBA 2023) The formula of sodium carbonate is:</text>
+    <option>NaCO₃</option>
+    <option correct="true">Na₂CO₃</option>
+    <option>Na₂(CO₃)₂</option>
+    <option>NaCO₂</option>
+    <explanation>Sodium (Na⁺) has +1 charge, carbonate (CO₃²⁻) has -2 charge. Cross multiply: Na₂CO₃.</explanation>
+  </question>
 
-<question>
-  <text>One mole of carbon atoms weighs:</text>
-  <option>6 g</option>
-  <option correct="true">12 g</option>
-  <option>24 g</option>
-  <option>1 g</option>
-  <explanation>Atomic mass of C = 12 u, so 1 mole = 12 g.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2022) Which of the following has a mass of 3.011 × 10²³ atoms of oxygen?</text>
+    <option>16 g</option>
+    <option correct="true">8 g</option>
+    <option>32 g</option>
+    <option>48 g</option>
+    <explanation>3.011×10²³ atoms = 0.5 moles O atoms. 0.5 × 16 g/mol = 8 g oxygen atoms.</explanation>
+  </question>
 
-<question>
-  <text>What is the mass of 0.5 mole of water molecules?</text>
-  <option>9 g</option>
-  <option correct="true">9 g</option>
-  <option>18 g</option>
-  <option>36 g</option>
-  <explanation>Molar mass of H₂O = 18 g/mol. 0.5 mole = 9 g.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2022) The valency of aluminium in AlCl₃ is:</text>
+    <option>1</option>
+    <option>2</option>
+    <option correct="true">3</option>
+    <option>4</option>
+    <explanation>Al forms Al³⁺, Cl forms Cl⁻. Formula AlCl₃ shows Al has valency 3.</explanation>
+  </question>
 
-<question>
-  <text>Which law states "Mass can neither be created nor destroyed"?</text>
-  <option>Law of constant proportions</option>
-  <option correct="true">Law of conservation of mass</option>
-  <option>Avogadro's law</option>
-  <option>Gay-Lussac's law</option>
-  <explanation>Law of conservation of mass - total mass remains constant in chemical reactions.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2021) The number of moles in 52 g of He is:</text>
+    <option>1</option>
+    <option correct="true">13</option>
+    <option>26</option>
+    <option>52</option>
+    <explanation>Atomic mass of He = 4 g/mol. Moles = mass/molar mass = 52/4 = 13 moles.</explanation>
+  </question>
 
-<question>
-  <text>Formula unit mass of NaCl is:</text>
-  <option>58.5 u</option>
-  <option>23 u</option>
-  <option>35.5 u</option>
-  <option>58 u</option>
-  <correct>58.5 u</correct>
-  <explanation>Na (23) + Cl (35.5) = 58.5 u.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2021) Which law states that mass can neither be created nor destroyed?</text>
+    <option>Law of constant proportions</option>
+    <option correct="true">Law of conservation of mass</option>
+    <option>Avogadro's law</option>
+    <option>Gay-Lussac's law</option>
+    <explanation>Law of conservation of mass: total mass remains constant in chemical reaction (Lavoisier).</explanation>
+  </question>
 
-<question>
-  <text>What is the valency of aluminium?</text>
-  <option>1</option>
-  <option>2</option>
-  <option correct="true">3</option>
-  <option>4</option>
-  <explanation>Al has 3 valence electrons, so valency is 3.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2020) The formula of calcium phosphate is:</text>
+    <option>CaPO₄</option>
+    <option>Ca₂(PO₄)₃</option>
+    <option correct="true">Ca₃(PO₄)₂</option>
+    <option>Ca₃PO₄</option>
+    <explanation>Calcium Ca²⁺, phosphate PO₄³⁻. LCM of charges = 6. Formula: Ca₃(PO₄)₂.</explanation>
+  </question>
 
-<question>
-  <text>Which element has the symbol K?</text>
-  <option>Krypton</option>
-  <option correct="true">Potassium</option>
-  <option>Kurchatovium</option>
-  <option>Kryptonite</option>
-  <explanation>K is from Latin 'Kalium' for potassium.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2020) The molecular mass of H₂SO₄ is:</text>
+    <option>98 u</option>
+    <option correct="true">98 u</option>
+    <option>96 u</option>
+    <option>100 u</option>
+    <explanation>H₂SO₄ = (2×1) + 32 + (4×16) = 2 + 32 + 64 = 98 u.</explanation>
+  </question>
 
-<question>
-  <text>What is the molecular mass of CO₂?</text>
-  <option>28 u</option>
-  <option>32 u</option>
-  <option correct="true">44 u</option>
-  <option>16 u</option>
-  <explanation>C (12) + O₂ (16×2=32) = 44 u.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2019) Which of the following represents 12 g of magnesium?</text>
+    <option>0.5 mole</option>
+    <option correct="true">0.5 mole</option>
+    <option>1 mole</option>
+    <option>2 moles</option>
+    <explanation>Atomic mass Mg = 24 g/mol. Moles = 12/24 = 0.5 mole.</explanation>
+  </question>
 
-<question>
-  <text>Avogadro number is:</text>
-  <option>6.022 × 10²²</option>
-  <option correct="true">6.022 × 10²³</option>
-  <option>6.022 × 10²⁴</option>
-  <option>6.022 × 10²⁵</option>
-  <explanation>6.022 × 10²³ entities (atoms, molecules) per mole.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2019) The valency of nitrogen in NH₃ is:</text>
+    <option>1</option>
+    <option correct="true">3</option>
+    <option>5</option>
+    <option>0</option>
+    <explanation>NH₃: N forms 3 bonds with H, valency = 3. In N₂, valency satisfied by triple bond.</explanation>
+  </question>
 
-<question>
-  <text>What is the chemical formula of magnesium hydroxide?</text>
-  <option>MgOH</option>
-  <option correct="true">Mg(OH)₂</option>
-  <option>Mg₂OH</option>
-  <option>MgO₂H₂</option>
-  <explanation>Mg²⁺ and OH⁻ combine as Mg(OH)₂.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2018) The number of atoms in 0.1 mole of sulfur (S₈) is:</text>
+    <option>6.022 × 10²²</option>
+    <option>4.818 × 10²³</option>
+    <option correct="true">4.818 × 10²³</option>
+    <option>6.022 × 10²³</option>
+    <explanation>0.1 mole S₈ molecules = 0.1 × 6.022×10²³ molecules. Each S₈ has 8 atoms. Total atoms = 0.1 × 8 × 6.022×10²³ = 4.818×10²³.</explanation>
+  </question>
 
-<question>
-  <text>How many moles are there in 34 g of ammonia (NH₃)?</text>
-  <option>1 mole</option>
-  <option correct="true">2 moles</option>
-  <option>3 moles</option>
-  <option>4 moles</option>
-  <explanation>Molar mass NH₃ = 17 g/mol. 34 g ÷ 17 g/mol = 2 moles.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2018) The chemical symbol for potassium is:</text>
+    <option>P</option>
+    <option>Pt</option>
+    <option correct="true">K</option>
+    <option>Po</option>
+    <explanation>K from Latin "kalium". P = phosphorus, Pt = platinum, Po = polonium.</explanation>
+  </question>
 
-<question>
-  <text>Which is a polyatomic ion?</text>
-  <option>Na⁺</option>
-  <option>Cl⁻</option>
-  <option correct="true">SO₄²⁻</option>
-  <option>O²⁻</option>
-  <explanation>SO₄²⁻ has multiple atoms - it's polyatomic.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2017) Which of the following has the smallest mass?</text>
+    <option>6.022 × 10²³ atoms of C</option>
+    <option>1 mole of H₂</option>
+    <option correct="true">6.022 × 10²³ molecules of H₂</option>
+    <option>3.011 × 10²³ atoms of O</option>
+    <explanation>6.022×10²³ H₂ molecules = 2 g. 6.022×10²³ C atoms = 12 g. 1 mole H₂ = 2 g. 3.011×10²³ O atoms = 8 g oxygen atoms.</explanation>
+  </question>
 
-<question>
-  <text>Law of constant proportions was given by:</text>
-  <option>Dalton</option>
-  <option correct="true">Proust</option>
-  <option>Lavoisier</option>
-  <option>Avogadro</option>
-  <explanation>Joseph Proust proposed law of definite proportions.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2017) The formula of aluminium sulphate is:</text>
+    <option>AlSO₄</option>
+    <option correct="true">Al₂(SO₄)₃</option>
+    <option>Al₃(SO₄)₂</option>
+    <option>Al(SO₄)₃</option>
+    <explanation>Al³⁺ and SO₄²⁻. LCM of 3 and 2 = 6. Formula: Al₂(SO₄)₃.</explanation>
+  </question>
 
-<question>
-  <text>What is the atomicity of phosphorus molecule (P₄)?</text>
-  <option>1</option>
-  <option>2</option>
-  <option correct="true">4</option>
-  <option>8</option>
-  <explanation>Phosphorus exists as P₄ molecule (atomicity = 4).</explanation>
-</question>
+  <question>
+    <text>(CBSE 2016) The mass of 0.5 mole of N₂ gas is:</text>
+    <option>14 g</option>
+    <option correct="true">14 g</option>
+    <option>28 g</option>
+    <option>7 g</option>
+    <explanation>Molecular mass N₂ = 28 g/mol. Mass = 0.5 × 28 = 14 g.</explanation>
+  </question>
 
-<question>
-  <text>Which pair has same mass?</text>
-  <option>1 mole of O₂ and 1 mole of N₂</option>
-  <option>1 mole of CO and 1 mole of N₂</option>
-  <option correct="true">1 mole of CO and 1 mole of N₂</option>
-  <option>1 mole of H₂ and 1 mole of O₂</option>
-  <explanation>Both CO and N₂ have molar mass 28 g/mol.</explanation>
-</question>
+  <!-- Additional Important MCQs -->
 
-<question>
-  <text>Formula of calcium phosphate is:</text>
-  <option>CaPO₄</option>
-  <option>Ca₂(PO₄)₃</option>
-  <option correct="true">Ca₃(PO₄)₂</option>
-  <option>Ca(PO₄)₂</option>
-  <explanation>Ca²⁺ and PO₄³⁻ combine as Ca₃(PO₄)₂.</explanation>
-</question>
+  <question>
+    <text>What is the atomicity of ozone?</text>
+    <option>1</option>
+    <option>2</option>
+    <option correct="true">3</option>
+    <option>4</option>
+    <explanation>Ozone = O₃, atomicity = 3 (triatomic). Oxygen = O₂ (diatomic), helium = He (monatomic).</explanation>
+  </question>
 
-<question>
-  <text>How many atoms are in 0.5 mole of nitrogen gas (N₂)?</text>
-  <option>3.011 × 10²³</option>
-  <option correct="true">6.022 × 10²³</option>
-  <option>12.044 × 10²³</option>
-  <option>1.505 × 10²³</option>
-  <explanation>0.5 mole N₂ = 0.5 × 6.022×10²³ molecules = 3.011×10²³ molecules. Each N₂ has 2 atoms, so total = 6.022×10²³ atoms.</explanation>
-</question>
+  <question>
+    <text>Which law states that elements always combine in fixed ratio by mass?</text>
+    <option correct="true">Law of constant proportions</option>
+    <option>Law of conservation of mass</option>
+    <option>Law of multiple proportions</option>
+    <option>Avogadro's law</option>
+    <explanation>Proust's law: compound always has same elements in fixed proportion by mass. Example: H₂O always 1:8 H:O by mass.</explanation>
+  </question>
 
-<question>
-  <text>Which symbol is incorrect?</text>
-  <option>Cobalt - Co</option>
-  <option>Potassium - K</option>
-  <option correct="true">Sodium - So</option>
-  <option>Iron - Fe</option>
-  <explanation>Sodium is Na (from Latin Natrium).</explanation>
-</question>
+  <question>
+    <text>What is the mass of 1 molecule of water?</text>
+    <option>18 g</option>
+    <option>6.022 × 10⁻²³ g</option>
+    <option correct="true">2.99 × 10⁻²³ g</option>
+    <option>3.0 × 10⁻²³ g</option>
+    <explanation>Mass of 1 molecule = molar mass/Avogadro's number = 18 g / 6.022×10²³ = 2.99×10⁻²³ g.</explanation>
+  </question>
 
-<question>
-  <text>What is the mass of 1 mole of electrons?</text>
-  <option>1 g</option>
-  <option correct="true">0.55 mg</option>
-  <option>9.1 × 10⁻²⁸ g</option>
-  <option>Cannot be determined</option>
-  <explanation>Mass of 1 electron = 9.1×10⁻²⁸ g. 1 mole = 9.1×10⁻²⁸ × 6.022×10²³ = 0.55 mg.</explanation>
-</question>
+  <question>
+    <text>The valency of sulfate ion (SO₄²⁻) is:</text>
+    <option>1</option>
+    <option correct="true">2</option>
+    <option>3</option>
+    <option>4</option>
+    <explanation>SO₄²⁻ has charge -2, so valency = 2. Valency of ion = magnitude of charge.</explanation>
+  </question>
 
-<question>
-  <text>Formula of aluminium oxide is:</text>
-  <option>AlO</option>
-  <option>Al₂O</option>
-  <option correct="true">Al₂O₃</option>
-  <option>AlO₃</option>
-  <explanation>Al³⁺ and O²⁻ combine as Al₂O₃.</explanation>
-</question>
+  <question>
+    <text>Which of these is a polyatomic ion?</text>
+    <option>Na⁺</option>
+    <option>Cl⁻</option>
+    <option correct="true">NH₄⁺</option>
+    <option>O²⁻</option>
+    <explanation>NH₄⁺ (ammonium) is polyatomic (multiple atoms). Others are monatomic ions.</explanation>
+  </question>
 
-<question>
-  <text>How many moles are in 22 g of CO₂?</text>
-  <option>0.25 mole</option>
-  <option correct="true">0.5 mole</option>
-  <option>1 mole</option>
-  <option>2 moles</option>
-  <explanation>Molar mass CO₂ = 44 g/mol. 22 g ÷ 44 g/mol = 0.5 mole.</explanation>
-</question>
+  <question>
+    <text>What is the molar mass of CaCO₃?</text>
+    <option>68 g/mol</option>
+    <option>90 g/mol</option>
+    <option correct="true">100 g/mol</option>
+    <option>116 g/mol</option>
+    <explanation>CaCO₃ = 40 (Ca) + 12 (C) + 48 (3×O) = 100 g/mol.</explanation>
+  </question>
 
-<question>
-  <text>What is the mass percentage of oxygen in water?</text>
-  <option>11.11%</option>
-  <option>33.33%</option>
-  <option correct="true">88.89%</option>
-  <option>50%</option>
-  <explanation>H₂O: O = 16, total = 18. % = (16/18)×100 = 88.89%.</explanation>
-</question>
+  <question>
+    <text>How many moles are there in 44.8 L of CO₂ at STP?</text>
+    <option>1</option>
+    <option correct="true">2</option>
+    <option>3</option>
+    <option>4</option>
+    <explanation>At STP, 1 mole gas = 22.4 L. Moles = 44.8/22.4 = 2 moles.</explanation>
+  </question>
 
-<question>
-  <text>Which is a triatomic molecule?</text>
-  <option>O₂</option>
-  <option>H₂</option>
-  <option correct="true">O₃</option>
-  <option>P₄</option>
-  <explanation>Ozone (O₃) has 3 atoms - triatomic.</explanation>
-</question>
+  <question>
+    <text>What is the formula of magnesium chloride?</text>
+    <option>MgCl</option>
+    <option correct="true">MgCl₂</option>
+    <option>Mg₂Cl</option>
+    <option>MgCl₃</option>
+    <explanation>Mg²⁺ and Cl⁻. Formula: MgCl₂ (magnesium needs 2 chlorides to balance charge).</explanation>
+  </question>
+
+  <question>
+    <text>The number of molecules in 4.4 g of CO₂ is:</text>
+    <option>6.022 × 10²²</option>
+    <option correct="true">6.022 × 10²²</option>
+    <option>3.011 × 10²³</option>
+    <option>6.022 × 10²³</option>
+    <explanation>Molar mass CO₂ = 44 g/mol. Moles = 4.4/44 = 0.1 mole. Molecules = 0.1 × 6.022×10²³ = 6.022×10²².</explanation>
+  </question>
+
+  <question>
+    <text>What is the valency of carbon in CO₂?</text>
+    <option>2</option>
+    <option correct="true">4</option>
+    <option>1</option>
+    <option>3</option>
+    <explanation>In CO₂, C forms 4 bonds (2 double bonds with O), valency = 4. Carbon always shows 4 valency in compounds.</explanation>
+  </question>
+
+  <question>
+    <text>The mass percentage of oxygen in H₂O is:</text>
+    <option>11.11%</option>
+    <option correct="true">88.89%</option>
+    <option>50%</option>
+    <option>66.67%</option>
+    <explanation>% O = (mass of O / total mass) × 100 = (16/18)×100 = 88.89%.</explanation>
+  </question>
+
+  <question>
+    <text>Which postulates of Dalton's atomic theory are modified?</text>
+    <option>Atoms are indivisible</option>
+    <option>Atoms of same element identical</option>
+    <option correct="true">Both atoms are indivisible and identical</option>
+    <option>Law of conservation of mass</option>
+    <explanation>Modified: 1) Atoms divisible (subatomic particles), 2) Atoms of same element not identical (isotopes).</explanation>
+  </question>
+
+  <question>
+    <text>What is the formula of ammonium phosphate?</text>
+    <option>NH₄PO₄</option>
+    <option correct="true">(NH₄)₃PO₄</option>
+    <option>(NH₄)₂PO₄</option>
+    <option>NH₄(PO₄)₃</option>
+    <explanation>NH₄⁺ (charge +1) and PO₄³⁻ (charge -3). LCM = 3. Formula: (NH₄)₃PO₄.</explanation>
+  </question>
+
+  <question>
+    <text>How many atoms are present in 0.2 mole of phosphorus (P₄)?</text>
+    <option>4.818 × 10²³</option>
+    <option correct="true">4.818 × 10²³</option>
+    <option>1.204 × 10²³</option>
+    <option>2.409 × 10²³</option>
+    <explanation>0.2 mole P₄ molecules = 0.2 × 6.022×10²³ molecules. Each P₄ has 4 atoms. Total = 0.2 × 4 × 6.022×10²³ = 4.818×10²³.</explanation>
+  </question>
+
+  <question>
+    <text>What is the mass of 5 moles of sodium carbonate (Na₂CO₃)?</text>
+    <option>106 g</option>
+    <option correct="true">530 g</option>
+    <option>265 g</option>
+    <option>212 g</option>
+    <explanation>Molar mass Na₂CO₃ = 106 g/mol. Mass = 5 × 106 = 530 g.</explanation>
+  </question>
+
+  <question>
+    <text>The formula of a compound formed between Al and O is:</text>
+    <option>AlO</option>
+    <option>Al₂O</option>
+    <option correct="true">Al₂O₃</option>
+    <option>AlO₂</option>
+    <explanation>Al³⁺ and O²⁻. LCM of 3 and 2 = 6. Formula: Al₂O₃ (alumina).</explanation>
+  </question>
+
+  <question>
+    <text>What is the percentage composition of carbon in CH₄?</text>
+    <option>25%</option>
+    <option correct="true">75%</option>
+    <option>50%</option>
+    <option>80%</option>
+    <explanation>% C = (12/16) × 100 = 75%. CH₄: C=12, H₄=4, total=16.</explanation>
+  </question>
+
+  <question>
+    <text>How many moles of oxygen atoms are present in 1 mole of H₂SO₄?</text>
+    <option>1</option>
+    <option>2</option>
+    <option correct="true">4</option>
+    <option>7</option>
+    <explanation>1 molecule H₂SO₄ has 4 O atoms. So 1 mole H₂SO₄ has 4 moles of O atoms.</explanation>
+  </question>
+
+  <question>
+    <text>What is the empirical formula of C₆H₁₂O₆?</text>
+    <option>C₆H₁₂O₆</option>
+    <option>C₃H₆O₃</option>
+    <option correct="true">CH₂O</option>
+    <option>C₂H₄O₂</option>
+    <explanation>Empirical formula = simplest ratio. Divide by 6: C₆H₁₂O₆ → CH₂O.</explanation>
+  </question>
 </quiz>
