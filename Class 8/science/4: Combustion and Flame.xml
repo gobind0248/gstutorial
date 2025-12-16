@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 8 Science - Chapter 4: Combustion and Flame</description>
+  </metadata>
+
+  <!-- Previous Year Questions (CBSE/SEBA) -->
+
+  <question>
+    <text>(CBSE 2023) Which of the following is necessary for combustion?</text>
+    <option>Fuel</option>
+    <option>Oxygen</option>
+    <option>Heat</option>
+    <option correct="true">All of these</option>
+    <explanation>Combustion requires three components: fuel, oxygen (air), and heat to reach ignition temperature. This is known as the fire triangle.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2023) Which zone of a candle flame is the hottest?</text>
+    <option>Blue zone</option>
+    <option correct="true">Non-luminous zone</option>
+    <option>Luminous zone</option>
+    <option>Dark zone</option>
+    <explanation>The non-luminous zone (outer zone) is the hottest part of a candle flame due to complete combustion. It has a blue color.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2022) Which gas is produced by incomplete combustion of carbon fuels?</text>
+    <option>Carbon dioxide</option>
+    <option correct="true">Carbon monoxide</option>
+    <option>Nitrogen dioxide</option>
+    <option>Sulfur dioxide</option>
+    <explanation>Incomplete combustion produces carbon monoxide, a poisonous gas. Complete combustion produces carbon dioxide.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2022) Which substance is used as a fire extinguisher for electrical fires?</text>
+    <option>Water</option>
+    <option>Soda-acid</option>
+    <option correct="true">Carbon dioxide</option>
+    <option>Foam</option>
+    <explanation>Carbon dioxide is used for electrical fires as it does not conduct electricity and cuts off oxygen supply. Water conducts electricity and can cause shock.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2021) What is the ignition temperature of a fuel?</text>
+    <option>The temperature at which fuel burns</option>
+    <option correct="true">The lowest temperature at which fuel catches fire</option>
+    <option>The highest temperature of flame</option>
+    <option>The temperature of boiling water</option>
+    <explanation>Ignition temperature is the minimum temperature at which a substance catches fire and continues to burn.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2021) Which of the following is a combustible substance?</text>
+    <option>Stone</option>
+    <option>Glass</option>
+    <option correct="true">Paper</option>
+    <option>Sand</option>
+    <explanation>Paper is combustible (catches fire and burns). Stone, glass, and sand are non-combustible.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2020) Which type of combustion produces heat and light instantly?</text>
+    <option>Spontaneous combustion</option>
+    <option>Explosion</option>
+    <option correct="true">Rapid combustion</option>
+    <option>Slow combustion</option>
+    <explanation>Rapid combustion produces heat and light instantly (e.g., burning of LPG). Explosion is sudden release of heat, light and sound.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2020) Which color of flame indicates complete combustion?</text>
+    <option>Yellow</option>
+    <option>Orange</option>
+    <option correct="true">Blue</option>
+    <option>Red</option>
+    <explanation>Blue flame indicates complete combustion with sufficient oxygen. Yellow/orange flame indicates incomplete combustion.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2019) Which gas is the main component of CNG?</text>
+    <option>Ethane</option>
+    <option correct="true">Methane</option>
+    <option>Propane</option>
+    <option>Butane</option>
+    <explanation>CNG (Compressed Natural Gas) mainly contains methane (90-95%). LPG contains propane and butane.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2019) Which substance has the lowest ignition temperature?</text>
+    <option>Wood</option>
+    <option>Coal</option>
+    <option correct="true">White phosphorus</option>
+    <option>Paper</option>
+    <explanation>White phosphorus has the lowest ignition temperature (35°C) and catches fire easily at room temperature.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2018) Which zone of a candle flame has unburnt carbon particles?</text>
+    <option>Outer zone</option>
+    <option correct="true">Middle zone</option>
+    <option>Inner zone</option>
+    <option>Blue zone</option>
+    <explanation>The middle zone (luminous zone) has incomplete combustion and contains unburnt carbon particles that glow and produce yellow light.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2018) Which fire extinguisher is used for burning oil and petrol?</text>
+    <option>Water</option>
+    <option>Soda-acid</option>
+    <option correct="true">Foam</option>
+    <option>Sand</option>
+    <explanation>Foam extinguishers are used for oil and petrol fires. Water is not suitable as it spreads the fire.</explanation>
+  </question>
+
+  <!-- Additional Important MCQs -->
+
+  <question>
+    <text>Which of these is an example of spontaneous combustion?</text>
+    <option>Burning of LPG</option>
+    <option>Burning of matchstick</option>
+    <option correct="true">Burning of white phosphorus in air</option>
+    <option>Burning of paper</option>
+    <explanation>Spontaneous combustion occurs without external heat when a substance reaches its ignition temperature naturally (e.g., white phosphorus).</explanation>
+  </question>
+
+  <question>
+    <text>What is the calorific value of a fuel?</text>
+    <option>The temperature at which it burns</option>
+    <option correct="true">Amount of heat produced by burning 1 kg of fuel</option>
+    <option>The color of its flame</option>
+    <option>Its boiling point</option>
+    <explanation>Calorific value is measured in kJ/kg and indicates the energy content of a fuel.</explanation>
+  </question>
+
+  <question>
+    <text>Which fuel has the highest calorific value?</text>
+    <option>Wood</option>
+    <option>Coal</option>
+    <option>Petrol</option>
+    <option correct="true">Hydrogen</option>
+    <explanation>Hydrogen has the highest calorific value (150 kJ/g) among common fuels. Petrol is about 50 kJ/g.</explanation>
+  </question>
+
+  <question>
+    <text>Which gas in the atmosphere supports combustion?</text>
+    <option>Nitrogen</option>
+    <option correct="true">Oxygen</option>
+    <option>Carbon dioxide</option>
+    <option>Argon</option>
+    <explanation>Oxygen (about 21% of air) supports combustion. Nitrogen does not support burning.</explanation>
+  </question>
+
+  <question>
+    <text>Which substance is used to control fires involving metals like sodium?</text>
+    <option>Water</option>
+    <option>CO₂</option>
+    <option correct="true">Sand</option>
+    <option>Foam</option>
+    <explanation>Sand is used for metal fires as water reacts violently with metals like sodium, producing hydrogen gas which can explode.</explanation>
+  </question>
+
+  <question>
+    <text>What is the main product of complete combustion of hydrocarbons?</text>
+    <option>Carbon monoxide</option>
+    <option correct="true">Carbon dioxide and water</option>
+    <option>Carbon particles</option>
+    <option>Sulfur dioxide</option>
+    <explanation>Complete combustion produces CO₂ and H₂O. Incomplete combustion produces CO, soot, and other pollutants.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is not a characteristic of an ideal fuel?</text>
+    <option>High calorific value</option>
+    <option>Low ignition temperature</option>
+    <option>No harmful products</option>
+    <option correct="true">High cost</option>
+    <explanation>An ideal fuel should be cheap, readily available, have high calorific value, moderate ignition temperature, and burn cleanly.</explanation>
+  </question>
+
+  <question>
+    <text>Which acid is used in soda-acid fire extinguisher?</text>
+    <option>Hydrochloric acid</option>
+    <option correct="true">Sulfuric acid</option>
+    <option>Nitric acid</option>
+    <option>Acetic acid</option>
+    <explanation>Soda-acid extinguishers contain sodium bicarbonate and sulfuric acid which react to produce CO₂ gas.</explanation>
+  </question>
+
+  <question>
+    <text>Which gas is produced when fossil fuels burn and causes acid rain?</text>
+    <option>Carbon monoxide</option>
+    <option>Nitrogen</option>
+    <option correct="true">Sulfur dioxide</option>
+    <option>Oxygen</option>
+    <explanation>Sulfur dioxide from burning coal and petroleum reacts with water to form sulfuric acid, causing acid rain.</explanation>
+  </question>
+
+  <question>
+    <text>What is the color of the innermost zone of a candle flame?</text>
+    <option>Blue</option>
+    <option>Yellow</option>
+    <option correct="true">Black/Dark</option>
+    <option>White</option>
+    <explanation>The innermost zone is dark and contains unburnt wax vapors. It is the coolest part of the flame.</explanation>
+  </question>
+
+  <question>
+    <text>Which substance catches fire easily and is called inflammable?</text>
+    <option>Iron</option>
+    <option>Brick</option>
+    <option correct="true">Petrol</option>
+    <option>Water</option>
+    <explanation>Inflammable substances have very low ignition temperature (e.g., petrol, alcohol, LPG).</explanation>
+  </question>
+
+  <question>
+    <text>Which metal can burn to produce a dazzling white flame?</text>
+    <option>Iron</option>
+    <option>Copper</option>
+    <option correct="true">Magnesium</option>
+    <option>Aluminum</option>
+    <explanation>Magnesium burns with a dazzling white flame to form magnesium oxide. Used in fireworks and flash photography.</explanation>
+  </question>
+
+  <question>
+    <text>What is the principle behind fire extinguishing?</text>
+    <option>Increasing oxygen supply</option>
+    <option>Increasing temperature</option>
+    <option correct="true">Cutting off oxygen supply or cooling</option>
+    <option>Adding more fuel</option>
+    <explanation>Fire can be extinguished by removing one element of the fire triangle: fuel, oxygen, or heat.</explanation>
+  </question>
+
+  <question>
+    <text>Which type of combustion occurs in crackers?</text>
+    <option>Slow combustion</option>
+    <option>Rapid combustion</option>
+    <option>Spontaneous combustion</option>
+    <option correct="true">Explosion</option>
+    <explanation>Explosion is rapid combustion with sudden release of heat, light, sound and gas (e.g., fireworks, crackers).</explanation>
+  </question>
+
+  <question>
+    <text>Which gas is produced during burning of coal and causes global warming?</text>
+    <option>Oxygen</option>
+    <option>Nitrogen</option>
+    <option correct="true">Carbon dioxide</option>
+    <option>Sulfur dioxide</option>
+    <explanation>CO₂ is a greenhouse gas that traps heat, causing global warming. Coal burning is a major source.</explanation>
+  </question>
+
+  <question>
+    <text>What is the unit of calorific value?</text>
+    <option>°C</option>
+    <option>Joule</option>
+    <option correct="true">kJ/kg</option>
+    <option>kg/m³</option>
+    <explanation>Calorific value is measured in kilojoules per kilogram (kJ/kg) for solid/liquid fuels and kJ/m³ for gases.</explanation>
+  </question>
+
+  <question>
+    <text>Which substance is used as a fuel in rockets?</text>
+    <option>Petrol</option>
+    <option>Diesel</option>
+    <option correct="true">Liquid hydrogen</option>
+    <option>Kerosene</option>
+    <explanation>Liquid hydrogen with liquid oxygen is used in rockets due to high calorific value and clean burning.</explanation>
+  </question>
+
+  <question>
+    <text>Which part of the flame is used by goldsmiths for melting gold?</text>
+    <option>Inner zone</option>
+    <option>Middle zone</option>
+    <option correct="true">Outer zone</option>
+    <option>All zones</option>
+    <explanation>Goldsmiths use the outer zone (non-luminous) as it is the hottest and provides complete combustion.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is a greenhouse gas produced during combustion?</text>
+    <option>Oxygen</option>
+    <option>Nitrogen</option>
+    <option correct="true">Carbon dioxide</option>
+    <option>Hydrogen</option>
+    <explanation>CO₂ is the main greenhouse gas from burning fossil fuels. Methane is also a potent greenhouse gas.</explanation>
+  </question>
+
+  <question>
+    <text>Which chemical is used in fire extinguishers to produce CO₂?</text>
+    <option>Sodium chloride</option>
+    <option correct="true">Sodium bicarbonate</option>
+    <option>Calcium carbonate</option>
+    <option>Potassium nitrate</option>
+    <explanation>Sodium bicarbonate reacts with acid to produce CO₂ gas in fire extinguishers.</explanation>
+  </question>
+</quiz>
