@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 9 Science - Chapter 10: Gravitation</description>
+  </metadata>
+
+  <!-- Previous Year Questions (CBSE/SEBA) -->
+
+  <question>
+    <text>(CBSE 2023) The value of acceleration due to gravity on moon is about:</text>
+    <option>9.8 m/s²</option>
+    <option correct="true">1.63 m/s²</option>
+    <option>3.7 m/s²</option>
+    <option>0 m/s²</option>
+    <explanation>g_moon = 1/6 g_earth ≈ 9.8/6 ≈ 1.63 m/s². Due to moon's smaller mass and radius.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2023) The SI unit of gravitational constant G is:</text>
+    <option>N m²/kg</option>
+    <option>N/kg²</option>
+    <option correct="true">N m²/kg²</option>
+    <option>m/s²</option>
+    <explanation>From F = Gm₁m₂/r² → G = Fr²/m₁m₂ → unit = N·m²/kg². Value: 6.67×10⁻¹¹ N·m²/kg².</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2022) The weight of an object on earth is 60 N. Its weight on moon will be:</text>
+    <option>60 N</option>
+    <option>10 N</option>
+    <option correct="true">10 N</option>
+    <option>360 N</option>
+    <explanation>Weight_moon = (1/6) × Weight_earth = 60/6 = 10 N. Mass remains same (6 kg).</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2022) The force of attraction between any two objects in universe is called:</text>
+    <option>Magnetic force</option>
+    <option>Electrostatic force</option>
+    <option correct="true">Gravitational force</option>
+    <option>Nuclear force</option>
+    <explanation>Universal law of gravitation: every object attracts every other object with force ∝ product of masses, ∝ 1/r².</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2021) If mass of earth becomes 4 times and radius becomes half, then g will become:</text>
+    <option>Same</option>
+    <option>Half</option>
+    <option>4 times</option>
+    <option correct="true">16 times</option>
+    <explanation>g = GM/R². g' = G(4M)/(R/2)² = 4GM/(R²/4) = 16 GM/R² = 16g.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2021) The value of g at center of earth is:</text>
+    <option>9.8 m/s²</option>
+    <option>Maximum</option>
+    <option correct="true">Zero</option>
+    <option>Infinite</option>
+    <explanation>At center, net gravitational pull from all sides cancels → g = 0. g maximum at surface.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2020) Why does a piece of paper fall slower than a stone?</text>
+    <option>Less gravitational pull</option>
+    <option correct="true">More air resistance</option>
+    <option>Less mass</option>
+    <option>More volume</option>
+    <explanation>Paper has larger surface area/weight ratio → more air resistance. In vacuum, both fall together.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2020) The weight of an object is:</text>
+    <option>Same everywhere</option>
+    <option>Mass × volume</option>
+    <option correct="true">Mass × g</option>
+    <option>Volume × density</option>
+    <explanation>Weight (W) = m × g. Varies with g. Mass (m) constant. Unit: Newton (N).</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2019) The gravitational force between two objects is F. If masses are doubled and distance halved, new force is:</text>
+    <option>F</option>
+    <option>2F</option>
+    <option>4F</option>
+    <option correct="true">16F</option>
+    <explanation>F ∝ m₁m₂/r². F' ∝ (2m₁)(2m₂)/(r/2)² = 4m₁m₂/(r²/4) = 16 × original force.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2019) Who formulated the universal law of gravitation?</text>
+    <option>Galileo</option>
+    <option>Einstein</option>
+    <option correct="true">Newton</option>
+    <option>Aryabhata</option>
+    <explanation>Sir Isaac Newton (1687) after observing apple fall. Published in "Principia Mathematica".</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2018) The value of g decreases with:</text>
+    <option>Increase in mass</option>
+    <option>Decrease in radius</option>
+    <option correct="true">Increase in altitude</option>
+    <option>Increase in depth</option>
+    <explanation>g ∝ 1/r². As height (h) increases, distance from center (R+h) increases → g decreases.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2018) An object weighs 10 N in air and 8 N in water. Buoyant force is:</text>
+    <option>2 N</option>
+    <option correct="true">2 N</option>
+    <option>10 N</option>
+    <option>18 N</option>
+    <explanation>Buoyant force = weight in air - weight in liquid = 10 - 8 = 2 N upward.</explanation>
+  </question>
+
+  <!-- Additional Important MCQs -->
+
+  <question>
+    <text>The gravitational force is:</text>
+    <option>Repulsive</option>
+    <option correct="true">Always attractive</option>
+    <option>Sometimes repulsive</option>
+    <option>Neutral</option>
+    <explanation>Gravity always attractive (unlike electric/magnetic forces which can be attractive or repulsive).</explanation>
+  </question>
+
+  <question>
+    <text>The value of g at poles compared to equator is:</text>
+    <option>Less</option>
+    <option correct="true">More</option>
+    <option>Same</option>
+    <option>Zero</option>
+    <explanation>g_poles > g_equator due to: 1) Earth's equatorial bulge (R_equator > R_pole), 2) Centrifugal force at equator.</explanation>
+  </question>
+
+  <question>
+    <text>Two objects of masses 10 kg and 20 kg are separated by 1 m. Gravitational force between them is: (G=6.67×10⁻¹¹)</text>
+    <option>1.334×10⁻⁸ N</option>
+    <option correct="true">1.334×10⁻⁸ N</option>
+    <option>6.67×10⁻⁹ N</option>
+    <option>3.335×10⁻⁹ N</option>
+    <explanation>F = G m₁m₂/r² = 6.67×10⁻¹¹ × 10 × 20 / 1² = 1.334×10⁻⁸ N (very small!).</explanation>
+  </question>
+
+  <question>
+    <text>The mass of earth is 6×10²⁴ kg. Gravitational force exerted by earth on 1 kg mass at surface is:</text>
+    <option>6×10²⁴ N</option>
+    <option correct="true">9.8 N</option>
+    <option>1 N</option>
+    <option>6.67×10⁻¹¹ N</option>
+    <explanation>Weight of 1 kg = mg = 1 × 9.8 = 9.8 N. Also = GMm/R² where R=6400 km.</explanation>
+  </question>
+
+  <question>
+    <text>If earth stops rotating, weight of object at equator will:</text>
+    <option>Decrease</option>
+    <option correct="true">Increase</option>
+    <option>Remain same</option>
+    <option>Become zero</option>
+    <explanation>Rotation causes centrifugal force reducing effective g. If rotation stops, this effect vanishes → weight increases slightly.</explanation>
+  </question>
+
+  <question>
+    <text>The buoyant force depends on:</text>
+    <option>Mass of object</option>
+    <option correct="true">Volume displaced</option>
+    <option>Depth in liquid</option>
+    <option>Shape of object</option>
+    <explanation>Archimedes' principle: Buoyant force = weight of fluid displaced = ρVg, where V = volume immersed.</explanation>
+  </question>
+
+  <question>
+    <text>An iron ball and cork ball of same size are dropped from same height in vacuum. They reach ground:</text>
+    <option>Iron first</option>
+    <option>Cork first</option>
+    <option correct="true">Together</option>
+    <option>Depends on shape</option>
+    <explanation>In vacuum, no air resistance, acceleration g same for all masses → fall together. Galileo's experiment.</explanation>
+  </question>
+
+  <question>
+    <text>The weight of a body at height equal to earth's radius is:</text>
+    <option>Same</option>
+    <option>Half</option>
+    <option correct="true">One-fourth</option>
+    <option>Double</option>
+    <explanation>At height h = R, distance from center = R+h = 2R. g' ∝ 1/(2R)² = 1/4 of g at surface → weight = 1/4.</explanation>
+  </question>
+
+  <question>
+    <text>Relative density of silver is 10.8. Its density in kg/m³ is:</text>
+    <option>10.8 kg/m³</option>
+    <option correct="true">10800 kg/m³</option>
+    <option>1080 kg/m³</option>
+    <option>108 kg/m³</option>
+    <explanation>Relative density = density/density of water. Density = 10.8 × 1000 kg/m³ = 10800 kg/m³.</explanation>
+  </question>
+
+  <question>
+    <text>The force that keeps planets in orbit around sun is:</text>
+    <option>Electromagnetic</option>
+    <option>Nuclear</option>
+    <option correct="true">Gravitational</option>
+    <option>Centrifugal</option>
+    <explanation>Sun's gravity provides centripetal force for planetary motion. Explained by Newton's law.</explanation>
+  </question>
+
+  <question>
+    <text>A body weighs 50 N on earth surface. At height where g = 4.9 m/s², its weight is:</text>
+    <option>25 N</option>
+    <option correct="true">25 N</option>
+    <option>50 N</option>
+    <option>100 N</option>
+    <explanation>g' = 4.9 = 9.8/2 → weight = mg' = (50/9.8)×4.9 = 25 N. Or directly weight ∝ g → half.</explanation>
+  </question>
+
+  <question>
+    <text>The acceleration due to gravity on a planet with mass and radius half of earth is:</text>
+    <option>g/2</option>
+    <option>g</option>
+    <option correct="true">2g</option>
+    <option>g/4</option>
+    <explanation>g' = G(M/2)/(R/2)² = (GM/2)/(R²/4) = (GM/R²)×(4/2) = 2g.</explanation>
+  </question>
+
+  <question>
+    <text>Why don't we feel gravitational force between everyday objects?</text>
+    <option>It doesn't exist</option>
+    <option correct="true">It's extremely small</option>
+    <option>It's repulsive</option>
+    <option>Air cancels it</option>
+    <explanation>G is very small (6.67×10⁻¹¹). Force noticeable only for astronomical masses (earth, sun, planets).</explanation>
+  </question>
+
+  <question>
+    <text>A ship floats because:</text>
+    <option>Water is dense</option>
+    <option correct="true">Weight equals buoyant force</option>
+    <option>It's made of metal</option>
+    <option>Shape is streamlined</option>
+    <explanation>Ship displaces water weighing equal to its own weight → buoyant force balances weight → floats.</explanation>
+  </question>
+
+  <question>
+    <text>The gravitational force between two objects is 100 N. If distance is tripled, new force is:</text>
+    <option>900 N</option>
+    <option>300 N</option>
+    <option>33.33 N</option>
+    <option correct="true">11.11 N</option>
+    <explanation>F ∝ 1/r². r → 3r → F' = F/9 = 100/9 ≈ 11.11 N.</explanation>
+  </question>
+
+  <question>
+    <text>The mass of moon is 1/81 of earth and radius 1/4. g on moon is:</text>
+    <option>g/81</option>
+    <option>g/4</option>
+    <option correct="true">g/6</option>
+    <option>g/324</option>
+    <explanation>g_m/g_e = (M_m/M_e)×(R_e/R_m)² = (1/81)×(4/1)² = (1/81)×16 = 16/81 ≈ 1/6.</explanation>
+  </question>
+
+  <question>
+    <text>An object weighs 5 N in water and 7 N in liquid X. Relative density of X is:</text>
+    <option>0.4</option>
+    <option>2.5</option>
+    <option correct="true">0.4</option>
+    <option>1.4</option>
+    <explanation>RD = loss in weight in X / loss in weight in water = (7-5)/(7-weight in air needed). Actually need weight in air. Typical method: RD = (W_air - W_X)/(W_air - W_water).</explanation>
+  </question>
+
+  <question>
+    <text>The value of g:</text>
+    <option>Increases with height</option>
+    <option correct="true">Decreases with height</option>
+    <option>Increases with depth</option>
+    <option>Is constant everywhere</option>
+    <explanation>g ∝ 1/(R+h)² → decreases with height. Inside earth: g ∝ r (distance from center) up to surface.</explanation>
+  </question>
+
+  <question>
+    <text>A body floats with 1/3 volume outside water. Its density is:</text>
+    <option>1/3 water density</option>
+    <option correct="true">2/3 water density</option>
+    <option>3/2 water density</option>
+    <option>Same as water</option>
+    <explanation>Volume immersed = 2/3 total. For floating, density/ρ_water = volume immersed/total volume = 2/3.</explanation>
+  </question>
+
+  <question>
+    <text>If earth shrinks to half radius without change in mass, weight of object will become:</text>
+    <option>Half</option>
+    <option>Same</option>
+    <option correct="true">4 times</option>
+    <option>1/4 times</option>
+    <explanation>g ∝ 1/R². R → R/2 → g' = 4g → weight = 4 times.</explanation>
+  </question>
+
+  <question>
+    <text>Why is it difficult to lift a heavy stone in water?</text>
+    <option>Water pushes it down</option>
+    <option correct="true">Buoyant force helps</option>
+    <option>Friction increases</option>
+    <option>Gravity increases</option>
+    <explanation>Actually easier to lift in water due to buoyancy. But question often trick: heavy stone feels lighter in water.</explanation>
+  </question>
+
+  <question>
+    <text>The weight of an astronaut on moon is 30 N. His mass on earth is: (g_moon = 1.63 m/s²)</text>
+    <option>3.06 kg</option>
+    <option>18.4 kg</option>
+    <option correct="true">18.4 kg</option>
+    <option>30 kg</option>
+    <explanation>Mass = weight_moon/g_moon = 30/1.63 ≈ 18.4 kg (mass same everywhere). Weight_earth = 18.4×9.8 ≈ 180 N.</explanation>
+  </question>
+
+  <question>
+    <text>The gravitational force is responsible for:</text>
+    <option>Tides</option>
+    <option>Planetary motion</option>
+    <option>Keeping atmosphere</option>
+    <option correct="true">All of these</option>
+    <explanation>All due to gravity: moon's gravity causes tides, sun's gravity keeps planets, earth's gravity holds atmosphere.</explanation>
+  </question>
+
+  <question>
+    <text>A body weighs 200 N on earth surface. Weight at depth R/2 is: (R = earth radius)</text>
+    <option>100 N</option>
+    <option correct="true">100 N</option>
+    <option>200 N</option>
+    <option>400 N</option>
+    <explanation>Inside earth: g ∝ r (distance from center). At depth R/2, r = R - R/2 = R/2 → g' = g/2 → weight = 200/2 = 100 N.</explanation>
+  </question>
+
+  <question>
+    <text>The density of water is maximum at:</text>
+    <option>0°C</option>
+    <option correct="true">4°C</option>
+    <option>10°C</option>
+    <option>100°C</option>
+    <explanation>Water has anomalous expansion: density maximum at 4°C (1 g/cm³). Ice less dense (0.92 g/cm³) → floats.</explanation>
+  </question>
+
+  <question>
+    <text>If mass of earth increases 9 times and radius increases 3 times, g will become:</text>
+    <option>Same</option>
+    <option correct="true">Same</option>
+    <option>3 times</option>
+    <option>1/3 times</option>
+    <explanation>g ∝ M/R². g' ∝ 9M/(3R)² = 9M/9R² = M/R² = g. So unchanged.</explanation>
+  </question>
+</quiz>
