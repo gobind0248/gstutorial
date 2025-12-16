@@ -43,8 +43,8 @@
   <question>
     <text>At what interval, the intensive cleaning of any coach is?</text>
     <option correct="false">Three month</option>
-    <option correct="false">One month</option>
-    <option correct="true">Six month</option>
+    <option correct="true">One month</option>
+    <option correct="false">Six month</option>
     <option correct="false">Eight month</option>
   </question>
 
