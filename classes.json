@@ -60,22 +60,22 @@
     ]
   },
   {
-    "id": "11",
+    "id": "je",
     "name": "JE",
     "icon": "🎯",
     "description": "Junior Engineer",
     "subjects": [
       {
-        "id": "dpq",
-        "name": "DPQ",
+        "id": "mech",
+        "name": "Mechanical",
         "icon": "⚛️",
-        "description": "ICF, Wagon etc."
+        "description": "DPQ/LDCE"
       },
       {
-        "id": "ldce",
-        "name": "LDCE",
+        "id": "elec",
+        "name": "Electrical",
         "icon": "🧪",
-        "description": "ICF, Wagon etc."
+        "description": "DPQ/LDCE"
       }
     ]
   }
