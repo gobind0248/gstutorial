@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 8 Science - Chapter 7: Reaching the Age of Adolescence</description>
+  </metadata>
+
+  <!-- Previous Year Questions (CBSE/SEBA) -->
+
+  <question>
+    <text>(CBSE 2023) At what age does adolescence usually begin?</text>
+    <option>5-8 years</option>
+    <option correct="true">11-13 years</option>
+    <option>18-21 years</option>
+    <option>25-30 years</option>
+    <explanation>Adolescence begins around 11-13 years (puberty) and lasts until 18-19 years. It marks the transition from childhood to adulthood.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2023) Which gland is called the "master gland"?</text>
+    <option>Thyroid gland</option>
+    <option>Adrenal gland</option>
+    <option correct="true">Pituitary gland</option>
+    <option>Pancreas</option>
+    <explanation>The pituitary gland is called the master gland because it controls the functions of other endocrine glands.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2022) Which hormone is responsible for the development of secondary sexual characteristics in males?</text>
+    <option>Estrogen</option>
+    <option>Progesterone</option>
+    <option>Insulin</option>
+    <option correct="true">Testosterone</option>
+    <explanation>Testosterone, produced by testes, causes voice deepening, facial hair, and muscle development in boys.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2022) What is the onset of menstruation called?</text>
+    <option>Menopause</option>
+    <option>Ovulation</option>
+    <option correct="true">Menarche</option>
+    <option>Puberty</option>
+    <explanation>Menarche is the first menstrual period in girls, usually occurring between 10-15 years during puberty.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2021) Which mineral is essential for the formation of blood in adolescents?</text>
+    <option>Calcium</option>
+    <option>Phosphorus</option>
+    <option correct="true">Iron</option>
+    <option>Sodium</option>
+    <explanation>Iron is essential for hemoglobin formation and preventing anemia, especially important during rapid growth in adolescence.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2021) Which hormone controls sugar level in blood?</text>
+    <option>Thyroxine</option>
+    <option>Adrenaline</option>
+    <option correct="true">Insulin</option>
+    <option>Growth hormone</option>
+    <explanation>Insulin, produced by pancreas, regulates blood sugar levels. Deficiency causes diabetes.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2020) What is the term for stoppage of menstruation in women?</text>
+    <option>Menarche</option>
+    <option>Ovulation</option>
+    <option correct="true">Menopause</option>
+    <option>Puberty</option>
+    <explanation>Menopause occurs around 45-50 years when menstrual cycles stop permanently and reproductive phase ends.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2020) Which gland produces thyroxine?</text>
+    <option>Pituitary</option>
+    <option correct="true">Thyroid</option>
+    <option>Adrenal</option>
+    <option>Pancreas</option>
+    <explanation>Thyroid gland produces thyroxine which regulates metabolism, growth and development.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2019) What is the legal age for marriage in India for girls?</text>
+    <option>16 years</option>
+    <option>20 years</option>
+    <option correct="true">18 years</option>
+    <option>21 years</option>
+    <explanation>The legal age for marriage is 18 years for girls and 21 years for boys in India (Prohibition of Child Marriage Act, 2006).</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2019) Which hormone is called the "emergency hormone"?</text>
+    <option>Insulin</option>
+    <option>Thyroxine</option>
+    <option correct="true">Adrenaline</option>
+    <option>Testosterone</option>
+    <explanation>Adrenaline prepares the body for fight or flight response during emergencies by increasing heart rate and blood pressure.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2018) Which vitamin is essential for good eyesight?</text>
+    <option>Vitamin B</option>
+    <option correct="true">Vitamin A</option>
+    <option>Vitamin C</option>
+    <option>Vitamin D</option>
+    <explanation>Vitamin A is essential for good vision, especially night vision. Deficiency causes night blindness.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2018) What is the voice box in males called?</text>
+    <option>Trachea</option>
+    <option correct="true">Larynx</option>
+    <option>Pharynx</option>
+    <option>Epiglottis</option>
+    <explanation>Larynx (voice box) becomes prominent in boys during puberty, causing the Adam's apple and voice deepening.</explanation>
+  </question>
+
+  <!-- Additional Important MCQs -->
+
+  <question>
+    <text>Which of these is a secondary sexual characteristic in females?</text>
+    <option>Deep voice</option>
+    <option>Facial hair</option>
+    <option correct="true">Development of breasts</option>
+    <option>Muscle growth</option>
+    <explanation>Development of breasts, widening of hips, and growth of pubic hair are secondary sexual characteristics in females.</explanation>
+  </question>
+
+  <question>
+    <text>Which gland secretes growth hormone?</text>
+    <option>Thyroid</option>
+    <option correct="true">Pituitary</option>
+    <option>Pancreas</option>
+    <option>Adrenal</option>
+    <explanation>Growth hormone is secreted by the pituitary gland and regulates growth of bones and tissues.</explanation>
+  </question>
+
+  <question>
+    <text>What is the main cause of acne during adolescence?</text>
+    <option>Eating chocolate</option>
+    <option>Not washing face</option>
+    <option correct="true">Increased sebum production</option>
+    <option>Sun exposure</option>
+    <explanation>Increased activity of sebaceous (oil) glands due to hormonal changes causes acne during puberty.</explanation>
+  </question>
+
+  <question>
+    <text>Which hormone is responsible for secondary sexual characteristics in females?</text>
+    <option>Testosterone</option>
+    <option correct="true">Estrogen</option>
+    <option>Insulin</option>
+    <option>Thyroxine</option>
+    <explanation>Estrogen, produced by ovaries, causes breast development, hip widening, and onset of menstruation.</explanation>
+  </question>
+
+  <question>
+    <text>What is the reproductive phase in women?</text>
+    <option>Birth to death</option>
+    <option>Menarche to menopause</option>
+    <option correct="true">Menarche to menopause</option>
+    <option>Puberty to menarche</option>
+    <explanation>Reproductive phase lasts from menarche (first period) to menopause (last period), approximately 30-35 years.</explanation>
+  </question>
+
+  <question>
+    <text>Which disease is caused by iodine deficiency?</text>
+    <option>Diabetes</option>
+    <option>Anemia</option>
+    <option correct="true">Goiter</option>
+    <option>Rickets</option>
+    <explanation>Iodine deficiency causes goiter (enlarged thyroid gland). Iodized salt is used to prevent it.</explanation>
+  </question>
+
+  <question>
+    <text>What is the function of testosterone?</text>
+    <option>Regulate blood sugar</option>
+    <option>Control metabolism</option>
+    <option correct="true">Develop male characteristics</option>
+    <option>Prepare body for emergency</option>
+    <explanation>Testosterone develops male reproductive organs, deepens voice, promotes facial/body hair, and builds muscles.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is a communicable disease?</text>
+    <option>Diabetes</option>
+    <option>Heart disease</option>
+    <option correct="true">AIDS</option>
+    <option>Goiter</option>
+    <explanation>AIDS is caused by HIV virus and spreads through sexual contact, blood transfusion, or from mother to child.</explanation>
+  </question>
+
+  <question>
+    <text>What is the importance of balanced diet during adolescence?</text>
+    <option>For energy</option>
+    <option>For growth</option>
+    <option>To prevent diseases</option>
+    <option correct="true">All of these</option>
+    <explanation>Balanced diet provides energy for increased activity, nutrients for growth spurts, and prevents deficiency diseases.</explanation>
+  </question>
+
+  <question>
+    <text>Which gland produces insulin?</text>
+    <option>Liver</option>
+    <option>Thyroid</option>
+    <option correct="true">Pancreas</option>
+    <option>Pituitary</option>
+    <explanation>Pancreas produces insulin which regulates blood glucose levels. It also produces digestive enzymes.</explanation>
+  </question>
+
+  <question>
+    <text>What causes changes in adolescents' emotional state?</text>
+    <option>Peer pressure</option>
+    <option>Academic stress</option>
+    <option correct="true">Hormonal changes</option>
+    <option>All of these</option>
+    <explanation>Hormonal fluctuations combined with social pressures cause mood swings, irritability, and emotional sensitivity.</explanation>
+  </question>
+
+  <question>
+    <text>Which mineral is essential for strong bones and teeth?</text>
+    <option>Iron</option>
+    <option correct="true">Calcium</option>
+    <option>Iodine</option>
+    <option>Phosphorus</option>
+    <explanation>Calcium is crucial for bone development during adolescent growth spurt. Dairy products are good sources.</explanation>
+  </question>
+
+  <question>
+    <text>What is the role of adrenaline?</text>
+    <option>Regulate growth</option>
+    <option>Control reproduction</option>
+    <option correct="true">Prepare for emergency</option>
+    <option>Digest food</option>
+    <explanation>Adrenaline increases heart rate, blood pressure, and glucose levels to prepare body for "fight or flight" response.</explanation>
+  </question>
+
+  <question>
+    <text>Which vitamin is produced when skin is exposed to sunlight?</text>
+    <option>Vitamin A</option>
+    <option>Vitamin B</option>
+    <option>Vitamin C</option>
+    <option correct="true">Vitamin D</option>
+    <explanation>Vitamin D is synthesized by skin in sunlight. It helps in calcium absorption for bone health.</explanation>
+  </question>
+
+  <question>
+    <text>What is the target age for marriage according to law?</text>
+    <option>When physically mature</option>
+    <option>When financially stable</option>
+    <option correct="true">18 for girls, 21 for boys</option>
+    <option>After completing education</option>
+    <explanation>Child Marriage Restraint Act sets 18 years as minimum age for girls and 21 years for boys to ensure physical and mental maturity.</explanation>
+  </question>
+
+  <question>
+    <text>Which disease spreads through sexual contact?</text>
+    <option>Tuberculosis</option>
+    <option>Malaria</option>
+    <option correct="true">Syphilis</option>
+    <option>Typhoid</option>
+    <explanation>Syphilis is a sexually transmitted disease (STD). Others are spread through air, mosquito bites, or contaminated food/water.</explanation>
+  </question>
+
+  <question>
+    <text>What is the function of thyroid gland?</text>
+    <option>Produce insulin</option>
+    <option>Produce adrenaline</option>
+    <option correct="true">Regulate metabolism</option>
+    <option>Produce sperms</option>
+    <explanation>Thyroid produces thyroxine which regulates metabolic rate, physical growth, and mental development.</explanation>
+  </question>
+
+  <question>
+    <text>Which habit should be avoided during adolescence?</text>
+    <option>Exercise</option>
+    <option>Healthy eating</option>
+    <option correct="true">Drug abuse</option>
+    <option>Studying</option>
+    <explanation>Drugs, smoking, and alcohol harm developing bodies and minds. They can cause addiction and health problems.</explanation>
+  </question>
+
+  <question>
+    <text>What is the full form of AIDS?</text>
+    <option>Acquired Immune Deficiency Syndrome</option>
+    <option correct="true">Acquired Immune Deficiency Syndrome</option>
+    <option>Acquired Immunity Disease Syndrome</option>
+    <option>Advanced Immune Deficiency Syndrome</option>
+    <explanation>AIDS is caused by HIV which attacks the immune system, making the body vulnerable to infections.</explanation>
+  </question>
+
+  <question>
+    <text>Which hormone is deficient in diabetes?</text>
+    <option>Thyroxine</option>
+    <option>Adrenaline</option>
+    <option>Testosterone</option>
+    <option correct="true">Insulin</option>
+    <explanation>Diabetes occurs when pancreas produces insufficient insulin or body becomes resistant to it.</explanation>
+  </question>
+</quiz>
