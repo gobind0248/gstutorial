@@ -1,233 +1,389 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quiz>
-<metadata>
-  <chapter>15. Improvement in Food Resources</chapter>
-  <timeLimit>30</timeLimit>
-  <author>CBSE Exam Important Questions</author>
-</metadata>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 9 Science - Chapter 15: Improvement in Food Resources</description>
+  </metadata>
 
-<question>
-  <text>Which nutrient is required in largest quantity by plants?</text>
-  <option>Phosphorus</option>
-  <option>Potassium</option>
-  <option correct="true">Nitrogen</option>
-  <option>Calcium</option>
-  <explanation>Macronutrients: Nitrogen required in largest amount for growth.</explanation>
-</question>
+  <!-- Previous Year Questions (CBSE/SEBA) -->
 
-<question>
-  <text>Manure is preferred over fertilizers because it:</text>
-  <option>Gives quick results</option>
-  <option correct="true">Improves soil texture</option>
-  <option>Has higher nutrient content</option>
-  <option>Is cheaper</option>
-  <explanation>Manure adds humus, improves soil structure and water retention.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2023) Which of these is a micronutrient for plants?</text>
+    <option>Nitrogen</option>
+    <option>Phosphorus</option>
+    <option correct="true">Zinc</option>
+    <option>Potassium</option>
+    <explanation>Micronutrients needed in small amounts: Zn, Cu, Fe, Mn, B, Mo, Cl. Macronutrients: N, P, K, Ca, Mg, S.</explanation>
+  </question>
 
-<question>
-  <text>Which is a kharif crop?</text>
-  <option>Wheat</option>
-  <option>Mustard</option>
-  <option correct="true">Paddy (rice)</option>
-  <option>Gram</option>
-  <explanation>Kharif crops: June-October (rice, maize, cotton). Rabi: October-March (wheat, gram).</explanation>
-</question>
+  <question>
+    <text>(SEBA 2023) The process of crossing between genetically dissimilar plants is called:</text>
+    <option>Inbreeding</option>
+    <option correct="true">Hybridization</option>
+    <option>Selection</option>
+    <option>Grafting</option>
+    <explanation>Hybridization: crossing different varieties/species → hybrid vigor (heterosis). Used for high yield, disease resistance.</explanation>
+  </question>
 
-<question>
-  <text>Cross-breeding between Indian and exotic breeds is done for:</text>
-  <option>Increasing milk yield</option>
-  <option>Disease resistance</option>
-  <option correct="true">Both of these</option>
-  <option>Better appearance</option>
-  <explanation>Cross-breeding combines high yield of exotic with disease resistance of local breeds.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2022) Which crop is a kharif crop?</text>
+    <option>Wheat</option>
+    <option>Gram</option>
+    <option correct="true">Paddy</option>
+    <option>Mustard</option>
+    <explanation>Kharif: June-Oct (monsoon): paddy, maize, cotton, soybean. Rabi: Oct-Mar: wheat, gram, mustard.</explanation>
+  </question>
 
-<question>
-  <text>Blue revolution is related to:</text>
-  <option>Crop production</option>
-  <option>Poultry farming</option>
-  <option correct="true">Fish production</option>
-  <option>Dairy farming</option>
-  <explanation>Blue revolution: enhancement of fish production.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2022) The practice of growing two or more crops simultaneously is called:</text>
+    <option>Crop rotation</option>
+    <option correct="true">Intercropping</option>
+    <option>Mixed farming</option>
+    <option>Plantation</option>
+    <explanation>Intercropping: grow 2+ crops simultaneously on same field in definite pattern. Maximizes land use, reduces risk.</explanation>
+  </question>
 
-<question>
-  <text>Which is a macronutrient for plants?</text>
-  <option>Zinc</option>
-  <option>Iron</option>
-  <option>Copper</option>
-  <option correct="true">Potassium</option>
-  <explanation>Macronutrients: N, P, K, Ca, Mg, S (needed in large amounts).</explanation>
-</question>
+  <question>
+    <text>(CBSE 2021) Which fertilizer is rich in nitrogen?</text>
+    <option>Superphosphate</option>
+    <option>Potash</option>
+    <option correct="true">Urea</option>
+    <option>NPK</option>
+    <explanation>Urea (CO(NH₂)₂): 46% N. Superphosphate: P, Potash: K, NPK: all three. Chemical fertilizers vs organic manures.</explanation>
+  </question>
 
-<question>
-  <text>Vermicompost is prepared using:</text>
-  <option>Bacteria</option>
-  <option correct="true">Earthworms</option>
-  <option>Fungi</option>
-  <option>Insects</option>
-  <explanation>Vermicompost: organic waste decomposed by earthworms.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2021) White revolution is associated with:</text>
+    <option>Egg production</option>
+    <option>Wheat production</option>
+    <option correct="true">Milk production</option>
+    <option>Fish production</option>
+    <explanation>Operation Flood (1970) by Dr. Verghese Kurien → made India largest milk producer. Also called White Revolution.</explanation>
+  </question>
 
-<question>
-  <text>Which breed of cattle is known for high milk yield?</text>
-  <option>Red Sindhi</option>
-  <option>Sahiwal</option>
-  <option correct="true">Holstein-Friesian</option>
-  <option>Gir</option>
-  <explanation>Exotic breed Holstein-Friesian gives highest milk yield.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2020) Which method increases soil fertility naturally?</text>
+    <option>Using chemical fertilizers</option>
+    <option correct="true">Crop rotation with legumes</option>
+    <option>Monoculture</option>
+    <option>Using pesticides</option>
+    <explanation>Legumes fix atmospheric nitrogen → enrich soil. Crop rotation maintains fertility, controls pests.</explanation>
+  </question>
 
-<question>
-  <text>Weeds can be controlled by:</text>
-  <option>Herbicides</option>
-  <option>Manual removal</option>
-  <option>Cultural methods</option>
-  <option correct="true">All of these</option>
-  <explanation>Weed control: chemical (herbicides), manual, cultural (crop rotation).</explanation>
-</question>
+  <question>
+    <text>(SEBA 2020) Which poultry bird is used for egg production?</text>
+    <option>Broiler</option>
+    <option correct="true">Layer</option>
+    <option>Both</option>
+    <option>Neither</option>
+    <explanation>Layers: egg production (e.g., White Leghorn). Broilers: meat production. Dual-purpose breeds exist.</explanation>
+  </question>
 
-<question>
-  <text>Green manure is obtained from:</text>
-  <option>Animal waste</option>
-  <option correct="true">Leguminous plants</option>
-  <option>Kitchen waste</option>
-  <option>Sewage</option>
-  <explanation>Green manure: legume plants (sunhemp, guar) ploughed into soil.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2019) Green revolution is associated with:</text>
+    <option>Milk production</option>
+    <option>Fish production</option>
+    <option correct="true">Cereal production</option>
+    <option>Vegetable production</option>
+    <explanation>Green Revolution (1960s): high-yielding varieties (wheat, rice), fertilizers, irrigation. Led by Dr. M.S. Swaminathan.</explanation>
+  </question>
 
-<question>
-  <text>White revolution is associated with:</text>
-  <option>Crop production</option>
-  <option correct="true">Milk production</option>
-  <option>Egg production</option>
-  <option>Fish production</option>
-  <explanation>White revolution (Operation Flood) by Dr. Verghese Kurien increased milk production.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2019) The scientific management of farm animals is called:</text>
+    <option>Horticulture</option>
+    <option>Apiculture</option>
+    <option correct="true">Animal husbandry</option>
+    <option>Pisciculture</option>
+    <explanation>Animal husbandry: breeding, feeding, healthcare of livestock for milk, meat, eggs, wool, etc.</explanation>
+  </question>
 
-<question>
-  <text>Which is a rabi crop?</text>
-  <option>Rice</option>
-  <option>Maize</option>
-  <option>Soybean</option>
-  <option correct="true">Wheat</option>
-  <explanation>Rabi crops (winter): wheat, barley, gram, mustard.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2018) Which fish is a freshwater fish?</text>
+    <option>Mackerel</option>
+    <option>Sardine</option>
+    <option correct="true">Rohu</option>
+    <option>Pomfret</option>
+    <explanation>Freshwater: Rohu, Catla, Mrigal (Indian major carps). Marine: Mackerel, Sardine, Pomfret, Tuna.</explanation>
+  </question>
 
-<question>
-  <text>NPK refers to:</text>
-  <option>Nitrogen, Phosphorus, Potassium</option>
-  <option>Nitrogen, Potassium, Calcium</option>
-  <option>Nitrogen, Phosphorus, Calcium</option>
-  <option correct="true">Nitrogen, Phosphorus, Potassium</option>
-  <explanation>NPK = Primary macronutrients in fertilizers.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2018) The practice of bee keeping is called:</text>
+    <option>Sericulture</option>
+    <option correct="true">Apiculture</option>
+    <option>Pisciculture</option>
+    <option>Viticulture</option>
+    <explanation>Apiculture: honeybee rearing for honey, wax, pollination. Important for cross-pollination of crops.</explanation>
+  </question>
 
-<question>
-  <text>Pisciculture means:</text>
-  <option>Bee keeping</option>
-  <option>Poultry farming</option>
-  <option correct="true">Fish farming</option>
-  <option>Sericulture</option>
-  <explanation>Pisciculture: breeding and rearing of fish.</explanation>
-</question>
+  <!-- Additional Important MCQs -->
 
-<question>
-  <text>Which micronutrient is required for chlorophyll formation?</text>
-  <option>Phosphorus</option>
-  <option>Potassium</option>
-  <option correct="true">Iron</option>
-  <option>Calcium</option>
-  <explanation>Iron is micronutrient needed for chlorophyll synthesis.</explanation>
-</question>
+  <question>
+    <text>Which nutrient is required for root development?</text>
+    <option>Nitrogen</option>
+    <option correct="true">Phosphorus</option>
+    <option>Potassium</option>
+    <option>Calcium</option>
+    <explanation>Phosphorus (P): root growth, flowering, seed formation. Deficiency: stunted growth, purple leaves.</explanation>
+  </question>
 
-<question>
-  <text>Composite fish culture involves:</text>
-  <option>Single fish species</option>
-  <option correct="true">Multiple fish species</option>
-  <option>Only marine fish</option>
-  <option>Only freshwater fish</option>
-  <explanation>Composite culture: 5-6 species with different feeding habits in same pond.</explanation>
-</question>
+  <question>
+    <text>Manure is preferred over fertilizers because it:</text>
+    <option>Acts quickly</option>
+    <option>Has high nutrient content</option>
+    <option correct="true">Improves soil structure</option>
+    <option>Is cheaper</option>
+    <explanation>Manure: adds humus, improves water retention, aeration, microbial activity. Slow release of nutrients.</explanation>
+  </question>
 
-<question>
-  <text>Which poultry breed is an exotic layer?</text>
-  <option>Rhode Island Red</option>
-  <option correct="true">Leghorn</option>
-  <option>Assel</option>
-  <option>Chittagong</option>
-  <explanation>Leghorn (white) is exotic breed known for egg laying.</explanation>
-</question>
+  <question>
+    <text>Which is a rabi crop?</text>
+    <option>Paddy</option>
+    <option>Maize</option>
+    <option>Cotton</option>
+    <option correct="true">Wheat</option>
+    <explanation>Rabi (winter): wheat, barley, gram, mustard, peas. Sown Oct-Dec, harvested Apr-May.</explanation>
+  </question>
 
-<question>
-  <text>Lack of which nutrient causes yellowing of leaves?</text>
-  <option>Phosphorus</option>
-  <option>Potassium</option>
-  <option correct="true">Nitrogen</option>
-  <option>Calcium</option>
-  <explanation>Nitrogen deficiency causes chlorosis (yellowing) of older leaves.</explanation>
-</question>
+  <question>
+    <text>The method of growing plants without soil is called:</text>
+    <option>Intercropping</option>
+    <option>Hydroponics</option>
+    <option correct="true">Hydroponics</option>
+    <option>Terracing</option>
+    <explanation>Hydroponics: nutrients dissolved in water. Advantages: controlled conditions, higher yield, no soil-borne diseases.</explanation>
+  </question>
 
-<question>
-  <text>Apiculture is rearing of:</text>
-  <option>Fish</option>
-  <option>Silkworms</option>
-  <option>Poultry</option>
-  <option correct="true">Honeybees</option>
-  <explanation>Apiculture: beekeeping for honey production.</explanation>
-</question>
+  <question>
+    <text>Which pest control method is eco-friendly?</text>
+    <option>Chemical pesticides</option>
+    <option correct="true">Biological control</option>
+    <option>Fumigation</option>
+    <option>All</option>
+    <explanation>Biological control: using natural predators/parasites (e.g., ladybugs for aphids, Trichoderma fungi).</explanation>
+  </question>
 
-<question>
-  <text>Which irrigation method is most efficient?</text>
-  <option>Surface irrigation</option>
-  <option>Sprinkler irrigation</option>
-  <option correct="true">Drip irrigation</option>
-  <option>Flood irrigation</option>
-  <explanation>Drip irrigation saves water (90% efficiency) by direct root watering.</explanation>
-</question>
+  <question>
+    <text>Vermicompost is prepared using:</text>
+    <option>Bacteria</option>
+    <option>Fungi</option>
+    <option correct="true">Earthworms</option>
+    <option>Insects</option>
+    <explanation>Earthworms (Eisenia foetida) decompose organic waste → nutrient-rich vermicompost. Improves soil fertility.</explanation>
+  </question>
 
-<question>
-  <text>Rohu, Catla and Mrigal are examples of:</text>
-  <option>Marine fish</option>
-  <option correct="true">Freshwater fish</option>
-  <option>Shellfish</option>
-  <option>Exotic fish</option>
-  <explanation>Indian major carps used in composite fish culture.</explanation>
-</question>
+  <question>
+    <text>Blue revolution is related to:</text>
+    <option>Poultry</option>
+    <option>Cereals</option>
+    <option correct="true">Fish production</option>
+    <option>Oilseeds</option>
+    <explanation>Blue Revolution: increasing fish production (aquaculture). Includes freshwater, marine, brackish water farming.</explanation>
+  </question>
 
-<question>
-  <text>Which is NOT a source of plant nutrients?</text>
-  <option>Manure</option>
-  <option>Fertilizers</option>
-  <option correct="true">Pesticides</option>
-  <option>Compost</option>
-  <explanation>Pesticides kill pests, don't provide nutrients.</explanation>
-</question>
+  <question>
+    <text>Which breed of cow is high milk yielder?</text>
+    <option>Desi</option>
+    <option correct="true">Jersey</option>
+    <option>Nagori</option>
+    <option>Hallikar</option>
+    <explanation>Exotic breeds: Jersey, Holstein-Friesian (high yield). Indigenous: Sahiwal, Red Sindhi, Gir (disease resistant).</explanation>
+  </question>
 
-<question>
-  <text>Hybridization aims to produce crops with:</text>
-  <option>Higher yield</option>
-  <option>Disease resistance</option>
-  <option>Better quality</option>
-  <option correct="true">All of these</option>
-  <explanation>Hybridization combines desirable traits from different varieties.</explanation>
-</question>
+  <question>
+    <text>The practice of growing flowers, fruits, vegetables is:</text>
+    <option>Floriculture</option>
+    <option correct="true">Horticulture</option>
+    <option>Olericulture</option>
+    <option>Pomology</option>
+    <explanation>Horticulture includes: Pomology (fruits), Olericulture (vegetables), Floriculture (flowers), Landscape gardening.</explanation>
+  </question>
 
-<question>
-  <text>Which crop is grown in zaid season?</text>
-  <option>Rice</option>
-  <option>Wheat</option>
-  <option correct="true">Cucumber</option>
-  <option>Mustard</option>
-  <explanation>Zaid crops: March-June (cucumber, watermelon, muskmelon).</explanation>
-</question>
+  <question>
+    <text>Which is NOT a storage pest?</text>
+    <option>Weevils</option>
+    <option>Rodents</option>
+    <option>Fungi</option>
+    <option correct="true">Aphids</option>
+    <explanation>Aphids are field pests (suck sap). Storage pests: insects (weevils, beetles), rodents, fungi cause spoilage.</explanation>
+  </question>
 
-<question>
-  <text>Broilers are chickens reared for:</text>
-  <option>Egg production</option>
-  <option correct="true">Meat production</option>
-  <option>Both egg and meat</option>
-  <option>Feathers</option>
-  <explanation>Broilers: meat-type poultry (grown for 6-7 weeks).</explanation>
-</question>
+  <question>
+    <text>Compost is prepared from:</text>
+    <option>Animal waste only</option>
+    <option correct="true">Farm and kitchen waste</option>
+    <option>Chemical fertilizers</option>
+    <option>Minerals</option>
+    <explanation>Compost: decomposed organic matter (crop residues, kitchen waste). Rich in nutrients, improves soil.</explanation>
+  </question>
+
+  <question>
+    <text>Which irrigation method saves water?</text>
+    <option>Flood irrigation</option>
+    <option>Canals</option>
+    <option correct="true">Drip irrigation</option>
+    <option>Dhekli</option>
+    <explanation>Drip: water directly to roots, minimal evaporation. Saves 30-70% water, suitable for arid regions.</explanation>
+  </question>
+
+  <question>
+    <text>The crossing between different species is:</text>
+    <option>Intraspecific hybridization</option>
+    <option correct="true">Interspecific hybridization</option>
+    <option>Intervarietal hybridization</option>
+    <option>Inbreeding</option>
+    <explanation>Interspecific: between species (e.g., wheat × rye = Triticale). Intervarietal: between varieties of same species.</explanation>
+  </question>
+
+  <question>
+    <text>Which vitamin is added to poultry feed for growth?</text>
+    <option>Vitamin A</option>
+    <option>Vitamin C</option>
+    <option correct="true">Vitamin D</option>
+    <option>Vitamin K</option>
+    <explanation>Vitamin D for bone development, calcium absorption. Also vitamin A, B-complex, minerals added to feed.</explanation>
+  </question>
+
+  <question>
+    <text>Silage is:</text>
+    <option>Dry fodder</option>
+    <option correct="true">Fermented green fodder</option>
+    <option>Concentrate feed</option>
+    <option>Mineral mixture</option>
+    <explanation>Silage: green fodder preserved by anaerobic fermentation (maize, sorghum). Nutritious, stored in silos.</explanation>
+  </question>
+
+  <question>
+    <text>Which is a marine fish?</text>
+    <option>Catla</option>
+    <option>Rohu</option>
+    <option>Common carp</option>
+    <option correct="true">Mackerel</option>
+    <explanation>Marine: Mackerel, Sardine, Tuna, Pomfret, Bombay duck. Freshwater: Catla, Rohu, Mrigal, Singhara.</explanation>
+  </question>
+
+  <question>
+    <text>The practice of fish farming is called:</text>
+    <option>Apiculture</option>
+    <option>Sericulture</option>
+    <option correct="true">Pisciculture</option>
+    <option>Viticulture</option>
+    <explanation>Pisciculture (aquaculture): controlled rearing of fish. Includes inland (ponds, tanks) and marine culture.</explanation>
+  </question>
+
+  <question>
+    <text>Which weedicide is used in paddy fields?</text>
+    <option>2,4-D</option>
+    <option correct="true">2,4-D</option>
+    <option>Butachlor</option>
+    <option>Atrazine</option>
+    <explanation>2,4-D: selective weedicide for broadleaf weeds in cereals. Butachlor also used in paddy.</explanation>
+  </question>
+
+  <question>
+    <text>Hybridization in plants is done to improve:</text>
+    <option>Yield</option>
+    <option>Disease resistance</option>
+    <option>Quality</option>
+    <option correct="true">All of these</option>
+    <explanation>Hybrid varieties: higher yield, better quality, resistant to pests/diseases, adaptable to conditions.</explanation>
+  </question>
+
+  <question>
+    <text>Which is a kharif pulse?</text>
+    <option>Gram</option>
+    <option>Pea</option>
+    <option correct="true">Arhar (pigeon pea)</option>
+    <option>Lentil</option>
+    <explanation>Kharif pulses: Arhar, Urad, Moong. Rabi pulses: Gram, Pea, Lentil. Pulses rich in protein, fix nitrogen.</explanation>
+  </question>
+
+  <question>
+    <text>The hormone used in fish breeding is:</text>
+    <option>Insulin</option>
+    <option>Thyroxine</option>
+    <option correct="true">Pituitary extract</option>
+    <option>Adrenaline</option>
+    <explanation>Fish pituitary gland extract induces spawning (egg release) in captive breeding (hypophysation).</explanation>
+  </question>
+
+  <question>
+    <text>Which is an oilseed crop?</text>
+    <option>Wheat</option>
+    <option>Rice</option>
+    <option correct="true">Groundnut</option>
+    <option>Maize</option>
+    <explanation>Oilseeds: Groundnut, Mustard, Soybean, Sunflower, Sesame. Provide edible oils.</explanation>
+  </question>
+
+  <question>
+    <text>The practice of rearing silk worms is:</text>
+    <option>Apiculture</option>
+    <option correct="true">Sericulture</option>
+    <option>Pisciculture</option>
+    <option>Horticulture</option>
+    <explanation>Sericulture: Bombyx mori silkworm reared on mulberry leaves → silk production. India second largest producer.</explanation>
+  </question>
+
+  <question>
+    <text>Which fertilizer is rich in phosphorus?</text>
+    <option correct="true">Superphosphate</option>
+    <option>Urea</option>
+    <option>Potash</option>
+    <option>Ammonium sulfate</term>
+    <explanation>Superphosphate (Ca(H₂PO₄)₂): 16-20% P. Single superphosphate (SSP), triple superphosphate (TSP).</explanation>
+  </question>
+
+  <question>
+    <text>Broiler chickens are raised for:</text>
+    <option correct="true">Meat</option>
+    <option>Eggs</option>
+    <option>Feathers</option>
+    <option>Manure</term>
+    <explanation>Broilers: meat production, fast growth (6-7 weeks), high feed efficiency. Require vitamin-rich feed.</explanation>
+  </question>
+
+  <question>
+    <text>Which method prevents soil erosion?</text>
+    <option>Deforestation</option>
+    <option>Overgrazing</option>
+    <option correct="true">Contour ploughing</option>
+    <option>Monoculture</term>
+    <explanation>Contour ploughing: ploughing along contours reduces runoff. Also terrace farming, strip cropping, afforestation.</explanation>
+  </question>
+
+  <question>
+    <text>The nutrient responsible for chlorophyll formation is:</text>
+    <option correct="true">Nitrogen</option>
+    <option>Phosphorus</option>
+    <option>Potassium</option>
+    <option>Calcium</term>
+    <explanation>Nitrogen (N): part of chlorophyll, proteins, enzymes. Deficiency: yellowing (chlorosis), stunted growth.</explanation>
+  </question>
+
+  <question>
+    <text>Which is a winter vegetable?</text>
+    <option>Brinjal</option>
+    <option>Okra</option>
+    <option>Tomato</option>
+    <option correct="true>Cabbage</term>
+    <explanation>Winter (rabi) vegetables: Cabbage, Cauliflower, Carrot, Radish, Spinach. Summer: Brinjal, Okra, Tomato, Cucumber.</explanation>
+  </question>
+
+  <question>
+    <text>Integrated Pest Management (IPM) emphasizes:</text>
+    <option>Only chemical pesticides</option>
+    <option correct="true">Combination of methods</option>
+    <option>Only biological control</option>
+    <option>No pest control</term>
+    <explanation>IPM: cultural, biological, mechanical, chemical methods combined. Reduces pesticide use, eco-friendly.</explanation>
+  </question>
+
+  <question>
+    <text>Which is a milch breed of cattle?</text>
+    <option>Hallikar</option>
+    <option correct="true">Sahiwal</option>
+    <option>Malvi</option>
+    <option>Kangayam</term>
+    <explanation>Milch (dairy) breeds: Sahiwal, Red Sindhi, Gir, Tharparkar. Draught: Hallikar, Malvi, Kangayam. Dual-purpose: Ongole.</explanation>
+  </question>
 </quiz>
