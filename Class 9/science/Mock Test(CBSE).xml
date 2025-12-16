@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <timelimit>50</timelimit>
+    <author>G. S. Tutorial</author>
+    <description>Class 9 Science - Most Important 50 Questions (Selected Chapters)</description>
+  </metadata>
+
+  <!-- Most Important 50 Questions from 12 Selected Chapters -->
+
+  <question>
+    <text>Which of these has strongest intermolecular forces?</text>
+    <option>Gases</option>
+    <option>Liquids</option>
+    <option correct="true">Solids</option>
+    <option>Plasma</option>
+    <explanation>Solids have strongest forces → fixed shape/volume. Gases weakest → no fixed shape/volume.</explanation>
+  </question>
+
+  <question>
+    <text>The SI unit of temperature is:</text>
+    <option>Celsius</option>
+    <option>Fahrenheit</option>
+    <option correct="true">Kelvin</option>
+    <option>Rankine</option>
+    <explanation>SI unit: Kelvin (K). 0 K = -273.15°C (absolute zero). K = °C + 273.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is a pure substance?</text>
+    <option>Air</option>
+    <option>Milk</option>
+    <option correct="true">Gold</option>
+    <option>Sea water</option>
+    <explanation>Gold is element with fixed composition. Others are mixtures.</explanation>
+  </question>
+
+  <question>
+    <text>The method to separate two miscible liquids with close boiling points is:</text>
+    <option>Simple distillation</option>
+    <option correct="true">Fractional distillation</option>
+    <option>Separating funnel</option>
+    <option>Evaporation</option>
+    <explanation>Fractional distillation uses fractionating column for multiple vaporization-condensation cycles.</explanation>
+  </question>
+
+  <question>
+    <text>The number of moles in 52g of He is: (Atomic mass He=4)</text>
+    <option>1</option>
+    <option correct="true">13</option>
+    <option>26</option>
+    <option>52</option>
+    <explanation>Moles = mass/molar mass = 52/4 = 13 moles.</explanation>
+  </question>
+
+  <question>
+    <text>Which law states that mass can neither be created nor destroyed?</text>
+    <option>Law of constant proportions</option>
+    <option correct="true">Law of conservation of mass</option>
+    <option>Avogadro's law</option>
+    <option>Gay-Lussac's law</option>
+    <explanation>Lavoisier's law: total mass constant in chemical reaction.</explanation>
+  </question>
+
+  <question>
+    <text>The formula of calcium phosphate is:</text>
+    <option>CaPO₄</option>
+    <option>Ca₂(PO₄)₃</option>
+    <option correct="true">Ca₃(PO₄)₂</option>
+    <option>Ca₃PO₄</option>
+    <explanation>Ca²⁺ and PO₄³⁻. LCM of charges = 6 → Ca₃(PO₄)₂.</explanation>
+  </question>
+
+  <question>
+    <text>Which subatomic particle was discovered by J.J. Thomson?</text>
+    <option>Proton</option>
+    <option correct="true">Electron</option>
+    <option>Neutron</option>
+    <option>Nucleus</option>
+    <explanation>Cathode ray experiment (1897). Electron has negative charge, mass 1/1840 u.</explanation>
+  </question>
+
+  <question>
+    <text>The number of neutrons in ²³₁₁Na is:</text>
+    <option>11</option>
+    <option correct="true">12</option>
+    <option>23</option>
+    <option>34</option>
+    <explanation>Neutrons = Mass number - Atomic number = 23 - 11 = 12.</explanation>
+  </question>
+
+  <question>
+    <text>Which cell organelle is called "powerhouse of cell"?</text>
+    <option>Nucleus</option>
+    <option>Endoplasmic reticulum</option>
+    <option correct="true">Mitochondria</option>
+    <option>Golgi apparatus</option>
+    <explanation>Mitochondria produce ATP through cellular respiration.</explanation>
+  </question>
+
+  <question>
+    <text>The process by which Amoeba engulfs food is called:</text>
+    <option>Diffusion</option>
+    <option>Osmosis</option>
+    <option correct="true">Phagocytosis</option>
+    <option>Pinocytosis</option>
+    <explanation>Phagocytosis: "cell eating" using pseudopodia. Pinocytosis: "cell drinking".</explanation>
+  </question>
+
+  <question>
+    <text>Which tissue connects bone to bone?</text>
+    <option>Tendon</option>
+    <option correct="true">Ligament</option>
+    <option>Cartilage</option>
+    <option>Areolar tissue</option>
+    <explanation>Ligament: bone to bone (elastic). Tendon: muscle to bone.</explanation>
+  </question>
+
+  <question>
+    <text>The tissue that transports food in plants is:</text>
+    <option correct="true">Phloem</option>
+    <option>Xylem</option>
+    <option>Parenchyma</option>
+    <option>Sclerenchyma</option>
+    <explanation>Phloem: organic nutrients (bidirectional). Xylem: water/minerals (upward).</explanation>
+  </question>
+
+  <question>
+    <text>The SI unit of acceleration is:</text>
+    <option>m/s</option>
+    <option>m</option>
+    <option correct="true">m/s²</option>
+    <option>m²/s</option>
+    <explanation>Acceleration = change in velocity/time = (m/s)/s = m/s².</explanation>
+  </question>
+
+  <question>
+    <text>A body is said to be in uniform motion if it covers:</text>
+    <option>Unequal distances in equal intervals</option>
+    <option correct="true">Equal distances in equal intervals</option>
+    <option>Equal distances in unequal intervals</option>
+    <option>Unequal distances in unequal intervals</option>
+    <explanation>Uniform motion: constant velocity, straight line path.</explanation>
+  </question>
+
+  <question>
+    <text>Newton's first law of motion is also called:</text>
+    <option correct="true">Law of inertia</option>
+    <option>Law of momentum</option>
+    <option>Law of action-reaction</option>
+    <option>Law of force</option>
+    <explanation>Body remains at rest/uniform motion unless acted by external force.</explanation>
+  </question>
+
+  <question>
+    <text>The product of mass and velocity is called:</text>
+    <option>Force</option>
+    <option>Acceleration</option>
+    <option correct="true">Momentum</option>
+    <option>Inertia</option>
+    <explanation>Momentum p = m×v. Vector quantity, conserved in isolated system.</explanation>
+  </question>
+
+  <question>
+    <text>Value of g on moon is about:</text>
+    <option>9.8 m/s²</option>
+    <option correct="true">1.63 m/s²</option>
+    <option>3.7 m/s²</option>
+    <option>0 m/s²</option>
+    <explanation>g_moon ≈ 1/6 g_earth = 9.8/6 ≈ 1.63 m/s² due to smaller mass.</explanation>
+  </question>
+
+  <question>
+    <text>Weight of object on earth is 60N. On moon it will be:</text>
+    <option>60 N</option>
+    <option correct="true">10 N</option>
+    <option>360 N</option>
+    <option>6 N</option>
+    <explanation>Weight ∝ g. g_moon = g_earth/6 → weight = 60/6 = 10 N.</explanation>
+  </question>
+
+  <question>
+    <text>The SI unit of work is:</text>
+    <option>Newton</option>
+    <option>Watt</option>
+    <option correct="true">Joule</option>
+    <option>Pascal</option>
+    <explanation>Work = Force × Displacement. 1 J = 1 N·m.</explanation>
+  </question>
+
+  <question>
+    <text>Kinetic energy of mass m moving at velocity v is:</text>
+    <option>mv</option>
+    <option>mv²</option>
+    <option correct="true">½mv²</option>
+    <option>2mv²</option>
+    <explanation>KE = ½mv². If velocity doubles, KE becomes 4 times.</explanation>
+  </question>
+
+  <question>
+    <text>Sound cannot travel through:</text>
+    <option>Solid</option>
+    <option>Liquid</option>
+    <option>Gas</option>
+    <option correct="true">Vacuum</option>
+    <explanation>Requires material medium. No particles in vacuum to vibrate.</explanation>
+  </question>
+
+  <question>
+    <text>The number of oscillations per second is called:</text>
+    <option>Amplitude</option>
+    <option>Time period</option>
+    <option correct="true">Frequency</option>
+    <option>Wavelength</option>
+    <explanation>Frequency (f) in Hertz (Hz). Human range: 20 Hz to 20,000 Hz.</explanation>
+  </question>
+
+  <question>
+    <text>Which crop is a kharif crop?</text>
+    <option>Wheat</option>
+    <option>Gram</option>
+    <option correct="true">Paddy</option>
+    <option>Mustard</option>
+    <explanation>Kharif: monsoon crops (June-Oct): paddy, maize, cotton. Rabi: winter crops.</explanation>
+  </question>
+
+  <question>
+    <text>White Revolution is associated with:</text>
+    <option>Egg production</option>
+    <option>Wheat production</option>
+    <option correct="true">Milk production</option>
+    <option>Fish production</option>
+    <explanation>Operation Flood by Dr. Verghese Kurien made India largest milk producer.</explanation>
+  </question>
+
+  <question>
+    <text>The process of solid directly changing to gas is called:</text>
+    <option>Evaporation</option>
+    <option>Condensation</option>
+    <option correct="true">Sublimation</option>
+    <option>Fusion</option>
+    <explanation>Examples: camphor, dry ice, iodine, naphthalene balls.</explanation>
+  </question>
+
+  <question>
+    <text>Tyndall effect is shown by:</text>
+    <option>Sugar solution</option>
+    <option>Salt solution</option>
+    <option correct="true">Starch solution</option>
+    <option>Alcohol in water</option>
+    <explanation>Colloidal particles scatter light. True solutions don't show Tyndall effect.</explanation>
+  </question>
+
+  <question>
+    <text>Mass of 1 mole of oxygen molecules (O₂) is:</text>
+    <option>8 g</option>
+    <option>16 g</option>
+    <option correct="true">32 g</option>
+    <option>64 g</option>
+    <explanation>Molar mass O₂ = 2×16 = 32 g/mol.</explanation>
+  </question>
+
+  <question>
+    <text>Rutherford's alpha scattering experiment led to discovery of:</text>
+    <option>Electron</option>
+    <option>Proton</option>
+    <option correct="true">Nucleus</option>
+    <option>Neutron</option>
+    <explanation>Gold foil experiment: most alpha passed through, few deflected → dense nucleus.</explanation>
+  </question>
+
+  <question>
+    <text>Which part of cell contains digestive enzymes?</text>
+    <option>Mitochondria</option>
+    <option>Ribosome</option>
+    <option correct="true">Lysosome</option>
+    <option>Chloroplast</option>
+    <explanation>Lysosomes: "suicide bags", contain hydrolytic enzymes.</explanation>
+  </question>
+
+  <question>
+    <text>The cell wall of plants is made of:</text>
+    <option>Lipid</option>
+    <option>Protein</option>
+    <option correct="true">Cellulose</option>
+    <option>Chitin</option>
+    <explanation>Cellulose: polysaccharide, provides rigidity. Fungal cell wall: chitin.</explanation>
+  </question>
+
+  <question>
+    <text>Which meristem is responsible for increase in girth?</text>
+    <option>Apical meristem</option>
+    <option correct="true">Lateral meristem</option>
+    <option>Intercalary meristem</option>
+    <option>Primary meristem</option>
+    <explanation>Lateral meristem (cambium) causes secondary growth (thickness).</explanation>
+  </question>
+
+  <question>
+    <text>Area under velocity-time graph represents:</text>
+    <option>Acceleration</option>
+    <option correct="true">Displacement</option>
+    <option>Distance</option>
+    <option>Speed</option>
+    <explanation>Area = displacement (vector) or distance (scalar). Slope gives acceleration.</explanation>
+  </question>
+
+  <question>
+    <text>A car accelerates from rest at 2 m/s². Its velocity after 5 seconds is:</text>
+    <option>2 m/s</option>
+    <option>5 m/s</option>
+    <option correct="true">10 m/s</option>
+    <option>25 m/s</option>
+    <explanation>v = u + at = 0 + 2×5 = 10 m/s.</explanation>
+  </question>
+
+  <question>
+    <text>According to Newton's second law, F =</text>
+    <option>m/v</option>
+    <option>mv</option>
+    <option correct="true">ma</option>
+    <option>m/a</option>
+    <explanation>F = ma. Force = rate of change of momentum.</explanation>
+  </question>
+
+  <question>
+    <text>When a bus starts suddenly, passengers fall backward due to:</text>
+    <option correct="true">Inertia of rest</option>
+    <option>Inertia of motion</option>
+    <option>Action-reaction</option>
+    <option>Gravity</option>
+    <explanation>Lower body moves with bus, upper body tends to remain at rest.</explanation>
+  </question>
+
+  <question>
+    <text>If mass of earth becomes 4 times and radius becomes half, then g will become:</text>
+    <option>Same</option>
+    <option>Half</option>
+    <option>4 times</option>
+    <option correct="true">16 times</option>
+    <explanation>g = GM/R² → g' = G(4M)/(R/2)² = 16GM/R² = 16g.</explanation>
+  </question>
+
+  <question>
+    <text>The value of g at center of earth is:</text>
+    <option>9.8 m/s²</option>
+    <option>Maximum</option>
+    <option correct="true">Zero</option>
+    <option>Infinite</option>
+    <explanation>At center, gravitational pull from all sides cancels → net g = 0.</explanation>
+  </question>
+
+  <question>
+    <text>Power is defined as:</text>
+    <option>Force × velocity</option>
+    <option>Work × time</option>
+    <option correct="true">Work/time</option>
+    <option>Energy × distance</option>
+    <explanation>Rate of doing work. SI unit: Watt (W) = J/s.</explanation>
+  </question>
+
+  <question>
+    <text>1 kWh equals:</text>
+    <option>3.6 × 10³ J</option>
+    <option>3.6 × 10⁴ J</option>
+    <option correct="true">3.6 × 10⁶ J</option>
+    <option>3.6 × 10⁹ J</option>
+    <explanation>1 kWh = 1000 W × 3600 s = 3,600,000 J = 3.6×10⁶ J.</explanation>
+  </question>
+
+  <question>
+    <text>Loudness of sound depends on:</text>
+    <option>Frequency</option>
+    <option correct="true">Amplitude</option>
+    <option>Time period</option>
+    <option>Wavelength</option>
+    <explanation>Greater amplitude → louder sound. Measured in decibels (dB).</explanation>
+  </question>
+
+  <question>
+    <text>Pitch of sound depends on:</text>
+    <option>Amplitude</option>
+    <option correct="true">Frequency</option>
+    <option>Loudness</option>
+    <option>Speed</option>
+    <explanation>Higher frequency → higher pitch (shrill). Lower frequency → lower pitch (deep).</explanation>
+  </question>
+
+  <question>
+    <text>Which fertilizer is rich in nitrogen?</text>
+    <option>Superphosphate</option>
+    <option>Potash</option>
+    <option correct="true">Urea</option>
+    <option>NPK</option>
+    <explanation>Urea (CO(NH₂)₂): 46% N. Superphosphate: P, Potash: K.</explanation>
+  </question>
+
+  <question>
+    <text>Green Revolution is associated with:</text>
+    <option>Milk production</option>
+    <option>Fish production</option>
+    <option correct="true">Cereal production</option>
+    <option>Vegetable production</option>
+    <explanation>High-yielding varieties of wheat/rice, fertilizers, irrigation (1960s, Dr. M.S. Swaminathan).</explanation>
+  </question>
+
+  <question>
+    <text>Water has maximum density at:</text>
+    <option>0°C</option>
+    <option correct="true">4°C</option>
+    <option>10°C</option>
+    <option>100°C</option>
+    <explanation>1 g/cm³ at 4°C. Expands below 4°C → ice less dense → floats.</explanation>
+  </question>
+
+  <question>
+    <text>The chemical symbol for potassium is:</text>
+    <option>P</option>
+    <option>Pt</option>
+    <option correct="true">K</option>
+    <option>Po</option>
+    <explanation>K from Latin "kalium". P = phosphorus, Pt = platinum, Po = polonium.</explanation>
+  </question>
+
+  <question>
+    <text>Isotopes have same:</text>
+    <option>Mass number</option>
+    <option>Number of neutrons</option>
+    <option correct="true">Atomic number</option>
+    <option>Both mass and atomic number</option>
+    <explanation>Same protons (atomic number), different neutrons. Examples: ¹H, ²H, ³H.</explanation>
+  </question>
+
+  <question>
+    <text>Which tissue is responsible for movement in our body?</text>
+    <option>Epithelial tissue</option>
+    <option>Nervous tissue</option>
+    <option correct="true">Muscular tissue</option>
+    <option>Connective tissue</option>
+    <explanation>Muscles contract and relax to produce movement. Three types: skeletal, smooth, cardiac.</explanation>
+  </question>
+
+  <question>
+    <text>A body moving with constant speed in circular path has:</text>
+    <option>Constant velocity</option>
+    <option>Zero acceleration</option>
+    <option correct="true">Changing velocity</option>
+    <option>Uniform acceleration</option>
+    <explanation>Speed constant but direction changes → velocity changes → acceleration (centripetal) present.</explanation>
+  </question>
+
+  <question>
+    <text>The work done by centripetal force on a body in circular motion is:</text>
+    <option>Positive</option>
+    <option>Negative</option>
+    <option correct="true">Zero</option>
+    <option>Maximum</option>
+    <explanation>Force perpendicular to displacement → θ = 90° → cos90° = 0 → Work = 0.</explanation>
+  </question>
+
+  <question>
+    <text>The kinetic energy of a body becomes 4 times when its:</text>
+    <option>Mass doubled</option>
+    <option correct="true">Velocity doubled</option>
+    <option>Mass halved</option>
+    <option>Velocity halved</option>
+    <explanation>KE ∝ v². Double v → KE ×4. Double mass → KE ×2 only.</explanation>
+  </question>
+
+  <question>
+    <text>SONAR works on principle of:</text>
+    <option>Reflection of light</option>
+    <option>Refraction of sound</option>
+    <option correct="true">Reflection of sound</option>
+    <option>Diffraction of sound</option>
+    <explanation>Sound Navigation and Ranging: ultrasound emitted → echo detected → measure depth.</explanation>
+  </question>
+</quiz>
