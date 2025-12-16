@@ -143,6 +143,27 @@
       transform: translateY(-1px);
     }
 
+    .notification-btn {
+      background: rgba(59, 130, 246, 0.15);
+      color: #93c5fd;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .notification-btn:hover {
+      background: rgba(59, 130, 246, 0.25);
+      transform: translateY(-1px);
+    }
+
     /* MAIN CONTENT */
     .main-content {
       width: 100%;
@@ -959,6 +980,83 @@
       transform: translateY(-1px);
     }
 
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 10000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 400px;
+      width: 90%;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .modal-title {
+      margin-top: 0;
+      color: #e5e7eb;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .modal-label {
+      display: block;
+      margin: 15px 0;
+      color: #d1d5db;
+      font-size: 0.95rem;
+    }
+
+    .modal-info {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: #9ca3af;
+      background: rgba(15, 23, 42, 0.5);
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid rgba(75, 85, 99, 0.3);
+    }
+
+    .modal-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .modal-btn {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .modal-btn.primary {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .modal-btn.secondary {
+      background: #64748b;
+      color: white;
+    }
+
+    .modal-btn:hover {
+      transform: translateY(-1px);
+    }
+
     /* Responsive */
     @media (max-width: 700px) {
       .main-content {
@@ -1000,6 +1098,31 @@
         gap: 8px;
       }
     }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #3b82f6;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      z-index: 9999;
+      font-size: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      animation: slideIn 0.3s ease;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideOut {
+      from { transform: translateX(0); opacity: 1; }
+      to { transform: translateX(100%); opacity: 0; }
+    }
   </style>
 </head>
 <body>
@@ -1020,7 +1143,7 @@
         <button class="logout-btn" id="header-logout-btn">
           ⏻ Logout
         </button>
-        <button class="logout-btn" id="notification-settings-btn" style="background:rgba(59,130,246,0.15);color:#93c5fd;border-color:rgba(59,130,246,0.3);">
+        <button class="notification-btn" id="notification-settings-btn">
           🔔
         </button>
       </div>
@@ -1150,27 +1273,38 @@
   </div>
 
   <!-- Notification Settings Modal -->
-  <div id="notification-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:10000; justify-content:center; align-items:center;">
-    <div style="background:#1e293b; padding:30px; border-radius:15px; max-width:400px; width:90%;">
-      <h3 style="margin-top:0; color:#e5e7eb;">🔔 Notification Settings</h3>
-      <div style="margin:20px 0;">
-        <label style="display:block; margin:15px 0; color:#d1d5db;">
+  <div id="notification-modal" class="modal">
+    <div class="modal-content">
+      <h3 class="modal-title">🔔 Notification Settings</h3>
+      <div>
+        <label class="modal-label">
           <input type="checkbox" id="enable-whatsapp" checked style="margin-right:10px;">
           Send WhatsApp notifications to 9706195457
         </label>
-        <label style="display:block; margin:15px 0; color:#d1d5db;">
+        <label class="modal-label">
           <input type="checkbox" id="enable-telegram" style="margin-right:10px;">
           Telegram Bot Notifications
         </label>
-        <div style="margin-top:25px; font-size:0.9rem; color:#9ca3af;">
+        <div class="modal-info">
           <strong>Current Setup:</strong><br>
           • WhatsApp: Active (to 9706195457)<br>
-          • Telegram: Not configured
+          • Telegram: Configure below
+        </div>
+        <div style="margin-top: 15px;">
+          <label style="font-size: 0.9rem; color: #9ca3af;">Telegram Bot Token:</label>
+          <input type="text" id="telegram-token" class="form-input" style="margin-top: 5px;" 
+                 placeholder="e.g., 8302552944:AAGxwgJhQ5pmRopQkCs9BmGZwLetrFnrGfY">
+          <label style="font-size: 0.9rem; color: #9ca3af; margin-top: 10px;">Telegram Chat ID:</label>
+          <input type="text" id="telegram-chat-id" class="form-input" style="margin-top: 5px;" 
+                 placeholder="e.g., 123456789">
+          <button onclick="getTelegramChatId()" class="back-btn" style="margin-top: 10px; width: 100%;">
+            📱 Get Chat ID from Telegram
+          </button>
         </div>
       </div>
-      <div style="display:flex; gap:10px;">
-        <button onclick="saveNotificationSettings()" style="flex:1; background:#3b82f6; color:white; border:none; padding:12px; border-radius:8px; cursor:pointer;">Save</button>
-        <button onclick="closeNotificationSettings()" style="flex:1; background:#64748b; color:white; border:none; padding:12px; border-radius:8px; cursor:pointer;">Close</button>
+      <div class="modal-buttons">
+        <button class="modal-btn primary" onclick="saveNotificationSettings()">Save</button>
+        <button class="modal-btn secondary" onclick="closeNotificationSettings()">Close</button>
       </div>
     </div>
   </div>
@@ -1183,9 +1317,9 @@ const CONFIG = {
     GID: '0'
   },
   NOTIFICATIONS: {
-    WHATSAPP_NUMBER: '9706195457',  // YOUR WhatsApp number
-    TELEGRAM_BOT_TOKEN: '',  '8302552944:AAGxwgJhQ5pmRopQkCs9BmGZwLetrFnrGfY'
-    TELEGRAM_CHAT_ID: ''     '5903174042'
+    WHATSAPP_NUMBER: '9706195457',
+    TELEGRAM_BOT_TOKEN: '8302552944:AAGxwgJhQ5pmRopQkCs9BmGZwLetrFnrGfY',
+    TELEGRAM_CHAT_ID: ''
   }
 };
 
@@ -1210,12 +1344,15 @@ let classesConfig = [];
 let failedAttempts = 0;
 const MAX_ATTEMPTS = 3;
 const COOLDOWN_TIME = 30;
+let cooldownTimer = null;
+let isOnCooldown = false;
 
 // ========== DOM ELEMENTS ==========
 const fixedHeaderEl = document.querySelector(".fixed-header");
 const headerUserInfoEl = document.getElementById("header-user-info");
 const headerUsernameEl = document.getElementById("header-username");
 const headerLogoutBtnEl = document.getElementById("header-logout-btn");
+const notificationSettingsBtn = document.getElementById("notification-settings-btn");
 const loginContainerEl = document.getElementById("login-container");
 const classSelectionEl = document.getElementById("class-selection");
 const subjectSelectionEl = document.getElementById("subject-selection");
@@ -1252,7 +1389,11 @@ const questionCounterEl = document.getElementById("question-counter");
 const progressBarFillEl = document.getElementById("progress-bar-fill");
 const scoreMiniEl = document.getElementById("score-mini");
 const finalScoreEl = document.getElementById("final-score");
-const notificationSettingsBtn = document.getElementById("notification-settings-btn");
+const notificationModal = document.getElementById("notification-modal");
+const enableWhatsappCheckbox = document.getElementById("enable-whatsapp");
+const enableTelegramCheckbox = document.getElementById("enable-telegram");
+const telegramTokenInput = document.getElementById("telegram-token");
+const telegramChatIdInput = document.getElementById("telegram-chat-id");
 
 // ========== NOTIFICATION SYSTEM ==========
 class NotificationSystem {
@@ -1269,10 +1410,24 @@ class NotificationSystem {
     if (saved) {
       this.settings = JSON.parse(saved);
     }
+    // Load Telegram config from CONFIG
+    if (CONFIG.NOTIFICATIONS.TELEGRAM_BOT_TOKEN) {
+      telegramTokenInput.value = CONFIG.NOTIFICATIONS.TELEGRAM_BOT_TOKEN;
+    }
+    if (CONFIG.NOTIFICATIONS.TELEGRAM_CHAT_ID) {
+      telegramChatIdInput.value = CONFIG.NOTIFICATIONS.TELEGRAM_CHAT_ID;
+    }
   }
 
   saveSettings() {
     localStorage.setItem('notificationSettings', JSON.stringify(this.settings));
+    // Save Telegram config to CONFIG
+    if (telegramTokenInput.value) {
+      CONFIG.NOTIFICATIONS.TELEGRAM_BOT_TOKEN = telegramTokenInput.value;
+    }
+    if (telegramChatIdInput.value) {
+      CONFIG.NOTIFICATIONS.TELEGRAM_CHAT_ID = telegramChatIdInput.value;
+    }
   }
 
   async sendWhatsApp(message) {
@@ -1285,7 +1440,10 @@ class NotificationSystem {
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
       
       // Open in new tab
-      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      const newWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      if (newWindow) {
+        setTimeout(() => newWindow.close(), 1000); // Close after 1 second
+      }
       
       console.log("📱 WhatsApp notification sent");
       return true;
@@ -1297,7 +1455,10 @@ class NotificationSystem {
   }
 
   async sendTelegram(message) {
-    if (!this.settings.telegram || !CONFIG.NOTIFICATIONS.TELEGRAM_BOT_TOKEN) return false;
+    if (!this.settings.telegram || !CONFIG.NOTIFICATIONS.TELEGRAM_BOT_TOKEN || !CONFIG.NOTIFICATIONS.TELEGRAM_CHAT_ID) {
+      console.log("Telegram not configured or disabled");
+      return false;
+    }
     
     try {
       const url = `https://api.telegram.org/bot${CONFIG.NOTIFICATIONS.TELEGRAM_BOT_TOKEN}/sendMessage`;
@@ -1312,10 +1473,17 @@ class NotificationSystem {
         })
       });
       
-      return response.ok;
+      const data = await response.json();
+      if (data.ok) {
+        console.log("✅ Telegram message sent successfully");
+        return true;
+      } else {
+        console.error("Telegram API error:", data.description);
+        return false;
+      }
       
     } catch (error) {
-      console.error("Telegram error:", error);
+      console.error("Telegram fetch error:", error);
       return false;
     }
   }
@@ -1338,8 +1506,11 @@ class NotificationSystem {
     
 🌐 *Platform:* G.S. Tutorial Online Quiz`;
     
+    let whatsappSent = false;
+    let telegramSent = false;
+    
     if (this.settings.whatsapp) {
-      await this.sendWhatsApp(message);
+      whatsappSent = await this.sendWhatsApp(message);
     }
     
     if (this.settings.telegram) {
@@ -1353,10 +1524,12 @@ class NotificationSystem {
       
 🌐 <b>Platform:</b> G.S. Tutorial Online Quiz`;
       
-      await this.sendTelegram(telegramMsg);
+      telegramSent = await this.sendTelegram(telegramMsg);
     }
     
-    this.showToast("📱 Login notification sent");
+    if (whatsappSent || telegramSent) {
+      this.showToast("📱 Login notification sent");
+    }
   }
 
   async notifyQuizResult(stats, chapterName) {
@@ -1366,6 +1539,8 @@ class NotificationSystem {
       dateStyle: 'medium',
       timeStyle: 'short'
     });
+    
+    const performanceMsg = this.getPerformanceMessage(stats.percentage);
     
     const message = `🏆 *G.S. Tutorial - Quiz Result*
     
@@ -1380,10 +1555,13 @@ class NotificationSystem {
 📈 *Percentage:* ${stats.percentage}%
 ⏱️ *Time Taken:* ${formatTimeTaken() || 'N/A'}
     
-🎯 *Performance:* ${this.getPerformanceMessage(stats.percentage)}`;
+🎯 *Performance:* ${performanceMsg}`;
+    
+    let whatsappSent = false;
+    let telegramSent = false;
     
     if (this.settings.whatsapp) {
-      await this.sendWhatsApp(message);
+      whatsappSent = await this.sendWhatsApp(message);
     }
     
     if (this.settings.telegram) {
@@ -1400,12 +1578,14 @@ class NotificationSystem {
 📈 <b>Percentage:</b> ${stats.percentage}%
 ⏱️ <b>Time Taken:</b> ${formatTimeTaken() || 'N/A'}
       
-🎯 <b>Performance:</b> ${this.getPerformanceMessage(stats.percentage)}`;
+🎯 <b>Performance:</b> ${performanceMsg}`;
       
-      await this.sendTelegram(telegramMsg);
+      telegramSent = await this.sendTelegram(telegramMsg);
     }
     
-    this.showToast("🏆 Quiz result notification sent");
+    if (whatsappSent || telegramSent) {
+      this.showToast("🏆 Quiz result notification sent");
+    }
   }
 
   getPerformanceMessage(percentage) {
@@ -1417,21 +1597,13 @@ class NotificationSystem {
   }
 
   showToast(message) {
+    // Remove existing toast
+    const existingToast = document.querySelector('.toast');
+    if (existingToast) existingToast.remove();
+    
     const toast = document.createElement('div');
+    toast.className = 'toast';
     toast.textContent = message;
-    toast.style.cssText = `
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #3b82f6;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      z-index: 9999;
-      font-size: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      animation: slideIn 0.3s ease;
-    `;
     
     document.body.appendChild(toast);
     
@@ -1461,11 +1633,67 @@ function shuffleArray(arr) {
   }
 }
 
+function showNotificationSettings() {
+  enableWhatsappCheckbox.checked = notificationSystem.settings.whatsapp;
+  enableTelegramCheckbox.checked = notificationSystem.settings.telegram;
+  notificationModal.style.display = 'flex';
+}
+
+function closeNotificationSettings() {
+  notificationModal.style.display = 'none';
+}
+
+function saveNotificationSettings() {
+  notificationSystem.settings = {
+    whatsapp: enableWhatsappCheckbox.checked,
+    telegram: enableTelegramCheckbox.checked
+  };
+  
+  // Save Telegram credentials
+  CONFIG.NOTIFICATIONS.TELEGRAM_BOT_TOKEN = telegramTokenInput.value.trim();
+  CONFIG.NOTIFICATIONS.TELEGRAM_CHAT_ID = telegramChatIdInput.value.trim();
+  
+  notificationSystem.saveSettings();
+  notificationSystem.showToast("Notification settings saved!");
+  closeNotificationSettings();
+}
+
+async function getTelegramChatId() {
+  const token = telegramTokenInput.value.trim();
+  if (!token) {
+    notificationSystem.showToast("Please enter Telegram Bot Token first");
+    return;
+  }
+  
+  notificationSystem.showToast("Getting Chat ID...");
+  
+  try {
+    const response = await fetch(`https://api.telegram.org/bot${token}/getUpdates`);
+    const data = await response.json();
+    
+    if (data.ok && data.result.length > 0) {
+      const chatId = data.result[0].message.chat.id;
+      telegramChatIdInput.value = chatId;
+      notificationSystem.showToast(`✅ Chat ID found: ${chatId}`);
+    } else {
+      notificationSystem.showToast("❌ Send /start to your bot first");
+    }
+  } catch (error) {
+    notificationSystem.showToast("❌ Error getting Chat ID");
+    console.error("Error getting Chat ID:", error);
+  }
+}
+
 // ========== LOGIN SYSTEM ==========
 function resetFailedAttempts() {
   failedAttempts = 0;
+  isOnCooldown = false;
   attemptCounterEl.style.display = 'none';
   cooldownMessageEl.style.display = 'none';
+  if (cooldownTimer) {
+    clearInterval(cooldownTimer);
+    cooldownTimer = null;
+  }
 }
 
 function updateAttemptCounter() {
@@ -1473,10 +1701,40 @@ function updateAttemptCounter() {
   attemptsRemainingEl.textContent = remaining;
   if (failedAttempts > 0) {
     attemptCounterEl.style.display = 'flex';
-    if (remaining <= 1) attemptCounterEl.className = 'attempt-counter critical';
-    else if (remaining <= 2) attemptCounterEl.className = 'attempt-counter warning';
-    else attemptCounterEl.className = 'attempt-counter';
+    if (remaining <= 1) {
+      attemptCounterEl.className = 'attempt-counter critical';
+    } else if (remaining <= 2) {
+      attemptCounterEl.className = 'attempt-counter warning';
+    } else {
+      attemptCounterEl.className = 'attempt-counter';
+    }
+  } else {
+    attemptCounterEl.style.display = 'none';
   }
+}
+
+function startCooldown() {
+  isOnCooldown = true;
+  loginBtnEl.disabled = true;
+  cooldownMessageEl.style.display = 'block';
+  attemptCounterEl.style.display = 'none';
+  
+  let seconds = COOLDOWN_TIME;
+  cooldownTimerEl.textContent = seconds;
+  
+  cooldownTimer = setInterval(() => {
+    seconds--;
+    cooldownTimerEl.textContent = seconds;
+    
+    if (seconds <= 0) {
+      clearInterval(cooldownTimer);
+      isOnCooldown = false;
+      loginBtnEl.disabled = false;
+      cooldownMessageEl.style.display = 'none';
+      resetFailedAttempts();
+      usernameEl.focus();
+    }
+  }, 1000);
 }
 
 async function loadUsersFromGoogleSheet() {
@@ -1514,7 +1772,7 @@ async function loadUsersFromGoogleSheet() {
     return true;
   } catch (error) {
     console.error("Error loading users:", error);
-    loginErrorEl.textContent = "⚠️ Cannot connect to login database.";
+    loginErrorEl.textContent = "⚠️ Cannot connect to login database. Please check internet connection.";
     loginErrorEl.style.display = "block";
     userList = [];
     return false;
@@ -1533,8 +1791,9 @@ function login(user) {
   headerUsernameEl.textContent = user.name;
   
   fixedHeaderEl.style.display = "block";
-  headerUserInfoEl.style.display = "block";
+  headerUserInfoEl.style.display = "flex";
   headerLogoutBtnEl.style.display = "block";
+  notificationSettingsBtn.style.display = "block";
   loginContainerEl.style.display = "none";
   classSelectionEl.style.display = "block";
   
@@ -1543,10 +1802,10 @@ function login(user) {
   
   console.log(`User ${user.name} logged in`);
   
-  // Send login notification after 2 seconds
+  // Send login notification after 1 second
   setTimeout(() => {
     notificationSystem.notifyLogin(user);
-  }, 2000);
+  }, 1000);
 }
 
 function logout() {
@@ -1573,16 +1832,19 @@ async function loadClassesConfiguration() {
   try {
     const response = await fetch('classes.json');
     classesConfig = await response.json();
+    console.log("Loaded classes configuration:", classesConfig);
     return true;
   } catch (error) {
     console.error("Error loading classes.json:", error);
+    // Fallback to default configuration
     classesConfig = [{
       "id": "8",
       "name": "Class 8",
       "icon": "📚",
+      "description": "Mathematics & Science",
       "subjects": [
-        {"id": "mathematics", "name": "Mathematics", "icon": "📐", "desc": "Algebra, Geometry, Mensuration"},
-        {"id": "science", "name": "Science", "icon": "🔬", "desc": "Physics, Chemistry, Biology"}
+        {"id": "mathematics", "name": "Mathematics", "icon": "📐", "description": "Algebra, Geometry, Mensuration"},
+        {"id": "science", "name": "Science", "icon": "🔬", "description": "Physics, Chemistry, Biology"}
       ]
     }];
     return true;
@@ -1612,7 +1874,7 @@ function loadClasses() {
     card.innerHTML = `
       <div class="class-icon">${cls.icon}</div>
       <div class="class-name">${cls.name}</div>
-      <div class="class-desc">${cls.subjects.map(s => s.name).join(', ')}</div>
+      <div class="class-desc">${cls.description}</div>
     `;
     card.addEventListener("click", () => showSubjectSelection(cls.id));
     classGridEl.appendChild(card);
@@ -1637,7 +1899,7 @@ function showSubjectSelection(className) {
     card.innerHTML = `
       <div class="subject-icon">${subject.icon}</div>
       <div class="subject-name">${subject.name}</div>
-      <div class="class-desc">${subject.desc}</div>
+      <div class="subject-desc">${subject.description}</div>
     `;
     card.addEventListener("click", () => {
       currentSubject = subject.name;
@@ -1662,12 +1924,25 @@ function showQuizContainer(subjectName) {
   loadChapters();
 }
 
+function showClassSelection() {
+  classSelectionEl.style.display = "block";
+  subjectSelectionEl.style.display = "none";
+  quizContainerEl.style.display = "none";
+  resetQuizState();
+}
+
 async function loadChapters() {
   try {
+    // Clean subject name for URL
+    const cleanSubject = currentSubject.toLowerCase()
+      .replace(/ /g, '-')
+      .replace(/[^a-z0-9-]/g, '');
+    
     const pathOptions = [
+      `Class ${currentClass}/${cleanSubject}/chapters.json`,
       `Class ${currentClass}/${currentSubject.toLowerCase()}/chapters.json`,
-      `${currentClass}/${currentSubject.toLowerCase()}/chapters.json`,
-      `${currentClass}/${currentSubject}/chapters.json`
+      `${currentClass}/${cleanSubject}/chapters.json`,
+      `${currentClass}/${currentSubject.toLowerCase()}/chapters.json`
     ];
     
     let response = null;
@@ -1675,17 +1950,21 @@ async function loadChapters() {
       try {
         response = await fetch(path);
         if (response.ok) break;
-      } catch (err) {}
+      } catch (err) {
+        console.log(`Error loading from ${path}:`, err.message);
+      }
     }
     
-    if (!response || !response.ok) throw new Error("Cannot find chapters.json");
+    if (!response || !response.ok) {
+      throw new Error(`Cannot find chapters.json for ${currentSubject}`);
+    }
     
     chaptersList = await response.json();
     populateChapterDropdown();
     
   } catch (err) {
     console.error("Error loading chapters:", err);
-    topicSelectEl.innerHTML = `<option value="">Error loading chapters</option>`;
+    topicSelectEl.innerHTML = `<option value="">Error loading chapters: ${err.message}</option>`;
     startBtnEl.disabled = true;
   }
 }
@@ -1702,6 +1981,10 @@ function populateChapterDropdown() {
       }
     });
     startBtnEl.disabled = false;
+    quizQuestionCountEl.textContent = `${chaptersList.length} chapters available`;
+  } else {
+    startBtnEl.disabled = true;
+    quizQuestionCountEl.textContent = "0 chapters";
   }
 }
 
@@ -1728,7 +2011,7 @@ function resetQuizState() {
   finishBtn.textContent = "Finish Quiz";
   finishBtn.onclick = () => {
     if (!questionsLoaded) return;
-    if (confirm("Finish the quiz?")) showFinalResult();
+    if (confirm("Are you sure you want to finish the quiz?")) showFinalResult();
   };
   finalScoreEl.style.display = "none";
   progressBarFillEl.style.width = "0%";
@@ -1744,6 +2027,7 @@ function parseXMLToQuestions(xmlText) {
   const xmlDoc = parser.parseFromString(xmlText, "application/xml");
   timerDuration = 0;
 
+  // Check for timer in metadata
   const metadataNode = xmlDoc.getElementsByTagName("metadata")[0];
   if (metadataNode) {
     const timeLimitNode = metadataNode.getElementsByTagName("timeLimit")[0];
@@ -1829,10 +2113,22 @@ function updateTimerDisplay() {
   const minutes = Math.floor((timeRemaining % 3600000) / 60000);
   const seconds = Math.floor((timeRemaining % 60000) / 1000);
   timerDisplayEl.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  
+  // Add warning colors
+  timerDisplayEl.classList.remove("timer-warning", "timer-critical");
+  if (timeRemaining <= 5 * 60 * 1000) { // 5 minutes
+    timerDisplayEl.classList.add("timer-warning");
+  }
+  if (timeRemaining <= 1 * 60 * 1000) { // 1 minute
+    timerDisplayEl.classList.add("timer-critical");
+  }
 }
 
 function stopTimer() {
-  if (timerInterval) clearInterval(timerInterval);
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
   timerContainerEl.style.display = "none";
 }
 
@@ -1844,11 +2140,19 @@ async function loadQuestionsFromXML(chapterName) {
   quizTopicNameEl.textContent = trimmed;
 
   try {
+    // Clean chapter name for filename
     const cleanChapterName = trimmed.replace(/[<>:"/\\|?*]/g, '');
+    
+    // Clean subject name for URL
+    const cleanSubject = currentSubject.toLowerCase()
+      .replace(/ /g, '-')
+      .replace(/[^a-z0-9-]/g, '');
+    
     const pathOptions = [
+      `Class ${currentClass}/${cleanSubject}/${cleanChapterName}.xml`,
       `Class ${currentClass}/${currentSubject.toLowerCase()}/${cleanChapterName}.xml`,
-      `${currentClass}/${currentSubject.toLowerCase()}/${cleanChapterName}.xml`,
-      `${currentClass}/${currentSubject}/${cleanChapterName}.xml`
+      `${currentClass}/${cleanSubject}/${cleanChapterName}.xml`,
+      `${currentClass}/${currentSubject.toLowerCase()}/${cleanChapterName}.xml`
     ];
 
     let xmlText = null;
@@ -1910,6 +2214,7 @@ function renderQuestion() {
   feedbackEl.textContent = "";
   feedbackEl.className = "feedback";
 
+  // Clear existing explanation
   const existingExplanation = feedbackEl.querySelector('.explanation');
   if (existingExplanation) existingExplanation.remove();
 
@@ -1944,6 +2249,7 @@ function renderQuestion() {
   nextBtn.disabled = true;
   finishBtn.disabled = false;
 
+  // If already answered this question, show feedback
   if (userAnswers[currentIndex] !== undefined) {
     const selectedIndex = userAnswers[currentIndex];
     const isCorrect = (selectedIndex === q.correctIndex);
@@ -2018,8 +2324,11 @@ function lockOptions() {
 
 function goToNextQuestion() {
   currentIndex++;
-  if (currentIndex < questions.length) renderQuestion();
-  else showFinalResult();
+  if (currentIndex < questions.length) {
+    renderQuestion();
+  } else {
+    showFinalResult();
+  }
 }
 
 function goToPreviousQuestion() {
@@ -2059,13 +2368,13 @@ async function showFinalResult() {
   // Send quiz result notification
   setTimeout(() => {
     notificationSystem.notifyQuizResult(stats, currentTopicName);
-  }, 2000);
+  }, 1000);
   
   let performanceMessage = "";
-  if (stats.percentage >= 80) performanceMessage = "🎉 Excellent!";
-  else if (stats.percentage >= 60) performanceMessage = "👍 Good job!";
-  else if (stats.percentage >= 40) performanceMessage = "📚 Keep learning!";
-  else performanceMessage = "📖 Needs improvement.";
+  if (stats.percentage >= 80) performanceMessage = "🎉 Excellent! Outstanding performance!";
+  else if (stats.percentage >= 60) performanceMessage = "👍 Good job! Keep practicing!";
+  else if (stats.percentage >= 40) performanceMessage = "📚 Keep learning! Review the chapter again.";
+  else performanceMessage = "📖 Needs improvement. Study the chapter thoroughly.";
   
   finalScoreEl.innerHTML = `
     <div class="result-header">Results - ${currentTopicName}</div>
@@ -2109,6 +2418,10 @@ function restartQuiz() {
   previousBtn.style.display = "inline-block";
   finishBtn.style.display = "inline-block";
   finishBtn.textContent = "Finish Quiz";
+  finishBtn.onclick = () => {
+    if (!questionsLoaded) return;
+    if (confirm("Are you sure you want to finish the quiz?")) showFinalResult();
+  };
   finalScoreEl.style.display = "none";
   if (timerDuration > 0) startTimer();
   renderQuestion();
@@ -2123,6 +2436,10 @@ function showQuestionReview() {
   finishBtn.onclick = () => showFinalResult();
   currentIndex = 0;
   
+  renderReviewQuestion();
+}
+
+function renderReviewQuestion() {
   const q = questions[currentIndex];
   questionTextEl.textContent = q.question;
   optionsListEl.innerHTML = "";
@@ -2132,6 +2449,10 @@ function showQuestionReview() {
     li.className = "option";
     li.classList.add("disabled");
     if (idx === q.correctIndex) li.classList.add("correct");
+    if (userAnswers[currentIndex] === idx && userAnswers[currentIndex] !== q.correctIndex) {
+      li.classList.add("incorrect");
+    }
+    
     const label = document.createElement("div");
     label.textContent = opt;
     li.appendChild(label);
@@ -2146,11 +2467,38 @@ function showQuestionReview() {
     explanationDiv.innerHTML = `<strong>Explanation:</strong> ${q.explanation}`;
     feedbackEl.appendChild(explanationDiv);
   }
+  
+  questionCounterEl.textContent = `Review ${currentIndex + 1} / ${questions.length}`;
+  previousBtn.disabled = (currentIndex === 0);
+  nextBtn.disabled = false;
+  
+  nextBtn.onclick = () => {
+    currentIndex++;
+    if (currentIndex < questions.length) {
+      renderReviewQuestion();
+    } else {
+      showFinalResult();
+    }
+  };
+  
+  previousBtn.onclick = () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      renderReviewQuestion();
+    }
+  };
 }
 
 // ========== EVENT LISTENERS ==========
 loginFormEl.addEventListener("submit", async function(e) {
   e.preventDefault();
+  
+  if (isOnCooldown) {
+    loginErrorEl.textContent = "Please wait for the cooldown period to end before trying again.";
+    loginErrorEl.style.display = "block";
+    return;
+  }
+  
   const username = usernameEl.value.trim();
   const password = passwordEl.value.trim();
   
@@ -2167,7 +2515,7 @@ loginFormEl.addEventListener("submit", async function(e) {
   
   const loaded = await loadUsersFromGoogleSheet();
   if (!loaded || userList.length === 0) {
-    loginErrorEl.textContent = "⚠️ Cannot load users. Check internet.";
+    loginErrorEl.textContent = "⚠️ Cannot load users. Check internet connection.";
     loginErrorEl.style.display = "block";
     loginBtnEl.disabled = false;
     loginBtnEl.innerHTML = '🔒 Login';
@@ -2183,6 +2531,7 @@ loginFormEl.addEventListener("submit", async function(e) {
       failedAttempts++;
       updateAttemptCounter();
       if (failedAttempts >= MAX_ATTEMPTS) {
+        startCooldown();
         loginErrorEl.textContent = `Too many failed attempts. Please wait ${COOLDOWN_TIME} seconds.`;
       } else {
         loginErrorEl.textContent = `Invalid username or password. ${MAX_ATTEMPTS - failedAttempts} attempt(s) remaining.`;
@@ -2207,13 +2556,7 @@ passwordToggleEl.addEventListener("click", () => {
 
 headerLogoutBtnEl.addEventListener("click", logout);
 notificationSettingsBtn.addEventListener("click", showNotificationSettings);
-
-backToClassesBtn.addEventListener("click", () => {
-  classSelectionEl.style.display = "block";
-  subjectSelectionEl.style.display = "none";
-  quizContainerEl.style.display = "none";
-  resetQuizState();
-});
+backToClassesBtn.addEventListener("click", showClassSelection);
 
 startBtnEl.addEventListener("click", () => {
   const dropdownVal = topicSelectEl.value;
@@ -2223,28 +2566,6 @@ startBtnEl.addEventListener("click", () => {
 
 nextBtn.addEventListener("click", goToNextQuestion);
 previousBtn.addEventListener("click", goToPreviousQuestion);
-
-// ========== NOTIFICATION SETTINGS UI ==========
-function showNotificationSettings() {
-  const modal = document.getElementById('notification-modal');
-  document.getElementById('enable-whatsapp').checked = notificationSystem.settings.whatsapp;
-  document.getElementById('enable-telegram').checked = notificationSystem.settings.telegram;
-  modal.style.display = 'flex';
-}
-
-function closeNotificationSettings() {
-  document.getElementById('notification-modal').style.display = 'none';
-}
-
-function saveNotificationSettings() {
-  notificationSystem.settings = {
-    whatsapp: document.getElementById('enable-whatsapp').checked,
-    telegram: document.getElementById('enable-telegram').checked
-  };
-  notificationSystem.saveSettings();
-  notificationSystem.showToast("Notification settings saved!");
-  closeNotificationSettings();
-}
 
 // ========== INITIALIZATION ==========
 async function initializeApp() {
@@ -2256,6 +2577,7 @@ async function initializeApp() {
   fixedHeaderEl.style.display = "none";
   headerUserInfoEl.style.display = "none";
   headerLogoutBtnEl.style.display = "none";
+  notificationSettingsBtn.style.display = "none";
   classSelectionEl.style.display = "none";
   subjectSelectionEl.style.display = "none";
   quizContainerEl.style.display = "none";
@@ -2264,13 +2586,14 @@ async function initializeApp() {
   currentPathEl.style.display = "none";
   attemptCounterEl.style.display = "none";
   cooldownMessageEl.style.display = "none";
+  notificationModal.style.display = "none";
   
   console.log("G.S. Tutorial Platform Initialized");
   console.log("WhatsApp notifications will be sent to:", CONFIG.NOTIFICATIONS.WHATSAPP_NUMBER);
+  console.log("Telegram Bot Token:", CONFIG.NOTIFICATIONS.TELEGRAM_BOT_TOKEN);
 }
 
 document.addEventListener("DOMContentLoaded", initializeApp);
   </script>
 </body>
 </html>
-
