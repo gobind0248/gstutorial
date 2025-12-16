@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 8 Science - Chapter 3: Coal and Petroleum</description>
+  </metadata>
+
+  <!-- Previous Year Questions (CBSE/SEBA) -->
+
+  <question>
+    <text>(CBSE 2023) Which of the following is a fossil fuel?</text>
+    <option>Biogas</option>
+    <option>Hydrogen gas</option>
+    <option correct="true">Natural gas</option>
+    <option>Wood</option>
+    <explanation>Natural gas is a fossil fuel formed from the remains of ancient plants and animals. Biogas is renewable, wood is biomass.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2023) Which product is obtained from the destructive distillation of coal?</text>
+    <option>Petrol</option>
+    <option correct="true">Coal tar</option>
+    <option>Kerosene</option>
+    <option>Diesel</option>
+    <explanation>Coal tar is obtained by destructive distillation of coal. Petrol, kerosene, and diesel are obtained from petroleum.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2022) Which gas is produced when coal is burned in insufficient air?</text>
+    <option>Carbon dioxide</option>
+    <option correct="true">Carbon monoxide</option>
+    <option>Methane</option>
+    <option>Nitrogen dioxide</option>
+    <explanation>Insufficient air (incomplete combustion) produces carbon monoxide, which is poisonous.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2022) Which of the following is not a petroleum product?</text>
+    <option>LPG</option>
+    <option>Paraffin wax</option>
+    <option>Bitumen</option>
+    <option correct="true">Coke</option>
+    <explanation>Coke is obtained from coal, not petroleum. LPG, paraffin wax, and bitumen are petroleum products.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2021) What is the main constituent of natural gas?</text>
+    <option>Ethane</option>
+    <option correct="true">Methane</option>
+    <option>Propane</option>
+    <option>Butane</option>
+    <explanation>Natural gas mainly consists of methane (about 90-95%), along with small amounts of ethane, propane, etc.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2021) Which fraction of petroleum is used as aviation fuel?</text>
+    <option>Petrol</option>
+    <option correct="true">Kerosene</option>
+    <option>Diesel</option>
+    <option>Lubricating oil</option>
+    <explanation>Kerosene is used as aviation fuel (aviation turbine fuel). Petrol is for vehicles, diesel for heavy vehicles.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2020) Which is the purest form of carbon?</text>
+    <option>Coal</option>
+    <option correct="true">Coke</option>
+    <option>Coal tar</option>
+    <option>Charcoal</option>
+    <explanation>Coke is almost pure carbon (98%) obtained by heating coal in absence of air. It is used in steel making.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2020) Which fuel is least polluting?</text>
+    <option>Coal</option>
+    <option>Petrol</option>
+    <option>Diesel</option>
+    <option correct="true">CNG</option>
+    <explanation>CNG (Compressed Natural Gas) burns cleaner compared to coal, petrol, and diesel, producing fewer pollutants.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2019) What is the process of conversion of vegetation into coal called?</text>
+    <option>Distillation</option>
+    <option correct="true">Carbonisation</option>
+    <option>Refining</option>
+    <option>Combustion</option>
+    <explanation>Carbonisation is the slow process of conversion of dead vegetation into coal under high pressure and temperature over millions of years.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2019) Which petroleum product is used for road surfacing?</text>
+    <option>Kerosene</option>
+    <option>Paraffin wax</option>
+    <option correct="true">Bitumen</option>
+    <option>LPG</option>
+    <explanation>Bitumen is used for road surfacing and waterproofing roofs. It is the heaviest fraction obtained during petroleum refining.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2018) Which fuel is used in jet aircraft?</text>
+    <option>Petrol</option>
+    <option correct="true">Kerosene</option>
+    <option>Diesel</option>
+    <option>LPG</option>
+    <explanation>Kerosene is used as aviation turbine fuel in jet aircraft due to its high calorific value and stability at high altitudes.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2018) Which substance is known as 'black gold'?</text>
+    <option>Coal</option>
+    <option correct="true">Petroleum</option>
+    <option>Natural gas</option>
+    <option>Diamond</option>
+    <explanation>Petroleum is called 'black gold' because of its high commercial value and dark colour when crude.</explanation>
+  </question>
+
+  <!-- Additional Important MCQs -->
+
+  <question>
+    <text>Which of these is an example of a renewable resource?</text>
+    <option>Coal</option>
+    <option>Petroleum</option>
+    <option>Natural gas</option>
+    <option correct="true">Solar energy</option>
+    <explanation>Solar energy is renewable, while coal, petroleum, and natural gas are non-renewable fossil fuels.</explanation>
+  </question>
+
+  <question>
+    <text>Which gas is the major cause of global warming?</text>
+    <option>Oxygen</option>
+    <option>Nitrogen</option>
+    <option correct="true">Carbon dioxide</option>
+    <option>Sulfur dioxide</option>
+    <explanation>Carbon dioxide from burning fossil fuels is the main greenhouse gas causing global warming.</explanation>
+  </question>
+
+  <question>
+    <text>Which product is used for making ointments and perfumes?</text>
+    <option>Coke</option>
+    <option>Coal gas</option>
+    <option correct="true">Coal tar</option>
+    <option>Paraffin wax</option>
+    <explanation>Coal tar is used in making ointments, perfumes, dyes, and synthetic drugs.</explanation>
+  </question>
+
+  <question>
+    <text>What is the main use of petroleum coke?</text>
+    <option>As a fuel</option>
+    <option correct="true">In making electrodes</option>
+    <option>For road making</option>
+    <option>In making plastics</option>
+    <explanation>Petroleum coke (petcoke) is used in making electrodes for electric arc furnaces and dry cells.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is not obtained from coal?</text>
+    <option>Coal gas</option>
+    <option>Coal tar</option>
+    <option>Coke</option>
+    <option correct="true">LPG</option>
+    <explanation>LPG (Liquefied Petroleum Gas) is obtained from petroleum refining, not from coal.</explanation>
+  </question>
+
+  <question>
+    <text>Which process is used to separate petroleum into useful fractions?</text>
+    <option>Carbonisation</option>
+    <option correct="true">Fractional distillation</option>
+    <option>Destructive distillation</option>
+    <option>Filtration</option>
+    <explanation>Fractional distillation separates crude oil into fractions like petrol, diesel, kerosene, etc., based on boiling points.</explanation>
+  </question>
+
+  <question>
+    <text>Which fuel is used in homes for cooking?</text>
+    <option>Petrol</option>
+    <option>Diesel</option>
+    <option correct="true">LPG</option>
+    <option>Kerosene</option>
+    <explanation>LPG (Liquefied Petroleum Gas) is a clean-burning fuel commonly used for cooking in homes.</explanation>
+  </question>
+
+  <question>
+    <text>What is the full form of PCRA?</text>
+    <option>Petroleum Conservation Research Association</option>
+    <option correct="true">Petroleum Conservation Research Association</option>
+    <option>Petroleum Control and Regulation Authority</option>
+    <option>Petroleum Conservation and Resource Association</option>
+    <explanation>PCRA promotes fuel conservation and efficiency in India.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is a characteristic of fossil fuels?</text>
+    <option>Renewable</option>
+    <option>Easily replenished</option>
+    <option correct="true">Formed from dead organisms</option>
+    <option>Do not cause pollution</option>
+    <explanation>Fossil fuels are formed from the remains of dead plants and animals over millions of years under high pressure and temperature.</explanation>
+  </question>
+
+  <question>
+    <text>Which petroleum product is used in candles?</text>
+    <option>Bitumen</option>
+    <option>Lubricating oil</option>
+    <option correct="true">Paraffin wax</option>
+    <option>Naphthalene</option>
+    <explanation>Paraffin wax, obtained from petroleum refining, is used in making candles, polishes, and cosmetics.</explanation>
+  </question>
+
+  <question>
+    <text>Which gas is produced during coal mining and can cause explosions?</text>
+    <option>Carbon dioxide</option>
+    <option>Oxygen</option>
+    <option correct="true">Methane</option>
+    <option>Hydrogen</option>
+    <explanation>Methane (firedamp) is released during coal mining and is highly explosive when mixed with air.</explanation>
+  </question>
+
+  <question>
+    <text>What is the main component of coal gas?</text>
+    <option>Carbon dioxide</option>
+    <option correct="true">Hydrogen</option>
+    <option>Nitrogen</option>
+    <option>Oxygen</option>
+    <explanation>Coal gas mainly contains hydrogen, methane, and carbon monoxide. It was used for lighting before electricity.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is not a fossil fuel?</text>
+    <option>Coal</option>
+    <option>Petroleum</option>
+    <option>Natural gas</option>
+    <option correct="true">Biogas</option>
+    <explanation>Biogas is produced from decomposition of organic waste, not from fossils. It is renewable.</explanation>
+  </question>
+
+  <question>
+    <text>Which fuel is used in heavy vehicles like trucks and buses?</text>
+    <option>Petrol</option>
+    <option correct="true">Diesel</option>
+    <option>CNG</option>
+    <option>Kerosene</option>
+    <explanation>Diesel is used in heavy vehicles due to its high efficiency and torque. Petrol is for lighter vehicles.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is an environmental problem caused by burning coal?</text>
+    <option>Air pollution</option>
+    <option>Acid rain</option>
+    <option>Global warming</option>
+    <option correct="true">All of these</option>
+    <explanation>Burning coal releases SO₂, NO₂, and CO₂ causing air pollution, acid rain, and global warming.</explanation>
+  </question>
+
+  <question>
+    <text>What is the main impurity in coal?</text>
+    <option>Nitrogen</option>
+    <option>Oxygen</option>
+    <option correct="true">Sulfur</option>
+    <option>Hydrogen</option>
+    <explanation>Sulfur is a major impurity in coal, which produces sulfur dioxide when burned, causing acid rain.</explanation>
+  </question>
+
+  <question>
+    <text>Which petroleum fraction has the lowest boiling point?</text>
+    <option>Diesel</option>
+    <option>Kerosene</option>
+    <option>Lubricating oil</option>
+    <option correct="true">Petrol</option>
+    <explanation>Petrol (gasoline) has the lowest boiling point among common petroleum fractions and vaporizes first during fractional distillation.</explanation>
+  </question>
+
+  <question>
+    <text>What is the full form of CNG?</text>
+    <option>Compressed Natural Gas</option>
+    <option correct="true">Compressed Natural Gas</option>
+    <option>Condensed Natural Gas</option>
+    <option>Combustible Natural Gas</option>
+    <explanation>CNG is natural gas (mainly methane) compressed to less than 1% of its volume for use as a clean fuel in vehicles.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is a measure to conserve fossil fuels?</text>
+    <option>Using public transport</option>
+    <option>Using energy-efficient appliances</option>
+    <option>Switching to renewable energy</option>
+    <option correct="true">All of these</option>
+    <explanation>Conservation includes using public transport, energy efficiency, and shifting to solar/wind energy to reduce fossil fuel use.</explanation>
+  </question>
+
+  <question>
+    <text>Which product is obtained from natural gas and used as a starting material for fertilizers?</text>
+    <option>Ethane</option>
+    <option>Propane</option>
+    <option correct="true">Ammonia</option>
+    <option>Methanol</option>
+    <explanation>Ammonia is produced from natural gas (via hydrogen) and is used to make fertilizers like urea.</explanation>
+  </question>
+</quiz>
