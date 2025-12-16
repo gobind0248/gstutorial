@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 9 Science - Chapter 11: Work and Energy</description>
+  </metadata>
+
+  <!-- Previous Year Questions (CBSE/SEBA) -->
+
+  <question>
+    <text>(CBSE 2023) The SI unit of work is:</text>
+    <option>Newton</option>
+    <option>Watt</option>
+    <option correct="true">Joule</option>
+    <option>Pascal</option>
+    <explanation>Work = Force × Displacement. SI unit: Joule (J) = N·m = kg·m²/s². Named after James Prescott Joule.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2023) The energy stored in a stretched spring is:</text>
+    <option>Kinetic energy</option>
+    <option correct="true">Elastic potential energy</option>
+    <option>Gravitational potential energy</option>
+    <option>Chemical energy</option>
+    <explanation>Stretched/compressed spring stores elastic PE = ½kx² where k = spring constant, x = displacement.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2022) A body of mass 1 kg is lifted through 1 m. Work done is: (g=10 m/s²)</text>
+    <option>1 J</option>
+    <option>10 J</option>
+    <option correct="true">10 J</option>
+    <option>100 J</option>
+    <explanation>Work = mgh = 1 × 10 × 1 = 10 J. Force needed = weight = mg = 10 N upward.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2022) The commercial unit of energy is:</text>
+    <option>Joule</option>
+    <option>Watt</option>
+    <option correct="true">Kilowatt-hour</option>
+    <option>Calorie</option>
+    <explanation>1 kWh = 3.6×10⁶ J. Used for electricity billing. 1 unit = 1 kWh.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2021) Which of these has greatest kinetic energy?</text>
+    <option>Mass m, speed v</option>
+    <option>Mass 2m, speed v/2</option>
+    <option correct="true">Mass m/2, speed 2v</option>
+    <option>All equal</option>
+    <explanation>KE = ½mv². Compare: A) ½mv², B) ½(2m)(v/2)² = ¼mv², C) ½(m/2)(2v)² = mv². So C has maximum.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2021) The work done by centripetal force on a body in circular motion is:</text>
+    <option>Positive</option>
+    <option>Negative</option>
+    <option correct="true">Zero</option>
+    <option>Maximum</option>
+    <explanation>Centripetal force is perpendicular to displacement (tangential) → θ = 90° → cos90° = 0 → Work = 0.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2020) Power is defined as:</text>
+    <option>Force × velocity</option>
+    <option>Work × time</option>
+    <option correct="true">Work/time</option>
+    <option>Energy × distance</option>
+    <explanation>Power = Rate of doing work = Work/time. SI unit: Watt (W) = J/s.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2020) The potential energy of a body at height h is:</text>
+    <option>m/h</option>
+    <option>mh</option>
+    <option correct="true">mgh</option>
+    <option>mg/h</option>
+    <explanation>Gravitational PE = mgh, where h measured from reference level (usually ground). PE increases with height.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2019) A boy carries a load on his head through horizontal road. Work done against gravity is:</text>
+    <option>Positive</option>
+    <option>Negative</option>
+    <option correct="true">Zero</option>
+    <option>Maximum</option>
+    <explanation>Displacement horizontal, gravity vertical → θ = 90° → Work = Fd cos90° = 0. He does work against friction/muscular effort.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2019) The kinetic energy of a body of mass m moving with velocity v is:</text>
+    <option>mv</option>
+    <option>mv²</option>
+    <option correct="true">½mv²</option>
+    <option>2mv²</option>
+    <explanation>KE = ½mv². Proportional to mass and square of velocity. Unit: Joule (same as work).</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2018) 1 kWh equals:</text>
+    <option>3.6 × 10³ J</option>
+    <option>3.6 × 10⁴ J</option>
+    <option correct="true">3.6 × 10⁶ J</option>
+    <option>3.6 × 10⁹ J</option>
+    <explanation>1 kWh = 1000 W × 3600 s = 3,600,000 J = 3.6×10⁶ J. 1 W = 1 J/s.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2018) The law of conservation of energy states:</text>
+    <option>Energy can be created</option>
+    <option>Energy can be destroyed</option>
+    <option correct="true">Energy can change forms</option>
+    <option>Energy decreases with time</option>
+    <explanation>Energy neither created nor destroyed, only transforms from one form to another. Total energy constant in isolated system.</explanation>
+  </question>
+
+  <!-- Additional Important MCQs -->
+
+  <question>
+    <text>Work is said to be done when:</text>
+    <option>Force is applied</option>
+    <option>Body has energy</option>
+    <option correct="true">Force causes displacement</option>
+    <option>Body has momentum</option>
+    <explanation>Work = F·d·cosθ. Three conditions: 1) Force applied, 2) Displacement, 3) Component of force in direction of displacement.</explanation>
+  </question>
+
+  <question>
+    <text>When work is done on a body, its energy:</text>
+    <option>Decreases</option>
+    <option correct="true">Increases</option>
+    <option>Remains same</option>
+    <option>Becomes zero</option>
+    <explanation>Work-energy theorem: Work done = change in kinetic energy. Positive work increases energy, negative work decreases.</explanation>
+  </question>
+
+  <question>
+    <text>A 2 kg mass moving at 3 m/s has kinetic energy:</text>
+    <option>3 J</option>
+    <option>6 J</option>
+    <option correct="true">9 J</option>
+    <option>18 J</option>
+    <explanation>KE = ½ × 2 × (3)² = 1 × 9 = 9 J.</explanation>
+  </question>
+
+  <question>
+    <text>The power of a pump lifting 100 kg water per minute from 10 m deep well is: (g=10 m/s²)</text>
+    <option>100 W</option>
+    <option>500 W</option>
+    <option correct="true">166.7 W</option>
+    <option>1000 W</option>
+    <explanation>Work/min = mgh = 100×10×10 = 10000 J/min. Power = 10000 J/60 s = 166.7 W.</explanation>
+  </question>
+
+  <question>
+    <text>If velocity of a body is doubled, its kinetic energy becomes:</text>
+    <option>Half</option>
+    <option>Same</option>
+    <option>Double</option>
+    <option correct="true">Four times</option>
+    <explanation>KE ∝ v². v → 2v → KE → (2)² = 4 times original.</explanation>
+  </question>
+
+  <question>
+    <text>A body at height h has potential energy 100 J. When fallen halfway, its PE is:</text>
+    <option>100 J</option>
+    <option>50 J</option>
+    <option correct="true">50 J</option>
+    <option>0 J</term>
+    <explanation>PE ∝ h. At h/2, PE = 100/2 = 50 J (assuming reference at ground). Lost 50 J converts to KE.</explanation>
+  </question>
+
+  <question>
+    <text>Which is NOT a unit of energy?</text>
+    <option>Joule</option>
+    <option>Calorie</option>
+    <option>kWh</option>
+    <option correct="true">Watt</option>
+    <explanation>Watt is power (J/s). Energy units: Joule, calorie (4.184 J), erg (10⁻⁷ J), eV (1.6×10⁻¹⁹ J).</explanation>
+  </question>
+
+  <question>
+    <text>A man pushes a wall but fails to move it. Work done is:</text>
+    <option>Positive</option>
+    <option>Negative</option>
+    <option correct="true">Zero</option>
+    <option>Infinite</option>
+    <explanation>No displacement → work = 0. Energy spent but no mechanical work (converts to heat in muscles).</explanation>
+  </question>
+
+  <question>
+    <text>When a spring is compressed, the work done on it is stored as:</text>
+    <option>Heat energy</option>
+    <option>Kinetic energy</option>
+    <option correct="true">Elastic potential energy</option>
+    <option>Sound energy</option>
+    <explanation>Spring stores elastic PE = ½kx². Released → converts to KE. Examples: toy gun, trampoline.</explanation>
+  </question>
+
+  <question>
+    <text>The work done by gravity on a freely falling body is:</text>
+    <option>Zero</option>
+    <option correct="true">Positive</option>
+    <option>Negative</option>
+    <option>Maximum at highest point</option>
+    <explanation>Gravity downward, displacement downward → θ = 0° → cos0° = 1 → positive work. Converts PE to KE.</explanation>
+  </question>
+
+  <question>
+    <text>If mass and speed both are doubled, kinetic energy becomes:</text>
+    <option>2 times</option>
+    <option>4 times</option>
+    <option correct="true">8 times</option>
+    <option>16 times</option>
+    <explanation>KE ∝ m and ∝ v². m→2m, v→2v → KE → 2 × (2)² = 2 × 4 = 8 times.</explanation>
+  </question>
+
+  <question>
+    <text>A 100 W bulb operates for 10 hours. Energy consumed is:</text>
+    <option>100 J</option>
+    <option>1000 J</option>
+    <option correct="true">1 kWh</option>
+    <option>10 kWh</option>
+    <explanation>Energy = Power × time = 100 W × 10 h = 1000 Wh = 1 kWh = 1 unit.</explanation>
+  </question>
+
+  <question>
+    <text>The potential energy of a body depends on:</text>
+    <option>Velocity</option>
+    <option>Path</option>
+    <option correct="true">Position/height</option>
+    <option>Time</option>
+    <explanation>Gravitational PE depends on height (mgΔh). Elastic PE depends on deformation (½kx²). Chemical PE on composition.</explanation>
+  </question>
+
+  <question>
+    <text>A machine does 1000 J work in 5 seconds. Its power is:</text>
+    <option>200 W</option>
+    <option correct="true">200 W</option>
+    <option>5000 W</option>
+    <option>1000 W</option>
+    <explanation>Power = Work/time = 1000 J/5 s = 200 W.</explanation>
+  </question>
+
+  <question>
+    <text>In which case is work done negative?</text>
+    <option>Lifting a weight</option>
+    <option>Pushing a car forward</option>
+    <option correct="true">Lowering a weight slowly</option>
+    <option>Stretching a spring</option>
+    <explanation>Lowering weight: force upward (to control), displacement downward → θ = 180° → cos180° = -1 → negative work.</explanation>
+  </question>
+
+  <question>
+    <text>The kinetic energy of a body becomes 4 times when its:</text>
+    <option>Mass doubled</option>
+    <option correct="true">Velocity doubled</option>
+    <option>Mass halved</option>
+    <option>Velocity halved</option>
+    <explanation>KE ∝ v². Double v → KE ×4. Double mass → KE ×2 only.</explanation>
+  </question>
+
+  <question>
+    <text>A 50 kg man runs up stairs of total height 4 m in 5 s. His power is: (g=10 m/s²)</text>
+    <option>200 W</option>
+    <option>250 W</option>
+    <option correct="true">400 W</option>
+    <option>500 W</option>
+    <explanation>Work = mgh = 50×10×4 = 2000 J. Power = 2000/5 = 400 W.</explanation>
+  </question>
+
+  <question>
+    <text>Energy transformation in electric heater is:</text>
+    <option>Electrical → Mechanical</option>
+    <option correct="true">Electrical → Heat</option>
+    <option>Heat → Electrical</option>
+    <option>Chemical → Heat</option>
+    <explanation>Electric heater: electrical energy → heat energy (Joule heating). Efficiency nearly 100%.</explanation>
+  </question>
+
+  <question>
+    <text>The work done in lifting a 5 kg mass through 2 m is: (g=10 m/s²)</text>
+    <option>10 J</option>
+    <option>20 J</option>
+    <option correct="true">100 J</option>
+    <option>200 J</option>
+    <explanation>Work against gravity = mgh = 5×10×2 = 100 J.</explanation>
+  </question>
+
+  <question>
+    <text>When a body falls freely, its total energy:</text>
+    <option>Increases</option>
+    <option>Decreases</option>
+    <option correct="true">Remains constant</option>
+    <option>First increases then decreases</option>
+    <explanation>Conservation of mechanical energy: PE + KE = constant (if no air resistance). PE converts to KE.</explanation>
+  </question>
+
+  <question>
+    <text>1 calorie equals:</text>
+    <option>1 J</option>
+    <option>4.184 J</option>
+    <option correct="true">4.184 J</option>
+    <option>1000 J</option>
+    <explanation>1 cal = 4.184 J (approximately 4.2 J). Nutritional Calorie (capital C) = 1000 cal = 4184 J.</explanation>
+  </question>
+
+  <question>
+    <text>A force of 10 N displaces a body by 5 m at angle 60°. Work done is:</text>
+    <option>50 J</option>
+    <option>25 J</option>
+    <option correct="true">25 J</option>
+    <option>43.3 J</option>
+    <explanation>W = Fd cosθ = 10×5×cos60° = 50×0.5 = 25 J. cos60° = 0.5.</explanation>
+  </question>
+
+  <question>
+    <text>Which has maximum kinetic energy?</text>
+    <option>Mass 1 kg at 2 m/s</option>
+    <option>Mass 2 kg at 1 m/s</option>
+    <option correct="true">Mass 0.5 kg at 4 m/s</option>
+    <option>Mass 4 kg at 0.5 m/s</option>
+    <explanation>Calculate KE: A) ½×1×4=2 J, B) ½×2×1=1 J, C) ½×0.5×16=4 J, D) ½×4×0.25=0.5 J. C maximum.</explanation>
+  </question>
+
+  <question>
+    <text>The work-energy theorem states:</text>
+    <option>Work = Power × time</option>
+    <option>Energy = mc²</option>
+    <option correct="true">Work done = Change in KE</option>
+    <option>PE = mgh</option>
+    <explanation>Theorem: Net work done = Final KE - Initial KE = ΔKE. Connects work and energy concepts.</explanation>
+  </question>
+
+  <question>
+    <text>A body of mass 2 kg has 16 J kinetic energy. Its speed is:</text>
+    <option>2 m/s</option>
+    <option>4 m/s</option>
+    <option correct="true">4 m/s</option>
+    <option>8 m/s</term>
+    <explanation>KE = ½mv² → 16 = ½×2×v² → v² = 16 → v = 4 m/s.</explanation>
+  </question>
+
+  <question>
+    <text>The energy stored in fossil fuels is:</text>
+    <option>Nuclear energy</option>
+    <option>Electrical energy</option>
+    <option correct="true">Chemical energy</option>
+    <option>Mechanical energy</term>
+    <explanation>Fossil fuels (coal, oil, gas) store chemical energy from ancient plants/animals, released by combustion.</explanation>
+  </question>
+
+  <question>
+    <text>A light and heavy body have same kinetic energy. Which has greater momentum?</text>
+    <option>Lighter body</option>
+    <option correct="true">Heavier body</option>
+    <option>Both equal</term>
+    <option>Cannot say</term>
+    <explanation>KE = p²/2m. For same KE, p ∝ √m. Heavier body has greater momentum.</explanation>
+  </question>
+</quiz>
