@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 9 Science - Chapter 7: Diversity in Living Organisms</description>
+  </metadata>
+
+  <!-- Previous Year Questions (CBSE/SEBA) -->
+
+  <question>
+    <text>(CBSE 2023) Which phylum includes animals with spiny skin and tube feet?</text>
+    <option>Mollusca</option>
+    <option>Annelida</option>
+    <option correct="true">Echinodermata</option>
+    <option>Arthropoda</option>
+    <explanation>Echinodermata: spiny-skinned marine animals with water vascular system and tube feet (e.g., starfish, sea urchin).</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2023) The scientific name of mango is:</text>
+    <option>Mangifera Indica</option>
+    <option correct="true">Mangifera indica</option>
+    <option>Mangifera indica</option>
+    <option>Mangifera Indica</option>
+    <explanation>Binomial nomenclature: Genus capitalized, species lowercase, italicized when printed. Mangifera indica (mango).</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2022) Which group of plants is called "amphibians of plant kingdom"?</text>
+    <option>Algae</option>
+    <option>Gymnosperms</option>
+    <option correct="true">Bryophytes</option>
+    <option>Pteridophytes</option>
+    <explanation>Bryophytes (mosses, liverworts) need water for reproduction, live in moist habitats but on land, hence "plant amphibians".</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2022) Which phylum includes animals with jointed legs?</text>
+    <option>Mollusca</option>
+    <option>Annelida</option>
+    <option correct="true">Arthropoda</option>
+    <option>Echinodermata</option>
+    <explanation>Arthropoda: largest phylum, jointed appendages, chitinous exoskeleton, segmented body (insects, spiders, crustaceans).</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2021) The five-kingdom classification was proposed by:</text>
+    <option>Carolus Linnaeus</option>
+    <option>Ernst Haeckel</option>
+    <option correct="true">Robert Whittaker</option>
+    <option>Charles Darwin</option>
+    <explanation>Robert Whittaker (1969): Monera, Protista, Fungi, Plantae, Animalia. Based on cell structure, nutrition, reproduction.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2021) Which group of plants has naked seeds?</text>
+    <option>Algae</option>
+    <option>Bryophytes</option>
+    <option>Pteridophytes</option>
+    <option correct="true">Gymnosperms</option>
+    <explanation>Gymnosperms: "naked seeds" not enclosed in ovary (e.g., pine, cycas, deodar). Angiosperms: seeds in fruits.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2020) Which is NOT a characteristic of mammals?</text>
+    <option>Mammary glands</option>
+    <option>Hair on body</option>
+    <option>Four-chambered heart</option>
+    <option correct="true">Cold-blooded</option>
+    <explanation>Mammals are warm-blooded (endothermic). Cold-blooded (ectothermic): fish, amphibians, reptiles.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2020) The basic unit of classification is:</text>
+    <option>Genus</option>
+    <option>Family</option>
+    <option correct="true">Species</option>
+    <option>Phylum</option>
+    <explanation>Species: group of interbreeding individuals producing fertile offspring. Basic taxonomic unit.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2019) Which protozoan causes malaria?</text>
+    <option>Entamoeba</option>
+    <option>Euglena</option>
+    <option correct="true">Plasmodium</option>
+    <option>Paramecium</option>
+    <explanation>Plasmodium (protozoan) causes malaria, transmitted by female Anopheles mosquito. Entamoeba causes amoebic dysentery.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2019) Which group of animals has three-chambered heart?</text>
+    <option>Fish</option>
+    <option correct="true">Amphibians</option>
+    <option>Birds</option>
+    <option>Mammals</option>
+    <explanation>Amphibians: 3-chambered heart (2 atria, 1 ventricle). Fish: 2-chambered. Birds/mammals: 4-chambered. Reptiles: mostly 3 (crocodiles 4).</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2018) Fungi are:</text>
+    <option>Autotrophic</option>
+    <option correct="true">Heterotrophic</option>
+    <option>Photosynthetic</option>
+    <option>Chemosynthetic</option>
+    <explanation>Fungi: heterotrophic (saprophytic/parasitic), chitin cell walls, reproduce by spores. Yeast, mushrooms, molds.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2018) The book "Origin of Species" was written by:</text>
+    <option>Linnaeus</option>
+    <option>Whittaker</option>
+    <option correct="true">Darwin</option>
+    <option>Haeckel</option>
+    <explanation>Charles Darwin (1859) proposed theory of evolution by natural selection in "On the Origin of Species".</explanation>
+  </question>
+
+  <!-- Additional Important MCQs -->
+
+  <question>
+    <text>Father of taxonomy is:</text>
+    <option correct="true">Carolus Linnaeus</option>
+    <option>Robert Whittaker</option>
+    <option>Ernst Haeckel</option>
+    <option>Charles Darwin</option>
+    <explanation>Linnaeus: introduced binomial nomenclature, hierarchical classification (Kingdom → Species).</explanation>
+  </question>
+
+  <question>
+    <text>Which kingdom includes bacteria?</text>
+    <option>Protista</option>
+    <option correct="true">Monera</option>
+    <option>Fungi</option>
+    <option>Plantae</option>
+    <explanation>Monera: prokaryotic, unicellular (bacteria, cyanobacteria). No nucleus, membrane-bound organelles.</explanation>
+  </question>
+
+  <question>
+    <text>Which group has seeds enclosed in fruits?</text>
+    <option>Gymnosperms</option>
+    <option correct="true">Angiosperms</option>
+    <option>Pteridophytes</option>
+    <option>Bryophytes</option>
+    <explanation>Angiosperms: flowering plants, seeds in fruits (ovary wall). Divided into monocots and dicots.</explanation>
+  </question>
+
+  <question>
+    <text>Which phylum includes snails and octopus?</text>
+    <option>Annelida</option>
+    <option correct="true">Mollusca</option>
+    <option>Arthropoda</option>
+    <option>Echinodermata</option>
+    <explanation>Mollusca: soft-bodied, muscular foot, mantle, calcareous shell (snails, octopus, squid, oysters). Second largest phylum.</explanation>
+  </question>
+
+  <question>
+    <text>Which is NOT a vertebrate class?</text>
+    <option>Pisces</option>
+    <option>Amphibia</option>
+    <option>Reptilia</option>
+    <option correct="true">Arthropoda</option>
+    <explanation>Arthropoda is invertebrate phylum. Vertebrates: Pisces, Amphibia, Reptilia, Aves, Mammalia.</explanation>
+  </question>
+
+  <question>
+    <text>Which plant group has vascular tissues but no seeds?</text>
+    <option>Bryophytes</option>
+    <option correct="true">Pteridophytes</option>
+    <option>Gymnosperms</option>
+    <option>Angiosperms</option>
+    <explanation>Pteridophytes: ferns, horsetails; have xylem/phloem but reproduce by spores, need water for fertilization.</explanation>
+  </question>
+
+  <question>
+    <text>Which is a cold-blooded vertebrate with scales?</text>
+    <option>Amphibians</option>
+    <option correct="true">Reptiles</option>
+    <option>Birds</option>
+    <option>Mammals</option>
+    <explanation>Reptiles: dry scaly skin, cold-blooded, lay eggs on land (snakes, lizards, crocodiles, turtles).</explanation>
+  </question>
+
+  <question>
+    <text>Which protozoan moves using pseudopodia?</text>
+    <option>Paramecium</option>
+    <option>Euglena</option>
+    <option correct="true">Amoeba</option>
+    <option>Plasmodium</option>
+    <explanation>Amoeba: moves and feeds using pseudopodia (false feet). Paramecium: cilia, Euglena: flagella, Plasmodium: no locomotion.</explanation>
+  </question>
+
+  <question>
+    <text>Which is the largest group of animals?</text>
+    <option>Mollusca</option>
+    <option>Chordata</option>
+    <option correct="true">Arthropoda</option>
+    <option>Annelida</option>
+    <explanation>Arthropoda: >1 million species (85% of all animals). Insects alone >750,000 species.</explanation>
+  </question>
+
+  <question>
+    <text>Which classification category is broader than genus but narrower than class?</text>
+    <option>Species</option>
+    <option>Family</option>
+    <option correct="true">Order</option>
+    <option>Phylum</option>
+    <explanation>Hierarchy: Kingdom → Phylum → Class → Order → Family → Genus → Species. Order between class and family.</explanation>
+  </question>
+
+  <question>
+    <text>Which group has specialized tissue for conduction but not true roots/stems/leaves?</text>
+    <option>Thallophyta</option>
+    <option correct="true">Bryophyta</option>
+    <option>Pteridophyta</option>
+    <option>Spermatophyta</option>
+    <explanation>Bryophytes: simple conductive tissues but no true vascular bundles, no true roots (rhizoids), stems, leaves.</explanation>
+  </question>
+
+  <question>
+    <text>Which is NOT a feature of birds?</text>
+    <option>Feathers</option>
+    <option>Beak without teeth</option>
+    <option>Four-chambered heart</option>
+    <option correct="true">External ears</option>
+    <explanation>Birds: feathers, forelimbs modified to wings, pneumatic bones, no external ears (have ear openings).</explanation>
+  </question>
+
+  <question>
+    <text>Which phylum includes earthworm and leech?</text>
+    <option>Platyhelminthes</option>
+    <option>Nematoda</option>
+    <option correct="true">Annelida</option>
+    <option>Arthropoda</option>
+    <explanation>Annelida: segmented worms, closed circulatory system (earthworm, leech, nereis).</explanation>
+  </question>
+
+  <question>
+    <text>Which plant division is called "algae"?</text>
+    <option correct="true">Thallophyta</option>
+    <option>Bryophyta</option>
+    <option>Pteridophyta</option>
+    <option>Spermatophyta</option>
+    <explanation>Thallophyta: plant body thallus (undifferentiated), mainly algae (Spirogyra, Ulva, Chlamydomonas).</explanation>
+  </question>
+
+  <question>
+    <text>Which is an example of gymnosperm?</text>
+    <option>Mango</option>
+    <option>Fern</option>
+    <option correct="true">Pine</option>
+    <option>Moss</option>
+    <explanation>Pine (Pinus) is gymnosperm. Mango: angiosperm, Fern: pteridophyte, Moss: bryophyte.</explanation>
+  </question>
+
+  <question>
+    <text>Which group has notochord at some life stage?</text>
+    <option>All invertebrates</option>
+    <option correct="true">All chordates</option>
+    <option>Only mammals</option>
+    <option>Only vertebrates</option>
+    <explanation>Chordates: notochord, dorsal nerve cord, pharyngeal slits, post-anal tail at some stage. Includes vertebrates and protochordates.</explanation>
+  </question>
+
+  <question>
+    <text>Which fungi is used in baking?</text>
+    <option>Penicillium</option>
+    <option>Aspergillus</option>
+    <option correct="true">Saccharomyces</option>
+    <option>Mucor</option>
+    <explanation>Saccharomyces cerevisiae (yeast) used in baking (fermentation), brewing. Penicillium: antibiotic.</explanation>
+  </question>
+
+  <question>
+    <text>Which animal has radial symmetry?</text>
+    <option>Earthworm</option>
+    <option>Butterfly</option>
+    <option correct="true">Hydra</option>
+    <option>Fish</option>
+    <explanation>Radial symmetry: body parts arranged around central axis (cnidarians like Hydra, jellyfish, echinoderms). Bilateral: two symmetrical halves.</explanation>
+  </question>
+
+  <question>
+    <text>Which is a monocot plant?</text>
+    <option>Bean</option>
+    <option>Pea</option>
+    <option correct="true">Maize</option>
+    <option>Sunflower</option>
+    <explanation>Monocots: single cotyledon, parallel venation, fibrous roots (maize, wheat, rice, lily). Dicots: two cotyledons, reticulate venation, taproot.</explanation>
+  </question>
+
+  <question>
+    <text>Which protozoan has chlorophyll?</text>
+    <option>Amoeba</option>
+    <option>Paramecium</option>
+    <option correct="true">Euglena</option>
+    <option>Plasmodium</option>
+    <explanation>Euglena: photosynthetic flagellate, has chlorophyll, can also ingest food (mixotrophic). Others are heterotrophic.</explanation>
+  </question>
+
+  <question>
+    <text>Which is NOT a feature of mammals?</text>
+    <option>Diaphragm</option>
+    <option>External ears (pinna)</option>
+    <option>Mammary glands</option>
+    <option correct="true">Lay eggs</option>
+    <explanation>Most mammals give birth to young ones (viviparous). Exception: monotremes (platypus, echidna) lay eggs.</explanation>
+  </question>
+
+  <question>
+    <text>Which classification system considered only two kingdoms?</text>
+    <option correct="true">Linnaean system</option>
+    <option>Whittaker's system</option>
+    <option>Three-domain system</option>
+    <option>Haeckel's system</option>
+    <explanation>Linnaeus: Plantae and Animalia only. Whittaker: 5 kingdoms. Three-domain: Archaea, Bacteria, Eukarya (Woese).</explanation>
+  </question>
+
+  <question>
+    <text>Which group has pseudocoelom?</text>
+    <option>Platyhelminthes</option>
+    <option correct="true">Nematoda</option>
+    <option>Annelida</option>
+    <option>Mollusca</option>
+    <explanation>Nematoda (roundworms): pseudocoelom (body cavity not lined by mesoderm). Platyhelminthes: acoelomate. Annelida: true coelom.</explanation>
+  </question>
+
+  <question>
+    <text>Which is NOT an arachnid?</text>
+    <option>Spider</option>
+    <option>Scorpion</option>
+    <option>Tick</option>
+    <option correct="true">Crab</option>
+    <explanation>Arachnids: spiders, scorpions, ticks, mites (4 pairs legs). Crab is crustacean (arthropod). Insects: 3 pairs legs.</explanation>
+  </question>
+
+  <question>
+    <text>The study of classification is called:</text>
+    <option>Ecology</option>
+    <option>Morphology</option>
+    <option correct="true">Taxonomy</option>
+    <option>Physiology</term>
+    <explanation>Taxonomy: science of classification. Nomenclature: naming. Systematics: evolutionary relationships.</explanation>
+  </question>
+</quiz>
