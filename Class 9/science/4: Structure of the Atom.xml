@@ -1,234 +1,326 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quiz>
-<metadata>
-  <chapter>4. Structure of Atom</chapter>
-  <timeLimit>30</timeLimit>
-  <author>CBSE Exam Important Questions</author>
-</metadata>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 9 Science - Chapter 4: Structure of the Atom</description>
+  </metadata>
 
-<question>
-  <text>Who discovered electrons?</text>
-  <option>Ernest Rutherford</option>
-  <option correct="true">J.J. Thomson</option>
-  <option>Neils Bohr</option>
-  <option>James Chadwick</option>
-  <explanation>J.J. Thomson discovered electrons using cathode ray tube in 1897.</explanation>
-</question>
+  <!-- Previous Year Questions (CBSE/SEBA) -->
 
-<question>
-  <text>Which subatomic particle has no charge?</text>
-  <option>Proton</option>
-  <option>Electron</option>
-  <option correct="true">Neutron</option>
-  <option>Positron</option>
-  <explanation>Neutron is electrically neutral.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2023) Which subatomic particle was discovered by J.J. Thomson?</text>
+    <option>Proton</option>
+    <option correct="true">Electron</option>
+    <option>Neutron</option>
+    <option>Nucleus</option>
+    <explanation>J.J. Thomson discovered electron in 1897 using cathode ray tube experiment. Proton discovered by Goldstein, neutron by Chadwick.</explanation>
+  </question>
 
-<question>
-  <text>Isotopes have same:</text>
-  <option>Mass number</option>
-  <option correct="true">Atomic number</option>
-  <option>Number of neutrons</option>
-  <option>None of these</option>
-  <explanation>Isotopes have same protons (atomic number) but different neutrons.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2023) The maximum number of electrons that can be accommodated in M shell is:</text>
+    <option>2</option>
+    <option>8</option>
+    <option correct="true">18</option>
+    <option>32</option>
+    <explanation>Maximum electrons in shell: K=2, L=8, M=18, N=32. Formula: 2n² where n is shell number.</explanation>
+  </question>
 
-<question>
-  <text>Maximum electrons in L shell:</text>
-  <option>2</option>
-  <option correct="true">8</option>
-  <option>18</option>
-  <option>32</option>
-  <explanation>L shell (n=2) holds max 2n² = 8 electrons.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2022) Isotopes have same:</text>
+    <option>Mass number</option>
+    <option>Number of neutrons</option>
+    <option correct="true">Atomic number</option>
+    <option>Both mass and atomic number</option>
+    <explanation>Isotopes: same atomic number (protons), different mass number (different neutrons). Example: ¹H, ²H, ³H.</explanation>
+  </question>
 
-<question>
-  <text>Who discovered nucleus?</text>
-  <option correct="true">Ernest Rutherford</option>
-  <option>J.J. Thomson</option>
-  <option>Neils Bohr</option>
-  <option>John Dalton</option>
-  <explanation>Rutherford discovered nucleus through gold foil experiment (1911).</explanation>
-</question>
+  <question>
+    <text>(SEBA 2022) The valency of an element with atomic number 12 is:</text>
+    <option>1</option>
+    <option correct="true">2</option>
+    <option>3</option>
+    <option>4</option>
+    <explanation>Atomic number 12 = Magnesium (Mg). Electronic configuration: 2,8,2. Valency = 2 (loses 2 electrons).</explanation>
+  </question>
 
-<question>
-  <text>Electronic configuration of sodium (Z=11) is:</text>
-  <option correct="true">2,8,1</option>
-  <option>2,8,2</option>
-  <option>2,8,3</option>
-  <option>2,8,8,1</option>
-  <explanation>Sodium: 11 electrons. K=2, L=8, M=1.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2021) Rutherford's alpha particle scattering experiment led to discovery of:</text>
+    <option>Electron</option>
+    <option>Proton</option>
+    <option correct="true">Nucleus</option>
+    <option>Neutron</option>
+    <explanation>Rutherford's gold foil experiment (1911) discovered nucleus. Most alpha particles passed through, few deflected, very few bounced back.</explanation>
+  </question>
 
-<question>
-  <text>Mass number =</text>
-  <option>Protons + Electrons</option>
-  <option correct="true">Protons + Neutrons</option>
-  <option>Neutrons + Electrons</option>
-  <option>Protons only</option>
-  <explanation>Mass number (A) = Number of protons (Z) + Number of neutrons (N).</explanation>
-</question>
+  <question>
+    <text>(SEBA 2021) The number of neutrons in an atom of ²³₁₁Na is:</text>
+    <option>11</option>
+    <option correct="true">12</option>
+    <option>23</option>
+    <option>34</option>
+    <explanation>Neutrons = Mass number - Atomic number = 23 - 11 = 12.</explanation>
+  </question>
 
-<question>
-  <text>Which model proposed electrons in fixed orbits?</text>
-  <option>Dalton's model</option>
-  <option>Thomson's model</option>
-  <option correct="true">Bohr's model</option>
-  <option>Rutherford's model</option>
-  <explanation>Bohr proposed electrons revolve in fixed energy levels/orbits.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2020) Which model proposed that electrons revolve in specific orbits?</text>
+    <option>Thomson's model</option>
+    <option correct="true">Bohr's model</option>
+    <option>Rutherford's model</option>
+    <option>Dalton's model</option>
+    <explanation>Bohr's model (1913): electrons in fixed orbits (energy levels), no energy loss in stationary orbits.</explanation>
+  </question>
 
-<question>
-  <text>Number of neutrons in C-14:</text>
-  <option>6</option>
-  <option correct="true">8</option>
-  <option>12</option>
-  <option>14</option>
-  <explanation>C-14: Atomic number 6, Mass number 14. Neutrons = 14-6 = 8.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2020) The isotope used in cancer treatment is:</text>
+    <option>Carbon-14</option>
+    <option>Uranium-235</option>
+    <option correct="true">Cobalt-60</option>
+    <option>Iodine-131</option>
+    <explanation>Cobalt-60 used in radiotherapy for cancer. Carbon-14 for carbon dating, Uranium-235 in nuclear reactors, Iodine-131 for thyroid treatment.</explanation>
+  </question>
 
-<question>
-  <text>Valence electrons determine:</text>
-  <option>Atomic mass</option>
-  <option>Atomic number</option>
-  <option correct="true">Chemical properties</option>
-  <option>Radioactivity</option>
-  <explanation>Chemical properties depend on valence electrons.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2019) The electronic configuration of chlorine (atomic number 17) is:</text>
+    <option>2,8,7</option>
+    <option correct="true">2,8,7</option>
+    <option>2,8,8</option>
+    <option>2,8,8,1</option>
+    <explanation>Cl (Z=17): K=2, L=8, M=7. Valency = 1 (gains 1 electron to achieve octet).</explanation>
+  </question>
 
-<question>
-  <text>Who discovered neutrons?</text>
-  <option>Rutherford</option>
-  <option>Thomson</option>
-  <option>Bohr</option>
-  <option correct="true">Chadwick</option>
-  <explanation>James Chadwick discovered neutrons in 1932.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2019) The mass of an electron is approximately:</text>
+    <option>1 u</option>
+    <option correct="true">1/1840 u</option>
+    <option>1/2000 u</option>
+    <option>2 u</option>
+    <explanation>Electron mass = 9.1×10⁻³¹ kg ≈ 1/1840 mass of proton. Negligible in atomic mass calculation.</explanation>
+  </question>
 
-<question>
-  <text>Isotopes of hydrogen are:</text>
-  <option>Protium and deuterium</option>
-  <option>Deuterium and tritium</option>
-  <option>Protium and tritium</option>
-  <option correct="true">All of these</option>
-  <explanation>Hydrogen has 3 isotopes: Protium (¹H), Deuterium (²H), Tritium (³H).</explanation>
-</question>
+  <question>
+    <text>(CBSE 2018) Isobars have same:</text>
+    <option>Atomic number</option>
+    <option correct="true">Mass number</option>
+    <option>Number of neutrons</option>
+    <option>Electronic configuration</option>
+    <explanation>Isobars: same mass number, different atomic numbers. Example: ⁴⁰₁₈Ar and ⁴⁰₂₀Ca.</explanation>
+  </question>
 
-<question>
-  <text>Electronic configuration of chlorine (Z=17):</text>
-  <option>2,8,7</option>
-  <option>2,8,8</option>
-  <option>2,8,8,1</option>
-  <option>2,8,8,7</option>
-  <correct>2,8,7</correct>
-  <explanation>Chlorine: 17 electrons. K=2, L=8, M=7.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2018) The maximum number of electrons in a subshell with l=1 is:</text>
+    <option>2</option>
+    <option correct="true">6</option>
+    <option>10</option>
+    <option>14</option>
+    <explanation>l=1 means p-subshell. Electrons in subshell = 2(2l+1) = 2(2×1+1) = 6 electrons.</explanation>
+  </question>
 
-<question>
-  <text>Alpha particles are:</text>
-  <option>Electrons</option>
-  <option>Neutrons</option>
-  <option correct="true">Helium nuclei</option>
-  <option>Protons</option>
-  <explanation>Alpha particles are He²⁺ ions (2 protons + 2 neutrons).</explanation>
-</question>
+  <!-- Additional Important MCQs -->
 
-<question>
-  <text>Maximum electrons in N shell:</text>
-  <option>8</option>
-  <option>18</option>
-  <option correct="true">32</option>
-  <option>50</option>
-  <explanation>N shell (n=4) holds max 2n² = 32 electrons.</explanation>
-</question>
+  <question>
+    <text>Who discovered neutron?</text>
+    <option>J.J. Thomson</option>
+    <option>Ernest Rutherford</option>
+    <option correct="true">James Chadwick</option>
+    <option>Niels Bohr</option>
+    <explanation>Chadwick discovered neutron in 1932. Neutral particle with mass ≈ proton, no charge.</explanation>
+  </question>
 
-<question>
-  <text>Atomic number =</text>
-  <option>Electrons in atom</option>
-  <option>Protons in nucleus</option>
-  <option correct="true">Both of these</option>
-  <option>Neutrons in nucleus</option>
-  <explanation>Atomic number = Protons = Electrons (in neutral atom).</explanation>
-</question>
+  <question>
+    <text>The atomic number of an element is determined by:</text>
+    <option>Number of neutrons</option>
+    <option correct="true">Number of protons</option>
+    <option>Number of electrons</option>
+    <option>Mass number</option>
+    <explanation>Atomic number (Z) = number of protons = number of electrons in neutral atom.</explanation>
+  </question>
 
-<question>
-  <text>Thomson's model is called:</text>
-  <option>Nuclear model</option>
-  <option>Planetary model</option>
-  <option correct="true">Plum pudding model</option>
-  <option>Quantum model</option>
-  <explanation>Thomson proposed atom as sphere of positive charge with electrons embedded.</explanation>
-</question>
+  <question>
+    <text>Which shell has lowest energy?</text>
+    <option correct="true">K shell (n=1)</option>
+    <option>L shell (n=2)</option>
+    <option>M shell (n=3)</option>
+    <option>N shell (n=4)</option>
+    <explanation>Energy increases with shell number: K&lt;L&lt;M&lt;N. Electrons fill from lower to higher energy shells.</explanation>
+  </question>
 
-<question>
-  <text>Which isotope is radioactive?</text>
-  <option>C-12</option>
-  <option>O-16</option>
-  <option correct="true">C-14</option>
-  <option>H-1</option>
-  <explanation>C-14 is radioactive isotope used in carbon dating.</explanation>
-</question>
+  <question>
+    <text>The valency of nitrogen in N₂ molecule is:</text>
+    <option>1</option>
+    <option>2</option>
+    <option correct="true">3</option>
+    <option>5</option>
+    <explanation>Nitrogen forms triple bond in N₂ (N≡N), sharing 3 pairs of electrons. Valency = 3.</explanation>
+  </question>
 
-<question>
-  <text>Number of electrons in M shell of argon (Z=18):</text>
-  <option>2</option>
-  <option>6</option>
-  <option correct="true">8</option>
-  <option>18</option>
-  <explanation>Argon: 2,8,8. M shell has 8 electrons.</explanation>
-</question>
+  <question>
+    <text>Which isotope is used in nuclear reactors?</text>
+    <option>Hydrogen-2</option>
+    <option>Carbon-14</option>
+    <option correct="true">Uranium-235</option>
+    <option>Iodine-131</option>
+    <explanation>U-235 undergoes fission, releasing energy in nuclear reactors. H-2 (deuterium) in heavy water, C-14 for dating, I-131 medical.</explanation>
+  </question>
 
-<question>
-  <text>Rutherford's experiment showed atom has:</text>
-  <option>Uniform positive charge</option>
-  <option>Electrons in orbits</option>
-  <option correct="true>Small, dense nucleus</option>
-  <option>No empty space</option>
-  <explanation>Gold foil experiment proved atom has small, dense, positive nucleus.</explanation>
-</question>
+  <question>
+    <text>The maximum electrons in d-subshell is:</text>
+    <option>2</option>
+    <option>6</option>
+    <option>10</option>
+    <option correct="true">10</option>
+    <explanation>Subshell capacities: s=2, p=6, d=10, f=14 electrons.</explanation>
+  </question>
 
-<question>
-  <text>Mass of electron is approximately:</text>
-  <option>Same as proton</option>
-  <option correct="true">1/1837 of proton</option>
-  <option>Double of proton</option>
-  <option>1/1000 of neutron</option>
-  <explanation>Electron mass = 9.1×10⁻³¹ kg, Proton mass = 1.67×10⁻²⁷ kg.</explanation>
-</question>
+  <question>
+    <text>What did Goldstein discover in cathode ray tube?</text>
+    <option>Electron</option>
+    <option correct="true">Proton</option>
+    <option>Neutron</option>
+    <option>Nucleus</option>
+    <explanation>Goldstein (1886) discovered protons (canal rays) using perforated cathode. Positively charged particles.</explanation>
+  </question>
 
-<question>
-  <text>Which has completely filled valence shell?</text>
-  <option>Sodium</option>
-  <option>Chlorine</option>
-  <option correct="true">Neon</option>
-  <option>Carbon</option>
-  <explanation>Neon (noble gas) has 8 electrons in valence shell - stable octet.</explanation>
-</question>
+  <question>
+    <text>The electronic configuration of sodium ion (Na⁺) is:</text>
+    <option>2,8,1</option>
+    <option correct="true">2,8</option>
+    <option>2,8,8</option>
+    <option>2,8,8,1</option>
+    <explanation>Na atom (Z=11): 2,8,1. Na⁺ loses 1 electron: 2,8 (same as neon).</explanation>
+  </question>
 
-<question>
-  <text>Charge on electron is:</text>
-  <option>+1.6 × 10⁻¹⁹ C</option>
-  <option correct="true">-1.6 × 10⁻¹⁹ C</option>
-  <option>Zero</option>
-  <option>+1 C</option>
-  <explanation>Electron has negative charge of 1.6×10⁻¹⁹ coulombs.</explanation>
-</question>
+  <question>
+    <text>Isotones have same:</text>
+    <option>Atomic number</option>
+    <option>Mass number</option>
+    <option correct="true">Number of neutrons</option>
+    <option>Number of electrons</option>
+    <explanation>Isotones: same neutron number, different proton numbers. Example: ³¹₁₅P and ³²₁₆S both have 16 neutrons.</explanation>
+  </question>
 
-<question>
-  <text>In Bohr's model, electrons move in:</text>
-  <option>Random paths</option>
-  <option correct="true">Fixed orbits</option>
-  <option>Straight lines</option>
-  <option>Spiral paths</option>
-  <explanation>Bohr proposed electrons revolve in fixed circular orbits with definite energy.</explanation>
-</question>
+  <question>
+    <text>The atomic model resembling watermelon was proposed by:</text>
+    <option correct="true">J.J. Thomson</option>
+    <option>Ernest Rutherford</option>
+    <option>Niels Bohr</option>
+    <option>John Dalton</option>
+    <explanation>Thomson's plum pudding model: positive sphere with electrons embedded like plums in pudding or seeds in watermelon.</explanation>
+  </question>
 
-<question>
-  <text>Which determines atomic number?</text>
-  <option>Neutrons</option>
-  <option>Electrons</option>
-  <option correct="true">Protons</option>
-  <option>Mass number</option>
-  <explanation>Atomic number = Number of protons (unique for each element).</explanation>
-</question>
+  <question>
+    <text>The mass number of an atom is:</text>
+    <option>Protons + electrons</option>
+    <option correct="true">Protons + neutrons</option>
+    <option>Neutrons + electrons</option>
+    <option>Protons only</option>
+    <explanation>Mass number (A) = Number of protons (Z) + Number of neutrons (N).</explanation>
+  </question>
+
+  <question>
+    <text>Which element has electronic configuration 2,8,3?</text>
+    <option>Sodium</option>
+    <option correct="true">Aluminium</option>
+    <option>Silicon</option>
+    <option>Phosphorus</option>
+    <explanation>Total electrons = 13. Atomic number 13 = Aluminium (Al). Valency = 3.</explanation>
+  </question>
+
+  <question>
+    <text>The charge on an electron is:</text>
+    <option>+1.6×10⁻¹⁹ C</option>
+    <option correct="true">-1.6×10⁻¹⁹ C</option>
+    <option>+1.6×10⁻¹⁹ C</option>
+    <option>Zero</option>
+    <explanation>Electron charge = -1.602×10⁻¹⁹ coulombs. Proton has equal but opposite positive charge.</explanation>
+  </question>
+
+  <question>
+    <text>Which rule states that maximum 2 electrons with opposite spins can occupy an orbital?</text>
+    <option>Aufbau principle</option>
+    <option correct="true">Pauli exclusion principle</option>
+    <option>Hund's rule</option>
+    <option>Octet rule</option>
+    <explanation>Pauli exclusion principle: no two electrons can have all four quantum numbers same. They must have opposite spins.</explanation>
+  </question>
+
+  <question>
+    <text>The number of valence electrons in oxygen (Z=8) is:</text>
+    <option>2</option>
+    <option correct="true">6</option>
+    <option>8</option>
+    <option>1</option>
+    <explanation>Electronic configuration: 2,6. Valence electrons = electrons in outermost shell = 6.</explanation>
+  </question>
+
+  <question>
+    <text>Which experiment proved that atom has mostly empty space?</text>
+    <option>Cathode ray experiment</option>
+    <option correct="true">Alpha scattering experiment</option>
+    <option>Canal ray experiment</option>
+    <option>Oil drop experiment</option>
+    <explanation>Rutherford's experiment: most alpha particles passed straight through → atom mostly empty space.</explanation>
+  </question>
+
+  <question>
+    <text>The isotope used in carbon dating is:</text>
+    <option>Carbon-12</option>
+    <option correct="true">Carbon-14</option>
+    <option>Carbon-13</option>
+    <option>Carbon-16</option>
+    <explanation>C-14 (radioactive) decays with half-life 5730 years. Used to date fossils up to 50,000 years old.</explanation>
+  </question>
+
+  <question>
+    <text>The electronic configuration of calcium (Z=20) is:</text>
+    <option>2,8,8,2</option>
+    <option correct="true">2,8,8,2</option>
+    <option>2,8,10</option>
+    <option>2,8,8,1,1</option>
+    <explanation>Ca (20): K=2, L=8, M=8, N=2. Valency = 2.</explanation>
+  </question>
+
+  <question>
+    <text>Which principle states electrons fill lower energy orbitals first?</text>
+    <option correct="true">Aufbau principle</option>
+    <option>Pauli exclusion principle</option>
+    <option>Hund's rule</option>
+    <option>Heisenberg principle</option>
+    <explanation>Aufbau (German: building up): electrons occupy lowest energy orbitals first. Order: 1s, 2s, 2p, 3s, 3p, 4s, 3d...</explanation>
+  </question>
+
+  <question>
+    <text>The number of electrons in Cl⁻ ion (Z=17) is:</text>
+    <option>16</option>
+    <option>17</option>
+    <option correct="true">18</option>
+    <option>19</option>
+    <explanation>Cl atom has 17 electrons. Cl⁻ gains 1 electron → total 18 electrons.</explanation>
+  </question>
+
+  <question>
+    <text>Which rule states electrons occupy degenerate orbitals singly first?</text>
+    <option>Aufbau principle</option>
+    <option>Pauli exclusion principle</option>
+    <option correct="true">Hund's rule of maximum multiplicity</option>
+    <option>Octet rule</option>
+    <explanation>Hund's rule: electrons fill degenerate orbitals (same energy) singly with parallel spins before pairing.</explanation>
+  </question>
+
+  <question>
+    <text>The nucleus contains:</text>
+    <option>Electrons and protons</option>
+    <option correct="true">Protons and neutrons</option>
+    <option>Electrons and neutrons</option>
+    <option>Only protons</option>
+    <explanation>Nucleus contains protons (+) and neutrons (neutral). Electrons revolve around nucleus.</explanation>
+  </question>
+
+  <question>
+    <text>What is the mass of one proton?</text>
+    <option>1/1840 u</option>
+    <option correct="true">1 u</option>
+    <option>2 u</option>
+    <option>0 u</option>
+    <explanation>Proton mass ≈ 1 atomic mass unit (1.67×10⁻²⁷ kg). Neutron ≈ 1 u, electron ≈ 1/1840 u.</explanation>
+  </question>
 </quiz>
