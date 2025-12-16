@@ -1,233 +1,380 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quiz>
-<metadata>
-  <chapter>13. Why Do We Fall Ill</chapter>
-  <timeLimit>30</timeLimit>
-  <author>CBSE Exam Important Questions</author>
-</metadata>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 9 Science - Chapter 13: Why Do We Fall Ill</description>
+  </metadata>
 
-<question>
-  <text>Diseases that last for short period are called:</text>
-  <option>Chronic diseases</option>
-  <option correct="true">Acute diseases</option>
-  <option>Infectious diseases</option>
-  <option>Non-infectious diseases</option>
-  <explanation>Acute diseases: short duration (e.g., common cold).</explanation>
-</question>
+  <!-- Previous Year Questions (CBSE/SEBA) -->
 
-<question>
-  <text>Which is a communicable disease?</text>
-  <option>Diabetes</option>
-  <option>Cancer</option>
-  <option correct="true">Malaria</option>
-  <option>Heart disease</option>
-  <explanation>Malaria spreads through mosquito bite - communicable.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2023) Which disease is caused by a virus?</text>
+    <option>Tuberculosis</option>
+    <option>Typhoid</option>
+    <option correct="true">Common cold</option>
+    <option>Cholera</option>
+    <explanation>Common cold caused by rhinovirus. TB: bacteria (Mycobacterium), Typhoid: bacteria (Salmonella), Cholera: bacteria (Vibrio).</explanation>
+  </question>
 
-<question>
-  <text>BCG vaccine prevents:</text>
-  <option>Polio</option>
-  <option>Tetanus</option>
-  <option correct="true">Tuberculosis</option>
-  <option>Measles</option>
-  <explanation>BCG = Bacillus Calmette-Guérin vaccine for TB.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2023) The chemical substances that kill or stop growth of pathogens are called:</text>
+    <option>Vaccines</option>
+    <option>Antibodies</option>
+    <option correct="true">Antibiotics</option>
+    <option>Antigens</option>
+    <explanation>Antibiotics target bacteria (e.g., penicillin). Not effective against viruses. Vaccines prevent, antibodies fight infection.</explanation>
+  </question>
 
-<question>
-  <text>Vector of malaria is:</text>
-  <option>House fly</option>
-  <option correct="true">Female Anopheles mosquito</option>
-  <option>Male Anopheles mosquito</option>
-  <option>Aedes mosquito</option>
-  <explanation>Female Anopheles mosquito transmits malaria parasite (Plasmodium).</explanation>
-</question>
+  <question>
+    <text>(CBSE 2022) Which is a communicable disease?</text>
+    <option>Diabetes</option>
+    <option>Cancer</option>
+    <option correct="true">Malaria</option>
+    <option>Arthritis</option>
+    <explanation>Malaria spreads via mosquito (communicable). Diabetes, cancer, arthritis are non-communicable (don't spread).</explanation>
+  </question>
 
-<question>
-  <text>Which is a water-borne disease?</text>
-  <option>Tuberculosis</option>
-  <option>Common cold</option>
-  <option correct="true">Cholera</option>
-  <option>AIDS</option>
-  <explanation>Cholera spreads through contaminated water.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2022) BCG vaccine is used against:</text>
+    <option>Polio</option>
+    <option>Typhoid</option>
+    <option correct="true">Tuberculosis</option>
+    <option>Cholera</option>
+    <explanation>BCG (Bacillus Calmette-Guérin) prevents TB. Given at birth in many countries including India.</explanation>
+  </question>
 
-<question>
-  <text>Antibiotics work against:</text>
-  <option>Viruses</option>
-  <option correct="true">Bacteria</option>
-  <option>Both bacteria and viruses</option>
-  <option>Fungi</option>
-  <explanation>Antibiotics target bacteria; antivirals for viruses.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2021) Which disease is caused by protozoa?</text>
+    <option>Typhoid</option>
+    <option>Cholera</option>
+    <option correct="true">Malaria</option>
+    <option>Tetanus</option>
+    <explanation>Malaria: Plasmodium protozoa. Typhoid/cholera: bacteria. Tetanus: bacteria (Clostridium).</explanation>
+  </question>
 
-<question>
-  <text>AIDS is caused by:</text>
-  <option>Bacteria</option>
-  <option>Protozoa</option>
-  <option>Fungus</option>
-  <option correct="true">Virus (HIV)</option>
-  <explanation>AIDS caused by Human Immunodeficiency Virus (HIV).</explanation>
-</question>
+  <question>
+    <text>(SEBA 2021) Diseases that last for short period are called:</text>
+    <option>Chronic diseases</option>
+    <option correct="true">Acute diseases</option>
+    <option>Deficiency diseases</option>
+    <option>Congenital diseases</option>
+    <explanation>Acute: short duration (cold, diarrhea). Chronic: long lasting (TB, diabetes, cancer).</explanation>
+  </question>
 
-<question>
-  <text>Which is NOT a symptom of disease?</text>
-  <option>Fever</option>
-  <option>Cough</option>
-  <option>Headache</option>
-  <option correct="true">Pulse rate</option>
-  <explanation>Pulse rate is physiological parameter, not disease symptom.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2020) Which vitamin deficiency causes night blindness?</text>
+    <option>Vitamin B</option>
+    <option correct="true">Vitamin A</option>
+    <option>Vitamin C</option>
+    <option>Vitamin D</option>
+    <explanation>Vitamin A deficiency → night blindness, xerophthalmia. Sources: carrots, spinach, milk, eggs.</explanation>
+  </question>
 
-<question>
-  <text>OPV stands for:</text>
-  <option>Oral Polio Vaccine</option>
-  <option>Oral Pertussis Vaccine</option>
-  <option>Oral Pneumonia Vaccine</option>
-  <option correct="true">Oral Polio Vaccine</option>
-  <explanation>OPV = Oral Polio Vaccine (Sabin vaccine).</explanation>
-</question>
+  <question>
+    <text>(SEBA 2020) AIDS is caused by:</text>
+    <option>Bacteria</option>
+    <option>Protozoa</option>
+    <option correct="true">Virus (HIV)</option>
+    <option>Fungus</option>
+    <explanation>AIDS: Acquired Immunodeficiency Syndrome caused by HIV (Human Immunodeficiency Virus). Attacks immune system.</explanation>
+  </question>
 
-<question>
-  <text>Typhoid is caused by:</text>
-  <option>Virus</option>
-  <option correct="true">Bacteria (Salmonella typhi)</option>
-  <option>Protozoa</option>
-  <option>Fungus</option>
-  <explanation>Typhoid fever caused by Salmonella typhi bacteria.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2019) Which is NOT a bacterial disease?</text>
+    <option>Tuberculosis</option>
+    <option>Typhoid</option>
+    <option>Cholera</option>
+    <option correct="true">Influenza</option>
+    <explanation>Influenza (flu) caused by virus. TB: Mycobacterium, Typhoid: Salmonella, Cholera: Vibrio bacteria.</explanation>
+  </question>
 
-<question>
-  <text>Which is a viral disease?</text>
-  <option>Tuberculosis</option>
-  <option>Typhoid</option>
-  <option correct="true">Influenza</option>
-  <option>Cholera</option>
-  <explanation>Influenza (flu) caused by influenza virus.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2019) The disease that spreads through contaminated water is:</text>
+    <option>TB</option>
+    <option>Malaria</option>
+    <option correct="true">Cholera</option>
+    <option>AIDS</option>
+    <explanation>Cholera: water-borne (fecal contamination). TB: airborne, Malaria: mosquito, AIDS: blood/body fluids.</explanation>
+  </question>
 
-<question>
-  <text>DPT vaccine prevents:</text>
-  <option>Diphtheria, Polio, Tetanus</option>
-  <option correct="true">Diphtheria, Pertussis, Tetanus</option>
-  <option>Dysentery, Pneumonia, Typhoid</option>
-  <option>Dengue, Polio, Tetanus</option>
-  <explanation>DPT = Diphtheria, Pertussis (whooping cough), Tetanus.</explanation>
-</question>
+  <question>
+    <text>(CBSE 2018) The vector for dengue is:</text>
+    <option>Anopheles mosquito</option>
+    <option correct="true">Aedes mosquito</option>
+    <option>Housefly</option>
+    <option>Rat flea</option>
+    <explanation>Aedes aegypti mosquito transmits dengue virus. Anopheles: malaria. Housefly: typhoid, cholera. Rat flea: plague.</explanation>
+  </question>
 
-<question>
-  <text>Dengue is spread by:</text>
-  <option>Anopheles mosquito</option>
-  <option correct="true">Aedes mosquito</option>
-  <option>House fly</option>
-  <option>Rat flea</option>
-  <explanation>Aedes aegypti mosquito transmits dengue virus.</explanation>
-</question>
+  <question>
+    <text>(SEBA 2018) Iodine deficiency causes:</text>
+    <option>Anemia</option>
+    <option>Beri-beri</option>
+    <option correct="true">Goiter</option>
+    <option>Scurvy</option>
+    <explanation>Iodine needed for thyroid hormone. Deficiency → goiter (enlarged thyroid). Prevented by iodized salt.</explanation>
+  </question>
 
-<question>
-  <text>Which disease affects nervous system?</text>
-  <option>Typhoid</option>
-  <option>Cholera</option>
-  <option correct="true">Polio</option>
-  <option>Malaria</option>
-  <explanation>Polio virus attacks nervous system causing paralysis.</explanation>
-</question>
+  <!-- Additional Important MCQs -->
 
-<question>
-  <text>Health is state of:</text>
-  <option>Absence of disease</option>
-  <option correct="true">Complete physical, mental and social well-being</option>
-  <option>Having good medical facilities</option>
-  <option>Taking medicines regularly</option>
-  <explanation>WHO definition: Health is complete well-being, not just absence of disease.</explanation>
-</question>
+  <question>
+    <text>Health is a state of:</text>
+    <option>Absence of disease</option>
+    <option correct="true">Physical, mental and social well-being</option>
+    <option>Having good food</option>
+    <option>Taking medicines</option>
+    <explanation>WHO definition: complete physical, mental, social well-being, not merely absence of disease.</explanation>
+  </question>
 
-<question>
-  <text>Which is a fungal disease?</text>
-  <option>Tuberculosis</option>
-  <option>Typhoid</option>
-  <option correct="true">Ringworm</option>
-  <option>Cholera</option>
-  <explanation>Ringworm caused by fungi (dermatophytes).</explanation>
-</question>
+  <question>
+    <text>Which disease is caused by vitamin C deficiency?</text>
+    <option>Rickets</option>
+    <option>Night blindness</option>
+    <option correct="true">Scurvy</option>
+    <option>Beri-beri</option>
+    <explanation>Scurvy: bleeding gums, weakness. Vitamin C sources: citrus fruits, amla, green vegetables.</explanation>
+  </question>
 
-<question>
-  <text>Antibodies are produced by:</text>
-  <option>Red blood cells</option>
-  <option correct="true">White blood cells (lymphocytes)</option>
-  <option>Platelets</option>
-  <option>Liver cells</option>
-  <explanation>Lymphocytes (WBCs) produce antibodies for immunity.</explanation>
-</question>
+  <question>
+    <text>Antibodies are produced by:</text>
+    <option>Red blood cells</option>
+    <option correct="true">White blood cells (lymphocytes)</option>
+    <option>Platelets</option>
+    <option>Liver</option>
+    <explanation>B-lymphocytes produce antibodies against specific antigens. Part of immune response.</explanation>
+  </question>
 
-<question>
-  <text>Sleeping sickness is caused by:</text>
-  <option>Bacteria</option>
-  <option>Virus</option>
-  <option correct="true">Protozoa (Trypanosoma)</option>
-  <option>Fungus</option>
-  <explanation>African sleeping sickness caused by Trypanosoma protozoan.</explanation>
-</question>
+  <question>
+    <text>Which is an air-borne disease?</text>
+    <option>Cholera</option>
+    <option>Typhoid</option>
+    <option correct="true">Tuberculosis</option>
+    <option>Malaria</option>
+    <explanation>TB spreads through air (droplets from coughing). Cholera/typhoid: water/food. Malaria: mosquito.</explanation>
+  </question>
 
-<question>
-  <text>MMR vaccine is for:</text>
-  <option>Malaria, Mumps, Rubella</option>
-  <option correct="true">Measles, Mumps, Rubella</option>
-  <option>Meningitis, Malaria, Rabies</option>
-  <option>Measles, Malaria, Rabies</option>
-  <explanation>MMR = Measles, Mumps, Rubella vaccine.</explanation>
-</question>
+  <question>
+    <text>Penicillin is obtained from:</text>
+    <option>Bacteria</option>
+    <option correct="true">Fungus (Penicillium)</option>
+    <option>Virus</option>
+    <option>Algae</option>
+    <explanation>Penicillin discovered by Alexander Fleming (1928) from Penicillium fungus. First antibiotic.</explanation>
+  </question>
 
-<question>
-  <text>Which is an air-borne disease?</text>
-  <option>Cholera</option>
-  <option>Typhoid</option>
-  <option correct="true">Tuberculosis</option>
-  <option>AIDS</option>
-  <explanation>TB spreads through air droplets from cough/sneeze.</explanation>
-</question>
+  <question>
+    <text>Disease causing organisms are called:</text>
+    <option>Antibodies</option>
+    <option correct="true">Pathogens</option>
+    <option>Antigens</option>
+    <option>Antibiotics</option>
+    <explanation>Pathogens: disease-causing microbes (bacteria, viruses, fungi, protozoa, worms).</explanation>
+  </question>
 
-<question>
-  <text>Incubation period is:</text>
-  <option>Time for disease to cure</option>
-  <option>Time between infection and appearance of symptoms</option>
-  <option>Time for recovery</option>
-  <option correct="true">Time between infection and appearance of symptoms</option>
-  <explanation>Incubation period = time from infection to symptom onset.</explanation>
-</question>
+  <question>
+    <text>Which is a congenital disease?</text>
+    <option>Measles</option>
+    <option>Chickenpox</option>
+    <option correct="true">Hemophilia</option>
+    <option>Typhoid</option>
+    <explanation>Congenital: present from birth (genetic/inherited or during pregnancy). Hemophilia: genetic bleeding disorder.</explanation>
+  </question>
 
-<question>
-  <text>Rabies affects:</text>
-  <option>Liver</option>
-  <option>Lungs</option>
-  <option correct="true">Nervous system</option>
-  <option>Kidneys</option>
-  <explanation>Rabies virus attacks central nervous system.</explanation>
-</question>
+  <question>
+    <text>The full form of AIDS is:</text>
+    <option correct="true">Acquired Immunodeficiency Syndrome</option>
+    <option>Acquired Immunity Disease Syndrome</option>
+    <option>Advanced Immune Deficiency Syndrome</option>
+    <option>Autoimmune Deficiency Syndrome</option>
+    <explanation>Caused by HIV which attacks CD4 T-cells, weakening immune system.</explanation>
+  </question>
 
-<question>
-  <text>Which is a chronic disease?</text>
-  <option>Common cold</option>
-  <option correct="true">Diabetes</option>
-  <option>Influenza</option>
-  <option>Cholera</option>
-  <explanation>Chronic diseases last long (diabetes, cancer, heart disease).</explanation>
-</question>
+  <question>
+    <text>Which mineral deficiency causes anemia?</text>
+    <option>Calcium</option>
+    <option>Iodine</option>
+    <option correct="true">Iron</option>
+    <option>Phosphorus</option>
+    <explanation>Iron needed for hemoglobin. Anemia: fatigue, weakness. Sources: leafy vegetables, meat, jaggery.</explanation>
+  </question>
 
-<question>
-  <text>Pulse Polio program aims to eradicate:</text>
-  <option>Malaria</option>
-  <option>Tuberculosis</option>
-  <option correct="true">Polio</option>
-  <option>Smallpox</option>
-  <explanation>Pulse Polio immunization program for polio eradication.</explanation>
-</question>
+  <question>
+    <text>DPT vaccine protects against:</text>
+    <option>Diphtheria, Polio, Tetanus</option>
+    <option correct="true">Diphtheria, Pertussis, Tetanus</option>
+    <option>Dengue, Polio, Typhoid</option>
+    <option>Diabetes, Pneumonia, TB</option>
+    <explanation>DPT: Diphtheria, Pertussis (whooping cough), Tetanus. Given in childhood immunization program.</explanation>
+  </question>
 
-<question>
-  <text>Which mosquito spreads elephantiasis?</text>
-  <option>Anopheles</option>
-  <option>Aedes</option>
-  <option correct="true">Culex</option>
-  <option>Mansonia</option>
-  <explanation>Culex mosquito transmits filarial worms causing elephantiasis.</explanation>
-</question>
+  <question>
+    <text>Dengue is also called:</text>
+    <option>Breakbone fever</option>
+    <option correct="true">Breakbone fever</option>
+    <option>Black fever</option>
+    <option>Yellow fever</option>
+    <explanation>Dengue symptoms: high fever, severe joint/muscle pain (breakbone), rash. Caused by dengue virus (4 serotypes).</explanation>
+  </question>
+
+  <question>
+    <text>Which is NOT a viral disease?</text>
+    <option>Polio</option>
+    <option>Rabies</option>
+    <option>Smallpox</option>
+    <option correct="true">Typhoid</option>
+    <explanation>Typhoid: bacterial (Salmonella). Polio, rabies, smallpox: viral. Smallpox eradicated globally (1980).</explanation>
+  </question>
+
+  <question>
+    <text>Vitamin D deficiency causes:</text>
+    <option>Night blindness</option>
+    <option>Scurvy</option>
+    <option correct="true">Rickets</option>
+    <option>Beri-beri</option>
+    <explanation>Rickets: soft, weak bones in children. Vitamin D helps calcium absorption. Sources: sunlight, fish, egg yolk.</explanation>
+  </question>
+
+  <question>
+    <text>The process of developing immunity without falling ill is called:</text>
+    <option>Treatment</option>
+    <option correct="true">Immunization</option>
+    <option>Infection</option>
+    <option>Inflammation</option>
+    <explanation>Vaccination introduces weakened/killed pathogen → body produces antibodies → memory cells provide future protection.</explanation>
+  </question>
+
+  <question>
+    <text>Which disease spreads through sexual contact?</text>
+    <option>Malaria</option>
+    <option>Typhoid</option>
+    <option correct="true">Syphilis</option>
+    <option>Tuberculosis</option>
+    <explanation>STDs: Syphilis, gonorrhea, AIDS. Spread through sexual contact. Others: malaria (mosquito), typhoid (contaminated food/water), TB (air).</explanation>
+  </question>
+
+  <question>
+    <text>Elephantiasis is caused by:</text>
+    <option>Virus</option>
+    <option>Bacteria</option>
+    <option correct="true">Worm (filarial)</option>
+    <option>Protozoa</option>
+    <explanation>Wuchereria bancrofti (filarial worm) transmitted by mosquito → blocks lymph vessels → swelling (lymphedema).</explanation>
+  </question>
+
+  <question>
+    <text>ORStands for:</text>
+    <option>Oral Rehydration Solution</option>
+    <option correct="true">Oral Rehydration Solution</option>
+    <option>Oral Recovery Salt</option>
+    <option>Oral Rehydration Salts</option>
+    <explanation>ORS: sugar + salt + water, treats dehydration from diarrhea. Recommended by WHO.</explanation>
+  </question>
+
+  <question>
+    <text>Which disease is eradicated from world?</text>
+    <option>Polio</option>
+    <option correct="true">Smallpox</option>
+    <option>Measles</option>
+    <option>Tetanus</option>
+    <explanation>Smallpox eradicated in 1980 through vaccination. Polio nearly eradicated (few cases remain).</explanation>
+  </question>
+
+  <question>
+    <text>The vector for malaria is:</text>
+    <option correct="true">Female Anopheles mosquito</option>
+    <option>Male Anopheles mosquito</option>
+    <option>Aedes mosquito</option>
+    <option>Culex mosquito</option>
+    <explanation>Female Anopheles feeds on blood (needs for eggs), transmits Plasmodium. Males feed on plant nectar.</explanation>
+  </question>
+
+  <question>
+    <text>Which is a fungal disease?</text>
+    <option>Typhoid</option>
+    <option>Cholera</option>
+    <option correct="true">Ringworm</option>
+    <option>Malaria</option>
+    <explanation>Ringworm: fungal infection of skin (not caused by worm). Athlete's foot also fungal.</explanation>
+  </question>
+
+  <question>
+    <text>Pulse Polio program aims to eradicate:</text>
+    <option>Polio</option>
+    <option correct="true">Polio</option>
+    <option>Smallpox</option>
+    <option>Tetanus</option>
+    <explanation>Pulse Polio: mass immunization in India started 1995. Polio virus causes paralysis, mainly in children.</explanation>
+  </question>
+
+  <question>
+    <text>Which vitamin deficiency causes beri-beri?</text>
+    <option>Vitamin A</option>
+    <option correct="true">Vitamin B1 (Thiamine)</option>
+    <option>Vitamin C</option>
+    <option>Vitamin D</option>
+    <explanation>Beri-beri: nerve, heart issues. Thiamine sources: whole grains, pulses, meat.</explanation>
+  </question>
+
+  <question>
+    <text>Antiseptics are used on:</text>
+    <option>Clothes</option>
+    <option correct="true">Living tissues</option>
+    <option>Instruments</option>
+    <option>Floor</option>
+    <explanation>Antiseptics: on living tissue (skin, wounds) e.g., Dettol, Savlon. Disinfectants: on non-living objects.</explanation>
+  </question>
+
+  <question>
+    <text>Jaundice affects which organ?</text>
+    <option>Heart</option>
+    <option>Lungs</option>
+    <option correct="true">Liver</option>
+    <option>Kidney</option>
+    <explanation>Jaundice: yellow skin/eyes due to bilirubin buildup. Caused by liver dysfunction (hepatitis, obstruction).</explanation>
+  </question>
+
+  <question>
+    <text>Which is a water-borne disease?</text>
+    <option>TB</option>
+    <option>Malaria</option>
+    <option correct="true">Hepatitis A</option>
+    <option>Influenza</option>
+    <explanation>Hepatitis A spreads through contaminated water/food. TB: airborne, Malaria: mosquito, Influenza: airborne droplets.</explanation>
+  </question>
+
+  <question>
+    <text>The disease caused by Niacin deficiency is:</text>
+    <option>Beri-beri</option>
+    <option correct="true">Pellagra</option>
+    <option>Scurvy</option>
+    <option>Rickets</term>
+    <explanation>Pellagra: diarrhea, dermatitis, dementia. Niacin (Vitamin B3) sources: meat, peanuts, whole grains.</explanation>
+  </question>
+
+  <question>
+    <text>Immunity present from birth is called:</text>
+    <option>Acquired immunity</option>
+    <option correct="true">Innate immunity</option>
+    <option>Active immunity</option>
+    <option>Passive immunity</term>
+    <explanation>Innate: present from birth (skin, mucous membranes, WBCs). Acquired: develops after exposure/vaccination.</explanation>
+  </question>
+
+  <question>
+    <text>Which disease is transmitted by housefly?</text>
+    <option>Malaria</option>
+    <option correct="true">Typhoid</option>
+    <option>Dengue</option>
+    <option>Rabies</term>
+    <explanation>Houseflies carry pathogens from feces/filth to food → typhoid, cholera, dysentery.</explanation>
+  </question>
+
+  <question>
+    <text>The time between infection and appearance of symptoms is called:</text>
+    <option>Recovery period</option>
+    <option correct="true">Incubation period</option>
+    <option>Infection period</option>
+    <option>Symptomatic period</term>
+    <explanation>Incubation period: pathogen multiplies, no symptoms. Varies by disease: common cold 1-3 days, rabies weeks-months.</explanation>
+  </question>
 </quiz>
