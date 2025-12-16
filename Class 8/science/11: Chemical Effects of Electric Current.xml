@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 8 Science - Chapter 11: Chemical Effects of Electric Current</description>
+  </metadata>
+
+  <!-- Previous Year Questions (CBSE/SEBA) -->
+
+  <question>
+    <text>(CBSE 2023) Which of the following is a good conductor of electricity?</text>
+    <option>Distilled water</option>
+    <option correct="true">Copper sulphate solution</option>
+    <option>Sugar solution</option>
+    <option>Kerosene</option>
+    <explanation>Copper sulphate solution is an electrolyte and conducts electricity. Distilled water and sugar solution are poor conductors. Kerosene is an insulator.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2023) What is the process of depositing a layer of any desired metal on another material by using electricity called?</text>
+    <option>Electroplating</option>
+    <option correct="true">Electroplating</option>
+    <option>Electrorefining</option>
+    <option>Electrolysis</option>
+    <explanation>Electroplating uses electric current to deposit a thin layer of metal (e.g., chromium, gold) on another metal object.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2022) Which gas is liberated at anode during electrolysis of water?</text>
+    <option>Hydrogen</option>
+    <option correct="true">Oxygen</option>
+    <option>Nitrogen</option>
+    <option>Chlorine</option>
+    <explanation>During electrolysis of acidified water: Oxygen is liberated at anode (+) and hydrogen at cathode (-).</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2022) Which of the following liquids will allow the bulb to glow in a circuit?</text>
+    <option>Lemon juice</option>
+    <option>Vinegar</option>
+    <option>Salt solution</option>
+    <option correct="true">All of these</option>
+    <explanation>All these are electrolytes containing ions that conduct electricity, allowing current to flow and bulb to glow.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2021) Which metal is electroplated on iron to make cans for storing food?</text>
+    <option>Copper</option>
+    <option>Silver</option>
+    <option correct="true">Tin</option>
+    <option>Zinc</option>
+    <explanation>Tin is non-toxic and prevents iron from rusting. Tin-plated iron is used for food containers (tin cans).</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2021) The decomposition of an electrolyte by passing electric current is called:</text>
+    <option>Electroplating</option>
+    <option>Electrorefining</option>
+    <option correct="true">Electrolysis</option>
+    <option>Electrochemistry</option>
+    <explanation>Electrolysis is chemical decomposition of electrolyte into its constituents by passing electric current.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2020) Why is chromium electroplated on objects?</text>
+    <option>To make them heavier</option>
+    <option correct="true">To prevent corrosion and for shine</option>
+    <option>To make them magnetic</option>
+    <option>To reduce cost</option>
+    <explanation>Chromium plating gives shiny appearance and protects from corrosion. Used on car parts, bathroom fittings, etc.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2020) Which electrode is connected to the negative terminal of battery?</text>
+    <option>Anode</option>
+    <option correct="true">Cathode</option>
+    <option>Both electrodes</option>
+    <option>Neither</option>
+    <explanation>Cathode is connected to negative terminal. Anode is positive. Remember: CAThode = Negative (CAT NEGative).</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2019) What happens when electric current is passed through copper sulphate solution using copper electrodes?</text>
+    <option>Copper deposits on cathode</option>
+    <option correct="true">Copper deposits on cathode</option>
+    <option>Copper deposits on anode</option>
+    <option>Oxygen is liberated</option>
+    <explanation>In copper sulphate electrolysis with copper electrodes: Copper from solution deposits on cathode. Anode copper dissolves.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2019) Which of these is a poor conductor of electricity?</text>
+    <option>Vinegar</option>
+    <option>Lemon juice</option>
+    <option>Salt water</option>
+    <option correct="true">Distilled water</option>
+    <explanation>Distilled water lacks ions, so it's poor conductor. Adding salt/acid makes it conductive by providing ions.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2018) Why is zinc coated on iron?</text>
+    <option>For decoration</option>
+    <option correct="true">To prevent rusting (galvanization)</option>
+    <option>To make it heavier</option>
+    <option>To make it magnetic</option>
+    <explanation>Zinc coating (galvanization) protects iron from rusting even if coating is scratched, as zinc is more reactive.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2018) Which device is used to detect weak electric current?</text>
+    <option>Ammeter</option>
+    <option>Voltmeter</option>
+    <option correct="true">LED or magnetic compass</option>
+    <option>Bulb</option>
+    <explanation>LED glows with very small current. Magnetic compass needle deflects even with weak current through wire.</explanation>
+  </question>
+
+  <!-- Additional Important MCQs -->
+
+  <question>
+    <text>What are materials that allow electric current to pass through them called?</text>
+    <option>Insulators</option>
+    <option correct="true">Conductors</option>
+    <option>Semi-conductors</option>
+    <option>Resistors</option>
+    <explanation>Conductors allow current flow (metals, electrolytes). Insulators don't (plastic, rubber, dry wood).</explanation>
+  </question>
+
+  <question>
+    <text>Which process is used to purify copper?</text>
+    <option>Electroplating</option>
+    <option correct="true">Electrorefining</option>
+    <option>Galvanization</option>
+    <option>Anodizing</option>
+    <explanation>Electrorefining uses electrolysis to obtain pure copper (99.99%) from impure copper for electrical wires.</explanation>
+  </question>
+
+  <question>
+    <text>What ions are present in acid solutions that make them conductive?</text>
+    <option>Sodium ions</option>
+    <option correct="true">Hydrogen ions (H+)</option>
+    <option>Chloride ions</option>
+    <option>Hydroxide ions</option>
+    <explanation>Acids dissociate in water to produce H+ ions which carry current. More H+ ions = stronger acid = better conductivity.</explanation>
+  </question>
+
+  <question>
+    <text>Why are electrodes usually made of graphite or platinum in electrolysis?</text>
+    <option>They are cheap</option>
+    <option>They are colorful</option>
+    <option correct="true">They are inert (don't react)</option>
+    <option>They are magnetic</option>
+    <explanation>Graphite/platinum are inert electrodes that don't participate in reaction, only conduct electricity.</explanation>
+  </question>
+
+  <question>
+    <text>What is the electrolyte in electroplating silver?</text>
+    <option>Silver nitrate solution</option>
+    <option correct="true">Silver nitrate solution</option>
+    <option>Copper sulphate solution</option>
+    <option>Sodium chloride solution</option>
+    <explanation>Silver nitrate (AgNO₃) solution provides Ag+ ions that deposit on cathode during silver electroplating.</explanation>
+  </question>
+
+  <question>
+    <text>Which metal is used for galvanizing iron?</text>
+    <option>Copper</option>
+    <option>Tin</option>
+    <option correct="true">Zinc</option>
+    <option>Nickel</option>
+    <explanation>Galvanization is coating iron/steel with zinc to prevent rusting. Used in pipelines, buckets, car bodies.</explanation>
+  </question>
+
+  <question>
+    <text>What happens to conductivity when concentration of electrolyte increases?</text>
+    <option>Decreases</option>
+    <option>Remains same</option>
+    <option correct="true">Increases</option>
+    <option>First increases then decreases</option>
+    <explanation>More concentrated electrolyte = more ions = better conductivity. However, very high concentration may decrease mobility.</explanation>
+  </question>
+
+  <question>
+    <text>Which gas is produced at cathode during water electrolysis?</text>
+    <option correct="true">Hydrogen</option>
+    <option>Oxygen</option>
+    <option>Chlorine</option>
+    <option>Nitrogen</option>
+    <explanation>At cathode: 2H₂O + 2e⁻ → H₂ + 2OH⁻. Hydrogen gas bubbles form (test with popping sound).</explanation>
+  </question>
+
+  <question>
+    <text>What is the purpose of adding few drops of acid to water during electrolysis?</text>
+    <option>To change color</option>
+    <option>To make it boil</option>
+    <option correct="true">To increase conductivity</option>
+    <option>To reduce evaporation</option>
+    <explanation>Pure water is poor conductor. Adding acid (H₂SO₄) provides H+ ions, making water conductive.</explanation>
+  </question>
+
+  <question>
+    <text>Which metal is electroplated on steel to make "chrome" parts?</text>
+    <option>Copper</option>
+    <option correct="true">Chromium</option>
+    <option>Nickel</option>
+    <option>Gold</option>
+    <explanation>Chromium plating gives shiny, corrosion-resistant surface on car bumpers, taps, bicycle handlebars.</explanation>
+  </question>
+
+  <question>
+    <text>What happens when electric current is passed through NaCl solution?</text>
+    <option>Hydrogen and oxygen produced</option>
+    <option correct="true">Chlorine and hydrogen produced</option>
+    <option>Copper deposits</option>
+    <option>Nothing happens</option>
+    <explanation>Electrolysis of NaCl solution: Chlorine at anode, hydrogen at cathode, NaOH forms in solution.</explanation>
+  </question>
+
+  <question>
+    <text>Why is copper used for electrical wiring?</text>
+    <option>It is cheap</option>
+    <option>It is colorful</option>
+    <option correct="true">It is excellent conductor</option>
+    <option>It is magnetic</option>
+    <explanation>Copper has high electrical conductivity, ductility (can be drawn into wires), and doesn't corrode easily.</explanation>
+  </question>
+
+  <question>
+    <text>What is the chemical effect of electric current?</text>
+    <option>Heating effect</option>
+    <option>Magnetic effect</option>
+    <option correct="true">Chemical decomposition</option>
+    <option>Light emission</option>
+    <explanation>Chemical effect causes decomposition of electrolyte (electrolysis). Heating effect heats conductor. Magnetic effect creates magnetic field.</explanation>
+  </question>
+
+  <question>
+    <text>Which metal is used as anode in electrorefining of copper?</text>
+    <option>Pure copper</option>
+    <option correct="true">Impure copper</option>
+    <option>Graphite</option>
+    <option>Platinum</option>
+    <explanation>In electrorefining: Anode = thick impure copper; Cathode = thin pure copper; Electrolyte = copper sulphate.</explanation>
+  </question>
+
+  <question>
+    <text>Why do bulbs sometimes not glow even with conducting liquid?</text>
+    <option>Bulb is faulty</option>
+    <option correct="true">Current is too weak</option>
+    <option>Battery is new</option>
+    <option>Wires are thick</option>
+    <explanation>Weak electrolyte produces small current that may not heat filament enough to glow, but can be detected with LED/compass.</explanation>
+  </question>
+
+  <question>
+    <text>What is the full form of LED?</text>
+    <option>Light Emitting Diode</option>
+    <option correct="true">Light Emitting Diode</option>
+    <option>Light Energy Device</option>
+    <option>Low Energy Device</option>
+    <explanation>LED emits light when current passes. More efficient than bulbs, works with very small current.</explanation>
+  </question>
+
+  <question>
+    <text>Which process prevents iron from rusting by coating with zinc?</text>
+    <option>Electroplating</option>
+    <option>Anodizing</option>
+    <option correct="true">Galvanization</option>
+    <option>Tinning</option>
+    <explanation>Galvanization = zinc coating; Tinning = tin coating; Electroplating = metal deposition using electricity.</explanation>
+  </question>
+
+  <question>
+    <text>What is the electrolyte in car batteries?</text>
+    <option>Copper sulphate</option>
+    <option>Salt water</option>
+    <option correct="true">Sulphuric acid</option>
+    <option>Distilled water</option>
+    <explanation>Car batteries use dilute sulphuric acid (H₂SO₄) as electrolyte between lead plates.</explanation>
+  </question>
+
+  <question>
+    <text>Which metal is used for electroplating jewelry to give golden appearance?</text>
+    <option>Copper</option>
+    <option>Silver</option>
+    <option correct="true">Gold</option>
+    <option>Chromium</option>
+    <explanation>Gold electroplating gives jewelry golden shine at lower cost. Real gold is too expensive for large items.</explanation>
+  </question>
+
+  <question>
+    <text>What happens to the anode during electroplating?</text>
+    <option>It gains weight</option>
+    <option correct="true">It dissolves</option>
+    <option>It changes color</option>
+    <option>It becomes magnetic</option>
+    <explanation>Anode metal dissolves into electrolyte, replacing metal ions that deposit on cathode. Anode loses weight.</explanation>
+  </question>
+
+  <question>
+    <text>Why is plastic coating used on electrical wires?</text>
+    <option>For beauty</option>
+    <option correct="true">As insulator for safety</option>
+    <option>To conduct better</option>
+    <option>To make wires stronger</option>
+    <explanation>Plastic/rubber insulation prevents electric shock and short circuits by not allowing current to leak.</explanation>
+  </question>
+
+  <question>
+    <text>Which industrial process uses electrolysis of NaCl solution?</text>
+    <option>Steel making</option>
+    <option correct="true">Chlor-alkali process</option>
+    <option>Paper making</option>
+    <option>Cement production</option>
+    <explanation>Chlor-alkali process produces chlorine, hydrogen and sodium hydroxide from brine (NaCl solution).</explanation>
+  </question>
+
+  <question>
+    <text>What is the role of battery in electroplating?</text>
+    <option>To light the room</option>
+    <option>To measure current</option>
+    <option correct="true">To provide DC current</option>
+    <option>To heat the solution</option>
+    <explanation>Battery provides direct current (DC) for electroplating. AC would deposit and remove metal alternately.</explanation>
+  </question>
+</quiz>
