@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 8 Science - Chapter 12: Some Natural Phenomena</description>
+  </metadata>
+
+  <!-- Previous Year Questions (CBSE/SEBA) -->
+
+  <question>
+    <text>(CBSE 2023) Which instrument is used to measure earthquake waves?</text>
+    <option>Barometer</option>
+    <option correct="true">Seismograph</option>
+    <option>Thermometer</option>
+    <option>Anemometer</option>
+    <explanation>A seismograph records seismic waves produced by earthquakes. The record is called a seismogram.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2023) Lightning is caused due to:</text>
+    <option>Heavy rainfall</option>
+    <option>Strong winds</option>
+    <option correct="true">Electric discharge between clouds</option>
+    <option>Earth's rotation</option>
+    <explanation>Lightning is a sudden electrostatic discharge during thunderstorm, between clouds or between cloud and ground.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2022) The point inside Earth where earthquake originates is called:</text>
+    <option>Epicenter</option>
+    <option correct="true">Focus</option>
+    <option>Crust</option>
+    <option>Seismic zone</option>
+    <explanation>Focus (hypocenter) is the point inside Earth where earthquake originates. Epicenter is point directly above focus on surface.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2022) Which scale measures earthquake magnitude?</text>
+    <option>Beaufort scale</option>
+    <option>Kelvin scale</option>
+    <option correct="true">Richter scale</option>
+    <option>Celsius scale</option>
+    <explanation>Richter scale measures earthquake magnitude (energy released). Each whole number increase means 10× more amplitude and ~32× more energy.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2021) Which device is used to protect buildings from lightning?</text>
+    <option>Insulator</option>
+    <option>Fuse</option>
+    <option correct="true">Lightning conductor</option>
+    <option>Circuit breaker</option>
+    <explanation>Lightning conductor (rod) provides easy path for lightning to reach ground, protecting building from damage.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2021) Charging a body by rubbing is called:</text>
+    <option>Conduction</option>
+    <option>Induction</option>
+    <option correct="true">Friction</option>
+    <option>Earthing</option>
+    <explanation>Frictional charging transfers electrons between objects by rubbing (e.g., glass rod with silk, plastic comb with hair).</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2020) Which regions are most prone to earthquakes?</text>
+    <option>Plains</option>
+    <option>Deserts</option>
+    <option correct="true">Plate boundaries</option>
+    <option>Ocean beds</option>
+    <explanation>Earthquakes occur mainly at tectonic plate boundaries like Himalayan region, Pacific Ring of Fire.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2020) What is the process of transferring charge to Earth called?</text>
+    <option>Charging</option>
+    <option>Insulation</option>
+    <option correct="true">Earthing</option>
+    <option>Conduction</option>
+    <explanation>Earthing connects charged object to ground using conductor, allowing excess charge to flow to Earth.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2019) Which natural phenomenon cannot be predicted accurately?</text>
+    <option>Rainfall</option>
+    <option>Thunderstorm</option>
+    <option correct="true">Earthquake</option>
+    <option>Flood</option>
+    <explanation>Earthquakes cannot be predicted accurately with current technology. Only seismic zones can be identified.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2019) Like charges:</text>
+    <option>Attract each other</option>
+    <option correct="true">Repel each other</option>
+    <option>Do nothing</option>
+    <option>Combine</option>
+    <explanation>Like charges repel (positive-positive or negative-negative). Unlike charges attract (positive-negative).</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2018) Which type of charge is acquired by glass rod rubbed with silk?</text>
+    <option>Negative</option>
+    <option correct="true">Positive</option>
+    <option>Neutral</option>
+    <option>Both</option>
+    <explanation>Glass loses electrons to silk, becoming positively charged. Silk gains electrons, becoming negatively charged.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2018) What should you avoid during thunderstorm?</text>
+    <option>Staying indoors</option>
+    <option>Using mobile phone</option>
+    <option correct="true">Taking shelter under tree</option>
+    <option>Closing windows</option>
+    <explanation>Tall trees can attract lightning. Avoid open fields, trees, water bodies, and metal objects during thunderstorms.</explanation>
+  </question>
+
+  <!-- Additional Important MCQs -->
+
+  <question>
+    <text>What causes earthquakes?</text>
+    <option>Heavy rainfall</option>
+    <option>Strong winds</option>
+    <option correct="true">Movement of tectonic plates</option>
+    <option>Volcanic eruptions only</option>
+    <explanation>Most earthquakes are caused by sudden release of energy due to movement of tectonic plates along faults.</explanation>
+  </question>
+
+  <question>
+    <text>Which is the safest place during earthquake if indoors?</text>
+    <option>Near windows</option>
+    <option>Under heavy furniture</option>
+    <option correct="true">Under a sturdy table</option>
+    <option>In elevator</option>
+    <explanation>Drop, Cover, Hold: Drop to ground, take cover under sturdy furniture, hold on until shaking stops.</explanation>
+  </question>
+
+  <question>
+    <text>What is an electroscope used for?</text>
+    <option>Measuring temperature</option>
+    <option>Measuring wind speed</option>
+    <option correct="true">Detecting electric charge</option>
+    <option>Measuring earthquake intensity</option>
+    <explanation>Electroscope detects presence and type of charge. Charged object causes leaves to diverge due to repulsion of like charges.</explanation>
+  </question>
+
+  <question>
+    <text>Which material is safe to touch during lightning?</text>
+    <option>Metal pole</option>
+    <option>Water tap</option>
+    <option correct="true">Rubber shoes</option>
+    <option>Umbrella with metal tip</option>
+    <explanation>Rubber is insulator and provides protection. Metal, water, and tall objects conduct electricity and attract lightning.</explanation>
+  </question>
+
+  <question>
+    <text>What is the cause of lightning?</text>
+    <option>Heating of air</option>
+    <option correct="true">Charge separation in clouds</option>
+    <option>Earth's magnetic field</option>
+    <option>Solar radiation</option>
+    <explanation>Updrafts and downdrafts in clouds separate charges: positive at top, negative at bottom, causing lightning when discharged.</explanation>
+  </question>
+
+  <question>
+    <text>Which is NOT a seismic zone in India?</text>
+    <option>Zone V (Very high risk)</option>
+    <option>Zone IV (High risk)</option>
+    <option>Zone III (Moderate risk)</option>
+    <option correct="true">Zone I (No risk)</option>
+    <explanation>India has Zones II-V. No Zone I (no risk) exists in India. Zone V includes Kashmir, Northeast, Rann of Kutch.</explanation>
+  </question>
+
+  <question>
+    <text>What is the purpose of lightning conductor?</text>
+    <option>To attract lightning</option>
+    <option correct="true">To provide safe path to ground</option>
+    <option>To prevent lightning</option>
+    <option>To measure lightning strength</option>
+    <explanation>Lightning conductor doesn't attract but provides low-resistance path, preventing damage to building.</explanation>
+  </question>
+
+  <question>
+    <text>How can you charge a neutral object by induction?</text>
+    <option>By rubbing</option>
+    <option correct="true">By bringing charged object near it</option>
+    <option>By heating</option>
+    <option>By cooling</option>
+    <explanation>Induction charges object without contact: charged object brought near causes charge separation; then earthing gives net charge.</explanation>
+  </question>
+
+  <question>
+    <text>What should you do if outdoors during earthquake?</text>
+    <option>Run into building</option>
+    <option correct="true">Move to open area away from buildings</option>
+    <option>Stand under tree</option>
+    <option>Cross bridges</option>
+    <explanation>Move to clear open area away from buildings, trees, power lines, and other structures that could fall.</explanation>
+  </question>
+
+  <question>
+    <text>What is thunder?</text>
+    <option>Light emission</option>
+    <option correct="true">Sound produced by lightning</option>
+    <option>Type of cloud</option>
+    <option>Earth vibration</option>
+    <explanation>Thunder is sound caused by rapid heating and expansion of air along lightning path (can reach 30,000°C).</explanation>
+  </question>
+
+  <question>
+    <text>Which type of charge does ebonite rod acquire when rubbed with wool?</text>
+    <option correct="true">Negative</option>
+    <option>Positive</option>
+    <option>Neutral</option>
+    <option>Both positive and negative</option>
+    <explanation>Ebonite (rubber) gains electrons from wool, becoming negatively charged. Wool becomes positively charged.</explanation>
+  </question>
+
+  <question>
+    <text>What is the magnitude of destructive earthquakes on Richter scale?</text>
+    <option>Below 3</option>
+    <option>3-4</option>
+    <option correct="true">Above 5</option>
+    <option>Above 7</option>
+    <explanation>Earthquakes above magnitude 5 can cause damage. Above 7 are major earthquakes; above 8 are great earthquakes.</explanation>
+  </question>
+
+  <question>
+    <text>Why is it safer inside car during lightning?</text>
+    <option>Car has rubber tires</option>
+    <option correct="true">Metal body acts as Faraday cage</option>
+    <option>Car is small</option>
+    <option>Car has AC</option>
+    <explanation>Metal car body conducts electricity around occupants (Faraday cage effect), keeping inside safe. Close windows!</explanation>
+  </question>
+
+  <question>
+    <text>What are tectonic plates?</text>
+    <option>Cloud types</option>
+    <option>Rock samples</option>
+    <option correct="true">Large pieces of Earth's crust</option>
+    <option>Ocean currents</option>
+    <explanation>Earth's lithosphere is divided into tectonic plates that float on semi-fluid asthenosphere, causing earthquakes when they move.</explanation>
+  </question>
+
+  <question>
+    <text>Which of these is NOT a method of charge transfer?</text>
+    <option>Conduction</option>
+    <option>Friction</option>
+    <option>Induction</option>
+    <option correct="true">Reflection</option>
+    <explanation>Charge transfer methods: 1) Friction (rubbing), 2) Conduction (contact), 3) Induction (without contact). Reflection is for light.</explanation>
+  </question>
+
+  <question>
+    <text>What is the main cause of tsunami?</text>
+    <option>Heavy rainfall</option>
+    <option>Strong winds</option>
+    <option correct="true">Undersea earthquake</option>
+    <option>Volcanic eruption on land</option>
+    <explanation>Tsunamis are caused by undersea earthquakes, landslides, or volcanic eruptions that displace large water volumes.</explanation>
+  </question>
+
+  <question>
+    <text>Why do we see lightning before hearing thunder?</text>
+    <option>Lightning happens first</option>
+    <option correct="true">Light travels faster than sound</option>
+    <option>Thunder is softer</option>
+    <option>Lightning is brighter</option>
+    <explanation>Light travels at 300,000 km/s, sound at 340 m/s. Count seconds between flash and thunder: every 3 seconds ≈ 1 km distance.</explanation>
+  </question>
+
+  <question>
+    <text>What is a seismologist?</text>
+    <option>Studies stars</option>
+    <option>Studies weather</option>
+    <option correct="true">Studies earthquakes</option>
+    <option>Studies rocks</option>
+    <explanation>Seismologist studies seismic waves, earthquakes, and Earth's interior structure using seismographs.</explanation>
+  </question>
+
+  <question>
+    <text>Which safety measure is WRONG during earthquake?</text>
+    <option>Drop, cover, hold</option>
+    <option>Stay away from windows</option>
+    <option correct="true">Use elevator to evacuate</option>
+    <option>Turn off gas supply</option>
+    <explanation>NEVER use elevators during earthquake - power may fail trapping you. Use stairs after shaking stops if safe.</explanation>
+  </question>
+
+  <question>
+    <text>What is the SI unit of electric charge?</text>
+    <option>Volt</option>
+    <option>Ampere</option>
+    <option correct="true">Coulomb</option>
+    <option>Ohm</option>
+    <explanation>Charge is measured in coulombs (C). 1 coulomb = charge of 6.24 × 10¹⁸ electrons.</explanation>
+  </question>
+
+  <question>
+    <text>Which region is in Zone V (highest seismic risk) in India?</text>
+    <option>Kolkata</option>
+    <option>Delhi</option>
+    <option correct="true>Northeastern states</option>
+    <option>Chennai</option>
+    <explanation>Zone V includes: entire Northeast, Kashmir, Himachal, Uttarakhand hills, Rann of Kutch, Andaman & Nicobar.</explanation>
+  </question>
+
+  <question>
+    <text>What should you do if someone is struck by lightning?</text>
+    <option>Pour water on them</option>
+    <option correct="true">Give CPR if trained</option>
+    <option>Move them immediately</option>
+    <option>Leave them alone</option>
+    <explanation>Lightning victims are safe to touch (no residual charge). Call ambulance, give CPR if needed, they may need defibrillation.</explanation>
+  </question>
+
+  <question>
+    <text>What is the study of earthquakes called?</text>
+    <option>Meteorology</option>
+    <option>Volcanology</option>
+    <option correct="true">Seismology</option>
+    <option>Geology</option>
+    <explanation>Seismology studies earthquakes and seismic waves. Seismographs record these waves as seismograms.</explanation>
+  </question>
+
+  <question>
+    <text>Which charge does a neutral object have?</text>
+    <option>Only positive</option>
+    <option>Only negative</option>
+    <option correct="true">Equal positive and negative</option>
+    <option>No charges at all</option>
+    <explanation>Neutral object has equal positive (protons) and negative (electrons) charges, so net charge is zero.</explanation>
+  </question>
+
+  <question>
+    <text>What is the minimum height for lightning conductor installation?</text>
+    <option>1 meter</option>
+    <option correct="true">2 meters above building</option>
+    <option>Equal to building height</option>
+    <option>5 meters</option>
+    <explanation>Lightning rod should be at least 2m above building, connected to copper plate buried 2m deep in moist ground.</explanation>
+  </question>
+</quiz>
