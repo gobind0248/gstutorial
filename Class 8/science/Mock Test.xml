@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quiz>
   <metadata>
+    <timeLimit>50</timeLimit>
     <author>G. S. Tutorial</author>
     <description>Class 8 Science - Most Important 50 Questions for Final Exam</description>
- <timelimit>50</timelimit>
+ 
   </metadata>
 
   <!-- Most Important 50 Questions from All Chapters -->
