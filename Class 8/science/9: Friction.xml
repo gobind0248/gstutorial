@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <metadata>
+    <author>G. S. Tutorial</author>
+    <description>Class 8 Science - Chapter 9: Friction</description>
+  </metadata>
+
+  <!-- Previous Year Questions (CBSE/SEBA) -->
+
+  <question>
+    <text>(CBSE 2023) Which of these reduces friction?</text>
+    <option>Making surfaces rough</option>
+    <option>Using sand on roads</option>
+    <option correct="true">Using ball bearings</option>
+    <option>Using spikes in shoes</option>
+    <explanation>Ball bearings convert sliding friction to rolling friction, which is much smaller. Rough surfaces increase friction.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2023) Friction always acts in which direction relative to motion?</text>
+    <option>Same direction</option>
+    <option>Perpendicular direction</option>
+    <option correct="true">Opposite direction</option>
+    <option>At 45° angle</option>
+    <explanation>Friction always opposes the relative motion between two surfaces in contact.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2022) Which type of friction is the largest?</text>
+    <option>Rolling friction</option>
+    <option correct="true">Static friction</option>
+    <option>Sliding friction</option>
+    <option>Fluid friction</option>
+    <explanation>Static friction > Sliding friction > Rolling friction. It takes most force to start moving an object.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2022) Why are tires of vehicles grooved?</text>
+    <option>To look attractive</option>
+    <option>To reduce weight</option>
+    <option correct="true">To increase friction for better grip</option>
+    <option>To reduce cost</option>
+    <explanation>Grooves (treads) increase friction by providing better grip on road, especially during braking or on wet surfaces.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2021) Which force causes wear and tear of machine parts?</text>
+    <option>Gravitational force</option>
+    <option>Magnetic force</option>
+    <option correct="true">Frictional force</option>
+    <option>Electrostatic force</option>
+    <explanation>Friction between moving parts causes wear and tear, generating heat and reducing machine efficiency.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2021) What is the cause of friction?</text>
+    <option>Magnetic attraction</option>
+    <option>Gravitational pull</option>
+    <option correct="true">Surface irregularities</option>
+    <option>Electric charge</option>
+    <explanation>Even smooth-looking surfaces have microscopic irregularities that interlock, causing resistance to motion.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2020) Why do kabaddi players rub soil on their hands?</text>
+    <option>To clean hands</option>
+    <option correct="true">To increase friction for better grip</option>
+    <option>To reduce sweating</option>
+    <option>As a tradition</option>
+    <explanation>Soil increases roughness, increasing friction for better grip on opponents during kabaddi.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2020) Which is the smallest type of friction?</text>
+    <option>Static friction</option>
+    <option>Sliding friction</option>
+    <option correct="true">Rolling friction</option>
+    <option>Fluid friction</option>
+    <explanation>Rolling friction < Sliding friction < Static friction. Rolling objects experience least friction.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2019) What is used to reduce friction in machines?</text>
+    <option>Sand</option>
+    <option>Grease</option>
+    <option correct="true">Lubricants</option>
+    <option>Powder</option>
+    <explanation>Lubricants (oil, grease) form a thin layer between surfaces, reducing friction and wear.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2019) Why is it difficult to walk on smooth wet floor?</text>
+    <option>Floor is cold</option>
+    <option>Water is slippery</option>
+    <option correct="true">Friction is reduced</option>
+    <option>Floor is transparent</option>
+    <explanation>Water acts as lubricant, reducing friction between shoes and floor, making it slippery.</explanation>
+  </question>
+
+  <question>
+    <text>(CBSE 2018) What type of friction comes into play when an object is at rest?</text>
+    <option>Sliding friction</option>
+    <option>Rolling friction</option>
+    <option correct="true">Static friction</option>
+    <option>Fluid friction</option>
+    <explanation>Static friction acts when object is at rest. It must be overcome to start motion.</explanation>
+  </question>
+
+  <question>
+    <text>(SEBA 2018) Why do brakes stop a moving bicycle?</text>
+    <option>They produce electricity</option>
+    <option>They change direction</option>
+    <option correct="true">They increase friction</option>
+    <option>They reduce weight</option>
+    <explanation>Brake pads press against wheel rim, increasing friction which converts kinetic energy to heat, stopping the bicycle.</explanation>
+  </question>
+
+  <!-- Additional Important MCQs -->
+
+  <question>
+    <text>What is fluid friction also called?</text>
+    <option>Static friction</option>
+    <option>Rolling friction</option>
+    <option correct="true">Drag</option>
+    <option>Tension</option>
+    <explanation>Friction in fluids (liquids and gases) is called drag. Air resistance is a type of fluid friction.</explanation>
+  </question>
+
+  <question>
+    <text>Why do parachutes have large surface area?</text>
+    <option>To look beautiful</option>
+    <option>To carry more weight</option>
+    <option correct="true">To increase air friction for slow descent</option>
+    <option>To reduce cost</option>
+    <explanation>Large area increases air resistance (fluid friction), slowing down the descent for safe landing.</explanation>
+  </question>
+
+  <question>
+    <text>Which shape experiences least fluid friction?</text>
+    <option>Square shape</option>
+    <option>Flat shape</option>
+    <option correct="true">Streamlined shape</option>
+    <option>Circular shape</option>
+    <explanation>Streamlined (tapered) shapes reduce fluid friction. Used in vehicles, airplanes, and fish bodies.</explanation>
+  </question>
+
+  <question>
+    <text>What is the advantage of friction?</text>
+    <option>It causes wear and tear</option>
+    <option>It generates heat</option>
+    <option>It reduces efficiency</option>
+    <option correct="true">It enables walking and gripping</option>
+    <explanation>Without friction: couldn't walk, hold objects, vehicles wouldn't move, brakes wouldn't work.</explanation>
+  </question>
+
+  <question>
+    <text>How does polishing reduce friction?</text>
+    <option>Makes surfaces magnetic</option>
+    <option correct="true">Makes surfaces smoother</option>
+    <option>Increases weight</option>
+    <option>Changes color</option>
+    <explanation>Polishing reduces surface irregularities, decreasing interlocking between surfaces, thus reducing friction.</explanation>
+  </question>
+
+  <question>
+    <text>What happens to friction if weight increases?</text>
+    <option>Decreases</option>
+    <option>Remains same</option>
+    <option correct="true">Increases</option>
+    <option>Becomes zero</option>
+    <explanation>Friction ∝ Normal force (weight). Heavier objects press surfaces together more, increasing friction.</explanation>
+  </question>
+
+  <question>
+    <text>Why do meteorites burn when entering Earth's atmosphere?</text>
+    <option>Due to Sun's heat</option>
+    <option correct="true">Due to air friction</option>
+    <option>Due to Earth's magnetic field</option>
+    <option>Due to gravitational pull</option>
+    <explanation>High speed through atmosphere creates enormous air friction, generating enough heat to burn meteorites.</explanation>
+  </question>
+
+  <question>
+    <text>What is the SI unit of friction?</text>
+    <option>Pascal</option>
+    <option>Joule</option>
+    <option correct="true">Newton</option>
+    <option>Watt</option>
+    <explanation>Friction is a force, so its SI unit is Newton (N) like all forces.</explanation>
+  </question>
+
+  <question>
+    <text>Why are shoes with spikes used by athletes?</text>
+    <option>To look stylish</option>
+    <option>To increase height</option>
+    <option correct="true">To increase friction for better grip</option>
+    <option>To reduce weight</option>
+    <explanation>Spikes penetrate ground, increasing friction and preventing slipping during running or jumping.</explanation>
+  </question>
+
+  <question>
+    <text>Which factor does NOT affect friction?</text>
+    <option>Nature of surfaces</option>
+    <option>Weight of object</option>
+    <option>Area of contact</option>
+    <option correct="true">Color of surfaces</option>
+    <explanation>Friction depends on: nature of surfaces (roughness), weight (normal force), but NOT on area of contact or color.</explanation>
+  </question>
+
+  <question>
+    <text>Why is it easier to pull a suitcase with wheels?</text>
+    <option>It becomes lighter</option>
+    <option>Wheels reduce weight</option>
+    <option correct="true">Rolling friction is less than sliding friction</option>
+    <option>Wheels look nice</option>
+    <explanation>Wheels convert sliding friction to rolling friction, which is much smaller, making it easier to move.</explanation>
+  </question>
+
+  <question>
+    <text>What is interlocking in friction?</text>
+    <option>Magnetic attraction</option>
+    <option>Chemical bonding</option>
+    <option correct="true">Surface irregularities fitting into each other</option>
+    <option>Gravitational pull</option>
+    <explanation>Microscopic hills and valleys on surfaces interlock, resisting relative motion.</explanation>
+  </question>
+
+  <question>
+    <text>Why do oil spills on roads make them dangerous?</text>
+    <option>Oil is expensive</option>
+    <option>Oil smells bad</option>
+    <option correct="true">Oil reduces friction drastically</option>
+    <option>Oil attracts animals</option>
+    <explanation>Oil acts as lubricant, greatly reducing friction between tires and road, causing vehicles to skid.</explanation>
+  </question>
+
+  <question>
+    <text>How does friction help in lighting a matchstick?</text>
+    <option>It cools the match head</option>
+    <option>It changes match color</option>
+    <option correct="true">It generates heat to reach ignition temperature</option>
+    <option>It produces light directly</option>
+    <explanation>Friction between match head and rough surface generates heat, raising temperature to ignition point.</explanation>
+  </question>
+
+  <question>
+    <text>What is the disadvantage of friction in machines?</text>
+    <option>It helps in movement</option>
+    <option correct="true">It wastes energy as heat</option>
+    <option>It prevents slipping</option>
+    <option>It helps in braking</option>
+    <explanation>Friction converts useful energy to heat, reduces efficiency, causes wear, and requires more power.</explanation>
+  </question>
+
+  <question>
+    <text>Why do aeroplanes have streamlined shape?</text>
+    <option>To carry more passengers</option>
+    <option>To look attractive</option>
+    <option correct="true">To reduce air friction (drag)</option>
+    <option>To increase weight</option>
+    <explanation>Streamlined shape minimizes air resistance, allowing planes to move faster with less fuel consumption.</explanation>
+  </question>
+
+  <question>
+    <text>What is the frictional force exerted by fluids called?</text>
+    <option>Static friction</option>
+    <option correct="true">Drag</option>
+    <option>Viscosity</option>
+    <option>Tension</option>
+    <explanation>Drag is fluid friction opposing motion through fluids. Viscosity is fluid's resistance to flow.</explanation>
+  </question>
+
+  <question>
+    <text>Why do we sprinkle powder on carrom board?</text>
+    <option>To make it colorful</option>
+    <option>To increase weight</option>
+    <option correct="true">To reduce friction for smooth movement</option>
+    <option>To clean the board</option>
+    <explanation>Powder (usually boric acid) acts as lubricant, reducing friction for smoother carrom striker movement.</explanation>
+  </question>
+
+  <question>
+    <text>How does friction help in writing?</text>
+    <option>It makes paper white</option>
+    <option correct="true">It allows pencil/pen to leave marks</option>
+    <option>It holds the paper</option>
+    <option>It makes ink flow</option>
+    <explanation>Friction between writing tip and paper causes material transfer (graphite/ink), creating marks.</explanation>
+  </question>
+
+  <question>
+    <text>What happens when you try to push a heavy box?</text>
+    <option>It moves immediately</option>
+    <option correct="true">Static friction must be overcome first</option>
+    <option>It becomes lighter</option>
+    <option>Rolling friction acts</option>
+    <explanation>Initially static friction resists motion. Once moving, sliding friction takes over which is smaller.</explanation>
+  </question>
+
+  <question>
+    <text>Why do bicycles slow down when you stop pedaling?</text>
+    <option>Gravity pulls them</option>
+    <option correct="true">Friction opposes motion</option>
+    <option>They lose air</option>
+    <option>Brakes activate automatically</option>
+    <explanation>Friction (air resistance + ground friction) opposes motion, converting kinetic energy to heat, slowing bicycle.</explanation>
+  </question>
+</quiz>
