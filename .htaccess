@@ -1,0 +1,17 @@
+# .htaccess
+<Files "save_question.php">
+    # Restrict access to admin only
+    AuthType Basic
+    AuthName "Admin Area"
+    AuthUserFile /path/to/.htpasswd
+    Require valid-user
+</Files>
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect XML files from direct access
+<FilesMatch "\.xml$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
