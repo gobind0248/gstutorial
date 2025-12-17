@@ -746,7 +746,6 @@
       border: 1px solid rgba(75, 85, 99, 0.7);
       margin-bottom: 16px;
       min-height: 140px;
-      position: relative;
     }
 
     .question-text {
@@ -1073,207 +1072,6 @@
       box-shadow: 0 10px 22px rgba(139, 92, 246, 0.5);
     }
 
-    /* ===== ADMIN EDITING STYLES ===== */
-    .edit-mode-badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: linear-gradient(to right, #8b5cf6, #7c3aed);
-      color: white;
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      z-index: 10;
-      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
-    }
-
-    .admin-controls {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-      padding: 10px;
-      background: rgba(15, 23, 42, 0.5);
-      border-radius: 8px;
-      border: 1px solid rgba(75, 85, 99, 0.5);
-    }
-
-    .edit-btn {
-      background: rgba(59, 130, 246, 0.15);
-      color: #93c5fd;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      border-radius: 6px;
-      padding: 6px 12px;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .edit-btn:hover {
-      background: rgba(59, 130, 246, 0.25);
-    }
-
-    .edit-btn.save {
-      background: rgba(34, 197, 94, 0.15);
-      color: #86efac;
-      border-color: rgba(34, 197, 94, 0.3);
-    }
-
-    .edit-btn.save:hover {
-      background: rgba(34, 197, 94, 0.25);
-    }
-
-    .edit-btn.cancel {
-      background: rgba(239, 68, 68, 0.15);
-      color: #fca5a5;
-      border-color: rgba(239, 68, 68, 0.3);
-    }
-
-    .edit-btn.cancel:hover {
-      background: rgba(239, 68, 68, 0.25);
-    }
-
-    .edit-btn.delete {
-      background: rgba(239, 68, 68, 0.15);
-      color: #fca5a5;
-      border-color: rgba(239, 68, 68, 0.3);
-    }
-
-    .edit-btn.delete:hover {
-      background: rgba(239, 68, 68, 0.25);
-    }
-
-    .edit-input {
-      background: #111827;
-      color: #e5e7eb;
-      border-radius: 6px;
-      border: 1px solid #3b82f6;
-      padding: 8px 10px;
-      font-size: 0.9rem;
-      width: 100%;
-      margin-bottom: 8px;
-    }
-
-    .edit-textarea {
-      background: #111827;
-      color: #e5e7eb;
-      border-radius: 6px;
-      border: 1px solid #3b82f6;
-      padding: 8px 10px;
-      font-size: 0.9rem;
-      width: 100%;
-      min-height: 80px;
-      resize: vertical;
-      margin-bottom: 8px;
-    }
-
-    .option-edit-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
-      padding: 8px;
-      background: rgba(15, 23, 42, 0.5);
-      border-radius: 6px;
-    }
-
-    .option-edit-input {
-      flex: 1;
-      background: #111827;
-      color: #e5e7eb;
-      border-radius: 6px;
-      border: 1px solid #6b7280;
-      padding: 6px 8px;
-      font-size: 0.9rem;
-    }
-
-    .correct-option-radio {
-      transform: scale(1.1);
-      accent-color: #22c55e;
-    }
-
-    .add-option-btn {
-      background: rgba(59, 130, 246, 0.15);
-      color: #93c5fd;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      border-radius: 6px;
-      padding: 6px 12px;
-      font-size: 0.85rem;
-      cursor: pointer;
-      margin-top: 8px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .add-option-btn:hover {
-      background: rgba(59, 130, 246, 0.25);
-    }
-
-    .remove-option-btn {
-      background: rgba(239, 68, 68, 0.15);
-      color: #fca5a5;
-      border: 1px solid rgba(239, 68, 68, 0.3);
-      border-radius: 4px;
-      padding: 4px 8px;
-      font-size: 0.75rem;
-      cursor: pointer;
-      min-width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .remove-option-btn:hover {
-      background: rgba(239, 68, 68, 0.25);
-    }
-
-    .admin-message {
-      padding: 8px 12px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    .admin-message.success {
-      background: rgba(22, 163, 74, 0.1);
-      color: #86efac;
-      border: 1px solid rgba(22, 163, 74, 0.2);
-    }
-
-    .admin-message.error {
-      background: rgba(239, 68, 68, 0.1);
-      color: #fca5a5;
-      border: 1px solid rgba(239, 68, 68, 0.2);
-    }
-
-    .admin-message.info {
-      background: rgba(59, 130, 246, 0.1);
-      color: #93c5fd;
-      border: 1px solid rgba(59, 130, 246, 0.2);
-    }
-
-    .question-editor {
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: 12px;
-      padding: 15px;
-      border: 2px solid #3b82f6;
-      margin-bottom: 15px;
-    }
-
-    .editor-label {
-      font-size: 0.9rem;
-      color: #d1d5db;
-      margin-bottom: 5px;
-      display: block;
-      font-weight: 500;
-    }
-
     /* RESPONSIVE STYLES */
     @media (max-width: 700px) {
       body {
@@ -1468,25 +1266,6 @@
       .password-toggle {
         top: 33px;
         right: 10px;
-      }
-      
-      .admin-controls {
-        flex-direction: column;
-      }
-      
-      .edit-btn {
-        width: 100%;
-        justify-content: center;
-      }
-      
-      .option-edit-container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 8px;
-      }
-      
-      .correct-option-radio {
-        align-self: flex-start;
       }
     }
 
@@ -1722,41 +1501,12 @@
         <div id="score-mini">Score: 0</div>
       </div>
 
-      <!-- Admin Editing Badge -->
-      <div id="edit-mode-badge" class="edit-mode-badge" style="display: none;">✏️ Edit Mode</div>
-
       <div class="question-box">
         <div id="question-text" class="question-text">
           Please select a chapter to start.
         </div>
         <ul id="options-list" class="options"></ul>
         <div id="feedback" class="feedback"></div>
-        
-        <!-- Admin Question Editor -->
-        <div id="question-editor" class="question-editor" style="display: none;">
-          <label class="editor-label">Question:</label>
-          <textarea id="edit-question-text" class="edit-textarea" placeholder="Enter question text..."></textarea>
-          
-          <label class="editor-label">Options:</label>
-          <div id="edit-options-container">
-            <!-- Options will be added here -->
-          </div>
-          <button type="button" id="add-option-btn" class="add-option-btn">+ Add Option</button>
-          
-          <label class="editor-label" style="margin-top: 12px;">Explanation:</label>
-          <textarea id="edit-explanation" class="edit-textarea" placeholder="Enter explanation (optional)..."></textarea>
-        </div>
-        
-        <!-- Admin Controls -->
-        <div id="admin-controls" class="admin-controls" style="display: none;">
-          <button type="button" id="edit-question-btn" class="edit-btn">✏️ Edit Question</button>
-          <button type="button" id="save-question-btn" class="edit-btn save">💾 Save Changes</button>
-          <button type="button" id="cancel-edit-btn" class="edit-btn cancel">✖️ Cancel</button>
-          <button type="button" id="delete-question-btn" class="edit-btn delete">🗑️ Delete Question</button>
-        </div>
-        
-        <!-- Admin Message -->
-        <div id="admin-message" class="admin-message" style="display: none;"></div>
       </div>
 
       <!-- BUTTON LAYOUT -->
@@ -1844,12 +1594,6 @@
     // Logging variables
     let userIP = 'Unknown';
     let currentQuizStats = null;
-    
-    // Admin editing variables
-    let isEditMode = false;
-    let originalQuestion = null;
-    let currentXMLPath = '';
-    let editOptions = [];
 
     // ========== DOM ELEMENTS ==========
     const fixedHeaderEl = document.querySelector(".fixed-header");
@@ -1897,20 +1641,6 @@
     const progressBarFillEl = document.getElementById("progress-bar-fill");
     const scoreMiniEl = document.getElementById("score-mini");
     const finalScoreEl = document.getElementById("final-score");
-    
-    // Admin editing elements
-    const editModeBadgeEl = document.getElementById("edit-mode-badge");
-    const questionEditorEl = document.getElementById("question-editor");
-    const adminControlsEl = document.getElementById("admin-controls");
-    const adminMessageEl = document.getElementById("admin-message");
-    const editQuestionTextEl = document.getElementById("edit-question-text");
-    const editOptionsContainerEl = document.getElementById("edit-options-container");
-    const addOptionBtn = document.getElementById("add-option-btn");
-    const editExplanationEl = document.getElementById("edit-explanation");
-    const editQuestionBtn = document.getElementById("edit-question-btn");
-    const saveQuestionBtn = document.getElementById("save-question-btn");
-    const cancelEditBtn = document.getElementById("cancel-edit-btn");
-    const deleteQuestionBtn = document.getElementById("delete-question-btn");
 
     // ========== LOAD EXTERNAL CONFIGURATIONS ==========
     async function loadConfigurations() {
@@ -2099,351 +1829,6 @@
             }
         } catch (error) {
             console.error("❌ Error sending Telegram message:", error);
-        }
-    }
-
-    // ========== ADMIN EDITING FUNCTIONS ==========
-    function showAdminControls() {
-        if (currentUser && currentUser.role === 'Admin' && questionsLoaded && questions.length > 0) {
-            adminControlsEl.style.display = 'flex';
-            editModeBadgeEl.style.display = 'none';
-            
-            // Show or hide edit button based on current mode
-            if (isEditMode) {
-                editQuestionBtn.style.display = 'none';
-                saveQuestionBtn.style.display = 'flex';
-                cancelEditBtn.style.display = 'flex';
-                deleteQuestionBtn.style.display = 'flex';
-                questionEditorEl.style.display = 'block';
-                questionTextEl.style.display = 'none';
-                optionsListEl.style.display = 'none';
-                feedbackEl.style.display = 'none';
-            } else {
-                editQuestionBtn.style.display = 'flex';
-                saveQuestionBtn.style.display = 'none';
-                cancelEditBtn.style.display = 'none';
-                deleteQuestionBtn.style.display = 'flex';
-                questionEditorEl.style.display = 'none';
-                questionTextEl.style.display = 'block';
-                optionsListEl.style.display = 'flex';
-                feedbackEl.style.display = 'block';
-            }
-        } else {
-            adminControlsEl.style.display = 'none';
-            editModeBadgeEl.style.display = 'none';
-            questionEditorEl.style.display = 'none';
-        }
-    }
-
-    function enterEditMode() {
-        if (!questionsLoaded || currentIndex >= questions.length) return;
-        
-        isEditMode = true;
-        editModeBadgeEl.style.display = 'block';
-        
-        // Store original question
-        originalQuestion = JSON.parse(JSON.stringify(questions[currentIndex]));
-        
-        // Populate editor with current question data
-        const question = questions[currentIndex];
-        editQuestionTextEl.value = question.question;
-        editExplanationEl.value = question.explanation || '';
-        
-        // Clear and populate options
-        editOptionsContainerEl.innerHTML = '';
-        editOptions = [];
-        
-        question.options.forEach((option, index) => {
-            addOptionToEditor(option, index === question.correctIndex);
-        });
-        
-        showAdminControls();
-        showAdminMessage('✏️ Edit mode enabled. Make your changes and click Save.', 'info');
-    }
-
-    function exitEditMode() {
-        isEditMode = false;
-        editModeBadgeEl.style.display = 'none';
-        
-        // Restore original question if canceled
-        if (originalQuestion) {
-            questions[currentIndex] = originalQuestion;
-        }
-        
-        showAdminControls();
-        renderQuestion();
-        showAdminMessage('Edit mode canceled.', 'info');
-    }
-
-    function addOptionToEditor(optionText = '', isCorrect = false) {
-        const optionIndex = editOptions.length;
-        const optionId = `edit-option-${optionIndex}`;
-        const radioId = `correct-option-${optionIndex}`;
-        
-        const optionContainer = document.createElement('div');
-        optionContainer.className = 'option-edit-container';
-        optionContainer.id = optionId;
-        
-        optionContainer.innerHTML = `
-            <input type="radio" 
-                   id="${radioId}" 
-                   name="correct-option" 
-                   class="correct-option-radio"
-                   ${isCorrect ? 'checked' : ''}
-                   data-index="${optionIndex}">
-            <input type="text" 
-                   class="option-edit-input" 
-                   placeholder="Option text..."
-                   value="${optionText}">
-            <button type="button" 
-                    class="remove-option-btn" 
-                    onclick="removeOptionFromEditor(${optionIndex})">×</button>
-        `;
-        
-        editOptionsContainerEl.appendChild(optionContainer);
-        
-        // Add to editOptions array
-        editOptions.push({
-            text: optionText,
-            isCorrect: isCorrect
-        });
-        
-        // Add event listeners
-        const radioInput = optionContainer.querySelector('.correct-option-radio');
-        const textInput = optionContainer.querySelector('.option-edit-input');
-        
-        radioInput.addEventListener('change', function() {
-            if (this.checked) {
-                // Update all other options to not correct
-                editOptions.forEach((opt, idx) => {
-                    editOptions[idx].isCorrect = (idx === optionIndex);
-                });
-            }
-        });
-        
-        textInput.addEventListener('input', function() {
-            editOptions[optionIndex].text = this.value;
-        });
-    }
-
-    function removeOptionFromEditor(index) {
-        if (editOptions.length <= 2) {
-            showAdminMessage('At least two options are required.', 'error');
-            return;
-        }
-        
-        // Remove from DOM
-        const optionElement = document.getElementById(`edit-option-${index}`);
-        if (optionElement) {
-            optionElement.remove();
-        }
-        
-        // Remove from array
-        editOptions.splice(index, 1);
-        
-        // Re-render all options with updated indices
-        editOptionsContainerEl.innerHTML = '';
-        editOptions.forEach((option, newIndex) => {
-            addOptionToEditor(option.text, option.isCorrect);
-        });
-    }
-
-    async function saveQuestionChanges() {
-        if (!questionsLoaded || currentIndex >= questions.length) return;
-        
-        // Validate inputs
-        const questionText = editQuestionTextEl.value.trim();
-        if (!questionText) {
-            showAdminMessage('Question text is required.', 'error');
-            return;
-        }
-        
-        // Filter out empty options
-        const validOptions = editOptions.filter(opt => opt.text.trim() !== '');
-        if (validOptions.length < 2) {
-            showAdminMessage('At least two non-empty options are required.', 'error');
-            return;
-        }
-        
-        // Find correct option index
-        const correctIndex = validOptions.findIndex(opt => opt.isCorrect);
-        if (correctIndex === -1) {
-            showAdminMessage('Please select a correct option.', 'error');
-            return;
-        }
-        
-        // Update question in memory
-        questions[currentIndex] = {
-            question: questionText,
-            options: validOptions.map(opt => opt.text.trim()),
-            correctIndex: correctIndex,
-            explanation: editExplanationEl.value.trim()
-        };
-        
-        // Save to server
-        const success = await saveQuestionsToServer();
-        
-        if (success) {
-            isEditMode = false;
-            originalQuestion = null;
-            
-            // Reload questions to ensure consistency
-            await reloadCurrentChapter();
-            
-            showAdminMessage('✅ Question saved successfully! Changes are now visible to all users.', 'success');
-            
-            // Exit edit mode and show updated question
-            setTimeout(() => {
-                exitEditMode();
-            }, 2000);
-        } else {
-            showAdminMessage('❌ Failed to save changes. Please try again.', 'error');
-        }
-    }
-
-    async function deleteCurrentQuestion() {
-        if (!questionsLoaded || questions.length <= 1) {
-            showAdminMessage('Cannot delete the only question in the quiz.', 'error');
-            return;
-        }
-        
-        if (!confirm('Are you sure you want to delete this question? This action cannot be undone.')) {
-            return;
-        }
-        
-        // Remove question from array
-        questions.splice(currentIndex, 1);
-        
-        // Adjust current index if needed
-        if (currentIndex >= questions.length) {
-            currentIndex = questions.length - 1;
-        }
-        
-        // Save to server
-        const success = await saveQuestionsToServer();
-        
-        if (success) {
-            showAdminMessage('✅ Question deleted successfully!', 'success');
-            
-            // Reload questions
-            await reloadCurrentChapter();
-            
-            // Re-render question
-            isEditMode = false;
-            showAdminControls();
-            renderQuestion();
-        } else {
-            showAdminMessage('❌ Failed to delete question. Please try again.', 'error');
-        }
-    }
-
-    async function saveQuestionsToServer() {
-        try {
-            // Convert questions to XML format
-            const xmlContent = convertQuestionsToXML(questions);
-            
-            // Send to server via POST request
-            const response = await fetch('save_question.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: new URLSearchParams({
-                    xml_content: xmlContent,
-                    file_path: currentXMLPath,
-                    chapter: currentTopicName,
-                    class: currentClass,
-                    subject: currentSubject
-                })
-            });
-            
-            const result = await response.json();
-            
-            if (result.success) {
-                console.log('✅ Questions saved to server:', result.message);
-                return true;
-            } else {
-                console.error('❌ Failed to save questions:', result.message);
-                return false;
-            }
-        } catch (error) {
-            console.error('❌ Error saving questions:', error);
-            
-            // Fallback: Try to save to localStorage as backup
-            try {
-                localStorage.setItem(`quiz_${currentClass}_${currentSubject}_${currentTopicName}`, 
-                    JSON.stringify(questions));
-                console.log('📦 Saved to localStorage as backup');
-                return true;
-            } catch (e) {
-                console.error('❌ Failed to save to localStorage:', e);
-                return false;
-            }
-        }
-    }
-
-    async function reloadCurrentChapter() {
-        if (!currentTopicName || !currentSubject || !currentClass) return;
-        
-        try {
-            // Clear current questions
-            questions = [];
-            questionsLoaded = false;
-            
-            // Reload from server
-            await loadQuestionsFromXML(currentTopicName);
-            
-            // Update question count
-            quizQuestionCountEl.textContent = `${questions.length} questions`;
-            
-            console.log('🔄 Chapter reloaded with updated questions');
-        } catch (error) {
-            console.error('❌ Error reloading chapter:', error);
-        }
-    }
-
-    function convertQuestionsToXML(questionsArray) {
-        let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-        xml += '<quiz>\n';
-        
-        // Add metadata if timer was set
-        if (timerDuration > 0) {
-            const minutes = Math.floor(timerDuration / (1000 * 60));
-            xml += `  <metadata>\n`;
-            xml += `    <timeLimit>${minutes}</timeLimit>\n`;
-            xml += `  </metadata>\n`;
-        }
-        
-        questionsArray.forEach((q, index) => {
-            xml += `  <question>\n`;
-            xml += `    <text><![CDATA[${q.question}]]></text>\n`;
-            
-            q.options.forEach((option, optIndex) => {
-                xml += `    <option${optIndex === q.correctIndex ? ' correct="true"' : ''}>`;
-                xml += `<![CDATA[${option}]]></option>\n`;
-            });
-            
-            if (q.explanation) {
-                xml += `    <explanation><![CDATA[${q.explanation}]]></explanation>\n`;
-            }
-            
-            xml += `  </question>\n`;
-        });
-        
-        xml += '</quiz>';
-        return xml;
-    }
-
-    function showAdminMessage(message, type = 'info') {
-        adminMessageEl.textContent = message;
-        adminMessageEl.className = `admin-message ${type}`;
-        adminMessageEl.style.display = 'block';
-        
-        // Auto-hide after 5 seconds for success messages
-        if (type === 'success') {
-            setTimeout(() => {
-                adminMessageEl.style.display = 'none';
-            }, 5000);
         }
     }
 
@@ -2717,7 +2102,6 @@
       quizContainerEl.style.display = "none";
       resetQuizState();
       isReviewMode = false;
-      isEditMode = false;
     }
 
     function showSubjectSelection(className) {
@@ -2730,7 +2114,6 @@
       
       loadSubjects();
       isReviewMode = false;
-      isEditMode = false;
     }
 
     function showQuizContainer(subjectName) {
@@ -2751,84 +2134,84 @@
       
       loadChapters();
       isReviewMode = false;
-      isEditMode = false;
     }
 
     function loadClasses() {
-      const userClassValue = currentUser?.class || "";
-      let availableClasses = [];
+  const userClassValue = currentUser?.class || "";
+  let availableClasses = [];
 
-      // =========================
-      // ADMIN → FULL ACCESS
-      // =========================
-      if (currentUser.role === 'Admin') {
-        availableClasses = CLASSES_CONFIG;
-      }
+  // =========================
+  // ADMIN → FULL ACCESS
+  // =========================
+  if (currentUser.role === 'Admin') {
+    availableClasses = CLASSES_CONFIG;
+  }
 
-      // =========================
-      // TEACHER → LIMITED CLASSES
-      // =========================
-      else if (currentUser.role === 'Teacher') {
+  // =========================
+  // TEACHER → LIMITED CLASSES
+  // =========================
+  else if (currentUser.role === 'Teacher') {
 
-        if (!userClassValue || userClassValue.toLowerCase() === "all") {
-          availableClasses = CLASSES_CONFIG;
-        } else {
-          const teacherClasses = userClassValue
-            .split(',')
-            .map(c => c.replace(/class/i, '').trim());
+    if (!userClassValue || userClassValue.toLowerCase() === "all") {
+      availableClasses = CLASSES_CONFIG;
+    } else {
+      const teacherClasses = userClassValue
+        .split(',')
+        .map(c => c.replace(/class/i, '').trim());
 
-          availableClasses = CLASSES_CONFIG.filter(cls =>
-            teacherClasses.includes(cls.id)
-          );
-        }
-      }
+      availableClasses = CLASSES_CONFIG.filter(cls =>
+        teacherClasses.includes(cls.id)
+      );
+    }
+  }
 
-      // =========================
-      // STUDENT → SINGLE CLASS
-      // =========================
-      else {
-        let studentClass = "8";
+  // =========================
+  // STUDENT → SINGLE CLASS
+  // =========================
+  else {
+    let studentClass = "8";
 
-        if (userClassValue && userClassValue.toLowerCase() !== "none") {
-          const match = userClassValue.match(/\d+/);
-          studentClass = match ? match[0] : "8";
-        }
+    if (userClassValue && userClassValue.toLowerCase() !== "none") {
+      const match = userClassValue.match(/\d+/);
+      studentClass = match ? match[0] : "8";
+    }
 
-        const cls = CLASSES_CONFIG.find(c => c.id === studentClass);
+    const cls = CLASSES_CONFIG.find(c => c.id === studentClass);
 
-        availableClasses = cls
-          ? [cls]
-          : [{
-              id: studentClass,
-              name: `Class ${studentClass}`,
-              icon: "📚",
-              description: "Mathematics & Science"
-            }];
-      }
+    availableClasses = cls
+      ? [cls]
+      : [{
+          id: studentClass,
+          name: `Class ${studentClass}`,
+          icon: "📚",
+          description: "Mathematics & Science"
+        }];
+  }
 
-      // =========================
-      // RENDER CLASS CARDS
-      // =========================
-      classGridEl.innerHTML = "";
+  // =========================
+  // RENDER CLASS CARDS
+  // =========================
+  classGridEl.innerHTML = "";
 
-      availableClasses.forEach(cls => {
-        const card = document.createElement("div");
-        card.className = "class-card";
-        card.innerHTML = `
-          <div class="class-icon">${cls.icon}</div>
-          <div class="class-name">${cls.name}</div>
-          <div class="class-desc">${cls.description || ""}</div>
-        `;
+  availableClasses.forEach(cls => {
+    const card = document.createElement("div");
+    card.className = "class-card";
+    card.innerHTML = `
+      <div class="class-icon">${cls.icon}</div>
+      <div class="class-name">${cls.name}</div>
+      <div class="class-desc">${cls.description || ""}</div>
+    `;
 
-        card.addEventListener("click", () => {
-          showSubjectSelection(cls.id);
-          resetInactivityTimer();
-        });
+    card.addEventListener("click", () => {
+      showSubjectSelection(cls.id);
+      resetInactivityTimer();
+    });
 
-        classGridEl.appendChild(card);
-      });
+    classGridEl.appendChild(card);
+  });
 
-      console.log(`📚 ${currentUser.role} access → ${availableClasses.length} classes`);
+  console.log(`📚 ${currentUser.role} access → ${availableClasses.length} classes`);
+
     }
 
     function loadSubjects() {
@@ -3005,7 +2388,6 @@
       currentTopicName = "";
       quizStartTime = null;
       isReviewMode = false;
-      isEditMode = false;
       
       // Reset UI
       questionTextEl.textContent = "Please select a chapter to start.";
@@ -3030,12 +2412,6 @@
       quizTopicNameEl.textContent = "No chapter selected";
       quizQuestionCountEl.textContent = "0 questions";
       timerContainerEl.style.display = "none";
-      
-      // Reset admin controls
-      adminControlsEl.style.display = "none";
-      editModeBadgeEl.style.display = "none";
-      questionEditorEl.style.display = "none";
-      adminMessageEl.style.display = "none";
       
       // Reset topic name styling
       quizTopicNameEl.style.backgroundColor = "";
@@ -3294,9 +2670,6 @@
         nextBtn.disabled = true;
         previousBtn.disabled = true;
         finishBtn.disabled = true;
-        
-        // Hide admin controls if no questions
-        adminControlsEl.style.display = "none";
         return;
       }
 
@@ -3333,7 +2706,7 @@
         optionsListEl.appendChild(li);
 
         li.addEventListener("click", () => {
-          if (hasAnswered || isReviewMode || isEditMode) return;
+          if (hasAnswered || isReviewMode) return;
           
           // Remove selected class from all options
           document.querySelectorAll(".option").forEach(opt => {
@@ -3395,9 +2768,6 @@
         }
       }
       
-      // Show admin controls if user is admin
-      showAdminControls();
-      
       resetInactivityTimer();
     }
 
@@ -3446,7 +2816,7 @@
     }
 
     function handleOptionClick(selectedIndex) {
-      if (hasAnswered || isReviewMode || isEditMode) return;
+      if (hasAnswered || isReviewMode) return;
       
       const q = questions[currentIndex];
       hasAnswered = true;
@@ -3571,10 +2941,6 @@
       finishBtn.style.display = "none";
       finalScoreEl.style.display = "block";
       
-      // Hide admin controls in results
-      adminControlsEl.style.display = "none";
-      editModeBadgeEl.style.display = "none";
-      
       let performanceMessage = "";
       if (stats.percentage >= 80) {
         performanceMessage = "🎉 Excellent! Outstanding performance!";
@@ -3661,7 +3027,6 @@
 
     function restartQuiz() {
       isReviewMode = false;
-      isEditMode = false;
       score = 0;
       attempted = 0;
       currentIndex = 0;
@@ -3775,7 +3140,6 @@
             if (res.ok) {
               xmlText = await res.text();
               successfulPath = path;
-              currentXMLPath = path;
               console.log(`✅ Successfully loaded XML from: ${path}`);
               break;
             } else {
@@ -3958,15 +3322,6 @@
 
     previousBtn.addEventListener("click", () => {
       goToPreviousQuestion();
-    });
-
-    // Admin editing event listeners
-    editQuestionBtn.addEventListener("click", enterEditMode);
-    saveQuestionBtn.addEventListener("click", saveQuestionChanges);
-    cancelEditBtn.addEventListener("click", exitEditMode);
-    deleteQuestionBtn.addEventListener("click", deleteCurrentQuestion);
-    addOptionBtn.addEventListener("click", () => {
-      addOptionToEditor('', false);
     });
 
     // ========== INITIALIZATION ==========
