@@ -2422,7 +2422,7 @@
       removeTimerNotification();
     }
 
-    // ========== XML PARSER ==========
+    // ========== ENHANCED XML PARSER ==========
     function parseXMLToQuestions(xmlText) {
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(xmlText, "application/xml");
@@ -2470,12 +2470,34 @@
           explanation = expNode.textContent.trim();
         }
 
-        for (let j = 0; j < optNodes.length; j++) {
-          const optNode = optNodes[j];
-          const optText = optNode.textContent.trim();
-          const isCorrect = optNode.getAttribute("correct") === "true";
-          options.push(optText);
-          if (isCorrect) correctIndex = j;
+        // Check if question has answer attribute (format 2: <question answer="C">)
+        const questionAnswer = qNode.getAttribute("answer");
+        
+        // FORMAT 1: <option correct="true"> (default format)
+        if (!questionAnswer) {
+          for (let j = 0; j < optNodes.length; j++) {
+            const optNode = optNodes[j];
+            const optText = optNode.textContent.trim();
+            const isCorrect = optNode.getAttribute("correct") === "true";
+            options.push(optText);
+            if (isCorrect) correctIndex = j;
+          }
+        } 
+        // FORMAT 2: <question answer="C"> with options A, B, C, D
+        else {
+          // Parse answer letter (A, B, C, D, etc.)
+          const answerLetter = questionAnswer.toUpperCase().trim();
+          
+          for (let j = 0; j < optNodes.length; j++) {
+            const optNode = optNodes[j];
+            const optText = optNode.textContent.trim();
+            const optionLetter = String.fromCharCode(65 + j); // A, B, C, D...
+            
+            options.push(optText);
+            if (optionLetter === answerLetter) {
+              correctIndex = j;
+            }
+          }
         }
 
         out.push({
