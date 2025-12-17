@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#0f172a">
   <meta charset="UTF-8" />
   <title>G.S. Tutorial – Interactive Learning App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,10 +57,9 @@
       flex: 1;
     }
 
-    /* Logo styles - LARGER SIZE */
     .logo-header {
-      width: 50px;  /* Increased from 30px */
-      height: 50px; /* Increased from 30px */
+      width: 50px;
+      height: 50px;
       border-radius: 8px;
       object-fit: contain;
       flex-shrink: 0;
@@ -69,8 +68,8 @@
     }
 
     .logo-login {
-      width: 70px;  /* Increased from 60px */
-      height: 70px; /* Increased from 60px */
+      width: 70px;
+      height: 70px;
       border-radius: 12px;
       object-fit: contain;
       background: rgba(255, 255, 255, 0.1);
@@ -152,6 +151,27 @@
 
     .logout-btn:hover {
       background: rgba(239, 68, 68, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .admin-btn {
+      background: linear-gradient(90deg, #8b5cf6 0%, #7c3aed 100%);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .admin-btn:hover {
+      background: linear-gradient(90deg, #7c3aed 0%, #6d28d9 100%);
       transform: translateY(-1px);
     }
 
@@ -240,7 +260,7 @@
       font-size: 0.95rem;
       transition: all 0.2s ease;
       width: 100%;
-      padding-right: 45px; /* Space for eye icon */
+      padding-right: 45px;
     }
 
     .form-input:focus {
@@ -253,7 +273,6 @@
       color: #6b7280;
     }
 
-    /* Password toggle eye icon */
     .password-toggle {
       position: absolute;
       right: 12px;
@@ -635,6 +654,27 @@
       box-shadow: 0 10px 22px rgba(37, 99, 235, 0.5);
     }
 
+    /* ADMIN EDIT BUTTON */
+    .edit-question-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(139, 92, 246, 0.2);
+      color: #a78bfa;
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: none;
+    }
+
+    .edit-question-btn:hover {
+      background: rgba(139, 92, 246, 0.3);
+      transform: translateY(-1px);
+    }
+
     /* RANDOMIZE TOGGLE */
     .toggle-row {
       display: flex;
@@ -746,6 +786,7 @@
       border: 1px solid rgba(75, 85, 99, 0.7);
       margin-bottom: 16px;
       min-height: 140px;
+      position: relative;
     }
 
     .question-text {
@@ -777,6 +818,7 @@
       transition: all 0.15s ease, border-color 0.15s ease, transform 0.05s ease;
       font-size: 0.92rem;
       color: #e5e7eb;
+      position: relative;
     }
 
     .option:hover:not(.disabled) {
@@ -812,6 +854,29 @@
     .option.selected.incorrect {
       background: rgba(220, 38, 38, 0.3);
       border-color: #dc2626;
+    }
+
+    /* EDIT OPTION BUTTON */
+    .edit-option-btn {
+      position: absolute;
+      right: 8px;
+      background: transparent;
+      border: none;
+      color: #9ca3af;
+      cursor: pointer;
+      font-size: 0.8rem;
+      padding: 2px 4px;
+      border-radius: 4px;
+      display: none;
+    }
+
+    .edit-option-btn:hover {
+      color: #60a5fa;
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    .option:hover .edit-option-btn {
+      display: block;
     }
 
     /* FEEDBACK AND EXPLANATION */
@@ -1072,6 +1137,245 @@
       box-shadow: 0 10px 22px rgba(139, 92, 246, 0.5);
     }
 
+    /* ===== EDIT MODAL STYLES ===== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(5px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #020617;
+      border-radius: 20px;
+      padding: 30px;
+      width: 100%;
+      max-width: 600px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    .modal-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #e5e7eb;
+      background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .close-modal {
+      background: rgba(239, 68, 68, 0.1);
+      color: #fca5a5;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 8px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .close-modal:hover {
+      background: rgba(239, 68, 68, 0.2);
+    }
+
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .edit-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .edit-form-group label {
+      font-size: 0.9rem;
+      color: #d1d5db;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .edit-form-group textarea,
+    .edit-form-group input {
+      background: #111827;
+      color: #e5e7eb;
+      border-radius: 10px;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      padding: 12px 16px;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      width: 100%;
+      resize: vertical;
+    }
+
+    .edit-form-group textarea {
+      min-height: 100px;
+    }
+
+    .edit-form-group textarea:focus,
+    .edit-form-group input:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+
+    .option-edit-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 8px;
+      border: 1px solid rgba(75, 85, 99, 0.5);
+    }
+
+    .option-edit-input {
+      flex: 1;
+    }
+
+    .correct-option-checkbox {
+      transform: scale(1.2);
+      cursor: pointer;
+      accent-color: #22c55e;
+    }
+
+    .option-label {
+      font-weight: bold;
+      color: #60a5fa;
+      min-width: 30px;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    .modal-btn {
+      padding: 12px 24px;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex: 1;
+    }
+
+    .save-btn {
+      background: linear-gradient(to right, #10b981, #059669);
+      color: white;
+      box-shadow: 0 8px 18px rgba(16, 185, 129, 0.4);
+    }
+
+    .save-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(16, 185, 129, 0.5);
+    }
+
+    .delete-btn {
+      background: linear-gradient(to right, #ef4444, #dc2626);
+      color: white;
+      box-shadow: 0 8px 18px rgba(239, 68, 68, 0.4);
+    }
+
+    .delete-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(239, 68, 68, 0.5);
+    }
+
+    .cancel-btn {
+      background: #1f2937;
+      color: #e5e7eb;
+      border: 1px solid rgba(75, 85, 99, 0.8);
+    }
+
+    .cancel-btn:hover {
+      background: #111827;
+    }
+
+    .add-question-btn {
+      background: linear-gradient(to right, #8b5cf6, #7c3aed);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: all 0.2s ease;
+      box-shadow: 0 8px 18px rgba(139, 92, 246, 0.4);
+      width: 100%;
+    }
+
+    .add-question-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(139, 92, 246, 0.5);
+    }
+
+    /* STATUS MESSAGES */
+    .status-message {
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin: 15px 0;
+      font-size: 0.9rem;
+      display: none;
+      animation: slideIn 0.3s ease;
+    }
+
+    .status-success {
+      background: rgba(22, 163, 74, 0.1);
+      color: #22c55e;
+      border: 1px solid rgba(22, 163, 74, 0.3);
+    }
+
+    .status-error {
+      background: rgba(239, 68, 68, 0.1);
+      color: #fca5a5;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .status-info {
+      background: rgba(59, 130, 246, 0.1);
+      color: #93c5fd;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     /* RESPONSIVE STYLES */
     @media (max-width: 700px) {
       body {
@@ -1118,14 +1422,14 @@
         max-width: 140px;
       }
       
-      .logout-btn {
+      .logout-btn, .admin-btn {
         font-size: 0.75rem;
         padding: 4px 8px;
         gap: 3px;
       }
       
       .main-content {
-        margin-top: 110px; /* Increased for larger header */
+        margin-top: 110px;
         padding: 12px;
         gap: 15px;
       }
@@ -1267,6 +1571,19 @@
         top: 33px;
         right: 10px;
       }
+      
+      .modal-content {
+        padding: 20px;
+        margin: 10px;
+      }
+      
+      .modal-footer {
+        flex-direction: column;
+      }
+      
+      .modal-btn {
+        width: 100%;
+      }
     }
 
     @media (min-width: 701px) {
@@ -1275,7 +1592,7 @@
       }
       
       .main-content {
-        margin: 100px auto 20px; /* Increased for larger header */
+        margin: 100px auto 20px;
         padding: 20px;
       }
       
@@ -1309,7 +1626,7 @@
         gap: 3px;
       }
       
-      .logout-btn {
+      .logout-btn, .admin-btn {
         font-size: 0.7rem;
         padding: 3px 6px;
         gap: 2px;
@@ -1380,6 +1697,9 @@
         <div class="user-info" id="header-user-info" style="display: none;">
           👤 <span id="header-username">Guest</span>
         </div>
+        <button class="admin-btn" id="header-admin-btn" style="display: none;">
+          ⚙️ Admin
+        </button>
         <button class="logout-btn" id="header-logout-btn" style="display: none;">
           ⏻ Logout
         </button>
@@ -1502,6 +1822,9 @@
       </div>
 
       <div class="question-box">
+        <button class="edit-question-btn" id="edit-question-btn" style="display: none;">
+          ✏️ Edit Question
+        </button>
         <div id="question-text" class="question-text">
           Please select a chapter to start.
         </div>
@@ -1523,6 +1846,121 @@
       <div class="score-box">
         <div id="final-score" class="final-score" style="display:none;"></div>
       </div>
+
+      <!-- ADD NEW QUESTION BUTTON (ADMIN ONLY) -->
+      <button class="add-question-btn" id="add-question-btn" style="display: none; margin-top: 20px;">
+        ➕ Add New Question to this Chapter
+      </button>
+    </div>
+  </div>
+
+  <!-- EDIT QUESTION MODAL -->
+  <div class="modal-overlay" id="edit-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">✏️ Edit Question</div>
+        <button class="close-modal" id="close-modal">✕ Close</button>
+      </div>
+      
+      <div class="modal-body">
+        <div id="status-message" class="status-message"></div>
+        
+        <div class="edit-form-group">
+          <label for="edit-question-text">📝 Question Text</label>
+          <textarea id="edit-question-text" class="form-input" rows="4" placeholder="Enter the question text..."></textarea>
+        </div>
+        
+        <div class="edit-form-group">
+          <label>🔘 Options</label>
+          <div id="edit-options-container">
+            <!-- Options will be added dynamically -->
+          </div>
+        </div>
+        
+        <div class="edit-form-group">
+          <label for="edit-explanation">💡 Explanation (Optional)</label>
+          <textarea id="edit-explanation" class="form-input" rows="3" placeholder="Enter explanation for the correct answer..."></textarea>
+        </div>
+        
+        <div class="edit-form-group">
+          <label for="edit-timer">⏰ Timer (Minutes, Optional)</label>
+          <input type="number" id="edit-timer" class="form-input" min="0" max="180" placeholder="Enter time limit in minutes (0 for no timer)">
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button class="modal-btn delete-btn" id="delete-question-btn">
+          🗑️ Delete Question
+        </button>
+        <button class="modal-btn cancel-btn" id="cancel-edit-btn">
+          ↩️ Cancel
+        </button>
+        <button class="modal-btn save-btn" id="save-question-btn">
+          💾 Save Changes
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD QUESTION MODAL -->
+  <div class="modal-overlay" id="add-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">➕ Add New Question</div>
+        <button class="close-modal" id="close-add-modal">✕ Close</button>
+      </div>
+      
+      <div class="modal-body">
+        <div id="add-status-message" class="status-message"></div>
+        
+        <div class="edit-form-group">
+          <label for="add-question-text">📝 Question Text</label>
+          <textarea id="add-question-text" class="form-input" rows="4" placeholder="Enter the question text..."></textarea>
+        </div>
+        
+        <div class="edit-form-group">
+          <label>🔘 Options (Check the correct one)</label>
+          <div id="add-options-container">
+            <div class="option-edit-row">
+              <span class="option-label">A</span>
+              <input type="text" class="option-edit-input" id="add-option-0" placeholder="Option A">
+              <input type="radio" name="add-correct-option" value="0" class="correct-option-checkbox" checked>
+            </div>
+            <div class="option-edit-row">
+              <span class="option-label">B</span>
+              <input type="text" class="option-edit-input" id="add-option-1" placeholder="Option B">
+              <input type="radio" name="add-correct-option" value="1" class="correct-option-checkbox">
+            </div>
+            <div class="option-edit-row">
+              <span class="option-label">C</span>
+              <input type="text" class="option-edit-input" id="add-option-2" placeholder="Option C">
+              <input type="radio" name="add-correct-option" value="2" class="correct-option-checkbox">
+            </div>
+            <div class="option-edit-row">
+              <span class="option-label">D</span>
+              <input type="text" class="option-edit-input" id="add-option-3" placeholder="Option D">
+              <input type="radio" name="add-correct-option" value="3" class="correct-option-checkbox">
+            </div>
+          </div>
+          <button class="add-option-btn" id="add-more-options" style="margin-top: 10px; padding: 8px 16px; background: rgba(59, 130, 246, 0.1); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px; cursor: pointer;">
+            ➕ Add More Options
+          </button>
+        </div>
+        
+        <div class="edit-form-group">
+          <label for="add-explanation">💡 Explanation (Optional)</label>
+          <textarea id="add-explanation" class="form-input" rows="3" placeholder="Enter explanation for the correct answer..."></textarea>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button class="modal-btn cancel-btn" id="cancel-add-btn">
+          ↩️ Cancel
+        </button>
+        <button class="modal-btn save-btn" id="save-new-question-btn">
+          💾 Add Question
+        </button>
+      </div>
     </div>
   </div>
 
@@ -1541,7 +1979,9 @@
         PHONE_NUMBER: '',
         MESSAGE_TEMPLATE: {
             LOGIN: "🔔 *New User Login* 🔔\n👤 Username: {username}\n📛 Name: {name}\n🏫 Class: {class}\n👥 Role: {role}\n📅 Date: {date}\n⏰ Time: {time}\n🌐 IP: {ip}",
-            QUIZ_RESULT: "📊 *Quiz Result* 📊\n👤 Username: {username}\n📛 Name: {name}\n🏫 Class: {class}\n📚 Subject: {subject}\n📖 Chapter: {chapter}\n✅ Correct: {correct}\n📋 Total: {total}\n📈 Score: {percentage}%\n⏱️ Time: {timeTaken}\n📅 Date: {date}"
+            QUIZ_RESULT: "📊 *Quiz Result* 📊\n👤 Username: {username}\n📛 Name: {name}\n🏫 Class: {class}\n📚 Subject: {subject}\n📖 Chapter: {chapter}\n✅ Correct: {correct}\n📋 Total: {total}\n📈 Score: {percentage}%\n⏱️ Time: {timeTaken}\n📅 Date: {date}",
+            QUESTION_EDITED: "📝 *Question Edited* 📝\n👤 Edited by: {editor}\n🏫 Class: {class}\n📚 Subject: {subject}\n📖 Chapter: {chapter}\n❓ Question No: {questionNo}\n✅ Status: {status}\n📅 Date: {date}",
+            QUESTION_ADDED: "➕ *New Question Added* ➕\n👤 Added by: {editor}\n🏫 Class: {class}\n📚 Subject: {subject}\n📖 Chapter: {chapter}\n✅ Status: {status}\n📅 Date: {date}"
         }
     };
     
@@ -1551,8 +1991,19 @@
         CHAT_ID: '',
         MESSAGE_TEMPLATE: {
             LOGIN: "🔔 *New User Login* 🔔\n👤 Username: {username}\n📛 Name: {name}\n🏫 Class: {class}\n👥 Role: {role}\n📅 Date: {date}\n⏰ Time: {time}\n🌐 IP: {ip}",
-            QUIZ_RESULT: "📊 *Quiz Result* 📊\n👤 Username: {username}\n📛 Name: {name}\n🏫 Class: {class}\n📚 Subject: {subject}\n📖 Chapter: {chapter}\n✅ Correct: {correct}\n📋 Total: {total}\n📈 Score: {percentage}%\n⏱️ Time: {timeTaken}\n📅 Date: {date}"
+            QUIZ_RESULT: "📊 *Quiz Result* 📊\n👤 Username: {username}\n📛 Name: {name}\n🏫 Class: {class}\n📚 Subject: {subject}\n📖 Chapter: {chapter}\n✅ Correct: {correct}\n📋 Total: {total}\n📈 Score: {percentage}%\n⏱️ Time: {timeTaken}\n📅 Date: {date}",
+            QUESTION_EDITED: "📝 *Question Edited* 📝\n👤 Edited by: {editor}\n🏫 Class: {class}\n📚 Subject: {subject}\n📖 Chapter: {chapter}\n❓ Question No: {questionNo}\n✅ Status: {status}\n📅 Date: {date}",
+            QUESTION_ADDED: "➕ *New Question Added* ➕\n👤 Added by: {editor}\n🏫 Class: {class}\n📚 Subject: {subject}\n📖 Chapter: {chapter}\n✅ Status: {status}\n📅 Date: {date}"
         }
+    };
+    
+    let ADMIN_EDIT_CONFIG = {
+        ENABLED: true,
+        GITHUB_REPO: '',  // Will be loaded from config.js
+        GITHUB_TOKEN: '', // Will be loaded from config.js
+        BRANCH: 'main',
+        COMMIT_MESSAGE: 'Question updated by admin',
+        ADD_COMMIT_MESSAGE: 'New question added by admin'
     };
     
     let CLASSES_CONFIG = [];
@@ -1595,10 +2046,17 @@
     let userIP = 'Unknown';
     let currentQuizStats = null;
 
+    // Editing variables
+    let originalQuestions = [];
+    let isAdmin = false;
+    let currentXMLContent = '';
+    let currentXMLPath = '';
+
     // ========== DOM ELEMENTS ==========
     const fixedHeaderEl = document.querySelector(".fixed-header");
     const headerUserInfoEl = document.getElementById("header-user-info");
     const headerUsernameEl = document.getElementById("header-username");
+    const headerAdminBtnEl = document.getElementById("header-admin-btn");
     const headerLogoutBtnEl = document.getElementById("header-logout-btn");
     
     const loginContainerEl = document.getElementById("login-container");
@@ -1634,6 +2092,9 @@
     const questionTextEl = document.getElementById("question-text");
     const optionsListEl = document.getElementById("options-list");
     const feedbackEl = document.getElementById("feedback");
+    const editQuestionBtn = document.getElementById("edit-question-btn");
+    const addQuestionBtn = document.getElementById("add-question-btn");
+    
     const nextBtn = document.getElementById("next-btn");
     const previousBtn = document.getElementById("previous-btn");
     const finishBtn = document.getElementById("finish-btn");
@@ -1641,6 +2102,28 @@
     const progressBarFillEl = document.getElementById("progress-bar-fill");
     const scoreMiniEl = document.getElementById("score-mini");
     const finalScoreEl = document.getElementById("final-score");
+    
+    // Modal elements
+    const editModal = document.getElementById("edit-modal");
+    const closeModalBtn = document.getElementById("close-modal");
+    const editQuestionText = document.getElementById("edit-question-text");
+    const editOptionsContainer = document.getElementById("edit-options-container");
+    const editExplanation = document.getElementById("edit-explanation");
+    const editTimer = document.getElementById("edit-timer");
+    const saveQuestionBtn = document.getElementById("save-question-btn");
+    const deleteQuestionBtn = document.getElementById("delete-question-btn");
+    const cancelEditBtn = document.getElementById("cancel-edit-btn");
+    const statusMessage = document.getElementById("status-message");
+    
+    const addModal = document.getElementById("add-modal");
+    const closeAddModalBtn = document.getElementById("close-add-modal");
+    const addQuestionText = document.getElementById("add-question-text");
+    const addOptionsContainer = document.getElementById("add-options-container");
+    const addExplanation = document.getElementById("add-explanation");
+    const addMoreOptionsBtn = document.getElementById("add-more-options");
+    const saveNewQuestionBtn = document.getElementById("save-new-question-btn");
+    const cancelAddBtn = document.getElementById("cancel-add-btn");
+    const addStatusMessage = document.getElementById("add-status-message");
 
     // ========== LOAD EXTERNAL CONFIGURATIONS ==========
     async function loadConfigurations() {
@@ -1681,6 +2164,20 @@
                 console.log("✅ Telegram notifications:", TELEGRAM_CONFIG.ENABLED ? "Enabled" : "Disabled");
             }
             
+            // Load Admin Edit config
+            const githubRepoMatch = configText.match(/GITHUB_REPO:\s*'([^']+)'/);
+            const githubTokenMatch = configText.match(/GITHUB_TOKEN:\s*'([^']+)'/);
+            
+            if (githubRepoMatch) {
+                ADMIN_EDIT_CONFIG.GITHUB_REPO = githubRepoMatch[1];
+                console.log("✅ GitHub Repository:", ADMIN_EDIT_CONFIG.GITHUB_REPO);
+            }
+            
+            if (githubTokenMatch) {
+                ADMIN_EDIT_CONFIG.GITHUB_TOKEN = githubTokenMatch[1];
+                console.log("✅ GitHub Token loaded");
+            }
+            
         } catch (error) {
             console.error("❌ Error loading configuration:", error);
         }
@@ -1699,7 +2196,6 @@
             console.log(`✅ Loaded ${CLASSES_CONFIG.length} classes from classes.json`);
         } catch (error) {
             console.error("❌ Error loading classes.json:", error);
-            // Fallback to default classes
             CLASSES_CONFIG = [
                 {
                     "id": "8",
@@ -1719,6 +2215,466 @@
             console.log("🌐 User IP:", userIP);
         } catch (error) {
             console.log("⚠️ Could not fetch IP:", error);
+        }
+    }
+
+    // ========== ADMIN EDITING FUNCTIONS ==========
+    function showAdminInterface() {
+        if (isAdmin && questionsLoaded) {
+            editQuestionBtn.style.display = "block";
+            addQuestionBtn.style.display = "block";
+            headerAdminBtnEl.style.display = "block";
+            
+            // Add edit buttons to options
+            document.querySelectorAll('.option').forEach((option, index) => {
+                const editBtn = document.createElement('button');
+                editBtn.className = 'edit-option-btn';
+                editBtn.innerHTML = '✏️';
+                editBtn.title = 'Edit this option';
+                editBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    openEditOptionModal(index);
+                };
+                option.appendChild(editBtn);
+            });
+        } else {
+            editQuestionBtn.style.display = "none";
+            addQuestionBtn.style.display = "none";
+        }
+    }
+
+    function openEditModal() {
+        if (!isAdmin || !questionsLoaded) return;
+        
+        const currentQuestion = questions[currentIndex];
+        editQuestionText.value = currentQuestion.question;
+        editExplanation.value = currentQuestion.explanation || '';
+        editTimer.value = timerDuration > 0 ? Math.floor(timerDuration / (1000 * 60)) : '';
+        
+        // Clear and populate options
+        editOptionsContainer.innerHTML = '';
+        currentQuestion.options.forEach((option, index) => {
+            const optionRow = document.createElement('div');
+            optionRow.className = 'option-edit-row';
+            optionRow.innerHTML = `
+                <span class="option-label">${String.fromCharCode(65 + index)}</span>
+                <input type="text" class="option-edit-input edit-option" value="${option}" data-index="${index}">
+                <input type="radio" name="correct-option" value="${index}" class="correct-option-checkbox" ${index === currentQuestion.correctIndex ? 'checked' : ''}>
+            `;
+            editOptionsContainer.appendChild(optionRow);
+        });
+        
+        statusMessage.style.display = 'none';
+        statusMessage.className = 'status-message';
+        editModal.style.display = 'flex';
+    }
+
+    function openEditOptionModal(optionIndex) {
+        if (!isAdmin || !questionsLoaded) return;
+        
+        const currentQuestion = questions[currentIndex];
+        openEditModal();
+        
+        // Set focus to the specific option input
+        const optionInput = document.querySelector(`.edit-option[data-index="${optionIndex}"]`);
+        if (optionInput) {
+            optionInput.focus();
+            optionInput.select();
+        }
+    }
+
+    function openAddModal() {
+        if (!isAdmin || !questionsLoaded) return;
+        
+        // Reset form
+        addQuestionText.value = '';
+        addExplanation.value = '';
+        
+        // Reset options container to default 4 options
+        addOptionsContainer.innerHTML = `
+            <div class="option-edit-row">
+                <span class="option-label">A</span>
+                <input type="text" class="option-edit-input" id="add-option-0" placeholder="Option A">
+                <input type="radio" name="add-correct-option" value="0" class="correct-option-checkbox" checked>
+            </div>
+            <div class="option-edit-row">
+                <span class="option-label">B</span>
+                <input type="text" class="option-edit-input" id="add-option-1" placeholder="Option B">
+                <input type="radio" name="add-correct-option" value="1" class="correct-option-checkbox">
+            </div>
+            <div class="option-edit-row">
+                <span class="option-label">C</span>
+                <input type="text" class="option-edit-input" id="add-option-2" placeholder="Option C">
+                <input type="radio" name="add-correct-option" value="2" class="correct-option-checkbox">
+            </div>
+            <div class="option-edit-row">
+                <span class="option-label">D</span>
+                <input type="text" class="option-edit-input" id="add-option-3" placeholder="Option D">
+                <input type="radio" name="add-correct-option" value="3" class="correct-option-checkbox">
+            </div>
+        `;
+        
+        addStatusMessage.style.display = 'none';
+        addStatusMessage.className = 'status-message';
+        addModal.style.display = 'flex';
+    }
+
+    async function saveEditedQuestion() {
+        if (!isAdmin || !questionsLoaded) return;
+        
+        // Validate form
+        const questionText = editQuestionText.value.trim();
+        if (!questionText) {
+            showStatus('Please enter a question text', 'error');
+            return;
+        }
+        
+        // Get options
+        const optionInputs = document.querySelectorAll('.edit-option');
+        const options = [];
+        for (let input of optionInputs) {
+            const value = input.value.trim();
+            if (!value) {
+                showStatus('All options must be filled', 'error');
+                return;
+            }
+            options.push(value);
+        }
+        
+        if (options.length < 2) {
+            showStatus('At least 2 options are required', 'error');
+            return;
+        }
+        
+        // Get correct option
+        const correctOption = document.querySelector('input[name="correct-option"]:checked');
+        if (!correctOption) {
+            showStatus('Please select the correct option', 'error');
+            return;
+        }
+        
+        const correctIndex = parseInt(correctOption.value);
+        const explanation = editExplanation.value.trim();
+        const timerMinutes = parseInt(editTimer.value) || 0;
+        
+        // Update the question in memory
+        questions[currentIndex] = {
+            question: questionText,
+            options: options,
+            correctIndex: correctIndex,
+            explanation: explanation
+        };
+        
+        // Update timer if changed
+        if (timerMinutes > 0 && timerMinutes !== Math.floor(timerDuration / (1000 * 60))) {
+            timerDuration = timerMinutes * 60 * 1000;
+        }
+        
+        // Save to GitHub
+        await saveQuestionsToGitHub('edit');
+        
+        // Update UI
+        renderQuestion();
+        showAdminInterface();
+        closeEditModal();
+        
+        // Show success message
+        showStatus('Question updated successfully! Changes are now live for all users.', 'success');
+        
+        // Send notification
+        sendEditNotification('edited');
+    }
+
+    async function addNewQuestion() {
+        if (!isAdmin || !questionsLoaded) return;
+        
+        // Validate form
+        const questionText = addQuestionText.value.trim();
+        if (!questionText) {
+            showAddStatus('Please enter a question text', 'error');
+            return;
+        }
+        
+        // Get options
+        const optionInputs = addOptionsContainer.querySelectorAll('.option-edit-input');
+        const options = [];
+        for (let input of optionInputs) {
+            const value = input.value.trim();
+            if (!value) {
+                showAddStatus('All options must be filled', 'error');
+                return;
+            }
+            options.push(value);
+        }
+        
+        if (options.length < 2) {
+            showAddStatus('At least 2 options are required', 'error');
+            return;
+        }
+        
+        // Get correct option
+        const correctOption = addOptionsContainer.querySelector('input[name="add-correct-option"]:checked');
+        if (!correctOption) {
+            showAddStatus('Please select the correct option', 'error');
+            return;
+        }
+        
+        const correctIndex = parseInt(correctOption.value);
+        const explanation = addExplanation.value.trim();
+        
+        // Add new question to the array
+        const newQuestion = {
+            question: questionText,
+            options: options,
+            correctIndex: correctIndex,
+            explanation: explanation
+        };
+        
+        questions.push(newQuestion);
+        
+        // Save to GitHub
+        await saveQuestionsToGitHub('add');
+        
+        // Update UI
+        quizQuestionCountEl.textContent = `${questions.length} questions`;
+        showAdminInterface();
+        closeAddModal();
+        
+        // Show success message
+        showStatus('New question added successfully! It is now live for all users.', 'success');
+        
+        // Send notification
+        sendEditNotification('added');
+    }
+
+    async function deleteCurrentQuestion() {
+        if (!isAdmin || !questionsLoaded || questions.length <= 1) return;
+        
+        if (!confirm('Are you sure you want to delete this question? This action cannot be undone.')) {
+            return;
+        }
+        
+        // Remove question from array
+        questions.splice(currentIndex, 1);
+        
+        // Adjust current index if needed
+        if (currentIndex >= questions.length) {
+            currentIndex = questions.length - 1;
+        }
+        
+        // Save to GitHub
+        await saveQuestionsToGitHub('delete');
+        
+        // Update UI
+        quizQuestionCountEl.textContent = `${questions.length} questions`;
+        renderQuestion();
+        showAdminInterface();
+        closeEditModal();
+        
+        // Show success message
+        showStatus('Question deleted successfully! Changes are now live for all users.', 'success');
+        
+        // Send notification
+        sendEditNotification('deleted');
+    }
+
+    async function saveQuestionsToGitHub(action) {
+        if (!ADMIN_EDIT_CONFIG.GITHUB_REPO || !ADMIN_EDIT_CONFIG.GITHUB_TOKEN) {
+            console.warn('⚠️ GitHub configuration not found. Skipping GitHub sync.');
+            return true;
+        }
+        
+        try {
+            // Convert questions to XML format
+            const xmlContent = generateXMLFromQuestions();
+            
+            // Clean the chapter name for filename
+            const cleanChapterName = currentTopicName.replace(/[<>:"/\\|?*]/g, '');
+            
+            // Determine file path
+            const cleanSubject = currentSubject.toLowerCase().replace(/ /g, '-');
+            const filePath = `${currentClass}/${cleanSubject}/${cleanChapterName}.xml`;
+            
+            // GitHub API URL
+            const apiUrl = `https://api.github.com/repos/${ADMIN_EDIT_CONFIG.GITHUB_REPO}/contents/${filePath}`;
+            
+            // First, get the current file to get its SHA (needed for update)
+            let sha = null;
+            try {
+                const response = await fetch(apiUrl, {
+                    headers: {
+                        'Authorization': `token ${ADMIN_EDIT_CONFIG.GITHUB_TOKEN}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+                
+                if (response.ok) {
+                    const fileData = await response.json();
+                    sha = fileData.sha;
+                }
+            } catch (error) {
+                console.log('File does not exist or cannot be accessed. Will create new file.');
+            }
+            
+            // Prepare commit message based on action
+            let commitMessage = ADMIN_EDIT_CONFIG.COMMIT_MESSAGE;
+            if (action === 'add') {
+                commitMessage = ADMIN_EDIT_CONFIG.ADD_COMMIT_MESSAGE;
+            } else if (action === 'delete') {
+                commitMessage = 'Question deleted by admin';
+            }
+            
+            // Prepare request body
+            const requestBody = {
+                message: commitMessage,
+                content: btoa(unescape(encodeURIComponent(xmlContent))), // Base64 encode
+                branch: ADMIN_EDIT_CONFIG.BRANCH
+            };
+            
+            // Add SHA if updating existing file
+            if (sha) {
+                requestBody.sha = sha;
+            }
+            
+            // Make API request
+            const method = sha ? 'PUT' : 'PUT'; // PUT for both create and update
+            const saveResponse = await fetch(apiUrl, {
+                method: method,
+                headers: {
+                    'Authorization': `token ${ADMIN_EDIT_CONFIG.GITHUB_TOKEN}`,
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestBody)
+            });
+            
+            if (!saveResponse.ok) {
+                const errorText = await saveResponse.text();
+                throw new Error(`GitHub API error: ${saveResponse.status} - ${errorText}`);
+            }
+            
+            console.log(`✅ Questions saved to GitHub successfully (${action})`);
+            return true;
+            
+        } catch (error) {
+            console.error('❌ Error saving to GitHub:', error);
+            showStatus('Error saving to GitHub: ' + error.message, 'error');
+            return false;
+        }
+    }
+
+    function generateXMLFromQuestions() {
+        let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<quiz>\n`;
+        
+        // Add timer metadata if exists
+        if (timerDuration > 0) {
+            const minutes = Math.floor(timerDuration / (1000 * 60));
+            xml += `  <metadata>\n    <timeLimit>${minutes}</timeLimit>\n  </metadata>\n`;
+        }
+        
+        // Add questions
+        questions.forEach((q, index) => {
+            xml += `  <question>\n`;
+            xml += `    <text>${escapeXML(q.question)}</text>\n`;
+            
+            q.options.forEach((option, optIndex) => {
+                const isCorrect = optIndex === q.correctIndex;
+                xml += `    <option${isCorrect ? ' correct="true"' : ''}>${escapeXML(option)}</option>\n`;
+            });
+            
+            if (q.explanation) {
+                xml += `    <explanation>${escapeXML(q.explanation)}</explanation>\n`;
+            }
+            
+            xml += `  </question>\n`;
+        });
+        
+        xml += `</quiz>`;
+        return xml;
+    }
+
+    function escapeXML(text) {
+        return text.replace(/[<>&"']/g, function(match) {
+            switch(match) {
+                case '<': return '&lt;';
+                case '>': return '&gt;';
+                case '&': return '&amp;';
+                case '"': return '&quot;';
+                case "'": return '&apos;';
+                default: return match;
+            }
+        });
+    }
+
+    function showStatus(message, type) {
+        statusMessage.textContent = message;
+        statusMessage.className = `status-message status-${type}`;
+        statusMessage.style.display = 'block';
+        
+        if (type === 'success') {
+            setTimeout(() => {
+                statusMessage.style.display = 'none';
+            }, 5000);
+        }
+    }
+
+    function showAddStatus(message, type) {
+        addStatusMessage.textContent = message;
+        addStatusMessage.className = `status-message status-${type}`;
+        addStatusMessage.style.display = 'block';
+        
+        if (type === 'success') {
+            setTimeout(() => {
+                addStatusMessage.style.display = 'none';
+            }, 5000);
+        }
+    }
+
+    function closeEditModal() {
+        editModal.style.display = 'none';
+    }
+
+    function closeAddModal() {
+        addModal.style.display = 'none';
+    }
+
+    function sendEditNotification(action) {
+        if (!WHATSAPP_CONFIG.ENABLED && !TELEGRAM_CONFIG.ENABLED) return;
+        if (!currentUser) return;
+        
+        const now = new Date();
+        const date = now.toLocaleDateString('en-IN');
+        
+        let message = '';
+        if (action === 'edited') {
+            message = WHATSAPP_CONFIG.MESSAGE_TEMPLATE.QUESTION_EDITED
+                .replace('{editor}', currentUser.name)
+                .replace('{class}', currentClass)
+                .replace('{subject}', currentSubject)
+                .replace('{chapter}', currentTopicName)
+                .replace('{questionNo}', currentIndex + 1)
+                .replace('{status}', 'Success')
+                .replace('{date}', date);
+        } else if (action === 'added') {
+            message = WHATSAPP_CONFIG.MESSAGE_TEMPLATE.QUESTION_ADDED
+                .replace('{editor}', currentUser.name)
+                .replace('{class}', currentClass)
+                .replace('{subject}', currentSubject)
+                .replace('{chapter}', currentTopicName)
+                .replace('{status}', 'Success')
+                .replace('{date}', date);
+        } else if (action === 'deleted') {
+            message = `🗑️ *Question Deleted* 🗑️\n👤 Deleted by: ${currentUser.name}\n🏫 Class: ${currentClass}\n📚 Subject: ${currentSubject}\n📖 Chapter: ${currentTopicName}\n✅ Status: Deleted\n📅 Date: ${date}`;
+        }
+        
+        // Send to WhatsApp
+        if (WHATSAPP_CONFIG.ENABLED && WHATSAPP_CONFIG.PHONE_NUMBER) {
+            sendWhatsAppMessage(message);
+        }
+        
+        // Send to Telegram
+        if (TELEGRAM_CONFIG.ENABLED && TELEGRAM_CONFIG.BOT_TOKEN) {
+            sendTelegramMessage(message);
         }
     }
 
@@ -1790,7 +2746,6 @@
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
             
-            // Create invisible iframe to trigger WhatsApp
             const iframe = document.createElement('iframe');
             iframe.style.display = 'none';
             iframe.src = whatsappUrl;
@@ -1916,7 +2871,6 @@
       try {
         console.log("📥 Loading users from Google Sheet...");
         
-        // Create the API URL using the config
         const apiUrl = GOOGLE_SHEETS_CONFIG.API_URL;
         console.log("🔗 Fetching from:", apiUrl);
         
@@ -1926,25 +2880,18 @@
         }
         
         const data = await response.text();
-        
-        // Google Sheets returns JSONP-like format, parse it
         const jsonData = JSON.parse(data.substring(47).slice(0, -2));
-        
-        // Extract rows from the response
         const rows = jsonData.table.rows;
         userList = [];
         
-        // Expected column indices
-        const USERNAME_COL = 0;  // Column A
-        const PASSWORD_COL = 1;  // Column B
-        const NAME_COL = 2;      // Column C
-        const ROLE_COL = 3;      // Column D
-        const CLASS_COL = 4;     // Column E
+        const USERNAME_COL = 0;
+        const PASSWORD_COL = 1;
+        const NAME_COL = 2;
+        const ROLE_COL = 3;
+        const CLASS_COL = 4;
         
         console.log(`📊 Total rows in sheet: ${rows.length}`);
         
-        // Start from row 1 (second row in Google Sheets)
-        // Row 0 is the header row
         for (let i = 1; i < rows.length; i++) {
           const row = rows[i];
           
@@ -1955,7 +2902,6 @@
             const role = row.c[ROLE_COL] ? row.c[ROLE_COL].v : 'Student';
             const userClass = row.c[CLASS_COL] ? row.c[CLASS_COL].v : '';
             
-            // Convert to string and trim
             const usernameStr = username ? username.toString().trim() : '';
             const passwordStr = password ? password.toString().trim() : '';
             
@@ -1968,9 +2914,7 @@
                 class: userClass ? userClass.toString().trim() : '8'
               });
               
-              console.log(`👤 Loaded user ${i}: ${usernameStr} (Class: ${userClass || '8'})`);
-            } else {
-              console.log(`⚠️ Skipping row ${i+1}: Missing username or password`);
+              console.log(`👤 Loaded user ${i}: ${usernameStr} (Role: ${role}, Class: ${userClass || '8'})`);
             }
           }
         }
@@ -1986,11 +2930,9 @@
       } catch (error) {
         console.error("❌ Error loading users from Google Sheet:", error);
         
-        // Show user-friendly error
         loginErrorEl.textContent = "⚠️ Cannot connect to login database. Please check your internet connection.";
         loginErrorEl.style.display = "block";
         
-        // Return empty user list
         userList = [];
         return false;
       }
@@ -2006,12 +2948,18 @@
 
     function login(user) {
       currentUser = user;
+      isAdmin = user.role === 'Admin';
       headerUsernameEl.textContent = user.name;
       
       // Show fixed header and class selection, hide login
       fixedHeaderEl.style.display = "block";
       headerUserInfoEl.style.display = "block";
       headerLogoutBtnEl.style.display = "block";
+      
+      if (isAdmin) {
+        headerAdminBtnEl.style.display = "block";
+      }
+      
       loginContainerEl.style.display = "none";
       classSelectionEl.style.display = "block";
       
@@ -2027,7 +2975,7 @@
       // Send login notification
       sendLoginNotification(user);
       
-      console.log(`🎉 User ${user.name} logged in successfully. Role: ${user.role}, Class: ${user.class || '8'}`);
+      console.log(`🎉 User ${user.name} logged in successfully. Role: ${user.role}, Class: ${user.class || '8'}, Admin: ${isAdmin}`);
     }
 
     function logout() {
@@ -2059,6 +3007,7 @@
         
         // Clear current user
         currentUser = null;
+        isAdmin = false;
         
         // Hide everything, show login
         fixedHeaderEl.style.display = "none";
@@ -2073,6 +3022,11 @@
         passwordToggleEl.textContent = '👁️';
         loginErrorEl.textContent = "";
         loginErrorEl.style.display = "none";
+        
+        // Hide admin buttons
+        editQuestionBtn.style.display = "none";
+        addQuestionBtn.style.display = "none";
+        headerAdminBtnEl.style.display = "none";
         
         // Focus on username field
         usernameEl.focus();
@@ -2137,91 +3091,73 @@
     }
 
     function loadClasses() {
-  const userClassValue = currentUser?.class || "";
-  let availableClasses = [];
+      const userClassValue = currentUser?.class || "";
+      let availableClasses = [];
 
-  // =========================
-  // ADMIN → FULL ACCESS
-  // =========================
-  if (currentUser.role === 'Admin') {
-    availableClasses = CLASSES_CONFIG;
-  }
+      if (currentUser.role === 'Admin') {
+        availableClasses = CLASSES_CONFIG;
+      }
+      else if (currentUser.role === 'Teacher') {
+        if (!userClassValue || userClassValue.toLowerCase() === "all") {
+          availableClasses = CLASSES_CONFIG;
+        } else {
+          const teacherClasses = userClassValue
+            .split(',')
+            .map(c => c.replace(/class/i, '').trim());
 
-  // =========================
-  // TEACHER → LIMITED CLASSES
-  // =========================
-  else if (currentUser.role === 'Teacher') {
+          availableClasses = CLASSES_CONFIG.filter(cls =>
+            teacherClasses.includes(cls.id)
+          );
+        }
+      }
+      else {
+        let studentClass = "8";
 
-    if (!userClassValue || userClassValue.toLowerCase() === "all") {
-      availableClasses = CLASSES_CONFIG;
-    } else {
-      const teacherClasses = userClassValue
-        .split(',')
-        .map(c => c.replace(/class/i, '').trim());
+        if (userClassValue && userClassValue.toLowerCase() !== "none") {
+          const match = userClassValue.match(/\d+/);
+          studentClass = match ? match[0] : "8";
+        }
 
-      availableClasses = CLASSES_CONFIG.filter(cls =>
-        teacherClasses.includes(cls.id)
-      );
-    }
-  }
+        const cls = CLASSES_CONFIG.find(c => c.id === studentClass);
 
-  // =========================
-  // STUDENT → SINGLE CLASS
-  // =========================
-  else {
-    let studentClass = "8";
+        availableClasses = cls
+          ? [cls]
+          : [{
+              id: studentClass,
+              name: `Class ${studentClass}`,
+              icon: "📚",
+              description: "Mathematics & Science"
+            }];
+      }
 
-    if (userClassValue && userClassValue.toLowerCase() !== "none") {
-      const match = userClassValue.match(/\d+/);
-      studentClass = match ? match[0] : "8";
-    }
+      classGridEl.innerHTML = "";
 
-    const cls = CLASSES_CONFIG.find(c => c.id === studentClass);
+      availableClasses.forEach(cls => {
+        const card = document.createElement("div");
+        card.className = "class-card";
+        card.innerHTML = `
+          <div class="class-icon">${cls.icon}</div>
+          <div class="class-name">${cls.name}</div>
+          <div class="class-desc">${cls.description || ""}</div>
+        `;
 
-    availableClasses = cls
-      ? [cls]
-      : [{
-          id: studentClass,
-          name: `Class ${studentClass}`,
-          icon: "📚",
-          description: "Mathematics & Science"
-        }];
-  }
+        card.addEventListener("click", () => {
+          showSubjectSelection(cls.id);
+          resetInactivityTimer();
+        });
 
-  // =========================
-  // RENDER CLASS CARDS
-  // =========================
-  classGridEl.innerHTML = "";
+        classGridEl.appendChild(card);
+      });
 
-  availableClasses.forEach(cls => {
-    const card = document.createElement("div");
-    card.className = "class-card";
-    card.innerHTML = `
-      <div class="class-icon">${cls.icon}</div>
-      <div class="class-name">${cls.name}</div>
-      <div class="class-desc">${cls.description || ""}</div>
-    `;
-
-    card.addEventListener("click", () => {
-      showSubjectSelection(cls.id);
-      resetInactivityTimer();
-    });
-
-    classGridEl.appendChild(card);
-  });
-
-  console.log(`📚 ${currentUser.role} access → ${availableClasses.length} classes`);
-
+      console.log(`📚 ${currentUser.role} access → ${availableClasses.length} classes`);
     }
 
     function loadSubjects() {
-      // Find current class in CLASSES_CONFIG
       const currentClassConfig = CLASSES_CONFIG.find(cls => cls.id === currentClass);
       
       let subjects = [];
       
       if (currentClassConfig && currentClassConfig.subjects) {
-        // Use subjects from classes.json
         subjects = currentClassConfig.subjects.map(subject => ({
           id: subject.id,
           name: subject.name,
@@ -2229,7 +3165,6 @@
           desc: subject.description
         }));
       } else {
-        // Fallback to default subjects
         subjects = [
           { id: "mathematics", name: "Mathematics", icon: "📐", desc: "Algebra, Geometry, Mensuration" },
           { id: "science", name: "Science", icon: "🔬", desc: "Physics, Chemistry, Biology" }
@@ -2260,12 +3195,10 @@
 
     async function loadChapters() {
       try {
-        // Clean the subject name for URL
         const cleanSubject = currentSubject.toLowerCase()
           .replace(/ /g, '-')
           .replace(/[^a-z0-9-]/g, '');
         
-        // Find subject ID from CLASSES_CONFIG
         const currentClassConfig = CLASSES_CONFIG.find(cls => cls.id === currentClass);
         let subjectId = cleanSubject;
         
@@ -2278,11 +3211,8 @@
           }
         }
         
-        // Try multiple path combinations
         const pathOptions = [
-          // Dynamic path from classes.json structure
           `${currentClass}/${subjectId}/chapters.json`,
-          // Traditional paths for backward compatibility
           `Class ${currentClass}/${cleanSubject}/chapters.json`,
           `${currentClass}/${cleanSubject}/chapters.json`,
           `Class ${currentClass}/${currentSubject}/chapters.json`
@@ -2293,7 +3223,6 @@
         let response = null;
         let successfulPath = '';
         
-        // Try each path option until one works
         for (const path of pathOptions) {
           try {
             console.log(`Trying path: ${path}`);
@@ -2318,7 +3247,6 @@
           throw new Error(`chapters.json is empty. Please add chapter names.`);
         }
         
-        // Populate dropdown
         populateChapterDropdown();
         
         console.log(`📖 Loaded ${chaptersList.length} chapters from ${successfulPath}`);
@@ -2344,7 +3272,6 @@
           }
         });
         
-        // Enable start button
         startBtnEl.disabled = false;
         quizTopicNameEl.textContent = "No chapter selected";
         quizQuestionCountEl.textContent = `${chaptersList.length} chapters available`;
@@ -2420,6 +3347,10 @@
       
       // Remove timer notification
       removeTimerNotification();
+      
+      // Hide admin buttons
+      editQuestionBtn.style.display = "none";
+      addQuestionBtn.style.display = "none";
     }
 
     // ========== ENHANCED XML PARSER ==========
@@ -2427,19 +3358,16 @@
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(xmlText, "application/xml");
 
-      // Reset timer duration
       timerDuration = 0;
 
-      // Check for timer configuration - look for timeLimit in metadata
       const metadataNode = xmlDoc.getElementsByTagName("metadata")[0];
       if (metadataNode) {
         const timeLimitNode = metadataNode.getElementsByTagName("timeLimit")[0];
         if (timeLimitNode) {
           const minutes = parseInt(timeLimitNode.textContent) || 0;
-          timerDuration = minutes * 60 * 1000; // Convert minutes to milliseconds
+          timerDuration = minutes * 60 * 1000;
         }
       } else {
-        // Also check for direct timer tag
         const timerNode = xmlDoc.getElementsByTagName("timer")[0];
         if (timerNode) {
           const hours = parseInt(timerNode.getAttribute("hours")) || 0;
@@ -2464,16 +3392,13 @@
         let correctIndex = 0;
         let explanation = "";
 
-        // Get explanation if exists
         const expNode = qNode.getElementsByTagName("explanation")[0];
         if (expNode) {
           explanation = expNode.textContent.trim();
         }
 
-        // Check if question has answer attribute (format 2: <question answer="C">)
         const questionAnswer = qNode.getAttribute("answer");
         
-        // FORMAT 1: <option correct="true"> (default format)
         if (!questionAnswer) {
           for (let j = 0; j < optNodes.length; j++) {
             const optNode = optNodes[j];
@@ -2482,16 +3407,13 @@
             options.push(optText);
             if (isCorrect) correctIndex = j;
           }
-        } 
-        // FORMAT 2: <question answer="C"> with options A, B, C, D
-        else {
-          // Parse answer letter (A, B, C, D, etc.)
+        } else {
           const answerLetter = questionAnswer.toUpperCase().trim();
           
           for (let j = 0; j < optNodes.length; j++) {
             const optNode = optNodes[j];
             const optText = optNode.textContent.trim();
-            const optionLetter = String.fromCharCode(65 + j); // A, B, C, D...
+            const optionLetter = String.fromCharCode(65 + j);
             
             options.push(optText);
             if (optionLetter === answerLetter) {
@@ -2678,7 +3600,6 @@
       feedbackEl.textContent = "";
       feedbackEl.className = "feedback";
       
-      // Clear any existing explanation
       const existingExplanation = feedbackEl.querySelector('.explanation');
       if (existingExplanation) {
         existingExplanation.remove();
@@ -2695,7 +3616,6 @@
         const li = document.createElement("li");
         li.className = "option";
         
-        // Check if this option was previously selected
         if (userAnswers[currentIndex] !== undefined && userAnswers[currentIndex] === idx) {
           li.classList.add("selected");
         }
@@ -2708,17 +3628,14 @@
         li.addEventListener("click", () => {
           if (hasAnswered || isReviewMode) return;
           
-          // Remove selected class from all options
           document.querySelectorAll(".option").forEach(opt => {
             opt.classList.remove("selected");
           });
           
-          // Add selected class to clicked option
           li.classList.add("selected");
           
           userAnswers[currentIndex] = idx;
           
-          // Handle option click (shows explanation)
           handleOptionClick(idx);
           resetInactivityTimer();
         });
@@ -2726,18 +3643,15 @@
 
       previousBtn.disabled = (currentIndex === 0);
       
-      // In review mode, next button is always enabled
-      // In quiz mode, next button is disabled until answer is selected
       if (isReviewMode) {
         nextBtn.disabled = false;
         showQuestionInReviewMode();
       } else {
-        nextBtn.disabled = true; // Disable next until answer is selected
+        nextBtn.disabled = true;
       }
       
       finishBtn.disabled = false;
       
-      // If already answered this question, show feedback and explanation
       if (userAnswers[currentIndex] !== undefined) {
         const selectedIndex = userAnswers[currentIndex];
         const isCorrect = (selectedIndex === q.correctIndex);
@@ -2754,7 +3668,6 @@
           feedbackEl.className = "feedback incorrect";
         }
         
-        // Show explanation if available
         if (q.explanation) {
           const explanationDiv = document.createElement("div");
           explanationDiv.className = "explanation";
@@ -2762,11 +3675,13 @@
           feedbackEl.appendChild(explanationDiv);
         }
         
-        // Enable next button since answer is already selected (only in quiz mode)
         if (!isReviewMode) {
           nextBtn.disabled = false;
         }
       }
+      
+      // Show admin interface if admin
+      showAdminInterface();
       
       resetInactivityTimer();
     }
@@ -2791,7 +3706,6 @@
           feedbackEl.className = "feedback incorrect";
         }
         
-        // Show explanation if available
         if (q.explanation) {
           const explanationDiv = document.createElement("div");
           explanationDiv.className = "explanation";
@@ -2802,8 +3716,7 @@
         feedbackEl.textContent = "⚠️ You did not answer this question.";
         feedbackEl.className = "feedback";
         
-        // Still show the correct answer and explanation
-        showCorrectness(-1); // Show only correct answer
+        showCorrectness(-1);
         lockOptions();
         
         if (q.explanation) {
@@ -2833,7 +3746,6 @@
         feedbackEl.className = "feedback incorrect";
       }
       
-      // Show explanation if available
       if (q.explanation) {
         const explanationDiv = document.createElement("div");
         explanationDiv.className = "explanation";
@@ -2845,7 +3757,6 @@
       showCorrectness(selectedIndex);
       lockOptions();
       
-      // Enable next button for manual navigation (NO AUTO-ADVANCE)
       nextBtn.disabled = false;
     }
 
@@ -2877,7 +3788,6 @@
           progressBarFillEl.style.width = "100%";
           showFinalResult();
         } else {
-          // In review mode, loop back to first question
           currentIndex = 0;
           renderQuestion();
         }
@@ -2923,7 +3833,6 @@
       const stats = calculateQuizStats();
       const timeTaken = formatTimeTaken();
       
-      // Store stats for notification
       currentQuizStats = {
         ...stats,
         timeTaken: timeTaken,
@@ -2952,10 +3861,8 @@
         performanceMessage = "📖 Needs improvement. Study the chapter thoroughly.";
       }
       
-      // Send quiz result notification
       sendQuizResultNotification(currentQuizStats);
       
-      // Add option to review questions with explanations
       let reviewSection = '';
       if (questions.length > 0) {
         reviewSection = `
@@ -3007,6 +3914,10 @@
         ${reviewSection}
       `;
       
+      // Hide admin buttons in result screen
+      editQuestionBtn.style.display = "none";
+      addQuestionBtn.style.display = "none";
+      
       resetInactivityTimer();
     }
 
@@ -3050,7 +3961,6 @@
         startTimer();
       }
       
-      // Re-render the first question
       renderQuestion();
       resetInactivityTimer();
     }
@@ -3066,15 +3976,12 @@
 
       currentTopicName = trimmed;
       
-      // Clean the filename - remove any invalid characters
       const cleanChapterName = trimmed.replace(/[<>:"/\\|?*]/g, '');
       
-      // Clean the subject name for URL
       const cleanSubject = currentSubject.toLowerCase()
         .replace(/ /g, '-')
         .replace(/[^a-z0-9-]/g, '');
       
-      // Find subject ID from CLASSES_CONFIG
       const currentClassConfig = CLASSES_CONFIG.find(cls => cls.id === currentClass);
       let subjectId = cleanSubject;
       
@@ -3087,17 +3994,12 @@
         }
       }
       
-      // Try multiple path combinations
       const pathOptions = [
-        // Dynamic path from classes.json structure
         `${currentClass}/${subjectId}/${cleanChapterName}.xml`,
-        // Traditional paths for backward compatibility
         `Class ${currentClass}/${cleanSubject}/${cleanChapterName}.xml`,
         `${currentClass}/${cleanSubject}/${cleanChapterName}.xml`,
         `Class ${currentClass}/${currentSubject.toLowerCase()}/${cleanChapterName}.xml`,
-        // Original chapter name (not cleaned)
         `Class ${currentClass}/${currentSubject.toLowerCase()}/${trimmed}.xml`,
-        // Encoded chapter name
         `${currentClass}/${currentSubject.toLowerCase()}/${encodeURIComponent(trimmed)}.xml`
       ];
       
@@ -3132,7 +4034,6 @@
         let lastError = null;
         let successfulPath = null;
         
-        // Try all path options
         for (const path of pathOptions) {
           try {
             console.log(`🔍 Trying XML path: ${path}`);
@@ -3140,6 +4041,7 @@
             if (res.ok) {
               xmlText = await res.text();
               successfulPath = path;
+              currentXMLPath = path;
               console.log(`✅ Successfully loaded XML from: ${path}`);
               break;
             } else {
@@ -3151,12 +4053,10 @@
           }
         }
         
-        // If no XML file found, show clean error message
         if (!xmlText) {
           const cleanErrorMessage = `XML file not found for chapter: "${trimmed}".xml`;
           console.error("❌ XML file not found. Tried paths:", pathOptions);
           
-          // Show user-friendly error
           questionTextEl.textContent = `Error: ${cleanErrorMessage}`;
           optionsListEl.innerHTML = "";
           feedbackEl.textContent = "";
@@ -3181,6 +4081,7 @@
           return;
         }
 
+        currentXMLContent = xmlText;
         const rawQuestions = parseXMLToQuestions(xmlText);
         if (rawQuestions.length === 0) {
           throw new Error(`No valid questions found in ${trimmed}.xml. Check XML format.`);
@@ -3213,7 +4114,6 @@
       } catch (err) {
         console.error("❌ Error loading questions:", err);
         
-        // Show clean error message without path details
         const errorMessage = err.message.includes("not found") 
           ? `XML file not found for chapter: "${trimmed}".xml` 
           : err.message;
@@ -3236,7 +4136,6 @@
     loginFormEl.addEventListener("submit", async function(e) {
       e.preventDefault();
       
-      // Check if on cooldown
       if (isOnCooldown) {
         loginErrorEl.textContent = "Please wait for the cooldown period to end before trying again.";
         loginErrorEl.style.display = "block";
@@ -3258,7 +4157,6 @@
       loginBtnEl.disabled = true;
       loginBtnEl.innerHTML = '⏳ Loading...';
       
-      // Always load fresh data from Google Sheets
       const loaded = await loadUsersFromGoogleSheet();
       
       if (!loaded || userList.length === 0) {
@@ -3273,11 +4171,9 @@
         const user = authenticateUser(username, password);
         
         if (user) {
-          // Successful login - reset failed attempts
           resetFailedAttempts();
           login(user);
         } else {
-          // Failed login - record attempt
           recordFailedAttempt();
           
           if (failedAttempts >= MAX_ATTEMPTS) {
@@ -3297,6 +4193,13 @@
 
     passwordToggleEl.addEventListener("click", togglePasswordVisibility);
     headerLogoutBtnEl.addEventListener("click", logout);
+    headerAdminBtnEl.addEventListener("click", () => {
+      if (questionsLoaded) {
+        openEditModal();
+      } else {
+        alert("Please load a chapter first to edit questions.");
+      }
+    });
     backToClassesBtn.addEventListener("click", () => {
       showClassSelection();
       resetInactivityTimer();
@@ -3324,29 +4227,66 @@
       goToPreviousQuestion();
     });
 
+    editQuestionBtn.addEventListener("click", openEditModal);
+    addQuestionBtn.addEventListener("click", openAddModal);
+    
+    closeModalBtn.addEventListener("click", closeEditModal);
+    closeAddModalBtn.addEventListener("click", closeAddModal);
+    
+    cancelEditBtn.addEventListener("click", closeEditModal);
+    cancelAddBtn.addEventListener("click", closeAddModal);
+    
+    saveQuestionBtn.addEventListener("click", saveEditedQuestion);
+    saveNewQuestionBtn.addEventListener("click", addNewQuestion);
+    deleteQuestionBtn.addEventListener("click", deleteCurrentQuestion);
+    
+    addMoreOptionsBtn.addEventListener("click", () => {
+      const optionCount = addOptionsContainer.querySelectorAll('.option-edit-row').length;
+      const newIndex = optionCount;
+      const optionRow = document.createElement('div');
+      optionRow.className = 'option-edit-row';
+      optionRow.innerHTML = `
+        <span class="option-label">${String.fromCharCode(65 + newIndex)}</span>
+        <input type="text" class="option-edit-input" id="add-option-${newIndex}" placeholder="Option ${String.fromCharCode(65 + newIndex)}">
+        <input type="radio" name="add-correct-option" value="${newIndex}" class="correct-option-checkbox">
+      `;
+      addOptionsContainer.appendChild(optionRow);
+    });
+
+    // Close modals when clicking outside
+    editModal.addEventListener("click", (e) => {
+      if (e.target === editModal) {
+        closeEditModal();
+      }
+    });
+
+    addModal.addEventListener("click", (e) => {
+      if (e.target === addModal) {
+        closeAddModal();
+      }
+    });
+
     // ========== INITIALIZATION ==========
     async function initializeApp() {
-      // Load all configurations first
       await loadConfigurations();
       
       usernameEl.focus();
       console.log("🚀 G. S. Tutorial App initialized");
       console.log("📊 Configuration loaded successfully");
       console.log("🔐 Google Sheets Login System Ready");
+      console.log("⚙️ Admin Editing System: " + (ADMIN_EDIT_CONFIG.ENABLED ? "Enabled" : "Disabled"));
       
-      // Show loaded configuration
       console.log("📋 Current Configuration:");
       console.log("- Google Sheets ID:", GOOGLE_SHEETS_CONFIG.SHEET_ID);
       console.log("- WhatsApp Enabled:", WHATSAPP_CONFIG.ENABLED);
       console.log("- Telegram Enabled:", TELEGRAM_CONFIG.ENABLED);
+      console.log("- GitHub Repo:", ADMIN_EDIT_CONFIG.GITHUB_REPO ? "Configured" : "Not configured");
       console.log("- Classes Loaded:", CLASSES_CONFIG.length);
       
-      // Add activity listeners for inactivity timer
       document.addEventListener('mousemove', resetInactivityTimer);
       document.addEventListener('keypress', resetInactivityTimer);
       document.addEventListener('click', resetInactivityTimer);
       
-      // Initialize failed attempts tracking
       resetFailedAttempts();
     }
 
