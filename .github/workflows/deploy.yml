@@ -1,0 +1,86 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Create required files
+      run: |
+        # Create default config.js if not exists
+        if [ ! -f "config.js" ]; then
+          echo "// Default configuration" > config.js
+          echo "const GOOGLE_SHEETS_CONFIG = { SHEET_ID: '', GID: '0' };" >> config.js
+          echo "const WHATSAPP_CONFIG = { ENABLED: false, PHONE_NUMBER: '' };" >> config.js
+          echo "const TELEGRAM_CONFIG = { ENABLED: false, BOT_TOKEN: '', CHAT_ID: '' };" >> config.js
+          echo "const GITHUB_CONFIG = { ENABLED: false, REPO: '', TOKEN: '', BRANCH: 'main' };" >> config.js
+        fi
+        
+        # Create default classes.json if not exists
+        if [ ! -f "classes.json" ]; then
+          echo '[' > classes.json
+          echo '  {' >> classes.json
+          echo '    "id": "8",' >> classes.json
+          echo '    "name": "Class 8",' >> classes.json
+          echo '    "icon": "📚",' >> classes.json
+          echo '    "description": "Mathematics & Science",' >> classes.json
+          echo '    "subjects": [' >> classes.json
+          echo '      {' >> classes.json
+          echo '        "id": "mathematics",' >> classes.json
+          echo '        "name": "Mathematics",' >> classes.json
+          echo '        "icon": "📐",' >> classes.json
+          echo '        "description": "Algebra, Geometry, Mensuration"' >> classes.json
+          echo '      },' >> classes.json
+          echo '      {' >> classes.json
+          echo '        "id": "science",' >> classes.json
+          echo '        "name": "Science",' >> classes.json
+          echo '        "icon": "🔬",' >> classes.json
+          echo '        "description": "Physics, Chemistry, Biology"' >> classes.json
+          echo '      }' >> classes.json
+          echo '    ]' >> classes.json
+          echo '  }' >> classes.json
+          echo ']' >> classes.json
+        fi
+        
+        # Create default service-worker.js
+        echo '// Service Worker' > service-worker.js
+        echo 'self.addEventListener("install", () => self.skipWaiting());' >> service-worker.js
+        echo 'self.addEventListener("activate", () => self.clients.claim());' >> service-worker.js
+        
+        # Create manifest.json
+        echo '{' > manifest.json
+        echo '  "name": "G.S. Tutorial",' >> manifest.json
+        echo '  "short_name": "G.S. Tutorial",' >> manifest.json
+        echo '  "start_url": "./index.html",' >> manifest.json
+        echo '  "display": "standalone",' >> manifest.json
+        echo '  "background_color": "#0f172a",' >> manifest.json
+        echo '  "theme_color": "#0f172a",' >> manifest.json
+        echo '  "icons": [' >> manifest.json
+        echo '    {' >> manifest.json
+        echo '      "src": "logo.png",' >> manifest.json
+        echo '      "sizes": "192x192",' >> manifest.json
+        echo '      "type": "image/png"' >> manifest.json
+        echo '    }' >> manifest.json
+        echo '  ]' >> manifest.json
+        echo '}' >> manifest.json
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
+        publish_branch: gh-pages
