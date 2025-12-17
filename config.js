@@ -32,7 +32,7 @@ const TELEGRAM_CONFIG = {
     }
 };
 
-// ========== GITHUB ADMIN EDIT CONFIG ==========
+// ========== GITHUB ADMIN EDIT CONFIG =========
 const GITHUB_CONFIG = {
     ENABLED: true, // Set to true to enable GitHub-based question editing
     REPO: 'gobind0248/gstutorial', // Your GitHub repository (format: username/repo-name)
