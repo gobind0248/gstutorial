@@ -1528,19 +1528,36 @@
 
   <script>
     // ========== CONFIGURATION LOADING ==========
-    // These will be loaded from config.js
-    let API_CONFIG = {};
-    let WHATSAPP_CONFIG = {};
-    let TELEGRAM_CONFIG = {};
-    let LOGO_CONFIG = {};
-    let LOGGING_CONFIG = {};
-
-    // Global variables for user management
-    let userList = [];
-    let currentUser = null;
+    let GOOGLE_SHEETS_CONFIG = {
+        SHEET_ID: '1G6tTHT56T6FmqOwOvVFVPoVqoSs-TSBz_-SiW9imQvk',
+        GID: '0',
+        get API_URL() {
+            return `https://docs.google.com/spreadsheets/d/${this.SHEET_ID}/gviz/tq?tqx=out:json&gid=${this.GID}`;
+        }
+    };
+    
+    let WHATSAPP_CONFIG = {
+        ENABLED: false,
+        PHONE_NUMBER: '',
+        MESSAGE_TEMPLATE: {
+            LOGIN: "🔔 *New User Login* 🔔\n👤 Username: {username}\n📛 Name: {name}\n🏫 Class: {class}\n👥 Role: {role}\n📅 Date: {date}\n⏰ Time: {time}\n🌐 IP: {ip}",
+            QUIZ_RESULT: "📊 *Quiz Result* 📊\n👤 Username: {username}\n📛 Name: {name}\n🏫 Class: {class}\n📚 Subject: {subject}\n📖 Chapter: {chapter}\n✅ Correct: {correct}\n📋 Total: {total}\n📈 Score: {percentage}%\n⏱️ Time: {timeTaken}\n📅 Date: {date}"
+        }
+    };
+    
+    let TELEGRAM_CONFIG = {
+        ENABLED: false,
+        BOT_TOKEN: '',
+        CHAT_ID: '',
+        MESSAGE_TEMPLATE: {
+            LOGIN: "🔔 *New User Login* 🔔\n👤 Username: {username}\n📛 Name: {name}\n🏫 Class: {class}\n👥 Role: {role}\n📅 Date: {date}\n⏰ Time: {time}\n🌐 IP: {ip}",
+            QUIZ_RESULT: "📊 *Quiz Result* 📊\n👤 Username: {username}\n📛 Name: {name}\n🏫 Class: {class}\n📚 Subject: {subject}\n📖 Chapter: {chapter}\n✅ Correct: {correct}\n📋 Total: {total}\n📈 Score: {percentage}%\n⏱️ Time: {timeTaken}\n📅 Date: {date}"
+        }
+    };
+    
     let CLASSES_CONFIG = [];
 
-    // ========== GLOBAL QUIZ VARIABLES ==========
+    // ========== GLOBAL VARIABLES ==========
     let questions = [];
     let currentIndex = 0;
     let score = 0;
@@ -1557,6 +1574,8 @@
     let isReviewMode = false;
     
     // Login system variables
+    let currentUser = null;
+    let userList = [];
     let inactivityTimer = null;
     const INACTIVITY_TIMEOUT = 15 * 60 * 1000; // 15 minutes
     
@@ -1623,51 +1642,44 @@
     const scoreMiniEl = document.getElementById("score-mini");
     const finalScoreEl = document.getElementById("final-score");
 
-    // ========== CONFIGURATION FUNCTIONS ==========
+    // ========== LOAD EXTERNAL CONFIGURATIONS ==========
     async function loadConfigurations() {
         try {
-            console.log("🚀 Loading configurations...");
-            
-            // Load config.js dynamically
+            // Load config.js
             const configResponse = await fetch('config.js');
             const configText = await configResponse.text();
             
-            // Parse config.js to extract variables
-            // Extract Cloudflare Worker URL
-            const workerUrlMatch = configText.match(/CLOUDFLARE_WORKER_URL:\s*'([^']+)'/);
-            if (workerUrlMatch) {
-                const baseUrl = workerUrlMatch[1];
-                API_CONFIG = {
-                    BASE_URL: baseUrl,
-                    USERS_ENDPOINT: `${baseUrl}/api/users`,
-                    TELEGRAM_CONFIG_ENDPOINT: `${baseUrl}/api/telegram-config`,
-                    SEND_TELEGRAM_ENDPOINT: `${baseUrl}/api/send-telegram`,
-                    AUTHENTICATE_ENDPOINT: `${baseUrl}/api/authenticate`,
-                    HEALTH_CHECK: `${baseUrl}/api/health`
-                };
-                console.log("✅ Cloudflare Worker configured:", API_CONFIG.BASE_URL);
+            // Extract configurations using regex
+            const sheetsMatch = configText.match(/SHEET_ID:\s*'([^']+)'/);
+            const gidMatch = configText.match(/GID:\s*'([^']+)'/);
+            
+            if (sheetsMatch && gidMatch) {
+                GOOGLE_SHEETS_CONFIG.SHEET_ID = sheetsMatch[1];
+                GOOGLE_SHEETS_CONFIG.GID = gidMatch[1];
+                console.log("✅ Loaded Google Sheets config:", GOOGLE_SHEETS_CONFIG.SHEET_ID);
             }
             
-            // Extract WhatsApp config
+            // Load WhatsApp config
             const whatsappEnabledMatch = configText.match(/ENABLED:\s*(true|false)/);
             const phoneMatch = configText.match(/PHONE_NUMBER:\s*'([^']+)'/);
             
             if (whatsappEnabledMatch && phoneMatch) {
                 WHATSAPP_CONFIG.ENABLED = whatsappEnabledMatch[1] === 'true';
                 WHATSAPP_CONFIG.PHONE_NUMBER = phoneMatch[1];
-                console.log("✅ WhatsApp:", WHATSAPP_CONFIG.ENABLED ? "Enabled" : "Disabled");
+                console.log("✅ WhatsApp notifications:", WHATSAPP_CONFIG.ENABLED ? "Enabled" : "Disabled");
             }
             
-            // Initially set Telegram config as empty (will load from worker)
-            TELEGRAM_CONFIG.ENABLED = false;
-            TELEGRAM_CONFIG.BOT_TOKEN = '';
-            TELEGRAM_CONFIG.CHAT_ID = '';
+            // Load Telegram config
+            const telegramEnabledMatch = configText.match(/ENABLED:\s*(true|false)/);
+            const botTokenMatch = configText.match(/BOT_TOKEN:\s*'([^']+)'/);
+            const chatIdMatch = configText.match(/CHAT_ID:\s*'([^']+)'/);
             
-            // Load Telegram config from Cloudflare Worker
-            await loadTelegramConfigFromWorker();
-            
-            // Test the worker connection
-            await testWorkerConnection();
+            if (telegramEnabledMatch && botTokenMatch && chatIdMatch) {
+                TELEGRAM_CONFIG.ENABLED = telegramEnabledMatch[1] === 'true';
+                TELEGRAM_CONFIG.BOT_TOKEN = botTokenMatch[1];
+                TELEGRAM_CONFIG.CHAT_ID = chatIdMatch[1];
+                console.log("✅ Telegram notifications:", TELEGRAM_CONFIG.ENABLED ? "Enabled" : "Disabled");
+            }
             
         } catch (error) {
             console.error("❌ Error loading configuration:", error);
@@ -1678,53 +1690,6 @@
         
         // Get user IP address
         await getUserIP();
-    }
-
-    // Test connection to Cloudflare Worker
-    async function testWorkerConnection() {
-        try {
-            const response = await fetch(API_CONFIG.HEALTH_CHECK);
-            const data = await response.json();
-            console.log("✅ Worker connection test:", data);
-            return data.status === 'ok';
-        } catch (error) {
-            console.error("❌ Worker connection failed:", error);
-            return false;
-        }
-    }
-
-    // Load Telegram config from Cloudflare Worker
-    async function loadTelegramConfigFromWorker() {
-        try {
-            console.log("🤖 Loading Telegram config from worker...");
-            
-            const response = await fetch(API_CONFIG.TELEGRAM_CONFIG_ENDPOINT);
-            if (!response.ok) {
-                throw new Error(`Worker error: ${response.status}`);
-            }
-            
-            const data = await response.json();
-            
-            if (data.success && data.config) {
-                TELEGRAM_CONFIG.ENABLED = data.config.ENABLED;
-                TELEGRAM_CONFIG.BOT_TOKEN = data.config.BOT_TOKEN;
-                TELEGRAM_CONFIG.CHAT_ID = data.config.CHAT_ID;
-                
-                console.log("✅ Telegram config loaded:", {
-                    ENABLED: TELEGRAM_CONFIG.ENABLED,
-                    BOT_TOKEN: TELEGRAM_CONFIG.BOT_TOKEN ? '***' + TELEGRAM_CONFIG.BOT_TOKEN.slice(-4) : 'Not set',
-                    CHAT_ID: TELEGRAM_CONFIG.CHAT_ID ? '***' + TELEGRAM_CONFIG.CHAT_ID.slice(-4) : 'Not set'
-                });
-            } else {
-                console.warn("⚠️ Telegram not configured in worker");
-            }
-            
-            return true;
-            
-        } catch (error) {
-            console.error("❌ Error loading Telegram config:", error);
-            return false;
-        }
     }
 
     async function loadClassesConfig() {
@@ -1757,121 +1722,15 @@
         }
     }
 
-    // ========== CLOUDFLARE WORKER FUNCTIONS ==========
-    async function loadUsersFromWorker() {
-        try {
-            console.log("📥 Loading users via Cloudflare Worker...");
-            
-            const response = await fetch(API_CONFIG.USERS_ENDPOINT);
-            
-            if (!response.ok) {
-                throw new Error(`Worker error: ${response.status}`);
-            }
-            
-            const data = await response.json();
-            
-            if (data.success) {
-                userList = data.users || [];
-                console.log(`✅ Loaded ${userList.length} users via worker`);
-                return true;
-            } else {
-                console.warn("⚠️ Worker returned error:", data.error);
-                userList = [];
-                
-                // Show fallback message
-                if (!userList || userList.length === 0) {
-                    loginErrorEl.textContent = "⚠️ No users found. Please contact administrator.";
-                    loginErrorEl.style.display = "block";
-                }
-                
-                return false;
-            }
-            
-        } catch (error) {
-            console.error("❌ Error loading users via worker:", error);
-            
-            // Show user-friendly error
-            loginErrorEl.textContent = "⚠️ Cannot connect to login service. Please check your internet connection.";
-            loginErrorEl.style.display = "block";
-            
-            userList = [];
-            return false;
-        }
-    }
-
-    // Direct authentication via worker (more secure)
-    async function authenticateViaWorker(username, password) {
-        try {
-            console.log("🔐 Authenticating via worker...");
-            
-            const response = await fetch(API_CONFIG.AUTHENTICATE_ENDPOINT, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    username: username.trim(),
-                    password: password.trim()
-                })
-            });
-            
-            const data = await response.json();
-            
-            if (data.success) {
-                console.log("✅ Authentication successful via worker");
-                return data.user; // Return user object
-            } else {
-                console.log("❌ Authentication failed via worker:", data.error);
-                return null;
-            }
-            
-        } catch (error) {
-            console.error("❌ Error authenticating via worker:", error);
-            return null;
-        }
-    }
-
-    async function sendTelegramMessage(message) {
-        if (!TELEGRAM_CONFIG.ENABLED || !TELEGRAM_CONFIG.BOT_TOKEN) {
-            console.log("⚠️ Telegram notifications disabled or not configured");
-            return;
-        }
-        
-        try {
-            console.log("📱 Sending Telegram via worker...");
-            
-            const response = await fetch(API_CONFIG.SEND_TELEGRAM_ENDPOINT, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    message: message
-                })
-            });
-            
-            const result = await response.json();
-            
-            if (result.success) {
-                console.log("✅ Telegram message sent via worker");
-            } else {
-                console.error("❌ Failed to send Telegram via worker:", result.error);
-            }
-            
-        } catch (error) {
-            console.error("❌ Error sending Telegram via worker:", error);
-        }
-    }
-
     // ========== NOTIFICATION FUNCTIONS ==========
     async function sendLoginNotification(user) {
-        if (!TELEGRAM_CONFIG.ENABLED) return;
+        if (!WHATSAPP_CONFIG.ENABLED && !TELEGRAM_CONFIG.ENABLED) return;
         
         const now = new Date();
         const date = now.toLocaleDateString('en-IN');
         const time = now.toLocaleTimeString('en-IN');
         
-        const message = TELEGRAM_CONFIG.MESSAGE_TEMPLATE.LOGIN
+        const message = WHATSAPP_CONFIG.MESSAGE_TEMPLATE.LOGIN
             .replace('{username}', user.username)
             .replace('{name}', user.name)
             .replace('{class}', user.class || 'Not assigned')
@@ -1882,18 +1741,25 @@
         
         console.log("📱 Login Notification:", message);
         
-        // Send to Telegram via worker
-        await sendTelegramMessage(message);
+        // Send to WhatsApp
+        if (WHATSAPP_CONFIG.ENABLED && WHATSAPP_CONFIG.PHONE_NUMBER) {
+            await sendWhatsAppMessage(message);
+        }
+        
+        // Send to Telegram
+        if (TELEGRAM_CONFIG.ENABLED && TELEGRAM_CONFIG.BOT_TOKEN) {
+            await sendTelegramMessage(message);
+        }
     }
 
     async function sendQuizResultNotification(stats) {
-        if (!TELEGRAM_CONFIG.ENABLED) return;
+        if (!WHATSAPP_CONFIG.ENABLED && !TELEGRAM_CONFIG.ENABLED) return;
         if (!currentUser || !currentQuizStats) return;
         
         const now = new Date();
         const date = now.toLocaleDateString('en-IN');
         
-        const message = TELEGRAM_CONFIG.MESSAGE_TEMPLATE.QUIZ_RESULT
+        const message = WHATSAPP_CONFIG.MESSAGE_TEMPLATE.QUIZ_RESULT
             .replace('{username}', currentUser.username)
             .replace('{name}', currentUser.name)
             .replace('{class}', currentClass)
@@ -1902,1487 +1768,1586 @@
             .replace('{correct}', stats.correct)
             .replace('{total}', stats.total)
             .replace('{percentage}', stats.percentage)
-            .replace('{attempted}', stats.attempted)
             .replace('{timeTaken}', stats.timeTaken || "N/A")
             .replace('{date}', date);
         
         console.log("📊 Quiz Result Notification:", message);
         
-        // Send to Telegram via worker
-        await sendTelegramMessage(message);
+        // Send to WhatsApp
+        if (WHATSAPP_CONFIG.ENABLED && WHATSAPP_CONFIG.PHONE_NUMBER) {
+            await sendWhatsAppMessage(message);
+        }
+        
+        // Send to Telegram
+        if (TELEGRAM_CONFIG.ENABLED && TELEGRAM_CONFIG.BOT_TOKEN) {
+            await sendTelegramMessage(message);
+        }
+    }
+
+    async function sendWhatsAppMessage(message) {
+        try {
+            const phone = WHATSAPP_CONFIG.PHONE_NUMBER;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+            
+            // Create invisible iframe to trigger WhatsApp
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.src = whatsappUrl;
+            document.body.appendChild(iframe);
+            
+            setTimeout(() => {
+                document.body.removeChild(iframe);
+            }, 1000);
+            
+            console.log("✅ WhatsApp notification sent");
+        } catch (error) {
+            console.error("❌ Error sending WhatsApp message:", error);
+        }
+    }
+
+    async function sendTelegramMessage(message) {
+        try {
+            const url = `https://api.telegram.org/bot${TELEGRAM_CONFIG.BOT_TOKEN}/sendMessage`;
+            
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: TELEGRAM_CONFIG.CHAT_ID,
+                    text: message,
+                    parse_mode: 'Markdown'
+                })
+            });
+            
+            if (response.ok) {
+                console.log("✅ Telegram notification sent");
+            } else {
+                console.error("❌ Telegram API error:", await response.text());
+            }
+        } catch (error) {
+            console.error("❌ Error sending Telegram message:", error);
+        }
     }
 
     // ========== PASSWORD TOGGLE FUNCTIONALITY ==========
     function togglePasswordVisibility() {
-        if (passwordEl.type === 'password') {
-            passwordEl.type = 'text';
-            passwordToggleEl.textContent = '🙈';
-            passwordToggleEl.setAttribute('aria-label', 'Hide password');
-        } else {
-            passwordEl.type = 'password';
-            passwordToggleEl.textContent = '👁️';
-            passwordToggleEl.setAttribute('aria-label', 'Show password');
-        }
-        resetInactivityTimer();
+      if (passwordEl.type === 'password') {
+        passwordEl.type = 'text';
+        passwordToggleEl.textContent = '🙈';
+        passwordToggleEl.setAttribute('aria-label', 'Hide password');
+      } else {
+        passwordEl.type = 'password';
+        passwordToggleEl.textContent = '👁️';
+        passwordToggleEl.setAttribute('aria-label', 'Show password');
+      }
+      resetInactivityTimer();
     }
 
     // ========== LOGIN ATTEMPT TRACKING ==========
     function resetFailedAttempts() {
-        failedAttempts = 0;
-        isOnCooldown = false;
-        attemptCounterEl.style.display = 'none';
-        cooldownMessageEl.style.display = 'none';
-        updateAttemptCounter();
-        if (cooldownTimer) {
-            clearInterval(cooldownTimer);
-            cooldownTimer = null;
-        }
+      failedAttempts = 0;
+      isOnCooldown = false;
+      attemptCounterEl.style.display = 'none';
+      cooldownMessageEl.style.display = 'none';
+      updateAttemptCounter();
+      if (cooldownTimer) {
+        clearInterval(cooldownTimer);
+        cooldownTimer = null;
+      }
     }
 
     function updateAttemptCounter() {
-        const remaining = MAX_ATTEMPTS - failedAttempts;
-        attemptsRemainingEl.textContent = remaining;
+      const remaining = MAX_ATTEMPTS - failedAttempts;
+      attemptsRemainingEl.textContent = remaining;
+      
+      if (failedAttempts > 0) {
+        attemptCounterEl.style.display = 'flex';
         
-        if (failedAttempts > 0) {
-            attemptCounterEl.style.display = 'flex';
-            
-            if (remaining <= 1) {
-                attemptCounterEl.className = 'attempt-counter critical';
-            } else if (remaining <= 2) {
-                attemptCounterEl.className = 'attempt-counter warning';
-            } else {
-                attemptCounterEl.className = 'attempt-counter';
-            }
+        if (remaining <= 1) {
+          attemptCounterEl.className = 'attempt-counter critical';
+        } else if (remaining <= 2) {
+          attemptCounterEl.className = 'attempt-counter warning';
         } else {
-            attemptCounterEl.style.display = 'none';
+          attemptCounterEl.className = 'attempt-counter';
         }
+      } else {
+        attemptCounterEl.style.display = 'none';
+      }
     }
 
     function startCooldown() {
-        isOnCooldown = true;
-        loginBtnEl.disabled = true;
-        cooldownMessageEl.style.display = 'block';
-        attemptCounterEl.style.display = 'none';
-        
-        let seconds = COOLDOWN_TIME;
+      isOnCooldown = true;
+      loginBtnEl.disabled = true;
+      cooldownMessageEl.style.display = 'block';
+      attemptCounterEl.style.display = 'none';
+      
+      let seconds = COOLDOWN_TIME;
+      cooldownTimerEl.textContent = seconds;
+      
+      cooldownTimer = setInterval(() => {
+        seconds--;
         cooldownTimerEl.textContent = seconds;
         
-        cooldownTimer = setInterval(() => {
-            seconds--;
-            cooldownTimerEl.textContent = seconds;
-            
-            if (seconds <= 0) {
-                clearInterval(cooldownTimer);
-                isOnCooldown = false;
-                loginBtnEl.disabled = false;
-                cooldownMessageEl.style.display = 'none';
-                resetFailedAttempts();
-                usernameEl.focus();
-            }
-        }, 1000);
+        if (seconds <= 0) {
+          clearInterval(cooldownTimer);
+          isOnCooldown = false;
+          loginBtnEl.disabled = false;
+          cooldownMessageEl.style.display = 'none';
+          resetFailedAttempts();
+          usernameEl.focus();
+        }
+      }, 1000);
     }
 
     function recordFailedAttempt() {
-        failedAttempts++;
-        updateAttemptCounter();
-        
-        if (failedAttempts >= MAX_ATTEMPTS) {
-            startCooldown();
-        }
+      failedAttempts++;
+      updateAttemptCounter();
+      
+      if (failedAttempts >= MAX_ATTEMPTS) {
+        startCooldown();
+      }
     }
 
-    // ========== AUTHENTICATION FUNCTIONS ==========
-    async function authenticateUser(username, password) {
-        // Try direct worker authentication first (more secure)
-        const workerUser = await authenticateViaWorker(username, password);
-        if (workerUser) {
-            return {
-                username: workerUser.username,
-                password: password, // Keep password for session
-                name: workerUser.name,
-                role: workerUser.role,
-                class: workerUser.class
-            };
+    // ========== GOOGLE SHEETS FUNCTIONS ==========
+    async function loadUsersFromGoogleSheet() {
+      try {
+        console.log("📥 Loading users from Google Sheet...");
+        
+        // Create the API URL using the config
+        const apiUrl = GOOGLE_SHEETS_CONFIG.API_URL;
+        console.log("🔗 Fetching from:", apiUrl);
+        
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch Google Sheet. Status: ${response.status}`);
         }
         
-        // Fallback to local authentication (if worker fails)
-        console.log("⚠️ Falling back to local authentication");
-        const user = userList.find(u => 
-            u.username.toLowerCase() === username.toLowerCase() && 
-            u.password === password
-        );
-        return user;
+        const data = await response.text();
+        
+        // Google Sheets returns JSONP-like format, parse it
+        const jsonData = JSON.parse(data.substring(47).slice(0, -2));
+        
+        // Extract rows from the response
+        const rows = jsonData.table.rows;
+        userList = [];
+        
+        // Expected column indices
+        const USERNAME_COL = 0;  // Column A
+        const PASSWORD_COL = 1;  // Column B
+        const NAME_COL = 2;      // Column C
+        const ROLE_COL = 3;      // Column D
+        const CLASS_COL = 4;     // Column E
+        
+        console.log(`📊 Total rows in sheet: ${rows.length}`);
+        
+        // Start from row 1 (second row in Google Sheets)
+        // Row 0 is the header row
+        for (let i = 1; i < rows.length; i++) {
+          const row = rows[i];
+          
+          if (row.c && row.c.length >= 2) {
+            const username = row.c[USERNAME_COL] ? row.c[USERNAME_COL].v : '';
+            const password = row.c[PASSWORD_COL] ? row.c[PASSWORD_COL].v : '';
+            const name = row.c[NAME_COL] ? row.c[NAME_COL].v : username;
+            const role = row.c[ROLE_COL] ? row.c[ROLE_COL].v : 'Student';
+            const userClass = row.c[CLASS_COL] ? row.c[CLASS_COL].v : '';
+            
+            // Convert to string and trim
+            const usernameStr = username ? username.toString().trim() : '';
+            const passwordStr = password ? password.toString().trim() : '';
+            
+            if (usernameStr && passwordStr) {
+              userList.push({
+                username: usernameStr,
+                password: passwordStr,
+                name: name ? name.toString().trim() : usernameStr,
+                role: role ? role.toString().trim() : 'Student',
+                class: userClass ? userClass.toString().trim() : '8'
+              });
+              
+              console.log(`👤 Loaded user ${i}: ${usernameStr} (Class: ${userClass || '8'})`);
+            } else {
+              console.log(`⚠️ Skipping row ${i+1}: Missing username or password`);
+            }
+          }
+        }
+        
+        if (userList.length === 0) {
+          console.warn("⚠️ No users found in Google Sheet. Using fallback.");
+          userList = [];
+        }
+        
+        console.log(`✅ Loaded ${userList.length} users from Google Sheet`);
+        return true;
+        
+      } catch (error) {
+        console.error("❌ Error loading users from Google Sheet:", error);
+        
+        // Show user-friendly error
+        loginErrorEl.textContent = "⚠️ Cannot connect to login database. Please check your internet connection.";
+        loginErrorEl.style.display = "block";
+        
+        // Return empty user list
+        userList = [];
+        return false;
+      }
+    }
+
+    function authenticateUser(username, password) {
+      const user = userList.find(u => 
+        u.username.toLowerCase() === username.toLowerCase() && 
+        u.password === password
+      );
+      return user;
     }
 
     function login(user) {
-        currentUser = user;
-        headerUsernameEl.textContent = user.name;
-        
-        // Show fixed header and class selection, hide login
-        fixedHeaderEl.style.display = "block";
-        headerUserInfoEl.style.display = "block";
-        headerLogoutBtnEl.style.display = "block";
-        loginContainerEl.style.display = "none";
-        classSelectionEl.style.display = "block";
-        
-        // Reset failed attempts and cooldown
-        resetFailedAttempts();
-        
-        // Reset inactivity timer
-        resetInactivityTimer();
-        
-        // Load available classes
-        loadClasses();
-        
-        // Send login notification
-        sendLoginNotification(user);
-        
-        console.log(`🎉 User ${user.name} logged in successfully. Role: ${user.role}, Class: ${user.class || '8'}`);
+      currentUser = user;
+      headerUsernameEl.textContent = user.name;
+      
+      // Show fixed header and class selection, hide login
+      fixedHeaderEl.style.display = "block";
+      headerUserInfoEl.style.display = "block";
+      headerLogoutBtnEl.style.display = "block";
+      loginContainerEl.style.display = "none";
+      classSelectionEl.style.display = "block";
+      
+      // Reset failed attempts and cooldown
+      resetFailedAttempts();
+      
+      // Reset inactivity timer
+      resetInactivityTimer();
+      
+      // Load available classes
+      loadClasses();
+      
+      // Send login notification
+      sendLoginNotification(user);
+      
+      console.log(`🎉 User ${user.name} logged in successfully. Role: ${user.role}, Class: ${user.class || '8'}`);
     }
 
     function logout() {
-        if (confirm("Are you sure you want to logout?")) {
-            // Clear all timers
-            if (timerInterval) {
-                clearInterval(timerInterval);
-                timerInterval = null;
-            }
-            
-            if (inactivityTimer) {
-                clearTimeout(inactivityTimer);
-                inactivityTimer = null;
-            }
-            
-            if (cooldownTimer) {
-                clearInterval(cooldownTimer);
-                cooldownTimer = null;
-            }
-            
-            // Remove activity listeners
-            document.removeEventListener('mousemove', resetInactivityTimer);
-            document.removeEventListener('keypress', resetInactivityTimer);
-            document.removeEventListener('click', resetInactivityTimer);
-            
-            // Reset state
-            resetQuizState();
-            resetFailedAttempts();
-            
-            // Clear current user
-            currentUser = null;
-            
-            // Hide everything, show login
-            fixedHeaderEl.style.display = "none";
-            classSelectionEl.style.display = "none";
-            subjectSelectionEl.style.display = "none";
-            quizContainerEl.style.display = "none";
-            loginContainerEl.style.display = "flex";
-            
-            // Clear login form
-            loginFormEl.reset();
-            passwordEl.type = 'password';
-            passwordToggleEl.textContent = '👁️';
-            loginErrorEl.textContent = "";
-            loginErrorEl.style.display = "none";
-            
-            // Focus on username field
-            usernameEl.focus();
-            
-            console.log("👋 User logged out");
+      if (confirm("Are you sure you want to logout?")) {
+        // Clear all timers
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
         }
+        
+        if (inactivityTimer) {
+          clearTimeout(inactivityTimer);
+          inactivityTimer = null;
+        }
+        
+        if (cooldownTimer) {
+          clearInterval(cooldownTimer);
+          cooldownTimer = null;
+        }
+        
+        // Remove activity listeners
+        document.removeEventListener('mousemove', resetInactivityTimer);
+        document.removeEventListener('keypress', resetInactivityTimer);
+        document.removeEventListener('click', resetInactivityTimer);
+        
+        // Reset state
+        resetQuizState();
+        resetFailedAttempts();
+        
+        // Clear current user
+        currentUser = null;
+        
+        // Hide everything, show login
+        fixedHeaderEl.style.display = "none";
+        classSelectionEl.style.display = "none";
+        subjectSelectionEl.style.display = "none";
+        quizContainerEl.style.display = "none";
+        loginContainerEl.style.display = "flex";
+        
+        // Clear login form
+        loginFormEl.reset();
+        passwordEl.type = 'password';
+        passwordToggleEl.textContent = '👁️';
+        loginErrorEl.textContent = "";
+        loginErrorEl.style.display = "none";
+        
+        // Focus on username field
+        usernameEl.focus();
+        
+        console.log("👋 User logged out");
+      }
     }
 
     function autoLogout() {
-        if (currentUser) {
-            alert("You have been automatically logged out due to inactivity (15 minutes).");
-            logout();
-        }
+      if (currentUser) {
+        alert("You have been automatically logged out due to inactivity (15 minutes).");
+        logout();
+      }
     }
 
     function resetInactivityTimer() {
-        if (inactivityTimer) {
-            clearTimeout(inactivityTimer);
-        }
-        inactivityTimer = setTimeout(autoLogout, INACTIVITY_TIMEOUT);
+      if (inactivityTimer) {
+        clearTimeout(inactivityTimer);
+      }
+      inactivityTimer = setTimeout(autoLogout, INACTIVITY_TIMEOUT);
     }
 
     // ========== NAVIGATION FUNCTIONS ==========
     function showClassSelection() {
-        classSelectionEl.style.display = "block";
-        subjectSelectionEl.style.display = "none";
-        quizContainerEl.style.display = "none";
-        resetQuizState();
-        isReviewMode = false;
+      classSelectionEl.style.display = "block";
+      subjectSelectionEl.style.display = "none";
+      quizContainerEl.style.display = "none";
+      resetQuizState();
+      isReviewMode = false;
     }
 
     function showSubjectSelection(className) {
-        currentClass = className;
-        currentClassDisplayEl.textContent = `Class ${className}`;
-        
-        classSelectionEl.style.display = "none";
-        subjectSelectionEl.style.display = "block";
-        quizContainerEl.style.display = "none";
-        
-        loadSubjects();
-        isReviewMode = false;
+      currentClass = className;
+      currentClassDisplayEl.textContent = `Class ${className}`;
+      
+      classSelectionEl.style.display = "none";
+      subjectSelectionEl.style.display = "block";
+      quizContainerEl.style.display = "none";
+      
+      loadSubjects();
+      isReviewMode = false;
     }
 
     function showQuizContainer(subjectName) {
-        currentSubject = subjectName;
-        
-        // Update path display
-        currentPathEl.innerHTML = `
-            <span class="path-link" onclick="showClassSelection()">Classes</span>
-            <span class="path-separator">›</span>
-            <span class="path-link" onclick="showSubjectSelection('${currentClass}')">Class ${currentClass}</span>
-            <span class="path-separator">›</span>
-            <span>${subjectName}</span>
-        `;
-        currentPathEl.style.display = "flex";
-        
-        subjectSelectionEl.style.display = "none";
-        quizContainerEl.style.display = "block";
-        
-        loadChapters();
-        isReviewMode = false;
+      currentSubject = subjectName;
+      
+      // Update path display
+      currentPathEl.innerHTML = `
+        <span class="path-link" onclick="showClassSelection()">Classes</span>
+        <span class="path-separator">›</span>
+        <span class="path-link" onclick="showSubjectSelection('${currentClass}')">Class ${currentClass}</span>
+        <span class="path-separator">›</span>
+        <span>${subjectName}</span>
+      `;
+      currentPathEl.style.display = "flex";
+      
+      subjectSelectionEl.style.display = "none";
+      quizContainerEl.style.display = "block";
+      
+      loadChapters();
+      isReviewMode = false;
     }
 
     function loadClasses() {
-        const userClassValue = currentUser?.class || "";
-        let availableClasses = [];
+  const userClassValue = currentUser?.class || "";
+  let availableClasses = [];
 
-        // =========================
-        // ADMIN → FULL ACCESS
-        // =========================
-        if (currentUser.role === 'Admin') {
-            availableClasses = CLASSES_CONFIG;
-        }
+  // =========================
+  // ADMIN → FULL ACCESS
+  // =========================
+  if (currentUser.role === 'Admin') {
+    availableClasses = CLASSES_CONFIG;
+  }
 
-        // =========================
-        // TEACHER → LIMITED CLASSES
-        // =========================
-        else if (currentUser.role === 'Teacher') {
+  // =========================
+  // TEACHER → LIMITED CLASSES
+  // =========================
+  else if (currentUser.role === 'Teacher') {
 
-            if (!userClassValue || userClassValue.toLowerCase() === "all") {
-                availableClasses = CLASSES_CONFIG;
-            } else {
-                const teacherClasses = userClassValue
-                    .split(',')
-                    .map(c => c.replace(/class/i, '').trim());
+    if (!userClassValue || userClassValue.toLowerCase() === "all") {
+      availableClasses = CLASSES_CONFIG;
+    } else {
+      const teacherClasses = userClassValue
+        .split(',')
+        .map(c => c.replace(/class/i, '').trim());
 
-                availableClasses = CLASSES_CONFIG.filter(cls =>
-                    teacherClasses.includes(cls.id)
-                );
-            }
-        }
+      availableClasses = CLASSES_CONFIG.filter(cls =>
+        teacherClasses.includes(cls.id)
+      );
+    }
+  }
 
-        // =========================
-        // STUDENT → SINGLE CLASS
-        // =========================
-        else {
-            let studentClass = "8";
+  // =========================
+  // STUDENT → SINGLE CLASS
+  // =========================
+  else {
+    let studentClass = "8";
 
-            if (userClassValue && userClassValue.toLowerCase() !== "none") {
-                const match = userClassValue.match(/\d+/);
-                studentClass = match ? match[0] : "8";
-            }
+    if (userClassValue && userClassValue.toLowerCase() !== "none") {
+      const match = userClassValue.match(/\d+/);
+      studentClass = match ? match[0] : "8";
+    }
 
-            const cls = CLASSES_CONFIG.find(c => c.id === studentClass);
+    const cls = CLASSES_CONFIG.find(c => c.id === studentClass);
 
-            availableClasses = cls
-                ? [cls]
-                : [{
-                    id: studentClass,
-                    name: `Class ${studentClass}`,
-                    icon: "📚",
-                    description: "Mathematics & Science"
-                }];
-        }
+    availableClasses = cls
+      ? [cls]
+      : [{
+          id: studentClass,
+          name: `Class ${studentClass}`,
+          icon: "📚",
+          description: "Mathematics & Science"
+        }];
+  }
 
-        // =========================
-        // RENDER CLASS CARDS
-        // =========================
-        classGridEl.innerHTML = "";
+  // =========================
+  // RENDER CLASS CARDS
+  // =========================
+  classGridEl.innerHTML = "";
 
-        availableClasses.forEach(cls => {
-            const card = document.createElement("div");
-            card.className = "class-card";
-            card.innerHTML = `
-                <div class="class-icon">${cls.icon}</div>
-                <div class="class-name">${cls.name}</div>
-                <div class="class-desc">${cls.description || ""}</div>
-            `;
+  availableClasses.forEach(cls => {
+    const card = document.createElement("div");
+    card.className = "class-card";
+    card.innerHTML = `
+      <div class="class-icon">${cls.icon}</div>
+      <div class="class-name">${cls.name}</div>
+      <div class="class-desc">${cls.description || ""}</div>
+    `;
 
-            card.addEventListener("click", () => {
-                showSubjectSelection(cls.id);
-                resetInactivityTimer();
-            });
+    card.addEventListener("click", () => {
+      showSubjectSelection(cls.id);
+      resetInactivityTimer();
+    });
 
-            classGridEl.appendChild(card);
-        });
+    classGridEl.appendChild(card);
+  });
 
-        console.log(`📚 ${currentUser.role} access → ${availableClasses.length} classes`);
+  console.log(`📚 ${currentUser.role} access → ${availableClasses.length} classes`);
+
     }
 
     function loadSubjects() {
-        // Find current class in CLASSES_CONFIG
-        const currentClassConfig = CLASSES_CONFIG.find(cls => cls.id === currentClass);
+      // Find current class in CLASSES_CONFIG
+      const currentClassConfig = CLASSES_CONFIG.find(cls => cls.id === currentClass);
+      
+      let subjects = [];
+      
+      if (currentClassConfig && currentClassConfig.subjects) {
+        // Use subjects from classes.json
+        subjects = currentClassConfig.subjects.map(subject => ({
+          id: subject.id,
+          name: subject.name,
+          icon: subject.icon,
+          desc: subject.description
+        }));
+      } else {
+        // Fallback to default subjects
+        subjects = [
+          { id: "mathematics", name: "Mathematics", icon: "📐", desc: "Algebra, Geometry, Mensuration" },
+          { id: "science", name: "Science", icon: "🔬", desc: "Physics, Chemistry, Biology" }
+        ];
+      }
+      
+      subjectGridEl.innerHTML = "";
+      
+      subjects.forEach(subject => {
+        const card = document.createElement("div");
+        card.className = "subject-card";
+        card.innerHTML = `
+          <div class="subject-icon">${subject.icon}</div>
+          <div class="subject-name">${subject.name}</div>
+          <div class="subject-desc">${subject.desc}</div>
+        `;
         
-        let subjects = [];
-        
-        if (currentClassConfig && currentClassConfig.subjects) {
-            // Use subjects from classes.json
-            subjects = currentClassConfig.subjects.map(subject => ({
-                id: subject.id,
-                name: subject.name,
-                icon: subject.icon,
-                desc: subject.description
-            }));
-        } else {
-            // Fallback to default subjects
-            subjects = [
-                { id: "mathematics", name: "Mathematics", icon: "📐", desc: "Algebra, Geometry, Mensuration" },
-                { id: "science", name: "Science", icon: "🔬", desc: "Physics, Chemistry, Biology" }
-            ];
-        }
-        
-        subjectGridEl.innerHTML = "";
-        
-        subjects.forEach(subject => {
-            const card = document.createElement("div");
-            card.className = "subject-card";
-            card.innerHTML = `
-                <div class="subject-icon">${subject.icon}</div>
-                <div class="subject-name">${subject.name}</div>
-                <div class="subject-desc">${subject.desc}</div>
-            `;
-            
-            card.addEventListener("click", () => {
-                console.log(`📚 Selected: Class ${currentClass}, Subject: ${subject.name}`);
-                currentSubject = subject.name;
-                showQuizContainer(currentSubject);
-                resetInactivityTimer();
-            });
-            
-            subjectGridEl.appendChild(card);
+        card.addEventListener("click", () => {
+          console.log(`📚 Selected: Class ${currentClass}, Subject: ${subject.name}`);
+          currentSubject = subject.name;
+          showQuizContainer(currentSubject);
+          resetInactivityTimer();
         });
+        
+        subjectGridEl.appendChild(card);
+      });
     }
 
     async function loadChapters() {
-        try {
-            // Clean the subject name for URL
-            const cleanSubject = currentSubject.toLowerCase()
-                .replace(/ /g, '-')
-                .replace(/[^a-z0-9-]/g, '');
-            
-            // Find subject ID from CLASSES_CONFIG
-            const currentClassConfig = CLASSES_CONFIG.find(cls => cls.id === currentClass);
-            let subjectId = cleanSubject;
-            
-            if (currentClassConfig && currentClassConfig.subjects) {
-                const subjectConfig = currentClassConfig.subjects.find(subj => 
-                    subj.name.toLowerCase() === currentSubject.toLowerCase()
-                );
-                if (subjectConfig) {
-                    subjectId = subjectConfig.id;
-                }
-            }
-            
-            // Try multiple path combinations
-            const pathOptions = [
-                // Dynamic path from classes.json structure
-                `${currentClass}/${subjectId}/chapters.json`,
-                // Traditional paths for backward compatibility
-                `Class ${currentClass}/${cleanSubject}/chapters.json`,
-                `${currentClass}/${cleanSubject}/chapters.json`,
-                `Class ${currentClass}/${currentSubject}/chapters.json`
-            ];
-            
-            console.log('🔍 Trying to load chapters from these paths:', pathOptions);
-            
-            let response = null;
-            let successfulPath = '';
-            
-            // Try each path option until one works
-            for (const path of pathOptions) {
-                try {
-                    console.log(`Trying path: ${path}`);
-                    response = await fetch(path);
-                    if (response.ok) {
-                        successfulPath = path;
-                        console.log(`✅ Successfully loaded from: ${path}`);
-                        break;
-                    }
-                } catch (err) {
-                    console.log(`❌ Error loading from ${path}:`, err.message);
-                }
-            }
-            
-            if (!response || !response.ok) {
-                throw new Error(`Cannot find chapters.json for ${currentClass}/${subjectId}`);
-            }
-            
-            chaptersList = await response.json();
-            
-            if (!Array.isArray(chaptersList) || chaptersList.length === 0) {
-                throw new Error(`chapters.json is empty. Please add chapter names.`);
-            }
-            
-            // Populate dropdown
-            populateChapterDropdown();
-            
-            console.log(`📖 Loaded ${chaptersList.length} chapters from ${successfulPath}`);
-            
-        } catch (err) {
-            console.error("❌ Error loading chapters:", err);
-            showChapterError(err.message);
-        }
-        
-        resetInactivityTimer();
-    }
-
-    function populateChapterDropdown() {
-        topicSelectEl.innerHTML = '<option value="">-- Select Chapter --</option>';
-        
-        if (chaptersList && chaptersList.length > 0) {
-            chaptersList.forEach(chapter => {
-                if (chapter && chapter.trim()) {
-                    const option = document.createElement("option");
-                    option.value = chapter.trim();
-                    option.textContent = chapter.trim();
-                    topicSelectEl.appendChild(option);
-                }
-            });
-            
-            // Enable start button
-            startBtnEl.disabled = false;
-            quizTopicNameEl.textContent = "No chapter selected";
-            quizQuestionCountEl.textContent = `${chaptersList.length} chapters available`;
-            questionTextEl.textContent = "Select a chapter to start.";
-            
-            console.log(`✅ Populated dropdown with ${chaptersList.length} chapters`);
-        } else {
-            startBtnEl.disabled = true;
-            quizTopicNameEl.textContent = "Error: No chapters found";
-            quizQuestionCountEl.textContent = "0 chapters";
-            questionTextEl.textContent = "Please check the chapters.json file format.";
-        }
-    }
-
-    function showChapterError(errorMessage) {
-        topicSelectEl.innerHTML = `
-            <option value="">-- Error Loading Chapters --</option>
-            <option value="">${errorMessage}</option>
-        `;
-        
-        quizTopicNameEl.textContent = "Error";
-        quizTopicNameEl.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
-        quizTopicNameEl.style.borderColor = "rgba(239, 68, 68, 0.5)";
-        quizTopicNameEl.style.color = "#fca5a5";
-        quizQuestionCountEl.textContent = "0 chapters";
-        questionTextEl.textContent = "Please create chapters.json in the subject folder with chapter names in an array.";
-        startBtnEl.disabled = true;
-    }
-
-    // ========== QUIZ FUNCTIONS ==========
-    function resetQuizState() {
-        questions = [];
-        currentIndex = 0;
-        score = 0;
-        hasAnswered = false;
-        questionsLoaded = false;
-        attempted = 0;
-        userAnswers = [];
-        timeRemaining = 0;
-        timerDuration = 0;
-        currentTopicName = "";
-        quizStartTime = null;
-        isReviewMode = false;
-        
-        // Reset UI
-        questionTextEl.textContent = "Please select a chapter to start.";
-        optionsListEl.innerHTML = "";
-        feedbackEl.textContent = "";
-        feedbackEl.className = "feedback";
-        nextBtn.disabled = true;
-        previousBtn.disabled = true;
-        finishBtn.disabled = true;
-        finishBtn.textContent = "Finish Quiz";
-        finishBtn.onclick = () => {
-            if (!questionsLoaded) return;
-            if (confirm("Are you sure you want to finish the quiz? Your current score will be calculated.")) {
-                showFinalResult();
-            }
-            resetInactivityTimer();
-        };
-        finalScoreEl.style.display = "none";
-        progressBarFillEl.style.width = "0%";
-        questionCounterEl.textContent = "Choose a chapter and click Start";
-        scoreMiniEl.textContent = "Score: 0";
-        quizTopicNameEl.textContent = "No chapter selected";
-        quizQuestionCountEl.textContent = "0 questions";
-        timerContainerEl.style.display = "none";
-        
-        // Reset topic name styling
-        quizTopicNameEl.style.backgroundColor = "";
-        quizTopicNameEl.style.borderColor = "";
-        quizTopicNameEl.style.color = "";
-        
-        // Remove timer notification
-        removeTimerNotification();
-    }
-
-    // ========== ENHANCED XML PARSER ==========
-    function parseXMLToQuestions(xmlText) {
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xmlText, "application/xml");
-
-        // Reset timer duration
-        timerDuration = 0;
-
-        // Check for timer configuration - look for timeLimit in metadata
-        const metadataNode = xmlDoc.getElementsByTagName("metadata")[0];
-        if (metadataNode) {
-            const timeLimitNode = metadataNode.getElementsByTagName("timeLimit")[0];
-            if (timeLimitNode) {
-                const minutes = parseInt(timeLimitNode.textContent) || 0;
-                timerDuration = minutes * 60 * 1000; // Convert minutes to milliseconds
-            }
-        } else {
-            // Also check for direct timer tag
-            const timerNode = xmlDoc.getElementsByTagName("timer")[0];
-            if (timerNode) {
-                const hours = parseInt(timerNode.getAttribute("hours")) || 0;
-                const minutes = parseInt(timerNode.getAttribute("minutes")) || 0;
-                timerDuration = (hours * 60 * 60 * 1000) + (minutes * 60 * 1000);
-            }
-        }
-
-        const qNodes = xmlDoc.getElementsByTagName("question");
-        const out = [];
-
-        for (let i = 0; i < qNodes.length; i++) {
-            const qNode = qNodes[i];
-            const textNode = qNode.getElementsByTagName("text")[0];
-            if (!textNode) continue;
-
-            const qText = textNode.textContent.trim();
-            const optNodes = qNode.getElementsByTagName("option");
-            if (optNodes.length < 2) continue;
-
-            const options = [];
-            let correctIndex = 0;
-            let explanation = "";
-
-            // Get explanation if exists
-            const expNode = qNode.getElementsByTagName("explanation")[0];
-            if (expNode) {
-                explanation = expNode.textContent.trim();
-            }
-
-            // Check if question has answer attribute (format 2: <question answer="C">)
-            const questionAnswer = qNode.getAttribute("answer");
-            
-            // FORMAT 1: <option correct="true"> (default format)
-            if (!questionAnswer) {
-                for (let j = 0; j < optNodes.length; j++) {
-                    const optNode = optNodes[j];
-                    const optText = optNode.textContent.trim();
-                    const isCorrect = optNode.getAttribute("correct") === "true";
-                    options.push(optText);
-                    if (isCorrect) correctIndex = j;
-                }
-            } 
-            // FORMAT 2: <question answer="C"> with options A, B, C, D
-            else {
-                // Parse answer letter (A, B, C, D, etc.)
-                const answerLetter = questionAnswer.toUpperCase().trim();
-                
-                for (let j = 0; j < optNodes.length; j++) {
-                    const optNode = optNodes[j];
-                    const optText = optNode.textContent.trim();
-                    const optionLetter = String.fromCharCode(65 + j); // A, B, C, D...
-                    
-                    options.push(optText);
-                    if (optionLetter === answerLetter) {
-                        correctIndex = j;
-                    }
-                }
-            }
-
-            out.push({
-                question: qText,
-                options,
-                correctIndex,
-                explanation: explanation
-            });
-        }
-        return out;
-    }
-
-    // ========== HELPER FUNCTIONS ==========
-    function shuffleArray(arr) {
-        for (let i = arr.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [arr[i], arr[j]] = [arr[j], arr[i]];
-        }
-    }
-
-    function prepareQuestionBank(rawQuestions, randomize) {
-        const qs = rawQuestions.map(q => ({
-            question: q.question,
-            options: [...q.options],
-            correctIndex: q.correctIndex,
-            explanation: q.explanation
-        }));
-
-        if (randomize) {
-            shuffleArray(qs);
-            qs.forEach(q => {
-                const idxs = q.options.map((_, idx) => idx);
-                shuffleArray(idxs);
-                const newOptions = idxs.map(i => q.options[i]);
-                const newCorrectIndex = idxs.indexOf(q.correctIndex);
-                q.options = newOptions;
-                q.correctIndex = newCorrectIndex;
-            });
-        }
-
-        return qs;
-    }
-
-    // ========== TIMER FUNCTIONS ==========
-    function startTimer() {
-        if (timerDuration <= 0) return;
-        
-        timeRemaining = timerDuration;
-        timerContainerEl.style.display = "flex";
-        
-        updateTimerDisplay();
-        
-        timerInterval = setInterval(() => {
-            timeRemaining -= 1000;
-            
-            if (timeRemaining <= 0) {
-                timeRemaining = 0;
-                clearInterval(timerInterval);
-                autoFinishQuiz();
-            }
-            
-            updateTimerDisplay();
-        }, 1000);
-    }
-
-    function updateTimerDisplay() {
-        const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
-        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-        
-        const formattedTime = 
-            `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        
-        timerDisplayEl.textContent = formattedTime;
-        
-        timerDisplayEl.classList.remove("timer-warning", "timer-critical");
-        
-        if (timeRemaining <= 30 * 60 * 1000) {
-            timerDisplayEl.classList.add("timer-warning");
-        }
-        
-        if (timeRemaining <= 10 * 60 * 1000) {
-            timerDisplayEl.classList.add("timer-critical");
-        }
-    }
-
-    function stopTimer() {
-        if (timerInterval) {
-            clearInterval(timerInterval);
-            timerInterval = null;
-        }
-        timerContainerEl.style.display = "none";
-    }
-
-    function showTimerNotification() {
-        removeTimerNotification();
-        
-        if (timerDuration > 0) {
-            const hours = Math.floor(timerDuration / (1000 * 60 * 60));
-            const minutes = Math.floor((timerDuration % (1000 * 60 * 60)) / (1000 * 60));
-            
-            let timeString = "";
-            if (hours > 0 && minutes > 0) {
-                timeString = `${hours} hour${hours > 1 ? 's' : ''} ${minutes} minute${minutes > 1 ? 's' : ''}`;
-            } else if (hours > 0) {
-                timeString = `${hours} hour${hours > 1 ? 's' : ''}`;
-            } else if (minutes > 0) {
-                timeString = `${minutes} minute${minutes > 1 ? 's' : ''}`;
-            } else {
-                timeString = "less than a minute";
-            }
-            
-            timerNotification = document.createElement("div");
-            timerNotification.className = "timer-notification";
-            timerNotification.innerHTML = `
-                <span>⏰</span>
-                <span>Timer set: <strong>${timeString}</strong> for this chapter</span>
-            `;
-            
-            const toggleRow = document.querySelector(".toggle-row");
-            if (toggleRow && toggleRow.nextElementSibling) {
-                toggleRow.parentNode.insertBefore(timerNotification, toggleRow.nextElementSibling);
-            }
-        }
-    }
-
-    function removeTimerNotification() {
-        if (timerNotification && timerNotification.parentNode) {
-            timerNotification.parentNode.removeChild(timerNotification);
-            timerNotification = null;
-        }
-        
-        const existingNotifications = document.querySelectorAll(".timer-notification");
-        existingNotifications.forEach(notification => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        });
-    }
-
-    function autoFinishQuiz() {
-        showFinalResult();
-        stopTimer();
-        removeTimerNotification();
-    }
-
-    function formatTimeTaken() {
-        if (timerDuration <= 0 || !quizStartTime) return "";
-        
-        const endTime = Date.now();
-        const timeTaken = endTime - quizStartTime;
-        const hours = Math.floor(timeTaken / (1000 * 60 * 60));
-        const minutes = Math.floor((timeTaken % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeTaken % (1000 * 60)) / 1000);
-        
-        if (hours > 0) {
-            return `${hours}h ${minutes}m ${seconds}s`;
-        } else if (minutes > 0) {
-            return `${minutes}m ${seconds}s`;
-        } else {
-            return `${seconds}s`;
-        }
-    }
-
-    // ========== UI FUNCTIONS ==========
-    function renderQuestion() {
-        if (!questionsLoaded || questions.length === 0) {
-            questionTextEl.textContent = "No questions available. Check your XML file.";
-            optionsListEl.innerHTML = "";
-            nextBtn.disabled = true;
-            previousBtn.disabled = true;
-            finishBtn.disabled = true;
-            return;
-        }
-
-        const q = questions[currentIndex];
-        hasAnswered = false;
-        feedbackEl.textContent = "";
-        feedbackEl.className = "feedback";
-        
-        // Clear any existing explanation
-        const existingExplanation = feedbackEl.querySelector('.explanation');
-        if (existingExplanation) {
-            existingExplanation.remove();
-        }
-
-        questionCounterEl.textContent = `Question ${currentIndex + 1} / ${questions.length}`;
-        const progressPercent = ((currentIndex + 1) / questions.length) * 100;
-        progressBarFillEl.style.width = `${progressPercent}%`;
-
-        questionTextEl.textContent = q.question;
-        optionsListEl.innerHTML = "";
-
-        q.options.forEach((opt, idx) => {
-            const li = document.createElement("li");
-            li.className = "option";
-            
-            // Check if this option was previously selected
-            if (userAnswers[currentIndex] !== undefined && userAnswers[currentIndex] === idx) {
-                li.classList.add("selected");
-            }
-
-            const label = document.createElement("div");
-            label.textContent = opt;
-            li.appendChild(label);
-            optionsListEl.appendChild(li);
-
-            li.addEventListener("click", () => {
-                if (hasAnswered || isReviewMode) return;
-                
-                // Remove selected class from all options
-                document.querySelectorAll(".option").forEach(opt => {
-                    opt.classList.remove("selected");
-                });
-                
-                // Add selected class to clicked option
-                li.classList.add("selected");
-                
-                userAnswers[currentIndex] = idx;
-                
-                // Handle option click (shows explanation)
-                handleOptionClick(idx);
-                resetInactivityTimer();
-            });
-        });
-
-        previousBtn.disabled = (currentIndex === 0);
-        
-        // In review mode, next button is always enabled
-        // In quiz mode, next button is disabled until answer is selected
-        if (isReviewMode) {
-            nextBtn.disabled = false;
-            showQuestionInReviewMode();
-        } else {
-            nextBtn.disabled = true; // Disable next until answer is selected
-        }
-        
-        finishBtn.disabled = false;
-        
-        // If already answered this question, show feedback and explanation
-        if (userAnswers[currentIndex] !== undefined) {
-            const selectedIndex = userAnswers[currentIndex];
-            const isCorrect = (selectedIndex === q.correctIndex);
-            
-            showCorrectness(selectedIndex);
-            lockOptions();
-            hasAnswered = true;
-            
-            if (isCorrect) {
-                feedbackEl.textContent = "✅ Correct!";
-                feedbackEl.className = "feedback correct";
-            } else {
-                feedbackEl.textContent = `❌ Wrong. The correct answer was: ${q.options[q.correctIndex]}`;
-                feedbackEl.className = "feedback incorrect";
-            }
-            
-            // Show explanation if available
-            if (q.explanation) {
-                const explanationDiv = document.createElement("div");
-                explanationDiv.className = "explanation";
-                explanationDiv.innerHTML = `<strong>Explanation:</strong> ${q.explanation}`;
-                feedbackEl.appendChild(explanationDiv);
-            }
-            
-            // Enable next button since answer is already selected (only in quiz mode)
-            if (!isReviewMode) {
-                nextBtn.disabled = false;
-            }
-        }
-        
-        resetInactivityTimer();
-    }
-
-    function showQuestionInReviewMode() {
-        const q = questions[currentIndex];
-        const selectedIndex = userAnswers[currentIndex];
-        const hasAnsweredQuestion = selectedIndex !== undefined;
-        
-        if (hasAnsweredQuestion) {
-            const isCorrect = (selectedIndex === q.correctIndex);
-            
-            showCorrectness(selectedIndex);
-            lockOptions();
-            hasAnswered = true;
-            
-            if (isCorrect) {
-                feedbackEl.textContent = "✅ Your answer was correct!";
-                feedbackEl.className = "feedback correct";
-            } else {
-                feedbackEl.textContent = `❌ Your answer was incorrect. The correct answer was: ${q.options[q.correctIndex]}`;
-                feedbackEl.className = "feedback incorrect";
-            }
-            
-            // Show explanation if available
-            if (q.explanation) {
-                const explanationDiv = document.createElement("div");
-                explanationDiv.className = "explanation";
-                explanationDiv.innerHTML = `<strong>Explanation:</strong> ${q.explanation}`;
-                feedbackEl.appendChild(explanationDiv);
-            }
-        } else {
-            feedbackEl.textContent = "⚠️ You did not answer this question.";
-            feedbackEl.className = "feedback";
-            
-            // Still show the correct answer and explanation
-            showCorrectness(-1); // Show only correct answer
-            lockOptions();
-            
-            if (q.explanation) {
-                const explanationDiv = document.createElement("div");
-                explanationDiv.className = "explanation";
-                explanationDiv.innerHTML = `<strong>Correct Answer:</strong> ${q.options[q.correctIndex]}<br><br><strong>Explanation:</strong> ${q.explanation}`;
-                feedbackEl.appendChild(explanationDiv);
-            }
-        }
-    }
-
-    function handleOptionClick(selectedIndex) {
-        if (hasAnswered || isReviewMode) return;
-        
-        const q = questions[currentIndex];
-        hasAnswered = true;
-        attempted++;
-        
-        const isCorrect = (selectedIndex === q.correctIndex);
-        
-        if (isCorrect) {
-            score++;
-            feedbackEl.textContent = "✅ Correct!";
-            feedbackEl.className = "feedback correct";
-        } else {
-            feedbackEl.textContent = `❌ Wrong. The correct answer was: ${q.options[q.correctIndex]}`;
-            feedbackEl.className = "feedback incorrect";
-        }
-        
-        // Show explanation if available
-        if (q.explanation) {
-            const explanationDiv = document.createElement("div");
-            explanationDiv.className = "explanation";
-            explanationDiv.innerHTML = `<strong>Explanation:</strong> ${q.explanation}`;
-            feedbackEl.appendChild(explanationDiv);
-        }
-        
-        scoreMiniEl.textContent = `Score: ${score}`;
-        showCorrectness(selectedIndex);
-        lockOptions();
-        
-        // Enable next button for manual navigation (NO AUTO-ADVANCE)
-        nextBtn.disabled = false;
-    }
-
-    function lockOptions() {
-        const optionEls = document.querySelectorAll(".option");
-        optionEls.forEach(opt => {
-            opt.classList.add("disabled");
-        });
-    }
-
-    function showCorrectness(selectedIndex) {
-        const q = questions[currentIndex];
-        const optionEls = document.querySelectorAll(".option");
-        optionEls.forEach((optEl, idx) => {
-            optEl.classList.remove("correct", "incorrect");
-            if (idx === q.correctIndex) optEl.classList.add("correct");
-            if (idx === selectedIndex && selectedIndex !== q.correctIndex) {
-                optEl.classList.add("incorrect");
-            }
-        });
-    }
-
-    function goToNextQuestion() {
-        currentIndex++;
-        if (currentIndex < questions.length) {
-            renderQuestion();
-        } else {
-            if (!isReviewMode) {
-                progressBarFillEl.style.width = "100%";
-                showFinalResult();
-            } else {
-                // In review mode, loop back to first question
-                currentIndex = 0;
-                renderQuestion();
-            }
-        }
-        resetInactivityTimer();
-    }
-
-    function goToPreviousQuestion() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            renderQuestion();
-        }
-        resetInactivityTimer();
-    }
-
-    function calculateQuizStats() {
-        let attempted = 0;
-        let correct = 0;
-        
-        for (let i = 0; i < questions.length; i++) {
-            if (userAnswers[i] !== undefined) {
-                attempted++;
-                if (userAnswers[i] === questions[i].correctIndex) {
-                    correct++;
-                }
-            }
-        }
-        
-        const percentage = questions.length > 0 ? ((correct / questions.length) * 100).toFixed(2) : 0;
-        
-        return {
-            total: questions.length,
-            attempted,
-            correct,
-            percentage
-        };
-    }
-
-    function showFinalResult() {
-        stopTimer();
-        removeTimerNotification();
-        
-        const stats = calculateQuizStats();
-        const timeTaken = formatTimeTaken();
-        
-        // Store stats for notification
-        currentQuizStats = {
-            ...stats,
-            timeTaken: timeTaken,
-            subject: currentSubject,
-            chapter: currentTopicName,
-            class: currentClass
-        };
-        
-        progressBarFillEl.style.width = "100%";
-        questionTextEl.textContent = "Quiz Completed!";
-        optionsListEl.innerHTML = "";
-        feedbackEl.textContent = "";
-        nextBtn.style.display = "none";
-        previousBtn.style.display = "none";
-        finishBtn.style.display = "none";
-        finalScoreEl.style.display = "block";
-        
-        let performanceMessage = "";
-        if (stats.percentage >= 80) {
-            performanceMessage = "🎉 Excellent! Outstanding performance!";
-        } else if (stats.percentage >= 60) {
-            performanceMessage = "👍 Good job! Keep practicing!";
-        } else if (stats.percentage >= 40) {
-            performanceMessage = "📚 Keep learning! Review the chapter again.";
-        } else {
-            performanceMessage = "📖 Needs improvement. Study the chapter thoroughly.";
-        }
-        
-        // Send quiz result notification
-        sendQuizResultNotification(currentQuizStats);
-        
-        // Add option to review questions with explanations
-        let reviewSection = '';
-        if (questions.length > 0) {
-            reviewSection = `
-                <div class="result-summary" style="margin-top: 20px;">
-                    <button class="review-btn" onclick="showQuestionReview()">
-                        📖 Review Questions with Explanations
-                    </button>
-                </div>
-            `;
-        }
-        
-        finalScoreEl.innerHTML = `
-            <div class="result-header">Results - ${currentTopicName}</div>
-            <div class="result-stats">
-                <div class="stat-item">
-                    <div class="stat-label">Total Questions</div>
-                    <div class="stat-value">${stats.total}</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-label">Attempted</div>
-                    <div class="stat-value">${stats.attempted}/${stats.total}</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-label">Correct Answers</div>
-                    <div class="stat-value">${stats.correct}</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-label">Score Percentage</div>
-                    <div class="stat-value stat-percentage">${stats.percentage}%</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-label">Time Taken</div>
-                    <div class="stat-value stat-time">${timeTaken || "No timer set"}</div>
-                </div>
-                ${timerDuration > 0 ? `
-                <div class="stat-item">
-                    <div class="stat-label">Time Limit</div>
-                    <div class="stat-value">${Math.floor(timerDuration / (1000 * 60))} minutes</div>
-                </div>
-                ` : ''}
-            </div>
-            <div class="result-message">
-                ${performanceMessage}
-            </div>
-            <div class="result-summary">
-                <em>Select another chapter from the dropdown above to start a new quiz.</em>
-            </div>
-            <button class="restart-btn" onclick="restartQuiz()">Restart</button>
-            ${reviewSection}
-        `;
-        
-        resetInactivityTimer();
-    }
-
-    function showQuestionReview() {
-        isReviewMode = true;
-        finalScoreEl.style.display = "none";
-        nextBtn.style.display = "inline-block";
-        previousBtn.style.display = "inline-block";
-        finishBtn.style.display = "inline-block";
-        finishBtn.textContent = "Back to Results";
-        finishBtn.onclick = () => {
-            showFinalResult();
-        };
-        
-        currentIndex = 0;
-        renderQuestion();
-    }
-
-    function restartQuiz() {
-        isReviewMode = false;
-        score = 0;
-        attempted = 0;
-        currentIndex = 0;
-        userAnswers = [];
-        scoreMiniEl.textContent = "Score: 0";
-        nextBtn.style.display = "inline-block";
-        previousBtn.style.display = "inline-block";
-        finishBtn.style.display = "inline-block";
-        finishBtn.textContent = "Finish Quiz";
-        finishBtn.onclick = () => {
-            if (!questionsLoaded) return;
-            if (confirm("Are you sure you want to finish the quiz? Your current score will be calculated.")) {
-                showFinalResult();
-            }
-            resetInactivityTimer();
-        };
-        finalScoreEl.style.display = "none";
-        
-        if (timerDuration > 0) {
-            showTimerNotification();
-            startTimer();
-        }
-        
-        // Re-render the first question
-        renderQuestion();
-        resetInactivityTimer();
-    }
-
-    // ========== LOAD QUESTIONS FROM XML FILES ==========
-    async function loadQuestionsFromXML(chapterName) {
-        const trimmed = chapterName.trim();
-        if (!trimmed) {
-            alert("Please select a chapter.");
-            resetInactivityTimer();
-            return;
-        }
-
-        currentTopicName = trimmed;
-        
-        // Clean the filename - remove any invalid characters
-        const cleanChapterName = trimmed.replace(/[<>:"/\\|?*]/g, '');
-        
+      try {
         // Clean the subject name for URL
         const cleanSubject = currentSubject.toLowerCase()
-            .replace(/ /g, '-')
-            .replace(/[^a-z0-9-]/g, '');
+          .replace(/ /g, '-')
+          .replace(/[^a-z0-9-]/g, '');
         
         // Find subject ID from CLASSES_CONFIG
         const currentClassConfig = CLASSES_CONFIG.find(cls => cls.id === currentClass);
         let subjectId = cleanSubject;
         
         if (currentClassConfig && currentClassConfig.subjects) {
-            const subjectConfig = currentClassConfig.subjects.find(subj => 
-                subj.name.toLowerCase() === currentSubject.toLowerCase()
-            );
-            if (subjectConfig) {
-                subjectId = subjectConfig.id;
-            }
+          const subjectConfig = currentClassConfig.subjects.find(subj => 
+            subj.name.toLowerCase() === currentSubject.toLowerCase()
+          );
+          if (subjectConfig) {
+            subjectId = subjectConfig.id;
+          }
         }
         
         // Try multiple path combinations
         const pathOptions = [
-            // Dynamic path from classes.json structure
-            `${currentClass}/${subjectId}/${cleanChapterName}.xml`,
-            // Traditional paths for backward compatibility
-            `Class ${currentClass}/${cleanSubject}/${cleanChapterName}.xml`,
-            `${currentClass}/${cleanSubject}/${cleanChapterName}.xml`,
-            `Class ${currentClass}/${currentSubject.toLowerCase()}/${cleanChapterName}.xml`,
-            // Original chapter name (not cleaned)
-            `Class ${currentClass}/${currentSubject.toLowerCase()}/${trimmed}.xml`,
-            // Encoded chapter name
-            `${currentClass}/${currentSubject.toLowerCase()}/${encodeURIComponent(trimmed)}.xml`
+          // Dynamic path from classes.json structure
+          `${currentClass}/${subjectId}/chapters.json`,
+          // Traditional paths for backward compatibility
+          `Class ${currentClass}/${cleanSubject}/chapters.json`,
+          `${currentClass}/${cleanSubject}/chapters.json`,
+          `Class ${currentClass}/${currentSubject}/chapters.json`
         ];
         
-        quizTopicNameEl.textContent = trimmed;
-
-        try {
-            questionTextEl.textContent = `Loading ${trimmed}…`;
-            optionsListEl.innerHTML = "";
-            feedbackEl.textContent = "";
-            nextBtn.disabled = true;
-            previousBtn.disabled = true;
-            finishBtn.disabled = true;
-            finishBtn.textContent = "Finish Quiz";
-            finishBtn.onclick = () => {
-                if (!questionsLoaded) return;
-                if (confirm("Are you sure you want to finish the quiz? Your current score will be calculated.")) {
-                    showFinalResult();
-                }
-                resetInactivityTimer();
-            };
-            finalScoreEl.style.display = "none";
-            progressBarFillEl.style.width = "0%";
-            questionCounterEl.textContent = "Loading…";
-
-            timerContainerEl.style.display = "none";
-            timerDuration = 0;
-            quizStartTime = Date.now();
-            
-            removeTimerNotification();
-
-            let xmlText = null;
-            let lastError = null;
-            let successfulPath = null;
-            
-            // Try all path options
-            for (const path of pathOptions) {
-                try {
-                    console.log(`🔍 Trying XML path: ${path}`);
-                    const res = await fetch(path);
-                    if (res.ok) {
-                        xmlText = await res.text();
-                        successfulPath = path;
-                        console.log(`✅ Successfully loaded XML from: ${path}`);
-                        break;
-                    } else {
-                        console.log(`❌ Failed to load from: ${path} (Status: ${res.status})`);
-                    }
-                } catch (err) {
-                    lastError = err;
-                    console.log(`❌ Error loading from ${path}:`, err.message);
-                }
+        console.log('🔍 Trying to load chapters from these paths:', pathOptions);
+        
+        let response = null;
+        let successfulPath = '';
+        
+        // Try each path option until one works
+        for (const path of pathOptions) {
+          try {
+            console.log(`Trying path: ${path}`);
+            response = await fetch(path);
+            if (response.ok) {
+              successfulPath = path;
+              console.log(`✅ Successfully loaded from: ${path}`);
+              break;
             }
-            
-            // If no XML file found, show clean error message
-            if (!xmlText) {
-                const cleanErrorMessage = `XML file not found for chapter: "${trimmed}".xml`;
-                console.error("❌ XML file not found. Tried paths:", pathOptions);
-                
-                // Show user-friendly error
-                questionTextEl.textContent = `Error: ${cleanErrorMessage}`;
-                optionsListEl.innerHTML = "";
-                feedbackEl.textContent = "";
-                nextBtn.disabled = true;
-                previousBtn.disabled = true;
-                finishBtn.disabled = true;
-                quizTopicNameEl.textContent = "Error loading chapter";
-                quizTopicNameEl.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
-                quizTopicNameEl.style.borderColor = "rgba(239, 68, 68, 0.5)";
-                quizTopicNameEl.style.color = "#fca5a5";
-                quizQuestionCountEl.textContent = "0 questions";
-                
-                console.error("🔧 Full error details for debugging:", {
-                    chapter: trimmed,
-                    cleanedChapter: cleanChapterName,
-                    subject: currentSubject,
-                    class: currentClass,
-                    triedPaths: pathOptions
-                });
-                
-                resetInactivityTimer();
-                return;
-            }
-
-            const rawQuestions = parseXMLToQuestions(xmlText);
-            if (rawQuestions.length === 0) {
-                throw new Error(`No valid questions found in ${trimmed}.xml. Check XML format.`);
-            }
-
-            const randomize = randomToggleEl.checked;
-            questions = prepareQuestionBank(rawQuestions, randomize);
-            userAnswers = new Array(questions.length);
-
-            questionsLoaded = true;
-            currentIndex = 0;
-            score = 0;
-            attempted = 0;
-            scoreMiniEl.textContent = "Score: 0";
-            nextBtn.style.display = "inline-block";
-            previousBtn.style.display = "inline-block";
-            finishBtn.style.display = "inline-block";
-
-            quizTopicNameEl.textContent = trimmed;
-            quizQuestionCountEl.textContent = `${questions.length} questions`;
-            
-            if (timerDuration > 0) {
-                showTimerNotification();
-                startTimer();
-            }
-            
-            renderQuestion();
-            resetInactivityTimer();
-            
-        } catch (err) {
-            console.error("❌ Error loading questions:", err);
-            
-            // Show clean error message without path details
-            const errorMessage = err.message.includes("not found") 
-                ? `XML file not found for chapter: "${trimmed}".xml` 
-                : err.message;
-                
-            questionTextEl.textContent = `Error: ${errorMessage}`;
-            optionsListEl.innerHTML = "";
-            feedbackEl.textContent = "";
-            nextBtn.disabled = true;
-            previousBtn.disabled = true;
-            finishBtn.disabled = true;
-            quizTopicNameEl.textContent = "Error loading chapter";
-            quizTopicNameEl.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
-            quizTopicNameEl.style.borderColor = "rgba(239, 68, 68, 0.5)";
-            quizTopicNameEl.style.color = "#fca5a5";
-            resetInactivityTimer();
+          } catch (err) {
+            console.log(`❌ Error loading from ${path}:`, err.message);
+          }
         }
+        
+        if (!response || !response.ok) {
+          throw new Error(`Cannot find chapters.json for ${currentClass}/${subjectId}`);
+        }
+        
+        chaptersList = await response.json();
+        
+        if (!Array.isArray(chaptersList) || chaptersList.length === 0) {
+          throw new Error(`chapters.json is empty. Please add chapter names.`);
+        }
+        
+        // Populate dropdown
+        populateChapterDropdown();
+        
+        console.log(`📖 Loaded ${chaptersList.length} chapters from ${successfulPath}`);
+        
+      } catch (err) {
+        console.error("❌ Error loading chapters:", err);
+        showChapterError(err.message);
+      }
+      
+      resetInactivityTimer();
+    }
+
+    function populateChapterDropdown() {
+      topicSelectEl.innerHTML = '<option value="">-- Select Chapter --</option>';
+      
+      if (chaptersList && chaptersList.length > 0) {
+        chaptersList.forEach(chapter => {
+          if (chapter && chapter.trim()) {
+            const option = document.createElement("option");
+            option.value = chapter.trim();
+            option.textContent = chapter.trim();
+            topicSelectEl.appendChild(option);
+          }
+        });
+        
+        // Enable start button
+        startBtnEl.disabled = false;
+        quizTopicNameEl.textContent = "No chapter selected";
+        quizQuestionCountEl.textContent = `${chaptersList.length} chapters available`;
+        questionTextEl.textContent = "Select a chapter to start.";
+        
+        console.log(`✅ Populated dropdown with ${chaptersList.length} chapters`);
+      } else {
+        startBtnEl.disabled = true;
+        quizTopicNameEl.textContent = "Error: No chapters found";
+        quizQuestionCountEl.textContent = "0 chapters";
+        questionTextEl.textContent = "Please check the chapters.json file format.";
+      }
+    }
+
+    function showChapterError(errorMessage) {
+      topicSelectEl.innerHTML = `
+        <option value="">-- Error Loading Chapters --</option>
+        <option value="">${errorMessage}</option>
+      `;
+      
+      quizTopicNameEl.textContent = "Error";
+      quizTopicNameEl.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
+      quizTopicNameEl.style.borderColor = "rgba(239, 68, 68, 0.5)";
+      quizTopicNameEl.style.color = "#fca5a5";
+      quizQuestionCountEl.textContent = "0 chapters";
+      questionTextEl.textContent = "Please create chapters.json in the subject folder with chapter names in an array.";
+      startBtnEl.disabled = true;
+    }
+
+    // ========== QUIZ FUNCTIONS ==========
+    function resetQuizState() {
+      questions = [];
+      currentIndex = 0;
+      score = 0;
+      hasAnswered = false;
+      questionsLoaded = false;
+      attempted = 0;
+      userAnswers = [];
+      timeRemaining = 0;
+      timerDuration = 0;
+      currentTopicName = "";
+      quizStartTime = null;
+      isReviewMode = false;
+      
+      // Reset UI
+      questionTextEl.textContent = "Please select a chapter to start.";
+      optionsListEl.innerHTML = "";
+      feedbackEl.textContent = "";
+      feedbackEl.className = "feedback";
+      nextBtn.disabled = true;
+      previousBtn.disabled = true;
+      finishBtn.disabled = true;
+      finishBtn.textContent = "Finish Quiz";
+      finishBtn.onclick = () => {
+        if (!questionsLoaded) return;
+        if (confirm("Are you sure you want to finish the quiz? Your current score will be calculated.")) {
+          showFinalResult();
+        }
+        resetInactivityTimer();
+      };
+      finalScoreEl.style.display = "none";
+      progressBarFillEl.style.width = "0%";
+      questionCounterEl.textContent = "Choose a chapter and click Start";
+      scoreMiniEl.textContent = "Score: 0";
+      quizTopicNameEl.textContent = "No chapter selected";
+      quizQuestionCountEl.textContent = "0 questions";
+      timerContainerEl.style.display = "none";
+      
+      // Reset topic name styling
+      quizTopicNameEl.style.backgroundColor = "";
+      quizTopicNameEl.style.borderColor = "";
+      quizTopicNameEl.style.color = "";
+      
+      // Remove timer notification
+      removeTimerNotification();
+    }
+
+    // ========== ENHANCED XML PARSER ==========
+    function parseXMLToQuestions(xmlText) {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+
+      // Reset timer duration
+      timerDuration = 0;
+
+      // Check for timer configuration - look for timeLimit in metadata
+      const metadataNode = xmlDoc.getElementsByTagName("metadata")[0];
+      if (metadataNode) {
+        const timeLimitNode = metadataNode.getElementsByTagName("timeLimit")[0];
+        if (timeLimitNode) {
+          const minutes = parseInt(timeLimitNode.textContent) || 0;
+          timerDuration = minutes * 60 * 1000; // Convert minutes to milliseconds
+        }
+      } else {
+        // Also check for direct timer tag
+        const timerNode = xmlDoc.getElementsByTagName("timer")[0];
+        if (timerNode) {
+          const hours = parseInt(timerNode.getAttribute("hours")) || 0;
+          const minutes = parseInt(timerNode.getAttribute("minutes")) || 0;
+          timerDuration = (hours * 60 * 60 * 1000) + (minutes * 60 * 1000);
+        }
+      }
+
+      const qNodes = xmlDoc.getElementsByTagName("question");
+      const out = [];
+
+      for (let i = 0; i < qNodes.length; i++) {
+        const qNode = qNodes[i];
+        const textNode = qNode.getElementsByTagName("text")[0];
+        if (!textNode) continue;
+
+        const qText = textNode.textContent.trim();
+        const optNodes = qNode.getElementsByTagName("option");
+        if (optNodes.length < 2) continue;
+
+        const options = [];
+        let correctIndex = 0;
+        let explanation = "";
+
+        // Get explanation if exists
+        const expNode = qNode.getElementsByTagName("explanation")[0];
+        if (expNode) {
+          explanation = expNode.textContent.trim();
+        }
+
+        // Check if question has answer attribute (format 2: <question answer="C">)
+        const questionAnswer = qNode.getAttribute("answer");
+        
+        // FORMAT 1: <option correct="true"> (default format)
+        if (!questionAnswer) {
+          for (let j = 0; j < optNodes.length; j++) {
+            const optNode = optNodes[j];
+            const optText = optNode.textContent.trim();
+            const isCorrect = optNode.getAttribute("correct") === "true";
+            options.push(optText);
+            if (isCorrect) correctIndex = j;
+          }
+        } 
+        // FORMAT 2: <question answer="C"> with options A, B, C, D
+        else {
+          // Parse answer letter (A, B, C, D, etc.)
+          const answerLetter = questionAnswer.toUpperCase().trim();
+          
+          for (let j = 0; j < optNodes.length; j++) {
+            const optNode = optNodes[j];
+            const optText = optNode.textContent.trim();
+            const optionLetter = String.fromCharCode(65 + j); // A, B, C, D...
+            
+            options.push(optText);
+            if (optionLetter === answerLetter) {
+              correctIndex = j;
+            }
+          }
+        }
+
+        out.push({
+          question: qText,
+          options,
+          correctIndex,
+          explanation: explanation
+        });
+      }
+      return out;
+    }
+
+    // ========== HELPER FUNCTIONS ==========
+    function shuffleArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+    }
+
+    function prepareQuestionBank(rawQuestions, randomize) {
+      const qs = rawQuestions.map(q => ({
+        question: q.question,
+        options: [...q.options],
+        correctIndex: q.correctIndex,
+        explanation: q.explanation
+      }));
+
+      if (randomize) {
+        shuffleArray(qs);
+        qs.forEach(q => {
+          const idxs = q.options.map((_, idx) => idx);
+          shuffleArray(idxs);
+          const newOptions = idxs.map(i => q.options[i]);
+          const newCorrectIndex = idxs.indexOf(q.correctIndex);
+          q.options = newOptions;
+          q.correctIndex = newCorrectIndex;
+        });
+      }
+
+      return qs;
+    }
+
+    // ========== TIMER FUNCTIONS ==========
+    function startTimer() {
+      if (timerDuration <= 0) return;
+      
+      timeRemaining = timerDuration;
+      timerContainerEl.style.display = "flex";
+      
+      updateTimerDisplay();
+      
+      timerInterval = setInterval(() => {
+        timeRemaining -= 1000;
+        
+        if (timeRemaining <= 0) {
+          timeRemaining = 0;
+          clearInterval(timerInterval);
+          autoFinishQuiz();
+        }
+        
+        updateTimerDisplay();
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+      
+      const formattedTime = 
+        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      
+      timerDisplayEl.textContent = formattedTime;
+      
+      timerDisplayEl.classList.remove("timer-warning", "timer-critical");
+      
+      if (timeRemaining <= 30 * 60 * 1000) {
+        timerDisplayEl.classList.add("timer-warning");
+      }
+      
+      if (timeRemaining <= 10 * 60 * 1000) {
+        timerDisplayEl.classList.add("timer-critical");
+      }
+    }
+
+    function stopTimer() {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      timerContainerEl.style.display = "none";
+    }
+
+    function showTimerNotification() {
+      removeTimerNotification();
+      
+      if (timerDuration > 0) {
+        const hours = Math.floor(timerDuration / (1000 * 60 * 60));
+        const minutes = Math.floor((timerDuration % (1000 * 60 * 60)) / (1000 * 60));
+        
+        let timeString = "";
+        if (hours > 0 && minutes > 0) {
+          timeString = `${hours} hour${hours > 1 ? 's' : ''} ${minutes} minute${minutes > 1 ? 's' : ''}`;
+        } else if (hours > 0) {
+          timeString = `${hours} hour${hours > 1 ? 's' : ''}`;
+        } else if (minutes > 0) {
+          timeString = `${minutes} minute${minutes > 1 ? 's' : ''}`;
+        } else {
+          timeString = "less than a minute";
+        }
+        
+        timerNotification = document.createElement("div");
+        timerNotification.className = "timer-notification";
+        timerNotification.innerHTML = `
+          <span>⏰</span>
+          <span>Timer set: <strong>${timeString}</strong> for this chapter</span>
+        `;
+        
+        const toggleRow = document.querySelector(".toggle-row");
+        if (toggleRow && toggleRow.nextElementSibling) {
+          toggleRow.parentNode.insertBefore(timerNotification, toggleRow.nextElementSibling);
+        }
+      }
+    }
+
+    function removeTimerNotification() {
+      if (timerNotification && timerNotification.parentNode) {
+        timerNotification.parentNode.removeChild(timerNotification);
+        timerNotification = null;
+      }
+      
+      const existingNotifications = document.querySelectorAll(".timer-notification");
+      existingNotifications.forEach(notification => {
+        if (notification.parentNode) {
+          notification.parentNode.removeChild(notification);
+        }
+      });
+    }
+
+    function autoFinishQuiz() {
+      showFinalResult();
+      stopTimer();
+      removeTimerNotification();
+    }
+
+    function formatTimeTaken() {
+      if (timerDuration <= 0 || !quizStartTime) return "";
+      
+      const endTime = Date.now();
+      const timeTaken = endTime - quizStartTime;
+      const hours = Math.floor(timeTaken / (1000 * 60 * 60));
+      const minutes = Math.floor((timeTaken % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeTaken % (1000 * 60)) / 1000);
+      
+      if (hours > 0) {
+        return `${hours}h ${minutes}m ${seconds}s`;
+      } else if (minutes > 0) {
+        return `${minutes}m ${seconds}s`;
+      } else {
+        return `${seconds}s`;
+      }
+    }
+
+    // ========== UI FUNCTIONS ==========
+    function renderQuestion() {
+      if (!questionsLoaded || questions.length === 0) {
+        questionTextEl.textContent = "No questions available. Check your XML file.";
+        optionsListEl.innerHTML = "";
+        nextBtn.disabled = true;
+        previousBtn.disabled = true;
+        finishBtn.disabled = true;
+        return;
+      }
+
+      const q = questions[currentIndex];
+      hasAnswered = false;
+      feedbackEl.textContent = "";
+      feedbackEl.className = "feedback";
+      
+      // Clear any existing explanation
+      const existingExplanation = feedbackEl.querySelector('.explanation');
+      if (existingExplanation) {
+        existingExplanation.remove();
+      }
+
+      questionCounterEl.textContent = `Question ${currentIndex + 1} / ${questions.length}`;
+      const progressPercent = ((currentIndex + 1) / questions.length) * 100;
+      progressBarFillEl.style.width = `${progressPercent}%`;
+
+      questionTextEl.textContent = q.question;
+      optionsListEl.innerHTML = "";
+
+      q.options.forEach((opt, idx) => {
+        const li = document.createElement("li");
+        li.className = "option";
+        
+        // Check if this option was previously selected
+        if (userAnswers[currentIndex] !== undefined && userAnswers[currentIndex] === idx) {
+          li.classList.add("selected");
+        }
+
+        const label = document.createElement("div");
+        label.textContent = opt;
+        li.appendChild(label);
+        optionsListEl.appendChild(li);
+
+        li.addEventListener("click", () => {
+          if (hasAnswered || isReviewMode) return;
+          
+          // Remove selected class from all options
+          document.querySelectorAll(".option").forEach(opt => {
+            opt.classList.remove("selected");
+          });
+          
+          // Add selected class to clicked option
+          li.classList.add("selected");
+          
+          userAnswers[currentIndex] = idx;
+          
+          // Handle option click (shows explanation)
+          handleOptionClick(idx);
+          resetInactivityTimer();
+        });
+      });
+
+      previousBtn.disabled = (currentIndex === 0);
+      
+      // In review mode, next button is always enabled
+      // In quiz mode, next button is disabled until answer is selected
+      if (isReviewMode) {
+        nextBtn.disabled = false;
+        showQuestionInReviewMode();
+      } else {
+        nextBtn.disabled = true; // Disable next until answer is selected
+      }
+      
+      finishBtn.disabled = false;
+      
+      // If already answered this question, show feedback and explanation
+      if (userAnswers[currentIndex] !== undefined) {
+        const selectedIndex = userAnswers[currentIndex];
+        const isCorrect = (selectedIndex === q.correctIndex);
+        
+        showCorrectness(selectedIndex);
+        lockOptions();
+        hasAnswered = true;
+        
+        if (isCorrect) {
+          feedbackEl.textContent = "✅ Correct!";
+          feedbackEl.className = "feedback correct";
+        } else {
+          feedbackEl.textContent = `❌ Wrong. The correct answer was: ${q.options[q.correctIndex]}`;
+          feedbackEl.className = "feedback incorrect";
+        }
+        
+        // Show explanation if available
+        if (q.explanation) {
+          const explanationDiv = document.createElement("div");
+          explanationDiv.className = "explanation";
+          explanationDiv.innerHTML = `<strong>Explanation:</strong> ${q.explanation}`;
+          feedbackEl.appendChild(explanationDiv);
+        }
+        
+        // Enable next button since answer is already selected (only in quiz mode)
+        if (!isReviewMode) {
+          nextBtn.disabled = false;
+        }
+      }
+      
+      resetInactivityTimer();
+    }
+
+    function showQuestionInReviewMode() {
+      const q = questions[currentIndex];
+      const selectedIndex = userAnswers[currentIndex];
+      const hasAnsweredQuestion = selectedIndex !== undefined;
+      
+      if (hasAnsweredQuestion) {
+        const isCorrect = (selectedIndex === q.correctIndex);
+        
+        showCorrectness(selectedIndex);
+        lockOptions();
+        hasAnswered = true;
+        
+        if (isCorrect) {
+          feedbackEl.textContent = "✅ Your answer was correct!";
+          feedbackEl.className = "feedback correct";
+        } else {
+          feedbackEl.textContent = `❌ Your answer was incorrect. The correct answer was: ${q.options[q.correctIndex]}`;
+          feedbackEl.className = "feedback incorrect";
+        }
+        
+        // Show explanation if available
+        if (q.explanation) {
+          const explanationDiv = document.createElement("div");
+          explanationDiv.className = "explanation";
+          explanationDiv.innerHTML = `<strong>Explanation:</strong> ${q.explanation}`;
+          feedbackEl.appendChild(explanationDiv);
+        }
+      } else {
+        feedbackEl.textContent = "⚠️ You did not answer this question.";
+        feedbackEl.className = "feedback";
+        
+        // Still show the correct answer and explanation
+        showCorrectness(-1); // Show only correct answer
+        lockOptions();
+        
+        if (q.explanation) {
+          const explanationDiv = document.createElement("div");
+          explanationDiv.className = "explanation";
+          explanationDiv.innerHTML = `<strong>Correct Answer:</strong> ${q.options[q.correctIndex]}<br><br><strong>Explanation:</strong> ${q.explanation}`;
+          feedbackEl.appendChild(explanationDiv);
+        }
+      }
+    }
+
+    function handleOptionClick(selectedIndex) {
+      if (hasAnswered || isReviewMode) return;
+      
+      const q = questions[currentIndex];
+      hasAnswered = true;
+      attempted++;
+      
+      const isCorrect = (selectedIndex === q.correctIndex);
+      
+      if (isCorrect) {
+        score++;
+        feedbackEl.textContent = "✅ Correct!";
+        feedbackEl.className = "feedback correct";
+      } else {
+        feedbackEl.textContent = `❌ Wrong. The correct answer was: ${q.options[q.correctIndex]}`;
+        feedbackEl.className = "feedback incorrect";
+      }
+      
+      // Show explanation if available
+      if (q.explanation) {
+        const explanationDiv = document.createElement("div");
+        explanationDiv.className = "explanation";
+        explanationDiv.innerHTML = `<strong>Explanation:</strong> ${q.explanation}`;
+        feedbackEl.appendChild(explanationDiv);
+      }
+      
+      scoreMiniEl.textContent = `Score: ${score}`;
+      showCorrectness(selectedIndex);
+      lockOptions();
+      
+      // Enable next button for manual navigation (NO AUTO-ADVANCE)
+      nextBtn.disabled = false;
+    }
+
+    function lockOptions() {
+      const optionEls = document.querySelectorAll(".option");
+      optionEls.forEach(opt => {
+        opt.classList.add("disabled");
+      });
+    }
+
+    function showCorrectness(selectedIndex) {
+      const q = questions[currentIndex];
+      const optionEls = document.querySelectorAll(".option");
+      optionEls.forEach((optEl, idx) => {
+        optEl.classList.remove("correct", "incorrect");
+        if (idx === q.correctIndex) optEl.classList.add("correct");
+        if (idx === selectedIndex && selectedIndex !== q.correctIndex) {
+          optEl.classList.add("incorrect");
+        }
+      });
+    }
+
+    function goToNextQuestion() {
+      currentIndex++;
+      if (currentIndex < questions.length) {
+        renderQuestion();
+      } else {
+        if (!isReviewMode) {
+          progressBarFillEl.style.width = "100%";
+          showFinalResult();
+        } else {
+          // In review mode, loop back to first question
+          currentIndex = 0;
+          renderQuestion();
+        }
+      }
+      resetInactivityTimer();
+    }
+
+    function goToPreviousQuestion() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderQuestion();
+      }
+      resetInactivityTimer();
+    }
+
+    function calculateQuizStats() {
+      let attempted = 0;
+      let correct = 0;
+      
+      for (let i = 0; i < questions.length; i++) {
+        if (userAnswers[i] !== undefined) {
+          attempted++;
+          if (userAnswers[i] === questions[i].correctIndex) {
+            correct++;
+          }
+        }
+      }
+      
+      const percentage = questions.length > 0 ? ((correct / questions.length) * 100).toFixed(2) : 0;
+      
+      return {
+        total: questions.length,
+        attempted,
+        correct,
+        percentage
+      };
+    }
+
+    function showFinalResult() {
+      stopTimer();
+      removeTimerNotification();
+      
+      const stats = calculateQuizStats();
+      const timeTaken = formatTimeTaken();
+      
+      // Store stats for notification
+      currentQuizStats = {
+        ...stats,
+        timeTaken: timeTaken,
+        subject: currentSubject,
+        chapter: currentTopicName,
+        class: currentClass
+      };
+      
+      progressBarFillEl.style.width = "100%";
+      questionTextEl.textContent = "Quiz Completed!";
+      optionsListEl.innerHTML = "";
+      feedbackEl.textContent = "";
+      nextBtn.style.display = "none";
+      previousBtn.style.display = "none";
+      finishBtn.style.display = "none";
+      finalScoreEl.style.display = "block";
+      
+      let performanceMessage = "";
+      if (stats.percentage >= 80) {
+        performanceMessage = "🎉 Excellent! Outstanding performance!";
+      } else if (stats.percentage >= 60) {
+        performanceMessage = "👍 Good job! Keep practicing!";
+      } else if (stats.percentage >= 40) {
+        performanceMessage = "📚 Keep learning! Review the chapter again.";
+      } else {
+        performanceMessage = "📖 Needs improvement. Study the chapter thoroughly.";
+      }
+      
+      // Send quiz result notification
+      sendQuizResultNotification(currentQuizStats);
+      
+      // Add option to review questions with explanations
+      let reviewSection = '';
+      if (questions.length > 0) {
+        reviewSection = `
+          <div class="result-summary" style="margin-top: 20px;">
+            <button class="review-btn" onclick="showQuestionReview()">
+              📖 Review Questions with Explanations
+            </button>
+          </div>
+        `;
+      }
+      
+      finalScoreEl.innerHTML = `
+        <div class="result-header">Results - ${currentTopicName}</div>
+        <div class="result-stats">
+          <div class="stat-item">
+            <div class="stat-label">Total Questions</div>
+            <div class="stat-value">${stats.total}</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Attempted</div>
+            <div class="stat-value">${stats.attempted}/${stats.total}</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Correct Answers</div>
+            <div class="stat-value">${stats.correct}</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Score Percentage</div>
+            <div class="stat-value stat-percentage">${stats.percentage}%</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Time Taken</div>
+            <div class="stat-value stat-time">${timeTaken || "No timer set"}</div>
+          </div>
+          ${timerDuration > 0 ? `
+          <div class="stat-item">
+            <div class="stat-label">Time Limit</div>
+            <div class="stat-value">${Math.floor(timerDuration / (1000 * 60))} minutes</div>
+          </div>
+          ` : ''}
+        </div>
+        <div class="result-message">
+          ${performanceMessage}
+        </div>
+        <div class="result-summary">
+          <em>Select another chapter from the dropdown above to start a new quiz.</em>
+        </div>
+        <button class="restart-btn" onclick="restartQuiz()">Restart</button>
+        ${reviewSection}
+      `;
+      
+      resetInactivityTimer();
+    }
+
+    function showQuestionReview() {
+      isReviewMode = true;
+      finalScoreEl.style.display = "none";
+      nextBtn.style.display = "inline-block";
+      previousBtn.style.display = "inline-block";
+      finishBtn.style.display = "inline-block";
+      finishBtn.textContent = "Back to Results";
+      finishBtn.onclick = () => {
+        showFinalResult();
+      };
+      
+      currentIndex = 0;
+      renderQuestion();
+    }
+
+    function restartQuiz() {
+      isReviewMode = false;
+      score = 0;
+      attempted = 0;
+      currentIndex = 0;
+      userAnswers = [];
+      scoreMiniEl.textContent = "Score: 0";
+      nextBtn.style.display = "inline-block";
+      previousBtn.style.display = "inline-block";
+      finishBtn.style.display = "inline-block";
+      finishBtn.textContent = "Finish Quiz";
+      finishBtn.onclick = () => {
+        if (!questionsLoaded) return;
+        if (confirm("Are you sure you want to finish the quiz? Your current score will be calculated.")) {
+          showFinalResult();
+        }
+        resetInactivityTimer();
+      };
+      finalScoreEl.style.display = "none";
+      
+      if (timerDuration > 0) {
+        showTimerNotification();
+        startTimer();
+      }
+      
+      // Re-render the first question
+      renderQuestion();
+      resetInactivityTimer();
+    }
+
+    // ========== LOAD QUESTIONS FROM XML FILES ==========
+    async function loadQuestionsFromXML(chapterName) {
+      const trimmed = chapterName.trim();
+      if (!trimmed) {
+        alert("Please select a chapter.");
+        resetInactivityTimer();
+        return;
+      }
+
+      currentTopicName = trimmed;
+      
+      // Clean the filename - remove any invalid characters
+      const cleanChapterName = trimmed.replace(/[<>:"/\\|?*]/g, '');
+      
+      // Clean the subject name for URL
+      const cleanSubject = currentSubject.toLowerCase()
+        .replace(/ /g, '-')
+        .replace(/[^a-z0-9-]/g, '');
+      
+      // Find subject ID from CLASSES_CONFIG
+      const currentClassConfig = CLASSES_CONFIG.find(cls => cls.id === currentClass);
+      let subjectId = cleanSubject;
+      
+      if (currentClassConfig && currentClassConfig.subjects) {
+        const subjectConfig = currentClassConfig.subjects.find(subj => 
+          subj.name.toLowerCase() === currentSubject.toLowerCase()
+        );
+        if (subjectConfig) {
+          subjectId = subjectConfig.id;
+        }
+      }
+      
+      // Try multiple path combinations
+      const pathOptions = [
+        // Dynamic path from classes.json structure
+        `${currentClass}/${subjectId}/${cleanChapterName}.xml`,
+        // Traditional paths for backward compatibility
+        `Class ${currentClass}/${cleanSubject}/${cleanChapterName}.xml`,
+        `${currentClass}/${cleanSubject}/${cleanChapterName}.xml`,
+        `Class ${currentClass}/${currentSubject.toLowerCase()}/${cleanChapterName}.xml`,
+        // Original chapter name (not cleaned)
+        `Class ${currentClass}/${currentSubject.toLowerCase()}/${trimmed}.xml`,
+        // Encoded chapter name
+        `${currentClass}/${currentSubject.toLowerCase()}/${encodeURIComponent(trimmed)}.xml`
+      ];
+      
+      quizTopicNameEl.textContent = trimmed;
+
+      try {
+        questionTextEl.textContent = `Loading ${trimmed}…`;
+        optionsListEl.innerHTML = "";
+        feedbackEl.textContent = "";
+        nextBtn.disabled = true;
+        previousBtn.disabled = true;
+        finishBtn.disabled = true;
+        finishBtn.textContent = "Finish Quiz";
+        finishBtn.onclick = () => {
+          if (!questionsLoaded) return;
+          if (confirm("Are you sure you want to finish the quiz? Your current score will be calculated.")) {
+            showFinalResult();
+          }
+          resetInactivityTimer();
+        };
+        finalScoreEl.style.display = "none";
+        progressBarFillEl.style.width = "0%";
+        questionCounterEl.textContent = "Loading…";
+
+        timerContainerEl.style.display = "none";
+        timerDuration = 0;
+        quizStartTime = Date.now();
+        
+        removeTimerNotification();
+
+        let xmlText = null;
+        let lastError = null;
+        let successfulPath = null;
+        
+        // Try all path options
+        for (const path of pathOptions) {
+          try {
+            console.log(`🔍 Trying XML path: ${path}`);
+            const res = await fetch(path);
+            if (res.ok) {
+              xmlText = await res.text();
+              successfulPath = path;
+              console.log(`✅ Successfully loaded XML from: ${path}`);
+              break;
+            } else {
+              console.log(`❌ Failed to load from: ${path} (Status: ${res.status})`);
+            }
+          } catch (err) {
+            lastError = err;
+            console.log(`❌ Error loading from ${path}:`, err.message);
+          }
+        }
+        
+        // If no XML file found, show clean error message
+        if (!xmlText) {
+          const cleanErrorMessage = `XML file not found for chapter: "${trimmed}".xml`;
+          console.error("❌ XML file not found. Tried paths:", pathOptions);
+          
+          // Show user-friendly error
+          questionTextEl.textContent = `Error: ${cleanErrorMessage}`;
+          optionsListEl.innerHTML = "";
+          feedbackEl.textContent = "";
+          nextBtn.disabled = true;
+          previousBtn.disabled = true;
+          finishBtn.disabled = true;
+          quizTopicNameEl.textContent = "Error loading chapter";
+          quizTopicNameEl.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
+          quizTopicNameEl.style.borderColor = "rgba(239, 68, 68, 0.5)";
+          quizTopicNameEl.style.color = "#fca5a5";
+          quizQuestionCountEl.textContent = "0 questions";
+          
+          console.error("🔧 Full error details for debugging:", {
+            chapter: trimmed,
+            cleanedChapter: cleanChapterName,
+            subject: currentSubject,
+            class: currentClass,
+            triedPaths: pathOptions
+          });
+          
+          resetInactivityTimer();
+          return;
+        }
+
+        const rawQuestions = parseXMLToQuestions(xmlText);
+        if (rawQuestions.length === 0) {
+          throw new Error(`No valid questions found in ${trimmed}.xml. Check XML format.`);
+        }
+
+        const randomize = randomToggleEl.checked;
+        questions = prepareQuestionBank(rawQuestions, randomize);
+        userAnswers = new Array(questions.length);
+
+        questionsLoaded = true;
+        currentIndex = 0;
+        score = 0;
+        attempted = 0;
+        scoreMiniEl.textContent = "Score: 0";
+        nextBtn.style.display = "inline-block";
+        previousBtn.style.display = "inline-block";
+        finishBtn.style.display = "inline-block";
+
+        quizTopicNameEl.textContent = trimmed;
+        quizQuestionCountEl.textContent = `${questions.length} questions`;
+        
+        if (timerDuration > 0) {
+          showTimerNotification();
+          startTimer();
+        }
+        
+        renderQuestion();
+        resetInactivityTimer();
+        
+      } catch (err) {
+        console.error("❌ Error loading questions:", err);
+        
+        // Show clean error message without path details
+        const errorMessage = err.message.includes("not found") 
+          ? `XML file not found for chapter: "${trimmed}".xml` 
+          : err.message;
+          
+        questionTextEl.textContent = `Error: ${errorMessage}`;
+        optionsListEl.innerHTML = "";
+        feedbackEl.textContent = "";
+        nextBtn.disabled = true;
+        previousBtn.disabled = true;
+        finishBtn.disabled = true;
+        quizTopicNameEl.textContent = "Error loading chapter";
+        quizTopicNameEl.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
+        quizTopicNameEl.style.borderColor = "rgba(239, 68, 68, 0.5)";
+        quizTopicNameEl.style.color = "#fca5a5";
+        resetInactivityTimer();
+      }
     }
 
     // ========== EVENT LISTENERS ==========
     loginFormEl.addEventListener("submit", async function(e) {
-        e.preventDefault();
+      e.preventDefault();
+      
+      // Check if on cooldown
+      if (isOnCooldown) {
+        loginErrorEl.textContent = "Please wait for the cooldown period to end before trying again.";
+        loginErrorEl.style.display = "block";
+        return;
+      }
+      
+      const username = usernameEl.value.trim();
+      const password = passwordEl.value.trim();
+      
+      if (!username || !password) {
+        loginErrorEl.textContent = "Please enter both username and password";
+        loginErrorEl.style.display = "block";
+        return;
+      }
+      
+      loginErrorEl.textContent = "";
+      loginErrorEl.style.display = "none";
+      
+      loginBtnEl.disabled = true;
+      loginBtnEl.innerHTML = '⏳ Loading...';
+      
+      // Always load fresh data from Google Sheets
+      const loaded = await loadUsersFromGoogleSheet();
+      
+      if (!loaded || userList.length === 0) {
+        loginErrorEl.textContent = "⚠️ Cannot load users. Please check your internet connection.";
+        loginErrorEl.style.display = "block";
+        loginBtnEl.disabled = false;
+        loginBtnEl.innerHTML = '🔒 Login';
+        return;
+      }
+      
+      setTimeout(() => {
+        const user = authenticateUser(username, password);
         
-        // Check if on cooldown
-        if (isOnCooldown) {
-            loginErrorEl.textContent = "Please wait for the cooldown period to end before trying again.";
-            loginErrorEl.style.display = "block";
-            return;
-        }
-        
-        const username = usernameEl.value.trim();
-        const password = passwordEl.value.trim();
-        
-        if (!username || !password) {
-            loginErrorEl.textContent = "Please enter both username and password";
-            loginErrorEl.style.display = "block";
-            return;
-        }
-        
-        loginErrorEl.textContent = "";
-        loginErrorEl.style.display = "none";
-        
-        loginBtnEl.disabled = true;
-        loginBtnEl.innerHTML = '⏳ Loading...';
-        
-        try {
-            // Try direct worker authentication first
-            const user = await authenticateViaWorker(username, password);
-            
-            if (user) {
-                // Successful login - reset failed attempts
-                resetFailedAttempts();
-                
-                // Convert to user object format
-                const userObj = {
-                    username: user.username,
-                    password: password, // Keep password for session
-                    name: user.name,
-                    role: user.role,
-                    class: user.class
-                };
-                
-                login(userObj);
-            } else {
-                // If worker authentication fails, fall back to loading users list
-                console.log("⚠️ Worker authentication failed, trying fallback...");
-                
-                // Load users list from worker
-                const loaded = await loadUsersFromWorker();
-                
-                if (!loaded || userList.length === 0) {
-                    loginErrorEl.textContent = "⚠️ Cannot authenticate. Please check your internet connection.";
-                    loginErrorEl.style.display = "block";
-                    loginBtnEl.disabled = false;
-                    loginBtnEl.innerHTML = '🔒 Login';
-                    return;
-                }
-                
-                // Try local authentication with the loaded list
-                const localUser = await authenticateUser(username, password);
-                
-                if (localUser) {
-                    // Successful login - reset failed attempts
-                    resetFailedAttempts();
-                    login(localUser);
-                } else {
-                    // Failed login - record attempt
-                    recordFailedAttempt();
-                    
-                    if (failedAttempts >= MAX_ATTEMPTS) {
-                        loginErrorEl.textContent = `Too many failed attempts. Please wait ${COOLDOWN_TIME} seconds.`;
-                    } else {
-                        loginErrorEl.textContent = `Invalid username or password. ${MAX_ATTEMPTS - failedAttempts} attempt(s) remaining.`;
-                    }
-                    loginErrorEl.style.display = "block";
-                    usernameEl.focus();
-                    usernameEl.select();
-                }
-            }
-        } catch (error) {
-            console.error("❌ Login error:", error);
-            loginErrorEl.textContent = "⚠️ Login service unavailable. Please try again.";
-            loginErrorEl.style.display = "block";
+        if (user) {
+          // Successful login - reset failed attempts
+          resetFailedAttempts();
+          login(user);
+        } else {
+          // Failed login - record attempt
+          recordFailedAttempt();
+          
+          if (failedAttempts >= MAX_ATTEMPTS) {
+            loginErrorEl.textContent = `Too many failed attempts. Please wait ${COOLDOWN_TIME} seconds.`;
+          } else {
+            loginErrorEl.textContent = `Invalid username or password. ${MAX_ATTEMPTS - failedAttempts} attempt(s) remaining.`;
+          }
+          loginErrorEl.style.display = "block";
+          usernameEl.focus();
+          usernameEl.select();
         }
         
         loginBtnEl.disabled = false;
         loginBtnEl.innerHTML = '🔒 Login';
+      }, 500);
     });
 
     passwordToggleEl.addEventListener("click", togglePasswordVisibility);
     headerLogoutBtnEl.addEventListener("click", logout);
     backToClassesBtn.addEventListener("click", () => {
-        showClassSelection();
-        resetInactivityTimer();
+      showClassSelection();
+      resetInactivityTimer();
     });
 
     startBtnEl.addEventListener("click", () => {
-        const dropdownVal = topicSelectEl.value;
-        
-        if (timerInterval) {
-            clearInterval(timerInterval);
-            timerInterval = null;
-        }
-        
-        removeTimerNotification();
-        
-        loadQuestionsFromXML(dropdownVal);
-        resetInactivityTimer();
+      const dropdownVal = topicSelectEl.value;
+      
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      
+      removeTimerNotification();
+      
+      loadQuestionsFromXML(dropdownVal);
+      resetInactivityTimer();
     });
 
     nextBtn.addEventListener("click", () => {
-        goToNextQuestion();
+      goToNextQuestion();
     });
 
     previousBtn.addEventListener("click", () => {
-        goToPreviousQuestion();
+      goToPreviousQuestion();
     });
 
     // ========== INITIALIZATION ==========
     async function initializeApp() {
-        // Load all configurations first
-        await loadConfigurations();
-        
-        usernameEl.focus();
-        console.log("🚀 G. S. Tutorial App initialized");
-        console.log("📊 Configuration loaded successfully");
-        console.log("🔐 Cloudflare Worker Authentication System Ready");
-        
-        // Show loaded configuration
-        console.log("📋 Current Configuration:");
-        console.log("- Cloudflare Worker:", API_CONFIG.BASE_URL || "Not configured");
-        console.log("- Telegram Enabled:", TELEGRAM_CONFIG.ENABLED);
-        console.log("- Classes Loaded:", CLASSES_CONFIG.length);
-        
-        // Add activity listeners for inactivity timer
-        document.addEventListener('mousemove', resetInactivityTimer);
-        document.addEventListener('keypress', resetInactivityTimer);
-        document.addEventListener('click', resetInactivityTimer);
-        
-        // Initialize failed attempts tracking
-        resetFailedAttempts();
+      // Load all configurations first
+      await loadConfigurations();
+      
+      usernameEl.focus();
+      console.log("🚀 G. S. Tutorial App initialized");
+      console.log("📊 Configuration loaded successfully");
+      console.log("🔐 Google Sheets Login System Ready");
+      
+      // Show loaded configuration
+      console.log("📋 Current Configuration:");
+      console.log("- Google Sheets ID:", GOOGLE_SHEETS_CONFIG.SHEET_ID);
+      console.log("- WhatsApp Enabled:", WHATSAPP_CONFIG.ENABLED);
+      console.log("- Telegram Enabled:", TELEGRAM_CONFIG.ENABLED);
+      console.log("- Classes Loaded:", CLASSES_CONFIG.length);
+      
+      // Add activity listeners for inactivity timer
+      document.addEventListener('mousemove', resetInactivityTimer);
+      document.addEventListener('keypress', resetInactivityTimer);
+      document.addEventListener('click', resetInactivityTimer);
+      
+      // Initialize failed attempts tracking
+      resetFailedAttempts();
     }
 
     document.addEventListener("DOMContentLoaded", initializeApp);
