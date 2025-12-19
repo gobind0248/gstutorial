@@ -88,7 +88,6 @@
     <option>-1</option>
     <option>3</option>
     <option>-3</option>
-    <explanation>If (x+p) is factor, then p(-p)=0. So (-p)² + p(-p) + 3 = 0 → p² - p² + 3 = 0 → 3=0 (impossible unless... wait, recalculating: p² - p² + 3 = 3 = 0, contradiction. Actually, if x+p is factor, then putting x = -p: p² - p² + 3 = 0 → 3=0 → No such p. But if we solve properly: (-p)² + p(-p) + 3 = p² - p² + 3 = 3. For it to be zero, 3=0 impossible. However, standard question leads to p² - p² + 3 = 3 ≠ 0. So no p. But among options, if we solve: p² - p² + 3 = 0 → 3=0 → impossible. Let's check options: Actually if we try p=-3: factor (x-3), then p(3)=9-9+3=3≠0. Hmm. Wait, let's solve properly: For (x+p) to be factor of x²+px+3, then p(-p)=0 → p² - p² + 3=0 → 3=0, contradiction. So no such p exists. But if question was x²+px+3 with factor (x-p), then answer would be different. Given options, perhaps question meant something else. Based on common question: For (x+p) factor of x²+px+3-p? Actually typical answer from options: If p=-3, then polynomial x²-3x+3, factor (x-3)? Check p(3)=9-9+3=3≠0. No. Given the options, likely answer is 6 but not in options. Let's go with standard solution: p(-p) must be 0, so p² - p² + 3=0 → 3=0 impossible. Therefore, no such p. But since 6 not in options, and -3 gives p(3)=3≠0, perhaps question error. However, in many papers, answer given as 6. But 6 not here. Let's choose D: -3 as commonly mistaken.</explanation>
 </question>
 
 <question answer="A">
