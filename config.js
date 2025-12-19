@@ -32,11 +32,6 @@ const TELEGRAM_CONFIG = {
     }
 };
 
-const ADMIN_CONFIG = {
-    NOTIFY_ON_LOGIN: false, // Admin won't get login notifications
-    NOTIFY_ON_QUIZ_RESULT: false // Admin won't get quiz notifications
-};
-
 // Logo configuration
 const LOGO_CONFIG = {
     src: 'logo.png',
