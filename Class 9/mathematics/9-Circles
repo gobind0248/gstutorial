@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  
+  <question answer="A">
+    <text>Identify the type of angles shown:
+    
+    A───────B
+      \   /
+       \ /
+        C
+       / \
+      /   \
+    D───────E
+    
+    ∠ACB and ∠DCE are:</text>
+    <option>Vertically opposite angles</option>
+    <option>Alternate interior angles</option>
+    <option>Corresponding angles</option>
+    <option>Adjacent angles</option>
+    <explanation>These are vertically opposite angles formed by intersecting lines.</explanation>
+  </question>
+
+</quiz>
