@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metadata>
-<timeLimit>1</timeLimit>
-</metadata>
 <quiz>
-
+  <metadata>
+    <timeLimit>1</timeLimit>
+  </metadata>
+  
   <question answer="C">
     <text>The standard wheel gauge of passenger BG coaching stock is –</text>
     <option>1602 mm</option>
@@ -11,7 +11,8 @@
     <option>1600 mm</option>
     <option>1598 mm</option>
   </question>
-<question answer="D">
+  
+  <question answer="D">
     <text>The maximum wheel gauge of passenger BG coaching stock is –</text>
     <option>1600 mm</option>
     <option>1601 mm</option>
