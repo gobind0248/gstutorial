@@ -31,6 +31,10 @@ const TELEGRAM_CONFIG = {
         QUIZ_RESULT: "📊 *Quiz Result* 📊\n👤 Username: {username}\n🎓 Name: {name}\n🏫 Class: {class}\n📚 Subject: {subject}\n📖 Chapter: {chapter}\n✅ Correct: {correct}\n📋 Total: {total}\n🔷 Attempted: {attempted}\n📈 Score: {percentage}%\n⏱️ Time Taken: {timeTaken}\n📅 Date: {date}"
     }
 };
+const ADMIN_CONFIG = {
+    NOTIFY_ON_LOGIN: false, // Admin won't get login notifications
+    NOTIFY_ON_QUIZ_RESULT: false // Admin won't get quiz notifications
+};
 
 // Logo configuration
 const LOGO_CONFIG = {
