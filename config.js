@@ -32,6 +32,11 @@ const TELEGRAM_CONFIG = {
     }
 };
 
+const ADMIN_CONFIG = {
+    NOTIFY_ON_LOGIN: false, // Admin won't get login notifications
+    NOTIFY_ON_QUIZ_RESULT: false // Admin won't get quiz notifications
+};
+
 // Logo configuration
 const LOGO_CONFIG = {
     src: 'logo.png',
@@ -43,6 +48,6 @@ const LOGO_CONFIG = {
 // Logging Configuration
 const LOGGING_CONFIG = {
     ENABLE_CONSOLE_LOG: true,
-    LOG_LEVEL: 'INFO', // DEBUG, INFO, WARN, ERROR
+    LOG_LEVEL: 'INFO',
     AUTO_SEND_NOTIFICATIONS: true
 };
