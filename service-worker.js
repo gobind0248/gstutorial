@@ -1,4 +1,4 @@
-const CACHE_NAME = "gst-mcq-v3.2"; // 🔴 CHANGE VERSION TO FORCE UPDATE
+const CACHE_NAME = "gst-mcq-v4"; // 🔴 CHANGE VERSION TO FORCE UPDATE
 
 self.addEventListener("install", event => {
   self.skipWaiting();
